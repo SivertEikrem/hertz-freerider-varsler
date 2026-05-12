@@ -2,8 +2,11 @@ name: Sjekk Hertz Freerider
 
 on:
   schedule:
-    # Hvert 30. minutt. Justér her hvis du vil ha det oftere/sjeldnere.
-    - cron: "*/30 * * * *"
+    # Kjører kl. xx:07, xx:22, xx:37, xx:52 — altså hvert 15. minutt,
+    # men forskjøvet vekk fra "runde" tidspunkter (00, 15, 30, 45) der
+    # GitHub har mye trafikk og forsinker scheduled jobs. Dette gir
+    # langt mer pålitelig oppstart i praksis.
+    - cron: "7,22,37,52 * * * *"
   workflow_dispatch:  # Lar deg trigge manuelt fra GitHub-grensesnittet
 
 permissions:
