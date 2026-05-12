@@ -3,11 +3,9 @@ name: Sjekk Hertz Freerider
 on:
   schedule:
     # Hvert 30. minutt. Justér her hvis du vil ha det oftere/sjeldnere.
-    # Format: minutt time dag-i-måned måned ukedag
     - cron: "*/30 * * * *"
   workflow_dispatch:  # Lar deg trigge manuelt fra GitHub-grensesnittet
 
-# Tillater workflow å committe oppdatert seen_trips.json tilbake til repoet
 permissions:
   contents: write
 
@@ -37,14 +35,14 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python check_routes.py
 
-      - name: Lagre tilstand (seen_trips.json)
+      - name: Lagre tilstand
         run: |
-          if [[ -n "$(git status --porcelain seen_trips.json)" ]]; then
+          if [[ -n "$(git status --porcelain seen_trips.json heartbeat.json)" ]]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add seen_trips.json
-            git commit -m "Oppdater seen_trips.json [skip ci]"
+            git add seen_trips.json heartbeat.json
+            git commit -m "Oppdater tilstand [skip ci]"
             git push
           else
-            echo "Ingen endringer i seen_trips.json"
+            echo "Ingen endringer i tilstandsfiler"
           fi
