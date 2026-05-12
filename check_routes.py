@@ -2,7 +2,8 @@
 Hertz Freerider ruteovervåker.
 
 Sjekker Hertz Freerider for tilgjengelige turer på definerte ruter,
-og sender Telegram-varsel ved nye treff.
+og sender Telegram-varsel ved nye treff. Sender også en
+"jeg lever"-melding hver 3. time så du vet systemet kjører.
 
 Kjøres automatisk via GitHub Actions.
 """
@@ -12,6 +13,7 @@ import sys
 import json
 import hashlib
 from pathlib import Path
+from datetime import datetime, timezone
 import requests
 
 # ============================================================
@@ -23,8 +25,11 @@ ROUTES = [
     # {"from": "Ålesund", "to": "Trondheim"},
 ]
 
+HEARTBEAT_INTERVAL_HOURS = 3  # Hvor ofte du får "jeg lever"-melding
+
 API_URL = "https://hertzfreerider.no/api/transport-routes/?country=NORWAY"
 STATE_FILE = Path("seen_trips.json")
+HEARTBEAT_FILE = Path("heartbeat.json")
 
 HEADERS = {
     "User-Agent": (
@@ -78,7 +83,6 @@ def trip_id(group, trip):
     for key in ("transportOfferId", "id"):
         if trip.get(key):
             return f"tid:{trip[key]}"
-    # Fallback hvis ingen ID finnes
     parts = [
         str(group.get("pickupLocationName") or ""),
         str(group.get("returnLocationName") or ""),
@@ -166,6 +170,51 @@ def save_seen(seen):
     )
 
 
+def load_last_heartbeat():
+    if HEARTBEAT_FILE.exists():
+        try:
+            data = json.loads(HEARTBEAT_FILE.read_text(encoding="utf-8"))
+            return datetime.fromisoformat(data["last"])
+        except Exception:
+            return None
+    return None
+
+
+def save_heartbeat(now):
+    HEARTBEAT_FILE.write_text(
+        json.dumps({"last": now.isoformat()}, indent=2),
+        encoding="utf-8",
+    )
+
+
+def maybe_send_heartbeat(total_trips, route_stats):
+    """Send en 'jeg lever'-melding hvis det er minst N timer siden forrige."""
+    last = load_last_heartbeat()
+    now = datetime.now(timezone.utc)
+
+    if last is not None:
+        hours_since = (now - last).total_seconds() / 3600
+        if hours_since < HEARTBEAT_INTERVAL_HOURS:
+            print(f"Heartbeat sendt for {hours_since:.1f} timer siden — venter.")
+            return
+
+    lines = [
+        "💓 *Varsleren lever*",
+        "",
+        f"Hertz Freerider har akkurat nå {total_trips} turer totalt.",
+        "",
+    ]
+    for route_name, count in route_stats:
+        if count == 0:
+            lines.append(f"🚫 {route_name}: ingen tilgjengelig nå")
+        else:
+            lines.append(f"✅ {route_name}: {count} tilgjengelig nå")
+
+    if send_telegram("\n".join(lines)):
+        save_heartbeat(now)
+        print("Heartbeat sendt.")
+
+
 # ============================================================
 # Hovedflyt
 # ============================================================
@@ -180,12 +229,14 @@ def main():
 
     seen = load_seen()
     nye = 0
+    route_stats = []
 
     for route in ROUTES:
         matching_groups = [g for g in groups if matches_route(g, route)]
         n_trips = sum(len(g.get("routes", [])) for g in matching_groups)
-        print(f"  {route['from']} → {route['to']}: "
-              f"{len(matching_groups)} grupper / {n_trips} turer")
+        route_name = f"{route['from']} → {route['to']}"
+        print(f"  {route_name}: {len(matching_groups)} grupper / {n_trips} turer")
+        route_stats.append((route_name, n_trips))
 
         for group in matching_groups:
             for trip in group.get("routes", []):
@@ -199,7 +250,8 @@ def main():
                     print(f"    ✓ Varslet om {tid}")
 
     save_seen(seen)
-    print(f"Ferdig. Sendte {nye} nye varsel.")
+    maybe_send_heartbeat(total_trips, route_stats)
+    print(f"Ferdig. Sendte {nye} nye trip-varsel.")
 
 
 if __name__ == "__main__":
