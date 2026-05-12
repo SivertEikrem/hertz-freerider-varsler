@@ -19,190 +19,90 @@ import requests
 # ============================================================
 ROUTES = [
     {"from": "Trondheim", "to": "Ålesund"},
-    # Fjern '#' under for å også overvåke returen:
+    # Fjern '#' under for også å overvåke returen:
     # {"from": "Ålesund", "to": "Trondheim"},
 ]
 
+API_URL = "https://hertzfreerider.no/api/transport-routes/?country=NORWAY"
 STATE_FILE = Path("seen_trips.json")
-
-# Endepunkter vi prøver i rekkefølge. Den norske Freerider-siden er ny
-# (Gatsby/React) og den eksakte API-URL-en kan endre seg. Hvis ingen
-# av disse fungerer: åpne hertzfreerider.no i Chrome, trykk F12 →
-# fanen "Network" → søk etter en tur → se hvilken URL som returnerer
-# JSON med turene. Lim inn øverst i denne lista.
-ENDPOINTS_TO_TRY = [
-    "https://www.hertzfreerider.no/api/trips",
-    "https://www.hertzfreerider.no/api/transport-offers",
-    "https://www.hertzfreerider.no/api/transports",
-    "https://hertzfreerider.no/api/trips",
-    "https://hertzfreerider.no/unauth/list_transport_offer.aspx",
-    "https://www.hertzfreerider.se/unauth/list_transport_offer.aspx",
-]
 
 HEADERS = {
     "User-Agent": (
         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) "
-        "Chrome/120.0.0.0 Safari/537.36"
+        "AppleWebKit/605.1.15 (KHTML, like Gecko) "
+        "Version/17.0 Safari/605.1.15"
     ),
-    "Accept": "application/json, text/xml, text/html, */*",
-    "Accept-Language": "nb-NO,nb;q=0.9,no;q=0.8,en;q=0.7",
+    "Accept": "application/json, text/plain, */*",
+    "Accept-Language": "nb-NO,nb;q=0.9",
+    "Referer": "https://hertzfreerider.no/no-no/",
 }
 
 
 # ============================================================
 # Henting og parsing
 # ============================================================
-def fetch_trips():
-    """Forsøk å hente turlista fra et av kjente endepunkter."""
-    last_error = None
-    for url in ENDPOINTS_TO_TRY:
-        try:
-            r = requests.get(url, headers=HEADERS, timeout=20)
-            if r.status_code != 200:
-                last_error = f"{url} → HTTP {r.status_code}"
-                continue
-
-            content_type = r.headers.get("Content-Type", "")
-            try:
-                data = r.json()
-                print(f"✓ Hentet JSON fra {url}", file=sys.stderr)
-                return data, url
-            except ValueError:
-                # Ikke JSON — kan være XML/HTML, hopp videre
-                last_error = f"{url} → ikke JSON ({content_type[:40]})"
-                continue
-        except requests.RequestException as e:
-            last_error = f"{url} → {e}"
-            continue
-
-    raise RuntimeError(
-        "Klarte ikke å finne et fungerende Hertz Freerider-endepunkt.\n"
-        f"Siste feil: {last_error}\n\n"
-        "Åpne hertzfreerider.no i Chrome, trykk F12, gå til Network-fanen, "
-        "og finn URL-en som returnerer turene. Legg den øverst i "
-        "ENDPOINTS_TO_TRY i check_routes.py."
-    )
+def fetch_route_groups():
+    """Hent alle rute-grupper fra Hertz Freerider API."""
+    r = requests.get(API_URL, headers=HEADERS, timeout=20)
+    r.raise_for_status()
+    data = r.json()
+    if not isinstance(data, list):
+        raise RuntimeError(
+            f"Forventet liste fra API, fikk {type(data).__name__}: "
+            f"{str(data)[:200]}"
+        )
+    return data
 
 
-def extract_trip_list(data):
-    """Trekk ut selve lista med turer fra et JSON-svar med ukjent struktur."""
-    if isinstance(data, list):
-        return data
-    if isinstance(data, dict):
-        for key in ("trips", "offers", "transports", "transportOffers",
-                    "items", "data", "results"):
-            value = data.get(key)
-            if isinstance(value, list):
-                return value
-        # Noen API-er legger lista en nivå dypere
-        for value in data.values():
-            if isinstance(value, dict):
-                result = extract_trip_list(value)
-                if result:
-                    return result
-    return []
+def matches_route(group, route):
+    """Sjekk om en rute-gruppe matcher en konfigurert rute."""
+    origin = (group.get("pickupLocationName") or "").lower()
+    dest = (group.get("returnLocationName") or "").lower()
+
+    def matches(query, text):
+        q = query.lower()
+        if q in text:
+            return True
+        # Ålesund kan også skrives Aalesund
+        if "ålesund" in q and "aalesund" in text:
+            return True
+        if "aalesund" in q and "ålesund" in text:
+            return True
+        return False
+
+    return matches(route["from"], origin) and matches(route["to"], dest)
 
 
-def get_field(trip, *candidates):
-    """Hent første feltet som finnes blant flere kandidater."""
-    for key in candidates:
-        if key in trip and trip[key] not in (None, ""):
-            return trip[key]
-        # Sjekk nestede objekter
-        for outer_key in ("pickup", "dropoff", "from", "to", "origin", "destination"):
-            outer = trip.get(outer_key)
-            if isinstance(outer, dict) and key in outer and outer[key]:
-                return outer[key]
-    return None
-
-
-def location_strings(trip):
-    """Returner (fra-streng, til-streng) som strings i lowercase."""
-    origin = get_field(
-        trip,
-        "from", "fromCity", "from_city", "origin", "originCity",
-        "pickupCity", "pickup_city", "pickupLocation", "pickup_location",
-        "startCity", "start_city", "fromStation",
-    )
-    dest = get_field(
-        trip,
-        "to", "toCity", "to_city", "destination", "destinationCity",
-        "dropoffCity", "dropoff_city", "dropoffLocation", "dropoff_location",
-        "endCity", "end_city", "toStation",
-    )
-
-    # Hvis fra/til selv er dict (f.eks. {"city": "Trondheim"})
-    def stringify(val):
-        if isinstance(val, dict):
-            for k in ("city", "name", "location", "station"):
-                if k in val:
-                    return str(val[k])
-            return json.dumps(val, ensure_ascii=False)
-        return str(val) if val is not None else ""
-
-    return stringify(origin).lower(), stringify(dest).lower()
-
-
-def matches_route(trip, route):
-    """Sjekk om en tur matcher en konfigurert rute."""
-    origin, dest = location_strings(trip)
-    from_match = route["from"].lower() in origin
-    to_match = route["to"].lower() in dest
-
-    # Spesialtilfelle: Ålesund vs Aalesund
-    if not from_match and "ålesund" in route["from"].lower():
-        from_match = "aalesund" in origin
-    if not to_match and "ålesund" in route["to"].lower():
-        to_match = "aalesund" in dest
-
-    return from_match and to_match
-
-
-def trip_id(trip):
-    """Lag en stabil ID for en tur, slik at vi ikke varsler to ganger."""
-    for key in ("id", "tripId", "trip_id", "offerId", "offer_id", "uuid", "guid"):
-        if key in trip and trip[key]:
-            return f"id:{trip[key]}"
-    # Fallback: hash de viktigste feltene
+def trip_id(group, trip):
+    """Stabil ID per tur — bruker transportOfferId hvis tilgjengelig."""
+    for key in ("transportOfferId", "id"):
+        if trip.get(key):
+            return f"tid:{trip[key]}"
+    # Fallback hvis ingen ID finnes
     parts = [
-        str(get_field(trip, "from", "fromCity", "pickupCity") or ""),
-        str(get_field(trip, "to", "toCity", "dropoffCity") or ""),
-        str(get_field(trip, "pickupDate", "pickup_date", "startDate", "fromDate") or ""),
-        str(get_field(trip, "returnDate", "return_date", "endDate", "toDate") or ""),
-        str(get_field(trip, "vehicle", "carModel", "car") or ""),
+        str(group.get("pickupLocationName") or ""),
+        str(group.get("returnLocationName") or ""),
+        str(trip.get("pickupDate") or trip.get("availableFrom") or ""),
+        str(trip.get("vehicleModel") or trip.get("vehicle") or ""),
     ]
     return "hash:" + hashlib.sha1("|".join(parts).encode("utf-8")).hexdigest()[:16]
 
 
 # ============================================================
-# Tilstand (hvilke turer vi allerede har varslet om)
-# ============================================================
-def load_seen():
-    if STATE_FILE.exists():
-        try:
-            return set(json.loads(STATE_FILE.read_text(encoding="utf-8")))
-        except Exception:
-            return set()
-    return set()
-
-
-def save_seen(seen):
-    STATE_FILE.write_text(
-        json.dumps(sorted(seen), indent=2, ensure_ascii=False),
-        encoding="utf-8",
-    )
-
-
-# ============================================================
 # Telegram-varsling
 # ============================================================
-def format_trip(trip, route):
-    origin = get_field(trip, "from", "fromCity", "pickupCity") or route["from"]
-    dest = get_field(trip, "to", "toCity", "dropoffCity") or route["to"]
-    pickup = get_field(trip, "pickupDate", "pickup_date", "startDate", "fromDate")
-    dropoff = get_field(trip, "returnDate", "return_date", "endDate", "toDate")
-    vehicle = get_field(trip, "vehicle", "carModel", "car", "vehicleType")
+def format_trip(group, trip):
+    """Formater en Telegram-melding for en tur."""
+    origin = group.get("pickupLocationName", "?")
+    dest = group.get("returnLocationName", "?")
+
+    pickup_date = (trip.get("pickupDate") or trip.get("availableFrom")
+                   or trip.get("validFrom") or trip.get("startDate"))
+    return_date = (trip.get("returnDate") or trip.get("expirationDate")
+                   or trip.get("validTo") or trip.get("endDate"))
+    vehicle = (trip.get("vehicleModel") or trip.get("vehicle")
+               or trip.get("carModel"))
+    distance = trip.get("maxDistance") or trip.get("distance")
 
     lines = [
         "🚗 *Ny Freerider-tur!*",
@@ -210,12 +110,14 @@ def format_trip(trip, route):
         f"📍 Fra: *{origin}*",
         f"📍 Til: *{dest}*",
     ]
-    if pickup:
-        lines.append(f"📅 Hentes: {pickup}")
-    if dropoff:
-        lines.append(f"📅 Leveres: {dropoff}")
+    if pickup_date:
+        lines.append(f"📅 Hentes: {pickup_date}")
+    if return_date:
+        lines.append(f"📅 Leveres: {return_date}")
     if vehicle:
         lines.append(f"🚙 Bil: {vehicle}")
+    if distance:
+        lines.append(f"📏 Maks: {distance} km")
     lines.append("")
     lines.append("👉 Book på hertzfreerider.no")
     return "\n".join(lines)
@@ -246,6 +148,25 @@ def send_telegram(message):
 
 
 # ============================================================
+# Tilstand
+# ============================================================
+def load_seen():
+    if STATE_FILE.exists():
+        try:
+            return set(json.loads(STATE_FILE.read_text(encoding="utf-8")))
+        except Exception:
+            return set()
+    return set()
+
+
+def save_seen(seen):
+    STATE_FILE.write_text(
+        json.dumps(sorted(seen), indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+
+
+# ============================================================
 # Hovedflyt
 # ============================================================
 def main():
@@ -253,26 +174,29 @@ def main():
     for route in ROUTES:
         print(f"  • {route['from']} → {route['to']}")
 
-    data, source_url = fetch_trips()
-    trips = extract_trip_list(data)
-    print(f"Fant totalt {len(trips)} turer på siden ({source_url})")
+    groups = fetch_route_groups()
+    total_trips = sum(len(g.get("routes", [])) for g in groups)
+    print(f"Hentet {len(groups)} rute-grupper, totalt {total_trips} turer")
 
     seen = load_seen()
     nye = 0
 
     for route in ROUTES:
-        matches = [t for t in trips if matches_route(t, route)]
-        print(f"  {route['from']} → {route['to']}: {len(matches)} treff")
+        matching_groups = [g for g in groups if matches_route(g, route)]
+        n_trips = sum(len(g.get("routes", [])) for g in matching_groups)
+        print(f"  {route['from']} → {route['to']}: "
+              f"{len(matching_groups)} grupper / {n_trips} turer")
 
-        for trip in matches:
-            tid = trip_id(trip)
-            if tid in seen:
-                continue
-            msg = format_trip(trip, route)
-            if send_telegram(msg):
-                nye += 1
-                seen.add(tid)
-                print(f"    ✓ Varslet om {tid}")
+        for group in matching_groups:
+            for trip in group.get("routes", []):
+                tid = trip_id(group, trip)
+                if tid in seen:
+                    continue
+                msg = format_trip(group, trip)
+                if send_telegram(msg):
+                    nye += 1
+                    seen.add(tid)
+                    print(f"    ✓ Varslet om {tid}")
 
     save_seen(seen)
     print(f"Ferdig. Sendte {nye} nye varsel.")
@@ -282,7 +206,6 @@ if __name__ == "__main__":
     try:
         main()
     except Exception as e:
-        # Send feil til Telegram så du ikke går glipp av at noe er galt
         err_msg = f"⚠️ Hertz Freerider-varsleren feilet:\n\n`{e}`"
         try:
             send_telegram(err_msg)
