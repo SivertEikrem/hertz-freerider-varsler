@@ -21,8 +21,10 @@ import requests
 # ============================================================
 ROUTES = [
     {"from": "Trondheim", "to": "Ålesund"},
-    # Fjern '#' under for også å overvåke returen:
-    # {"from": "Ålesund", "to": "Trondheim"},
+    {"from": "Ålesund", "to": "*"},   # "*" = hvor som helst
+    # Eksempler du kan legge til:
+    # {"from": "*", "to": "Trondheim"},   # alle turer TIL Trondheim
+    # {"from": "Oslo", "to": "Bergen"},
 ]
 
 HEARTBEAT_INTERVAL_HOURS = 3  # Hvor ofte du får "jeg lever"-melding
@@ -65,7 +67,10 @@ def matches_route(group, route):
     dest = (group.get("returnLocationName") or "").lower()
 
     def matches(query, text):
-        q = query.lower()
+        q = query.lower().strip()
+        # "*" eller tom streng = matcher hva som helst
+        if q in ("", "*"):
+            return True
         if q in text:
             return True
         # Ålesund kan også skrives Aalesund
@@ -198,17 +203,36 @@ def maybe_send_heartbeat(total_trips, route_stats):
             print(f"Heartbeat sendt for {hours_since:.1f} timer siden — venter.")
             return
 
-    lines = [
-        "💓 *Varsleren lever*",
-        "",
-        f"Hertz Freerider har akkurat nå {total_trips} turer totalt.",
-        "",
-    ]
-    for route_name, count in route_stats:
-        if count == 0:
-            lines.append(f"🚫 {route_name}: ingen tilgjengelig nå")
+    # Hvis noen ruter har treff, vis det øverst slik at det er synlig
+    # i selve pushvarselet på telefonen.
+    available = [(name, count) for name, count in route_stats if count > 0]
+    empty = [(name, count) for name, count in route_stats if count == 0]
+
+    lines = []
+    if available:
+        # Hovedoverskrift som beskriver det viktigste, og dermed havner
+        # i pushvarselet
+        if len(available) == 1:
+            name, count = available[0]
+            lines.append(f"🎯 *{count} tur(er) tilgjengelig: {name}*")
         else:
-            lines.append(f"✅ {route_name}: {count} tilgjengelig nå")
+            lines.append("🎯 *Tilgjengelige turer akkurat nå:*")
+            for name, count in available:
+                lines.append(f"✅ {name}: {count}")
+        lines.append("")
+        lines.append("_(Statusoppdatering — varsleren lever)_")
+        if empty:
+            lines.append("")
+            for name, _ in empty:
+                lines.append(f"🚫 {name}: ingen tilgjengelig")
+    else:
+        # Ingenting tilgjengelig — klassisk "jeg lever"-melding
+        lines.append("💓 *Varsleren lever*")
+        lines.append("")
+        lines.append(f"Hertz Freerider har akkurat nå {total_trips} turer totalt.")
+        lines.append("")
+        for name, count in route_stats:
+            lines.append(f"🚫 {name}: ingen tilgjengelig nå")
 
     if send_telegram("\n".join(lines)):
         save_heartbeat(now)
