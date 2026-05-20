@@ -21,9 +21,9 @@ import requests
 # ============================================================
 ROUTES = [
     {"from": "Trondheim", "to": "Ålesund"},
-    {"from": "Ålesund", "to": "*"},   # "*" = hvor som helst
-    # Eksempler du kan legge til:
-    # {"from": "*", "to": "Trondheim"},   # alle turer TIL Trondheim
+    # Skru på når du er klar for å overvåke flere ruter — bare fjern '#':
+    # {"from": "Ålesund", "to": "*"},   # "*" = hvor som helst
+    # {"from": "*", "to": "Trondheim"}, # alle turer TIL Trondheim
     # {"from": "Oslo", "to": "Bergen"},
 ]
 
