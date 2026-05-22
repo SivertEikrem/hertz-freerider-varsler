@@ -107,22 +107,28 @@ def format_trip(group, trip):
 
     pickup_date = (trip.get("pickupDate") or trip.get("availableFrom")
                    or trip.get("validFrom") or trip.get("startDate"))
-    return_date = (trip.get("returnDate") or trip.get("expirationDate")
-                   or trip.get("validTo") or trip.get("endDate"))
+    expiry_date = (trip.get("expirationDate") or trip.get("offerExpiresAt")
+                   or trip.get("returnDate") or trip.get("validTo")
+                   or trip.get("endDate"))
     vehicle = (trip.get("vehicleModel") or trip.get("vehicle")
                or trip.get("carModel"))
     distance = trip.get("maxDistance") or trip.get("distance")
 
-    lines = [
-        "🚗 *Ny Freerider-tur!*",
-        "",
-        f"📍 Fra: *{origin}*",
-        f"📍 Til: *{dest}*",
-    ]
+    lines = ["🚗 *Ny Freerider-tur til Ålesund!*", ""]
+
+    # Utløpsdato øverst — det mest tidskritiske
+    if expiry_date:
+        lines.append(f"⏰ Tilbud utløper: *{expiry_date}*")
+        lines.append("")
+
+    # Fra og til
+    lines.append(f"📍 Fra: *{origin}*")
+    lines.append(f"📍 Til: *{dest}*")
+
+    # Klokkeslett for henting etter lokasjoner
     if pickup_date:
-        lines.append(f"📅 Hentes: {pickup_date}")
-    if return_date:
-        lines.append(f"📅 Leveres: {return_date}")
+        lines.append(f"🕐 Hentes: {pickup_date}")
+
     if vehicle:
         lines.append(f"🚙 Bil: {vehicle}")
     if distance:
