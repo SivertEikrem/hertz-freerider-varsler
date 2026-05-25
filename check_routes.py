@@ -114,7 +114,7 @@ def format_trip(group, trip):
                or trip.get("carModel"))
     distance = trip.get("maxDistance") or trip.get("distance")
 
-    lines = ["🚗 *Ny Freerider-tur til Ålesund!*", ""]
+    lines = ["🚗 *Ny Freerider-tur!*", ""]
 
     # Utløpsdato øverst — det mest tidskritiske
     if expiry_date:
@@ -136,6 +136,24 @@ def format_trip(group, trip):
     lines.append("")
     lines.append("👉 Book på hertzfreerider.no")
     return "\n".join(lines)
+
+
+def format_trip_summary(group, trip, index):
+    """Kompakt énlinje-oppsummering til heartbeat-listen."""
+    expiry = (trip.get("expirationDate") or trip.get("offerExpiresAt")
+              or trip.get("returnDate") or trip.get("validTo") or trip.get("endDate"))
+    pickup = (trip.get("pickupDate") or trip.get("availableFrom")
+              or trip.get("validFrom") or trip.get("startDate"))
+    vehicle = (trip.get("vehicleModel") or trip.get("vehicle")
+               or trip.get("carModel") or "?")
+
+    parts = []
+    if expiry:
+        parts.append(f"Utløper: {expiry}")
+    if pickup:
+        parts.append(f"Hentes: {pickup}")
+    parts.append(vehicle)
+    return f"  {index}. {' | '.join(parts)}"
 
 
 def send_telegram(message):
@@ -199,7 +217,9 @@ def save_heartbeat(now):
 
 
 def maybe_send_heartbeat(total_trips, route_stats):
-    """Send en 'jeg lever'-melding hvis det er minst N timer siden forrige."""
+    """Send en 'jeg lever'-melding hvis det er minst N timer siden forrige.
+    route_stats: liste av (route_name, [(group, trip), ...])
+    """
     last = load_last_heartbeat()
     now = datetime.now(timezone.utc)
 
@@ -209,35 +229,28 @@ def maybe_send_heartbeat(total_trips, route_stats):
             print(f"Heartbeat sendt for {hours_since:.1f} timer siden — venter.")
             return
 
-    # Hvis noen ruter har treff, vis det øverst slik at det er synlig
-    # i selve pushvarselet på telefonen.
-    available = [(name, count) for name, count in route_stats if count > 0]
-    empty = [(name, count) for name, count in route_stats if count == 0]
+    available = [(name, trips) for name, trips in route_stats if trips]
+    empty = [(name, trips) for name, trips in route_stats if not trips]
 
     lines = []
     if available:
-        # Hovedoverskrift som beskriver det viktigste, og dermed havner
-        # i pushvarselet
-        if len(available) == 1:
-            name, count = available[0]
-            lines.append(f"🎯 *{count} tur(er) tilgjengelig: {name}*")
-        else:
-            lines.append("🎯 *Tilgjengelige turer akkurat nå:*")
-            for name, count in available:
-                lines.append(f"✅ {name}: {count}")
+        total_avail = sum(len(trips) for _, trips in available)
+        lines.append(f"🎯 *{total_avail} tur(er) tilgjengelig akkurat nå:*")
         lines.append("")
-        lines.append("_(Statusoppdatering — varsleren lever)_")
+        for name, trips in available:
+            lines.append(f"✅ *{name}* ({len(trips)} stk)")
+            for i, (group, trip) in enumerate(trips, start=1):
+                lines.append(format_trip_summary(group, trip, i))
         if empty:
             lines.append("")
             for name, _ in empty:
                 lines.append(f"🚫 {name}: ingen tilgjengelig")
+        lines.append("")
+        lines.append("_(Statusoppdatering — varsleren lever)_")
     else:
-        # Ingenting tilgjengelig — klassisk "jeg lever"-melding
         lines.append("💓 *Varsleren lever*")
         lines.append("")
-        lines.append(f"Hertz Freerider har akkurat nå {total_trips} turer totalt.")
-        lines.append("")
-        for name, count in route_stats:
+        for name, _ in route_stats:
             lines.append(f"🚫 {name}: ingen tilgjengelig nå")
 
     if send_telegram("\n".join(lines)):
@@ -259,25 +272,31 @@ def main():
 
     seen = load_seen()
     nye = 0
-    route_stats = []
+    route_stats = []  # liste av (route_name, [(group, trip), ...])
 
     for route in ROUTES:
         matching_groups = [g for g in groups if matches_route(g, route)]
         n_trips = sum(len(g.get("routes", [])) for g in matching_groups)
         route_name = f"{route['from']} → {route['to']}"
         print(f"  {route_name}: {len(matching_groups)} grupper / {n_trips} turer")
-        route_stats.append((route_name, n_trips))
 
-        for group in matching_groups:
-            for trip in group.get("routes", []):
-                tid = trip_id(group, trip)
-                if tid in seen:
-                    continue
-                msg = format_trip(group, trip)
-                if send_telegram(msg):
-                    nye += 1
-                    seen.add(tid)
-                    print(f"    ✓ Varslet om {tid}")
+        # Samle alle (group, trip)-par for heartbeat-listen
+        all_trips = [
+            (group, trip)
+            for group in matching_groups
+            for trip in group.get("routes", [])
+        ]
+        route_stats.append((route_name, all_trips))
+
+        for group, trip in all_trips:
+            tid = trip_id(group, trip)
+            if tid in seen:
+                continue
+            msg = format_trip(group, trip)
+            if send_telegram(msg):
+                nye += 1
+                seen.add(tid)
+                print(f"    ✓ Varslet om {tid}")
 
     save_seen(seen)
     maybe_send_heartbeat(total_trips, route_stats)
