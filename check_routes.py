@@ -20,11 +20,9 @@ import requests
 # KONFIGURASJON — endre her hvis du vil overvåke flere ruter
 # ============================================================
 ROUTES = [
-    {"from": "Trondheim", "to": "Ålesund"},
-    # Skru på når du er klar for å overvåke flere ruter — bare fjern '#':
-    # {"from": "Ålesund", "to": "*"},   # "*" = hvor som helst
-    # {"from": "*", "to": "Trondheim"}, # alle turer TIL Trondheim
-    # {"from": "Oslo", "to": "Bergen"},
+    {"from": "Ålesund", "to": "*"},   # Alle turer fra Ålesund, uansett destinasjon
+    # Skru på igjen når du er tilbake i Trondheim:
+    # {"from": "Trondheim", "to": "Ålesund"},
 ]
 
 HEARTBEAT_INTERVAL_HOURS = 3  # Hvor ofte du får "jeg lever"-melding
