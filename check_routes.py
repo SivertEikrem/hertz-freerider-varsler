@@ -125,118 +125,76 @@ def fetch_hertz():
 HJEMFERD_URL = "https://www.hjemferd.no/index.php?page=order"
 
 def fetch_hjemferd():
-    """Hent og normaliser turer fra Hjemferd.no (HTML-scraping)."""
+    """Hent og normaliser turer fra Hjemferd.no (HTML-scraping).
+
+    Hjemferd bruker Bootstrap-kort med klassene .portfolio-item.
+    Hvert kort inneholder:
+      .order-header  → rutenavn (f.eks. "Ålesund - Kristiansund")
+      .strdate       → Ledig Fra-dato
+      .row.order-text (andre) → Må hentes før-dato
+      .fa-user       → antall seter
+      .fa-dashboard  → drivstoff inkludert/ikke
+      .fa-exclamation → bom/ferge inkludert/ikke
+    """
     from bs4 import BeautifulSoup
 
     r = requests.get(HJEMFERD_URL, headers=HEADERS, timeout=20)
     r.raise_for_status()
     soup = BeautifulSoup(r.text, "html.parser")
 
+    items = soup.select(".portfolio-item")
+    print(f"  Hjemferd: fant {len(items)} listinger", file=sys.stderr)
+
     trips = []
-
-    # Hjemferd sin side er en klassisk Bootstrap/PHP-side.
-    # Listingene er strukturert slik at rute-navnet kommer rett
-    # før en <hr>-tag, og detaljene med "Ledig Fra" / "Må hentes før"
-    # følger etter.
-    #
-    # Vi finner alle <strong>-tagger med "Ledig Fra" og navigerer
-    # derfra til resten av listingen.
-
-    def txt(elem):
-        return elem.get_text(separator=" ", strip=True) if elem else ""
-
-    def find_value_after(label_elem):
-        """Finn tekstverdien som følger etter et <strong>-element."""
-        node = label_elem.next_sibling
-        while node:
-            t = node.get_text(strip=True) if hasattr(node, "get_text") else str(node).strip()
-            if t:
-                return t
-            node = node.next_sibling
-        return None
-
-    # Finn alle <strong>-elementer med teksten "Ledig Fra"
-    ledig_fra_tags = [
-        s for s in soup.find_all("strong")
-        if "ledig fra" in s.get_text(strip=True).lower()
-    ]
-
-    print(f"  Hjemferd: fant {len(ledig_fra_tags)} listinger", file=sys.stderr)
-
-    for lf_tag in ledig_fra_tags:
-        # Gå oppover i DOM for å finne en beholder
-        container = lf_tag.find_parent(["div", "section", "article", "li", "td"])
-        if not container:
-            container = lf_tag.parent
-
+    for item in items:
         # ---- Rutenavn ----
-        # Rutenavnet er enten i en heading inni containeren,
-        # eller i forrige søsken-element til containeren.
-        route_name = None
-        for htag in ["h1", "h2", "h3", "h4", "h5", "h6"]:
-            h = container.find(htag)
-            if h:
-                route_name = h.get_text(strip=True)
-                break
-        if not route_name:
-            # Prøv forrige søsken
-            prev = container.find_previous_sibling()
-            while prev and not route_name:
-                t = txt(prev)
-                if " - " in t and len(t) < 100:
-                    route_name = t
-                    break
-                prev = prev.find_previous_sibling()
-        if not route_name:
-            # Se etter tekst med " - " i containeren
-            for elem in container.find_all(string=True):
-                t = elem.strip()
-                if " - " in t and 5 < len(t) < 100:
-                    route_name = t
-                    break
-
-        if not route_name or " - " not in route_name:
-            print(f"  Hjemferd: hopper over listing uten rutenavn", file=sys.stderr)
+        header = item.select_one(".order-header")
+        if not header:
             continue
-
-        # Del rutenavn på " - " og ta første som fra, siste som til
-        parts = [p.strip() for p in route_name.split(" - ") if p.strip()]
+        route_name = header.get_text(strip=True)
+        parts    = [p.strip() for p in route_name.split(" - ") if p.strip()]
         from_loc = parts[0] if parts else route_name
         to_loc   = parts[-1] if len(parts) > 1 else ""
 
-        # ---- Datoer ----
-        available_from = find_value_after(lf_tag)
+        # ---- Ledig fra ----
+        strdate = item.select_one(".strdate")
+        available_from = (
+            " ".join(strdate.get_text(strip=True).split())
+            if strdate else None
+        )
 
-        mhf_tag = None
-        for s in container.find_all("strong"):
-            if "hentes før" in s.get_text(strip=True).lower():
-                mhf_tag = s
-                break
-        deadline = find_value_after(mhf_tag) if mhf_tag else None
+        # ---- Må hentes før ----
+        order_rows = item.select(".row.order-text")
+        deadline = None
+        if len(order_rows) >= 2:
+            d = order_rows[1].select_one(".col-xs-6.text-right")
+            if d:
+                deadline = d.get_text(strip=True)
 
-        # ---- Drivstoff og kostnader ----
-        full_text = container.get_text(separator=" ", strip=True).lower()
-        fuel_included  = None
-        extra_included = None
+        # ---- Drivstoff ----
+        fuel_elem = item.select_one(".fa-dashboard")
+        fuel_text = " ".join(fuel_elem.get_text(strip=True).lower().split()) if fuel_elem else ""
+        if "ikke" in fuel_text:
+            fuel_included = False
+        elif "inkludert" in fuel_text:
+            fuel_included = True
+        else:
+            fuel_included = None
 
-        if "inkludert" in full_text:
-            # Se etter «Inkludert Drivstoff» vs «Ikke inkludert Drivstoff»
-            if "ikke inkludert drivstoff" in full_text or "ikke inkludert.*drivstoff" in full_text:
-                fuel_included = False
-            elif "inkludert drivstoff" in full_text:
-                fuel_included = True
-
-            if "ikke inkludert andre" in full_text:
-                extra_included = False
-            elif "inkludert andre" in full_text:
-                extra_included = True
+        # ---- Bom/ferge ----
+        exc_elem = item.select_one(".fa-exclamation")
+        exc_text = " ".join(exc_elem.get_text(strip=True).lower().split()) if exc_elem else ""
+        if "ikke" in exc_text:
+            extra_included = False
+        elif "inkludert" in exc_text:
+            extra_included = True
+        else:
+            extra_included = None
 
         # ---- Seter ----
-        seats = None
-        import re
-        seat_match = re.search(r"(\d+)\s*antall seter", full_text)
-        if seat_match:
-            seats = int(seat_match.group(1))
+        seats_elem = item.select_one(".fa-user")
+        seats_txt  = seats_elem.get_text(strip=True) if seats_elem else ""
+        seats = int(seats_txt) if seats_txt.isdigit() else None
 
         # ---- ID ----
         id_parts = [from_loc, to_loc, str(available_from or ""), str(deadline or "")]
@@ -286,11 +244,14 @@ def trip_matches_route(trip, route):
 # ============================================================
 # TELEGRAM
 # ============================================================
+def safe_md(text):
+    """Escaper tegn som kan ødelegge Telegram Markdown."""
+    return str(text).replace("*", "alle").replace("_", "\\_").replace("`", "\\`")
+
 SOURCE_EMOJI = {"Hertz": "🔵", "Hjemferd": "🟢"}
 
 def format_trip(trip):
     """Fullstendig Telegram-melding for én ny tur."""
-    emoji  = SOURCE_EMOJI.get(trip["source"], "🚗")
     source = trip["source"]
     lines  = [f"🚗 *Ny returbil — {source}!*", ""]
 
@@ -307,8 +268,6 @@ def format_trip(trip):
         lines.append(f"🚙 Bil: {trip['vehicle']}")
     if trip["seats"]:
         lines.append(f"💺 Seter: {trip['seats']}")
-
-    # Drivstoff og kostnader (kun vis hvis vi vet det)
     if trip["fuel_included"] is not None:
         lines.append(f"⛽ Drivstoff: {'inkludert' if trip['fuel_included'] else 'ikke inkludert'}")
     if trip["extra_costs_included"] is not None:
@@ -417,20 +376,20 @@ def maybe_send_heartbeat(route_stats):
         lines.append(f"🎯 *{total} tur(er) tilgjengelig akkurat nå:*")
         lines.append("")
         for name, trips in available:
-            lines.append(f"✅ *{name}* ({len(trips)} stk)")
+            lines.append(f"✅ *{safe_md(name)}* ({len(trips)} stk)")
             for i, trip in enumerate(trips, start=1):
                 lines.append(format_trip_summary(trip, i))
         if empty:
             lines.append("")
             for name, _ in empty:
-                lines.append(f"🚫 {name}: ingen tilgjengelig")
+                lines.append(f"🚫 {safe_md(name)}: ingen tilgjengelig")
         lines.append("")
         lines.append("_(Statusoppdatering — varsleren lever)_")
     else:
         lines.append("💓 *Varsleren lever*")
         lines.append("")
         for name, _ in route_stats:
-            lines.append(f"🚫 {name}: ingen tilgjengelig nå")
+            lines.append(f"🚫 {safe_md(name)}: ingen tilgjengelig nå")
 
     if send_telegram("\n".join(lines)):
         save_heartbeat(now)
