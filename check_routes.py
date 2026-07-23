@@ -20,9 +20,8 @@ import requests
 # KONFIGURASJON
 # ============================================================
 ROUTES = [
-    {"from": "Ålesund", "to": "*"},   # Alle turer fra Ålesund
-    # Skru på igjen når du er tilbake i Trondheim:
-    # {"from": "Trondheim", "to": "Ålesund"},
+    {"from": "Ålesund", "to": "Trondheim", "label": "🏠 Til Trondheim"},
+    {"from": "Ålesund", "to": "*",         "label": "🗺️ Andre fra Ålesund"},
 ]
 
 # Skru av/på kilder her (True = aktiv, False = ignorer)
@@ -371,22 +370,24 @@ def maybe_send_heartbeat(route_stats):
     empty     = [(name, trips) for name, trips in route_stats if not trips]
 
     lines = []
-    if available:
-        total = sum(len(t) for _, t in available)
+    any_available = any(trips for _, trips in route_stats)
+
+    if any_available:
+        total = sum(len(t) for _, t in route_stats)
         lines.append(f"🎯 *{total} tur(er) tilgjengelig akkurat nå*")
         lines.append("")
-        for name, trips in available:
-            lines.append(f"✅ {safe_md(name)}: {len(trips)} stk")
-        if empty:
-            for name, _ in empty:
-                lines.append(f"🚫 {safe_md(name)}: ingen")
+        for name, trips in route_stats:
+            if trips:
+                lines.append(f"✅ {name}: {len(trips)} stk")
+            else:
+                lines.append(f"🚫 {name}: ingen")
         lines.append("")
         lines.append("_(Statusoppdatering — varsleren lever)_")
     else:
         lines.append("💓 *Varsleren lever*")
         lines.append("")
         for name, _ in route_stats:
-            lines.append(f"🚫 {safe_md(name)}: ingen tilgjengelig nå")
+            lines.append(f"🚫 {name}: ingen tilgjengelig nå")
 
     if send_telegram("\n".join(lines)):
         save_heartbeat(now)
@@ -429,8 +430,8 @@ def main():
     route_stats = []
 
     for route in ROUTES:
-        route_name    = f"{route['from']} → {route['to']}"
-        matching      = [t for t in all_trips if trip_matches_route(t, route)]
+        route_name = route.get("label") or f"{route['from']} → {safe_md(route['to'])}"
+        matching   = [t for t in all_trips if trip_matches_route(t, route)]
         print(f"  {route_name}: {len(matching)} treff "
               f"({sum(1 for t in matching if t['source']=='Hertz')} Hertz, "
               f"{sum(1 for t in matching if t['source']=='Hjemferd')} Hjemferd)")
