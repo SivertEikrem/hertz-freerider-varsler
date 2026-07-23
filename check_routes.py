@@ -373,16 +373,13 @@ def maybe_send_heartbeat(route_stats):
     lines = []
     if available:
         total = sum(len(t) for _, t in available)
-        lines.append(f"🎯 *{total} tur(er) tilgjengelig akkurat nå:*")
+        lines.append(f"🎯 *{total} tur(er) tilgjengelig akkurat nå*")
         lines.append("")
         for name, trips in available:
-            lines.append(f"✅ *{safe_md(name)}* ({len(trips)} stk)")
-            for i, trip in enumerate(trips, start=1):
-                lines.append(format_trip_summary(trip, i))
+            lines.append(f"✅ {safe_md(name)}: {len(trips)} stk")
         if empty:
-            lines.append("")
             for name, _ in empty:
-                lines.append(f"🚫 {safe_md(name)}: ingen tilgjengelig")
+                lines.append(f"🚫 {safe_md(name)}: ingen")
         lines.append("")
         lines.append("_(Statusoppdatering — varsleren lever)_")
     else:
