@@ -1,5 +1,5 @@
 """
-Returbil-varsler: Hertz Freerider + Hjemferd.no
+Returbil-varsler: Hertz Freerider + Hjemferd.no + Leiebilretur.no
 
 Sjekker flere tjenester for tilgjengelige returbil-turer,
 og sender Telegram-varsel ved nye treff. Sender også en
@@ -26,8 +26,9 @@ ROUTES = [
 
 # Skru av/på kilder her (True = aktiv, False = ignorer)
 SOURCES = {
-    "hertz":    True,
-    "hjemferd": True,
+    "hertz":         True,
+    "hjemferd":      True,
+    "leiebilretur":  True,
 }
 
 HEARTBEAT_INTERVAL_HOURS = 3
@@ -217,8 +218,53 @@ def fetch_hjemferd():
 
 
 # ============================================================
-# RUTE-MATCHING
+# KILDE 3: LEIEBILRETUR.NO
 # ============================================================
+LEIEBILRETUR_URL = "https://www.leiebilretur.no/headless/jobs/"
+
+def fetch_leiebilretur():
+    """Hent og normaliser turer fra Leiebilretur.no (JSON API)."""
+    r = requests.get(LEIEBILRETUR_URL, headers=HEADERS, timeout=20)
+    r.raise_for_status()
+    jobs = r.json()
+    if not isinstance(jobs, list):
+        raise RuntimeError(f"Leiebilretur: forventet liste, fikk {type(jobs).__name__}")
+
+    trips = []
+    for job in jobs:
+        from_loc = (job.get("pickupFrom") or {}).get("name") or ""
+        to_loc   = (job.get("deliverTo")  or {}).get("name") or ""
+
+        # Dato: "2026-07-20T16:00:00" → "20.07.2026 16:00"
+        raw_date = job.get("availableForPickup") or ""
+        try:
+            dt = datetime.fromisoformat(raw_date)
+            available_from = dt.strftime("%d.%m.%Y %H:%M")
+        except Exception:
+            available_from = raw_date[:16].replace("T", " ") if raw_date else None
+
+        admin_fee   = job.get("adminFee", 0) or 0
+        no_show_fee = job.get("feeForNoShow", 0) or 0
+        extra_info  = job.get("extraInfo") or ""
+
+        trips.append({
+            "source":   "Leiebilretur",
+            "id":       f"leiebilretur:{job['id']}",
+            "from_loc": from_loc,
+            "to_loc":   to_loc,
+            "available_from": available_from,
+            "deadline": None,
+            "vehicle":  None,
+            "fuel_included":        job.get("freeFuel"),
+            "extra_costs_included": job.get("freeAdditionalCosts"),
+            "seats":    job.get("seats"),
+            "booking_url": "https://www.leiebilretur.no",
+            # Leiebilretur-spesifikke felt
+            "admin_fee":   admin_fee,
+            "no_show_fee": no_show_fee,
+            "extra_info":  extra_info,
+        })
+    return trips
 def location_matches(query, text):
     """Sjekk om en lokasjon-query matcher en tekst."""
     q = query.lower().strip()
@@ -247,7 +293,7 @@ def safe_md(text):
     """Escaper tegn som kan ødelegge Telegram Markdown."""
     return str(text).replace("*", "alle").replace("_", "\\_").replace("`", "\\`")
 
-SOURCE_EMOJI = {"Hertz": "🔵", "Hjemferd": "🟢"}
+SOURCE_EMOJI = {"Hertz": "🔵", "Hjemferd": "🟢", "Leiebilretur": "🟠"}
 
 def format_trip(trip):
     """Fullstendig Telegram-melding for én ny tur."""
@@ -271,6 +317,17 @@ def format_trip(trip):
         lines.append(f"⛽ Drivstoff: {'inkludert' if trip['fuel_included'] else 'ikke inkludert'}")
     if trip["extra_costs_included"] is not None:
         lines.append(f"🛣️ Bom/ferge: {'inkludert' if trip['extra_costs_included'] else 'ikke inkludert'}")
+
+    # Leiebilretur-spesifikke felt
+    admin_fee = trip.get("admin_fee", 0) or 0
+    if admin_fee > 0:
+        lines.append(f"💰 Formidlingsgebyr: {admin_fee} kr")
+    no_show = trip.get("no_show_fee", 0) or 0
+    if no_show > 0:
+        lines.append(f"⚠️ No-show gebyr: {no_show} kr")
+    extra = trip.get("extra_info", "") or ""
+    if extra:
+        lines.append(f"ℹ️ Info: {extra}")
 
     lines.append("")
     lines.append(f"👉 Book på {trip['booking_url']}")
@@ -423,6 +480,15 @@ def main():
         except Exception as e:
             print(f"Hjemferd FEIL: {e}", file=sys.stderr)
             send_telegram(f"⚠️ Hjemferd-henting feilet:\n`{e}`")
+
+    if SOURCES.get("leiebilretur"):
+        try:
+            lr_trips = fetch_leiebilretur()
+            print(f"Leiebilretur: hentet {len(lr_trips)} turer")
+            all_trips.extend(lr_trips)
+        except Exception as e:
+            print(f"Leiebilretur FEIL: {e}", file=sys.stderr)
+            send_telegram(f"⚠️ Leiebilretur-henting feilet:\n`{e}`")
 
     # --- Match og varsle ---
     seen = load_seen()
