@@ -13,7 +13,7 @@ import sys
 import json
 import hashlib
 from pathlib import Path
-from datetime import datetime, timezone
+from datetime import datetime
 import requests
 
 # ============================================================
@@ -31,10 +31,7 @@ SOURCES = {
     "leiebilretur":  True,
 }
 
-HEARTBEAT_INTERVAL_HOURS = 3
-
 STATE_FILE    = Path("seen_trips.json")
-HEARTBEAT_FILE = Path("heartbeat.json")
 
 HEADERS = {
     "User-Agent": (
@@ -295,7 +292,7 @@ def safe_md(text):
 
 SOURCE_EMOJI = {"Hertz": "🔵", "Hjemferd": "🟢", "Leiebilretur": "🟠"}
 
-def format_trip(trip):
+def format_trip(trip, total_available):
     """Fullstendig Telegram-melding for én ny tur."""
     source = trip["source"]
     lines  = [f"🚗 *Ny returbil — {source}!*", ""]
@@ -330,23 +327,10 @@ def format_trip(trip):
         lines.append(f"ℹ️ Info: {extra}")
 
     lines.append("")
+    lines.append(f"📊 Tilgjengelig totalt akkurat nå: *{total_available}* tur(er) på dine ruter")
+    lines.append("")
     lines.append(f"👉 Book på {trip['booking_url']}")
     return "\n".join(lines)
-
-
-def format_trip_summary(trip, index):
-    """Kompakt énlinje-oppsummering til heartbeat-meldingen."""
-    emoji  = SOURCE_EMOJI.get(trip["source"], "🚗")
-    parts  = [f"{emoji} [{trip['source']}]"]
-    if trip["deadline"]:
-        parts.append(f"Utløper: {trip['deadline']}")
-    if trip["available_from"]:
-        parts.append(f"Hentes: {trip['available_from']}")
-    if trip["vehicle"]:
-        parts.append(trip["vehicle"])
-    if trip["fuel_included"] is not None:
-        parts.append("⛽inkl." if trip["fuel_included"] else "⛽ikke inkl.")
-    return f"  {index}. {' | '.join(parts)}"
 
 
 def send_telegram(message):
@@ -388,67 +372,6 @@ def save_seen(seen):
         json.dumps(sorted(seen), indent=2, ensure_ascii=False),
         encoding="utf-8",
     )
-
-
-def load_last_heartbeat():
-    if HEARTBEAT_FILE.exists():
-        try:
-            data = json.loads(HEARTBEAT_FILE.read_text(encoding="utf-8"))
-            return datetime.fromisoformat(data["last"])
-        except Exception:
-            return None
-    return None
-
-
-def save_heartbeat(now):
-    HEARTBEAT_FILE.write_text(
-        json.dumps({"last": now.isoformat()}, indent=2),
-        encoding="utf-8",
-    )
-
-
-# ============================================================
-# HEARTBEAT
-# ============================================================
-def maybe_send_heartbeat(route_stats):
-    """Send 'jeg lever'-melding hvis det er ≥ N timer siden forrige.
-    route_stats: liste av (route_name, [trip, ...])
-    """
-    last = load_last_heartbeat()
-    now  = datetime.now(timezone.utc)
-
-    if last is not None:
-        hours_since = (now - last).total_seconds() / 3600
-        if hours_since < HEARTBEAT_INTERVAL_HOURS:
-            print(f"Heartbeat sendt for {hours_since:.1f}t siden — venter.")
-            return
-
-    available = [(name, trips) for name, trips in route_stats if trips]
-    empty     = [(name, trips) for name, trips in route_stats if not trips]
-
-    lines = []
-    any_available = any(trips for _, trips in route_stats)
-
-    if any_available:
-        total = sum(len(t) for _, t in route_stats)
-        lines.append(f"🎯 *{total} tur(er) tilgjengelig akkurat nå*")
-        lines.append("")
-        for name, trips in route_stats:
-            if trips:
-                lines.append(f"✅ {name}: {len(trips)} stk")
-            else:
-                lines.append(f"🚫 {name}: ingen")
-        lines.append("")
-        lines.append("_(Statusoppdatering — varsleren lever)_")
-    else:
-        lines.append("💓 *Varsleren lever*")
-        lines.append("")
-        for name, _ in route_stats:
-            lines.append(f"🚫 {name}: ingen tilgjengelig nå")
-
-    if send_telegram("\n".join(lines)):
-        save_heartbeat(now)
-        print("Heartbeat sendt.")
 
 
 # ============================================================
@@ -495,6 +418,9 @@ def main():
     nye  = 0
     route_stats = []
 
+    # Unike turer (uansett hvilken rute de matcher) - brukes til "totalt tilgjengelig"
+    unique_matching = {}
+
     for route in ROUTES:
         route_name = route.get("label") or f"{route['from']} → {safe_md(route['to'])}"
         matching   = [t for t in all_trips if trip_matches_route(t, route)]
@@ -502,19 +428,23 @@ def main():
               f"({sum(1 for t in matching if t['source']=='Hertz')} Hertz, "
               f"{sum(1 for t in matching if t['source']=='Hjemferd')} Hjemferd)")
         route_stats.append((route_name, matching))
+        for t in matching:
+            unique_matching[t["id"]] = t
 
+    total_available = len(unique_matching)
+
+    for route_name, matching in route_stats:
         for trip in matching:
             if trip["id"] in seen:
                 continue
-            msg = format_trip(trip)
+            msg = format_trip(trip, total_available)
             if send_telegram(msg):
                 nye += 1
                 seen.add(trip["id"])
                 print(f"    ✓ Varslet om {trip['id']}")
 
     save_seen(seen)
-    maybe_send_heartbeat(route_stats)
-    print(f"Ferdig. Sendte {nye} nye varsel.")
+    print(f"Ferdig. Sendte {nye} nye varsel. Totalt tilgjengelig nå: {total_available}.")
 
 
 if __name__ == "__main__":
