@@ -295,7 +295,7 @@ SOURCE_EMOJI = {"Hertz": "🔵", "Hjemferd": "🟢", "Leiebilretur": "🟠"}
 def format_trip(trip, total_available):
     """Fullstendig Telegram-melding for én ny tur."""
     source = trip["source"]
-    lines  = [f"🚗 *Ny returbil — {source}!*", ""]
+    lines  = [f"🚗 *{source.upper()}*", ""]
 
     if trip["deadline"]:
         lines.append(f"⏰ Tilbud utløper: *{trip['deadline']}*")
