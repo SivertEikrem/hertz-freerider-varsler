@@ -127,8 +127,9 @@ Den norske Freerider-siden har en relativt ny nettside, og API-URL-en kan endre 
 ## Hvordan det fungerer
 
 - GitHub Actions kjører `check_routes.py` på en tidsplan.
-- Skriptet henter alle Freerider-turer, filtrerer på rutene dine, og sammenligner med `seen_trips.json` (en fil i repoet som husker hvilke turer du allerede er varslet om).
-- Nye turer → Telegram-melding.
+- Skriptet henter turer fra alle aktive kilder, filtrerer på rutene dine, og sammenligner med `seen_trips.json` (en fil i repoet som husker hvilke turer du allerede er varslet om).
+- **Kun nye turer** gir Telegram-melding — det sendes ingen periodiske status-/heartbeat-meldinger.
+- Hver varsel-melding inkluderer også hvor mange turer som er tilgjengelig totalt på rutene dine akkurat nå (`📊 Tilgjengelig totalt akkurat nå: X`), slik at du får den oversikten uten å måtte sjekke selv.
 - `seen_trips.json` commits tilbake til repoet automatisk.
 
 Alt er gratis: GitHub-konto, GitHub Actions, og Telegram Bot API.
