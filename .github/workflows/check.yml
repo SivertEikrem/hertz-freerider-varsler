@@ -40,10 +40,10 @@ jobs:
 
       - name: Lagre tilstand
         run: |
-          if [[ -n "$(git status --porcelain seen_trips.json heartbeat.json)" ]]; then
+          if [[ -n "$(git status --porcelain seen_trips.json)" ]]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add seen_trips.json heartbeat.json
+            git add seen_trips.json
             git commit -m "Oppdater tilstand [skip ci]"
             git push
           else
