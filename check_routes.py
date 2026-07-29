@@ -2,8 +2,7 @@
 Returbil-varsler: Hertz Freerider + Hjemferd.no + Leiebilretur.no
 
 Sjekker flere tjenester for tilgjengelige returbil-turer,
-og sender Telegram-varsel ved nye treff. Sender også en
-"jeg lever"-melding med statusoversikt hver 3. time.
+og sender Telegram-varsel når nye turer dukker opp på rutene dine.
 
 Kjøres automatisk via GitHub Actions.
 """
@@ -81,10 +80,16 @@ def fetch_hertz():
         raise RuntimeError(f"Hertz: forventet liste, fikk {type(groups).__name__}")
 
     trips = []
+    debug_printed = False
     for group in groups:
         from_loc = group.get("pickupLocationName") or ""
         to_loc   = group.get("returnLocationName") or ""
         for raw in group.get("routes", []):
+            if not debug_printed:
+                print(f"  [DEBUG] Hertz raw felter: {sorted(raw.keys())}", file=sys.stderr)
+                print(f"  [DEBUG] Hertz raw eksempel: {json.dumps(raw, ensure_ascii=False)[:1000]}", file=sys.stderr)
+                debug_printed = True
+
             tid = None
             for key in ("transportOfferId", "id"):
                 if raw.get(key):
@@ -160,13 +165,18 @@ def fetch_hjemferd():
             if strdate else None
         )
 
-        # ---- Må hentes før ----
+        # ---- Må hentes før (leter etter riktig etikett, ikke posisjon) ----
         order_rows = item.select(".row.order-text")
         deadline = None
-        if len(order_rows) >= 2:
-            d = order_rows[1].select_one(".col-xs-6.text-right")
-            if d:
-                deadline = d.get_text(strip=True)
+        for row in order_rows:
+            label_elem = row.select_one(".col-xs-6:not(.text-right)")
+            value_elem = row.select_one(".col-xs-6.text-right")
+            if not label_elem or not value_elem:
+                continue
+            label_text = label_elem.get_text(strip=True).lower()
+            if "hentes" in label_text or "frist" in label_text or "utløp" in label_text:
+                deadline = value_elem.get_text(strip=True)
+                break
 
         # ---- Drivstoff ----
         fuel_elem = item.select_one(".fa-dashboard")
