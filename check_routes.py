@@ -15,6 +15,18 @@ from pathlib import Path
 from datetime import datetime
 import requests
 
+
+def format_iso_date(raw_date):
+    """Konverter en ISO 8601-datostreng til 'dd.mm.ÅÅÅÅ TT:MM'. Returnerer None hvis tom/mangler."""
+    if not raw_date:
+        return None
+    try:
+        dt = datetime.fromisoformat(raw_date)
+        return dt.strftime("%d.%m.%Y %H:%M")
+    except Exception:
+        return str(raw_date)[:16].replace("T", " ")
+
+
 # ============================================================
 # KONFIGURASJON
 # ============================================================
@@ -80,16 +92,10 @@ def fetch_hertz():
         raise RuntimeError(f"Hertz: forventet liste, fikk {type(groups).__name__}")
 
     trips = []
-    debug_printed = False
     for group in groups:
         from_loc = group.get("pickupLocationName") or ""
         to_loc   = group.get("returnLocationName") or ""
         for raw in group.get("routes", []):
-            if not debug_printed:
-                print(f"  [DEBUG] Hertz raw felter: {sorted(raw.keys())}", file=sys.stderr)
-                print(f"  [DEBUG] Hertz raw eksempel: {json.dumps(raw, ensure_ascii=False)[:1000]}", file=sys.stderr)
-                debug_printed = True
-
             tid = None
             for key in ("transportOfferId", "id"):
                 if raw.get(key):
@@ -97,8 +103,8 @@ def fetch_hertz():
                     break
             if not tid:
                 parts = [from_loc, to_loc,
-                         str(raw.get("availableFrom") or raw.get("pickupDate") or ""),
-                         str(raw.get("vehicleModel") or "")]
+                         str(raw.get("availableAt") or raw.get("availableFrom") or ""),
+                         str(raw.get("carModel") or "")]
                 tid = "hertz:" + hashlib.sha1("|".join(parts).encode()).hexdigest()[:16]
 
             trips.append({
@@ -106,11 +112,12 @@ def fetch_hertz():
                 "id":     tid,
                 "from_loc": from_loc,
                 "to_loc":   to_loc,
-                "available_from": (raw.get("availableFrom") or raw.get("pickupDate")
-                                   or raw.get("validFrom") or raw.get("startDate")),
-                "deadline": (raw.get("expirationDate") or raw.get("offerExpiresAt")
-                             or raw.get("returnDate") or raw.get("validTo")
-                             or raw.get("endDate")),
+                "available_from": format_iso_date(
+                    raw.get("availableAt") or raw.get("availableFrom")
+                    or raw.get("pickupDate") or raw.get("validFrom") or raw.get("startDate")),
+                "deadline": format_iso_date(
+                    raw.get("expireTime") or raw.get("expirationDate") or raw.get("offerExpiresAt")
+                    or raw.get("returnDate") or raw.get("validTo") or raw.get("endDate")),
                 "vehicle":  (raw.get("vehicleModel") or raw.get("vehicle")
                              or raw.get("carModel")),
                 "fuel_included":        None,
@@ -243,12 +250,7 @@ def fetch_leiebilretur():
         to_loc   = (job.get("deliverTo")  or {}).get("name") or ""
 
         # Dato: "2026-07-20T16:00:00" → "20.07.2026 16:00"
-        raw_date = job.get("availableForPickup") or ""
-        try:
-            dt = datetime.fromisoformat(raw_date)
-            available_from = dt.strftime("%d.%m.%Y %H:%M")
-        except Exception:
-            available_from = raw_date[:16].replace("T", " ") if raw_date else None
+        available_from = format_iso_date(job.get("availableForPickup"))
 
         admin_fee   = job.get("adminFee", 0) or 0
         no_show_fee = job.get("feeForNoShow", 0) or 0
