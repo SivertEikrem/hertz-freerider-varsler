@@ -425,6 +425,7 @@ def main():
             print(f"Leiebilretur FEIL: {e}", file=sys.stderr)
             send_telegram(f"⚠️ Leiebilretur-henting feilet:\n`{e}`")
 
+    print("[DEBUG] Unike steder per kilde:", file=sys.stderr) for src in ("Hertz", "Hjemferd", "Leiebilretur"): steder = sorted({t["from_loc"] for t in all_trips if t["source"] == src and t["from_loc"]} | {t["to_loc"] for t in all_trips if t["source"] == src and t["to_loc"]}) print(f" [DEBUG] {src} ({len(steder)} steder): {steder}", file=sys.stderr)
     # --- Match og varsle ---
     seen = load_seen()
     nye  = 0
