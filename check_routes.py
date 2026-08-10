@@ -274,20 +274,21 @@ def fetch_leiebilretur():
             "extra_info":  extra_info,
         })
     return trips
+# Regionale aliaser: et sted kan omtales med et annet navn enn selve
+# bynavnet (f.eks. er Trondheim lufthavn ofte bare kalt "Værnes").
+REGION_ALIASES = {
+    "ålesund":   ("ålesund", "aalesund", "vigra"),
+    "trondheim": ("trondheim", "værnes", "vaernes"),
+}
+
 def location_matches(query, text):
-    """Sjekk om en lokasjon-query matcher en tekst."""
+    """Sjekk om en lokasjon-query matcher en tekst (inkl. regionale aliaser)."""
     q = query.lower().strip()
     if q in ("", "*"):
         return True
     t = text.lower()
-    if q in t:
-        return True
-    # Ålesund/Aalesund-variant
-    if "ålesund" in q and "aalesund" in t:
-        return True
-    if "aalesund" in q and "ålesund" in t:
-        return True
-    return False
+    aliases = REGION_ALIASES.get(q, (q,))
+    return any(alias in t for alias in aliases)
 
 
 def trip_matches_route(trip, route):
@@ -368,6 +369,26 @@ def send_telegram(message):
 
 
 # ============================================================
+# DATA FOR UI (GitHub Pages)
+# ============================================================
+DATA_FILE = Path("docs/data.json")
+
+def write_data_json(all_trips):
+    """Skriv alle innhentede turer (uansett rute-match) til docs/data.json,
+    slik at nettsiden i docs/index.html kan vise og filtrere dem fritt."""
+    DATA_FILE.parent.mkdir(parents=True, exist_ok=True)
+    payload = {
+        "generated_at": datetime.now().astimezone().isoformat(timespec="seconds"),
+        "count": len(all_trips),
+        "trips": all_trips,
+    }
+    DATA_FILE.write_text(
+        json.dumps(payload, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+
+
+# ============================================================
 # TILSTAND
 # ============================================================
 def load_seen():
@@ -425,9 +446,8 @@ def main():
             print(f"Leiebilretur FEIL: {e}", file=sys.stderr)
             send_telegram(f"⚠️ Leiebilretur-henting feilet:\n`{e}`")
 
-    # --- MIDLERTIDIG DEBUG: list alle unike steder per kilde ---
-    print("[DEBUG] Unike steder per kilde:", file=sys.stderr); [print(f"  [DEBUG] {src} ({len(sorted({t['from_loc'] for t in all_trips if t['source']==src and t['from_loc']} | {t['to_loc'] for t in all_trips if t['source']==src and t['to_loc']}))} steder): {sorted({t['from_loc'] for t in all_trips if t['source']==src and t['from_loc']} | {t['to_loc'] for t in all_trips if t['source']==src and t['to_loc']})}", file=sys.stderr) for src in ("Hertz","Hjemferd","Leiebilretur")]
-    # --- SLUTT DEBUG ---
+    # --- Skriv data til UI-en (alle turer, uansett rute) ---
+    write_data_json(all_trips)
 
     # --- Match og varsle ---
     seen = load_seen()
