@@ -23,6 +23,14 @@
 
   <div id="status" class="status"></div>
 
+  <!-- Lås opp -->
+  <section class="panel" id="unlockPanel" style="display:none;">
+    <h2>Skriv inn koden din</h2>
+    <input type="password" id="unlockCodeInput" placeholder="Kode" inputmode="numeric" autocomplete="off" />
+    <button class="primary" id="unlockBtn" type="button">Lås opp</button>
+    <button class="ghost" id="unlockForgetBtn" type="button" style="margin-left:8px;">Glemt koden? Start på nytt</button>
+  </section>
+
   <!-- Innstillinger -->
   <section class="panel" id="settingsPanel" style="display:none;">
     <h2>GitHub-tilkobling</h2>
@@ -37,8 +45,10 @@
       </div>
     </div>
     <label for="patInput">Personal Access Token</label>
-    <input type="password" id="patInput" placeholder="github_pat_..." />
-    <p class="hint">Lagres kun i denne nettleseren (localStorage) - sendes aldri noe annet sted enn direkte til GitHub sitt API.</p>
+    <input type="password" id="patInput" placeholder="github_pat_..." autocomplete="off" />
+    <label for="codeInput">Velg en kode</label>
+    <input type="password" id="codeInput" placeholder="f.eks. 4 sifre" inputmode="numeric" autocomplete="off" />
+    <p class="hint">Tokenen krypteres med koden din og lagres kun i denne nettleseren. Neste gang trenger du bare koden - ikke hele tokenen.</p>
     <button class="primary" id="saveSettingsBtn" type="button">Lagre og koble til</button>
     <button class="ghost" id="forgetSettingsBtn" type="button" style="margin-left:8px;">Glem lagrede data</button>
   </section>
