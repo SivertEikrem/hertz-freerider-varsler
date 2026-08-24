@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Freerider-ruter</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>Free<span class="free">rider</span>-ruter</h1>
+    <button class="icon-btn" id="settingsToggle" type="button">Innstillinger</button>
+  </header>
+  <p class="subtitle">Velg hvilke ruter botten skal varsle deg om.</p>
+
+  <div id="status" class="status"></div>
+
+  <!-- Innstillinger -->
+  <section class="panel" id="settingsPanel" style="display:none;">
+    <h2>GitHub-tilkobling</h2>
+    <div class="field-row">
+      <div>
+        <label for="ownerInput">Brukernavn</label>
+        <input type="text" id="ownerInput" placeholder="SivertEikrem" />
+      </div>
+      <div>
+        <label for="repoInput">Repo-navn</label>
+        <input type="text" id="repoInput" placeholder="hertz-freerider" />
+      </div>
+    </div>
+    <label for="patInput">Personal Access Token</label>
+    <input type="password" id="patInput" placeholder="github_pat_..." />
+    <p class="hint">Lagres kun i denne nettleseren (localStorage) - sendes aldri noe annet sted enn direkte til GitHub sitt API.</p>
+    <button class="primary" id="saveSettingsBtn" type="button">Lagre og koble til</button>
+    <button class="ghost" id="forgetSettingsBtn" type="button" style="margin-left:8px;">Glem lagrede data</button>
+  </section>
+
+  <!-- Ruteliste -->
+  <section class="panel" id="routesPanel" style="display:none;">
+    <h2>Overvåkede ruter</h2>
+    <div class="route-list" id="routeList"></div>
+  </section>
+
+  <!-- Legg til rute -->
+  <section class="panel" id="addPanel" style="display:none;">
+    <h2>Legg til ny rute</h2>
+
+    <div class="add-grid">
+      <div>
+        <label>Fra</label>
+        <div class="mode-toggle" id="fromModeToggle">
+          <button type="button" data-mode="station" class="active">Stasjon</button>
+          <button type="button" data-mode="city">By</button>
+        </div>
+        <select id="fromSelect"></select>
+      </div>
+      <div class="arrow-col">&#8594;</div>
+      <div>
+        <label>Til</label>
+        <div class="mode-toggle" id="toModeToggle">
+          <button type="button" data-mode="station" class="active">Stasjon</button>
+          <button type="button" data-mode="city">By</button>
+        </div>
+        <select id="toSelect"></select>
+      </div>
+    </div>
+
+    <button class="primary" id="addRouteBtn" type="button" style="margin-top:6px;">Legg til i listen</button>
+  </section>
+
+  <button class="primary" id="saveAllBtn" type="button" style="display:none; width:100%; padding:14px;">Lagre endringer til GitHub</button>
+
+  <footer class="foot">Endringer trer i kraft neste gang botten sjekker (hvert 15. minutt).</footer>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
