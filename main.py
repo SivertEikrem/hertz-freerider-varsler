@@ -79,17 +79,18 @@ def format_dato(iso_str):
 
 
 def format_route_message(watch, matches):
-    blocks = []
+    label = describe_watch(watch)
+    lines = [f"\U0001F697 Fant {len(matches)} ny(e) Freerider-tur(er) for {label}:\n"]
     for route in matches:
         pickup_name = route["pickupLocation"]["name"]
         return_name = route["returnLocation"]["name"]
-        blocks.append(
-            f"\U0001F697 {pickup_name} \u2192 {return_name}\n"
-            f"Bil: {route.get('carModel', 'Ukjent bilmodell')}\n"
-            f"Tilbudet utl\u00f8per: {format_dato(route.get('expireTime'))}\n"
-            f"Tilgjengelig fra: {format_dato(route.get('availableAt'))}"
+        lines.append(
+            f"\u2022 {pickup_name} \u2192 {return_name}\n"
+            f"  Bil: {route.get('carModel', 'Ukjent bilmodell')}\n"
+            f"  Tilbudet utl\u00f8per: {format_dato(route.get('expireTime'))}\n"
+            f"  Tilgjengelig fra: {format_dato(route.get('availableAt'))}"
         )
-    return "\n\n\u2014\u2014\u2014\n\n".join(blocks)
+    return "\n\n".join(lines)
 
 
 def notify_matches(config, seen, all_routes):
