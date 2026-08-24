@@ -11,10 +11,14 @@ Kjøres periodisk via GitHub Actions (se .github/workflows/check.yml).
 
 import json
 from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 
 import freerider_api
 import telegram_api
 from state_store import load_config, load_seen, save_seen
+
+OSLO_TZ = ZoneInfo("Europe/Oslo")
+DAGLIG_OPPSUMMERING_TIDER = [8, 13, 18, 23]  # klokketimer (norsk lokaltid) for daglig oppsummering
 
 LIVE_ROUTES_PATH = "docs/live-routes.json"
 
@@ -93,6 +97,67 @@ def format_route_message(watch, matches):
     return "\n\n".join(lines)
 
 
+def format_dato_kort(iso_str):
+    """Gjør om '2026-08-25T10:00:00' til '25. aug' (uten klokkeslett)."""
+    if not iso_str:
+        return "ukjent"
+    try:
+        dt = datetime.fromisoformat(iso_str)
+    except ValueError:
+        return iso_str
+    return f"{dt.day}. {NORSKE_MAANEDER[dt.month - 1]}"
+
+
+def build_daily_summary(config, all_routes):
+    watches = config.get("watches", [])
+    if not watches:
+        return None
+
+    now_oslo = datetime.now(OSLO_TZ)
+    sections = [f"\U0001F4CB Daglig oversikt - {format_dato_kort(now_oslo.isoformat())}\n"]
+
+    for watch in watches:
+        label = describe_watch(watch)
+        matches = [r for r in all_routes if matches_watch(r, watch)]
+        if not matches:
+            sections.append(f"{label}\nIngen ledige biler akkurat n\u00e5.")
+            continue
+        lines = [f"{label} ({len(matches)} stk):"]
+        for route in matches:
+            lines.append(
+                f"  \u2022 {route['pickupLocation']['name']} \u2192 {route['returnLocation']['name']}\n"
+                f"    {route.get('carModel', 'Ukjent bilmodell')}, book innen "
+                f"{format_dato(route.get('expireTime'))}"
+            )
+        sections.append("\n".join(lines))
+
+    return "\n\n".join(sections)
+
+
+def maybe_send_daily_summary(config, seen, all_routes):
+    now_oslo = datetime.now(OSLO_TZ)
+
+    if now_oslo.hour not in DAGLIG_OPPSUMMERING_TIDER:
+        return
+
+    today_str = now_oslo.date().isoformat()
+    slot_key = f"{today_str}T{now_oslo.hour:02d}"
+    sent_slots = seen.get("summary_sent_slots", [])
+
+    if slot_key in sent_slots:
+        return  # allerede sendt for denne timen i dag
+
+    summary = build_daily_summary(config, all_routes)
+    if summary:
+        telegram_api.send_message(summary)
+        print(f"Sendte daglig oppsummering (kl. {now_oslo.hour}).")
+
+    # Behold kun dagens tidspunkter, så listen ikke vokser i det uendelige
+    sent_slots = [s for s in sent_slots if s.startswith(today_str)]
+    sent_slots.append(slot_key)
+    seen["summary_sent_slots"] = sent_slots
+
+
 def notify_matches(config, seen, all_routes):
     watches = config.get("watches", [])
     if not watches:
@@ -162,6 +227,7 @@ def main():
     all_routes = [route for group in data for route in group.get("routes", [])]
 
     notify_matches(config, seen, all_routes)
+    maybe_send_daily_summary(config, seen, all_routes)
     write_live_routes(all_routes)
 
     save_seen(seen)
