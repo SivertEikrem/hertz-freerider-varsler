@@ -1,0 +1,64 @@
+
+/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Oversikt · HTML
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ledige biler - Freerider</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="wrap">
+ 
+  <header class="top">
+    <h1>Ledige <span class="free">biler</span></h1>
+    <a class="icon-btn" href="index.html" style="text-decoration:none; display:inline-block;">Mine ruter</a>
+  </header>
+  <p class="subtitle" id="updatedLine">Laster...</p>
+ 
+  <input type="text" id="filterInput" placeholder="Filtrer på stasjon eller by..." style="margin-bottom:16px;" />
+ 
+  <div class="panel">
+    <div class="route-list" id="liveList"></div>
+  </div>
+ 
+  <footer class="foot">Listen oppdateres av botten hvert 15. minutt - ikke sanntid til sekundet.</footer>
+</div>
+ 
+<script src="oversikt.js"></script>
+</body>
+</html>
+ 
