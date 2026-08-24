@@ -41,10 +41,17 @@ a {
 
 header.top {
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
   justify-content: space-between;
-  gap: 12px;
+  gap: 10px 12px;
   margin-bottom: 6px;
+}
+
+@media (max-width: 400px) {
+  header.top h1 {
+    font-size: 19px;
+  }
 }
 
 h1 {
