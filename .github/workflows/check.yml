@@ -2,9 +2,9 @@ name: Sjekk Hertz Freerider
 
 on:
   schedule:
-    # Kjører hvert 30. minutt. GitHub garanterer ikke eksakt timing,
+    # Kjører hvert 15. minutt. GitHub garanterer ikke eksakt timing,
     # så det kan ta noen minutter ekstra i perioder med mye trafikk.
-    - cron: "*/30 * * * *"
+    - cron: "*/15 * * * *"
   workflow_dispatch: # gjør at du også kan trigge den manuelt fra GitHub
 
 permissions:
@@ -21,6 +21,7 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: "pip"
 
       - name: Installer avhengigheter
         run: pip install -r requirements.txt
