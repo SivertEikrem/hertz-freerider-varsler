@@ -37,14 +37,16 @@ def matches_watch(route, watch):
         if normalize(pickup["name"]) != normalize(watch["from"]):
             return False
     elif "from_city" in watch:
-        if normalize(pickup["city"]) != normalize(watch["from_city"]):
+        if freerider_api.canonical_city(pickup["city"]) != normalize(
+            watch["from_city"]
+        ):
             return False
 
     if "to" in watch:
         if normalize(ret["name"]) != normalize(watch["to"]):
             return False
     elif "to_city" in watch:
-        if normalize(ret["city"]) != normalize(watch["to_city"]):
+        if freerider_api.canonical_city(ret["city"]) != normalize(watch["to_city"]):
             return False
 
     return True
