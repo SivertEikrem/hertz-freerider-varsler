@@ -1,16 +1,8 @@
 {
   "watches": [
     {
-      "from": "TRONDHEIM SLUPPEN",
-      "to": "MOLDE LUFTHAVN"
-    },
-    {
-      "from_city": "SVOLVÆR",
-      "to_city": "BODØ"
-    },
-    {
       "from_city": "TRONDHEIM",
-      "to_city": "KRISTIANSUND"
+      "to_city": "ÅLESUND"
     }
   ]
 }
