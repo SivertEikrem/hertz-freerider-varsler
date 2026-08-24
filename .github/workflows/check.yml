@@ -2,10 +2,9 @@ name: Sjekk Hertz Freerider
 
 on:
   schedule:
-    # Kjører hvert 5. minutt (raskeste mulige intervall for GitHub Actions cron).
-    # GitHub garanterer ikke eksakt timing, så det kan ta noen minutter ekstra
-    # i perioder med mye trafikk.
-    - cron: "*/5 * * * *"
+    # Kjører hvert 15. minutt. GitHub garanterer ikke eksakt timing,
+    # så det kan ta noen minutter ekstra i perioder med mye trafikk.
+    - cron: "*/15 * * * *"
   workflow_dispatch: # gjør at du også kan trigge den manuelt fra GitHub
 
 permissions:
@@ -37,6 +36,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add config.json seen.json state.json
-          git diff --staged --quiet || git commit -m "Oppdater tilstand [skip ci]"
+          git add seen.json docs/live-routes.json
+          git diff --staged --quiet || git commit -m "Oppdater sette turer og live-oversikt [skip ci]"
           git push
