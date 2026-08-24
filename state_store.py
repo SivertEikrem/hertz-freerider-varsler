@@ -9,7 +9,7 @@ CONFIG_PATH = "config.json"
 SEEN_PATH = "seen.json"
 
 DEFAULT_CONFIG = {"watches": []}
-DEFAULT_SEEN = {"notified_ids": [], "last_summary_date": None}
+DEFAULT_SEEN = {"notified_ids": [], "summary_sent_slots": []}
 
 
 def _load(path, default):
