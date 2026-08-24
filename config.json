@@ -1,4 +1,8 @@
 {
-  "from": "TRONDHEIM SLUPPEN",
-  "to": "KRISTIANSUND LUFTHAVN"
+  "watches": [
+    {
+      "from_city": "TRONDHEIM",
+      "to_city": "ÅLESUND"
+    }
+  ]
 }
