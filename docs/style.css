@@ -1,0 +1,368 @@
+:root {
+  --bg: #10151b;
+  --surface: #1a222b;
+  --surface-alt: #212b36;
+  --line: #2b3745;
+  --text: #edeff2;
+  --text-muted: #8b94a3;
+  --yellow: #f4c542;
+  --teal: #3db3ae;
+  --danger: #e4572e;
+  --success: #4caf7d;
+  --radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Work Sans", system-ui, sans-serif;
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--yellow);
+}
+
+.wrap {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 28px 20px 80px;
+}
+
+header.top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+h1 {
+  font-family: "Oswald", "Work Sans", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-size: 22px;
+  margin: 0;
+}
+
+h1 span.free {
+  color: var(--yellow);
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin: 0 0 24px;
+}
+
+button.icon-btn {
+  background: none;
+  border: 1px solid var(--line);
+  color: var(--text-muted);
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+button.icon-btn:hover {
+  border-color: var(--text-muted);
+  color: var(--text);
+}
+
+/* --- Kort/panel --- */
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.panel h2 {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin: 0 0 16px;
+}
+
+/* --- Innstillinger-skjema --- */
+
+label {
+  display: block;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="password"],
+select {
+  width: 100%;
+  background: var(--surface-alt);
+  border: 1px solid var(--line);
+  color: var(--text);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 14px;
+  font-family: "IBM Plex Mono", monospace;
+  margin-bottom: 14px;
+}
+
+input:focus,
+select:focus,
+button:focus-visible {
+  outline: 2px solid var(--yellow);
+  outline-offset: 1px;
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.hint {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: -8px;
+  margin-bottom: 14px;
+}
+
+button.primary {
+  background: var(--yellow);
+  color: #14181d;
+  border: none;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 11px 18px;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: "Work Sans", sans-serif;
+}
+
+button.primary:hover {
+  filter: brightness(1.08);
+}
+
+button.primary:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+button.ghost {
+  background: none;
+  border: 1px solid var(--line);
+  color: var(--text);
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: "Work Sans", sans-serif;
+}
+
+button.ghost:hover {
+  border-color: var(--text-muted);
+}
+
+/* --- Rutekort ("manifest") --- */
+
+.route-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.route-card {
+  padding: 16px 4px;
+  position: relative;
+}
+
+.route-card:not(:last-child) {
+  border-bottom: none;
+}
+
+.lane-divider {
+  height: 1px;
+  background-image: repeating-linear-gradient(
+    to right,
+    var(--line) 0,
+    var(--line) 10px,
+    transparent 10px,
+    transparent 18px
+  );
+  background-size: 200% 100%;
+  animation: drive 6s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lane-divider {
+    animation: none;
+  }
+}
+
+@keyframes drive {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -200px 0;
+  }
+}
+
+.route-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 14.5px;
+}
+
+.route-from,
+.route-to {
+  flex: 1;
+}
+
+.route-to {
+  text-align: right;
+}
+
+.route-arrow {
+  color: var(--yellow);
+  font-size: 15px;
+}
+
+.route-meta {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 6px;
+  text-align: center;
+}
+
+.remove-btn {
+  display: block;
+  margin: 10px auto 0;
+  background: none;
+  border: none;
+  color: var(--danger);
+  font-size: 12px;
+  cursor: pointer;
+  font-family: "Work Sans", sans-serif;
+  padding: 4px 8px;
+}
+
+.remove-btn:hover {
+  text-decoration: underline;
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 24px 8px;
+  font-size: 14px;
+}
+
+/* --- Legg til rute --- */
+
+.mode-toggle {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.mode-toggle button {
+  flex: 1;
+  background: var(--surface-alt);
+  border: 1px solid var(--line);
+  color: var(--text-muted);
+  border-radius: 8px;
+  padding: 9px;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: "Work Sans", sans-serif;
+}
+
+.mode-toggle button.active {
+  border-color: var(--yellow);
+  color: var(--yellow);
+}
+
+.add-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: end;
+  gap: 10px;
+}
+
+.add-grid .arrow-col {
+  color: var(--yellow);
+  padding-bottom: 24px;
+  font-size: 16px;
+}
+
+@media (max-width: 480px) {
+  .add-grid {
+    grid-template-columns: 1fr;
+  }
+  .add-grid .arrow-col {
+    text-align: center;
+    padding: 0;
+  }
+  .field-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- Statusmeldinger --- */
+
+.status {
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 13px;
+  margin-bottom: 16px;
+  display: none;
+}
+
+.status.show {
+  display: block;
+}
+
+.status.error {
+  background: rgba(228, 87, 46, 0.12);
+  color: #ff8f66;
+  border: 1px solid rgba(228, 87, 46, 0.35);
+}
+
+.status.success {
+  background: rgba(76, 175, 125, 0.12);
+  color: #7fd9ab;
+  border: 1px solid rgba(76, 175, 125, 0.35);
+}
+
+.status.info {
+  background: rgba(61, 179, 174, 0.1);
+  color: var(--teal);
+  border: 1px solid rgba(61, 179, 174, 0.3);
+}
+
+footer.foot {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 12px;
+  margin-top: 32px;
+}
