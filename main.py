@@ -1,27 +1,26 @@
 """
-Hertz Freerider-bot: hovedskript.
+Hertz Freerider-varsler.
 
-Kjøres periodisk via GitHub Actions. Hver kjøring:
- 1. Behandler eventuelle nye Telegram-kommandoer/knappetrykk (meny/veiviser)
- 2. Sjekker Freerider sitt API for nye biler som matcher lagrede ruter
- 3. Sender Telegram-varsel ved nye treff
+Sjekker https://hertzfreerider.no/api/transport-routes/ for ledige biler som
+matcher rutene i config.json (satt via nettsiden i docs/), og sender
+Telegram-varsel ved nye treff.
+
+Kjøres periodisk via GitHub Actions (se .github/workflows/check.yml).
 """
 
-import bot_menu
 import freerider_api
 import telegram_api
-from state_store import (
-    load_config,
-    save_config,
-    load_seen,
-    save_seen,
-    load_state,
-    save_state,
-)
+from state_store import load_config, load_seen, save_seen
 
 
 def normalize(value):
     return value.strip().upper() if value else ""
+
+
+def describe_watch(watch):
+    from_label = watch.get("from") or f"alle stasjoner i {watch.get('from_city')}"
+    to_label = watch.get("to") or f"alle stasjoner i {watch.get('to_city')}"
+    return f"{from_label} \u2192 {to_label}"
 
 
 def matches_watch(route, watch):
@@ -46,7 +45,7 @@ def matches_watch(route, watch):
 
 
 def format_route_message(watch, matches):
-    label = bot_menu.describe_watch(watch)
+    label = describe_watch(watch)
     lines = [f"\U0001F697 Fant {len(matches)} ny(e) Freerider-tur(er) for {label}:\n"]
     for route in matches:
         pickup_name = route["pickupLocation"]["name"]
@@ -60,10 +59,13 @@ def format_route_message(watch, matches):
     return "\n\n".join(lines)
 
 
-def check_for_matches(config, seen):
+def main():
+    config = load_config()
+    seen = load_seen()
+
     watches = config.get("watches", [])
     if not watches:
-        print("Ingen ruter er satt opp - hopper over bilsjekk.")
+        print("Ingen ruter er satt opp i config.json - ingenting å sjekke.")
         return
 
     notified_ids = set(seen.get("notified_ids", []))
@@ -88,31 +90,13 @@ def check_for_matches(config, seen):
             telegram_api.send_message(message)
             print(
                 f"Sendte varsel om {len(new_matches)} nye tur(er) "
-                f"for {bot_menu.describe_watch(watch)}."
+                f"for {describe_watch(watch)}."
             )
 
     if not any_new:
         print("Ingen nye turer funnet.")
 
     seen["notified_ids"] = list(notified_ids)
-
-
-def main():
-    config = load_config()
-    state = load_state()
-    seen = load_seen()
-
-    try:
-        had_updates = bot_menu.process_updates(state, config)
-        if had_updates:
-            print("Behandlet nye Telegram-kommandoer.")
-    except Exception as e:  # noqa: BLE001 - vil ikke at dette skal stoppe bilsjekken
-        print(f"Advarsel: klarte ikke behandle Telegram-oppdateringer: {e}")
-
-    check_for_matches(config, seen)
-
-    save_config(config)
-    save_state(state)
     save_seen(seen)
 
 
