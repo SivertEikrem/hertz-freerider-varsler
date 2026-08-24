@@ -16,7 +16,7 @@
     <h1>Free<span class="free">rider</span>-ruter</h1>
     <div style="display:flex; gap:8px;">
       <a class="icon-btn" href="oversikt.html" style="text-decoration:none; display:inline-block;">Ledige biler</a>
-      <button class="icon-btn" id="settingsToggle" type="button">Innstillinger</button>
+      <button class="icon-btn" id="settingsToggle" type="button">Endre kode/token</button>
     </div>
   </header>
   <p class="subtitle">Velg hvilke ruter botten skal varsle deg om.</p>
@@ -28,29 +28,18 @@
     <h2>Skriv inn koden din</h2>
     <input type="password" id="unlockCodeInput" placeholder="Kode" inputmode="numeric" autocomplete="off" />
     <button class="primary" id="unlockBtn" type="button">Lås opp</button>
-    <button class="ghost" id="unlockForgetBtn" type="button" style="margin-left:8px;">Glemt koden? Start på nytt</button>
+    <button class="ghost" id="unlockForgetBtn" type="button" style="margin-left:8px;">Glemt koden? Sett opp på nytt</button>
   </section>
 
-  <!-- Innstillinger -->
+  <!-- Førstegangsoppsett / endre token og kode -->
   <section class="panel" id="settingsPanel" style="display:none;">
-    <h2>GitHub-tilkobling</h2>
-    <div class="field-row">
-      <div>
-        <label for="ownerInput">Brukernavn</label>
-        <input type="text" id="ownerInput" placeholder="SivertEikrem" />
-      </div>
-      <div>
-        <label for="repoInput">Repo-navn</label>
-        <input type="text" id="repoInput" placeholder="hertz-freerider" />
-      </div>
-    </div>
+    <h2>Koble til GitHub</h2>
     <label for="patInput">Personal Access Token</label>
     <input type="password" id="patInput" placeholder="github_pat_..." autocomplete="off" />
     <label for="codeInput">Velg en kode</label>
     <input type="password" id="codeInput" placeholder="f.eks. 4 sifre" inputmode="numeric" autocomplete="off" />
-    <p class="hint">Tokenen krypteres med koden din og lagres kun i denne nettleseren. Neste gang trenger du bare koden - ikke hele tokenen.</p>
-    <button class="primary" id="saveSettingsBtn" type="button">Lagre og koble til</button>
-    <button class="ghost" id="forgetSettingsBtn" type="button" style="margin-left:8px;">Glem lagrede data</button>
+    <p class="hint">Tokenen krypteres med koden din og lagres i repoet. Etter dette trenger du kun koden - på alle enheter, ingen token å lete frem igjen.</p>
+    <button class="primary" id="saveSettingsBtn" type="button">Krypter og lagre</button>
   </section>
 
   <!-- Ruteliste -->
@@ -91,6 +80,7 @@
   <footer class="foot">Endringer trer i kraft neste gang botten sjekker (hvert 15. minutt).</footer>
 </div>
 
+<script src="config.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
