@@ -2,15 +2,21 @@
 Hertz Freerider-varsler.
 
 Sjekker https://hertzfreerider.no/api/transport-routes/ for ledige biler som
-matcher rutene i config.json (satt via nettsiden i docs/), og sender
-Telegram-varsel ved nye treff.
+matcher rutene i config.json (satt via nettsiden i docs/), sender
+Telegram-varsel ved nye treff, og lagrer en fersk oversikt over ALLE ledige
+biler til docs/live-routes.json (som nettsiden viser).
 
 Kjøres periodisk via GitHub Actions (se .github/workflows/check.yml).
 """
 
+import json
+from datetime import datetime, timezone
+
 import freerider_api
 import telegram_api
 from state_store import load_config, load_seen, save_seen
+
+LIVE_ROUTES_PATH = "docs/live-routes.json"
 
 
 def normalize(value):
@@ -59,18 +65,13 @@ def format_route_message(watch, matches):
     return "\n\n".join(lines)
 
 
-def main():
-    config = load_config()
-    seen = load_seen()
-
+def notify_matches(config, seen, all_routes):
     watches = config.get("watches", [])
     if not watches:
         print("Ingen ruter er satt opp i config.json - ingenting å sjekke.")
         return
 
     notified_ids = set(seen.get("notified_ids", []))
-    data = freerider_api.fetch_routes()
-    all_routes = [route for group in data for route in group.get("routes", [])]
 
     any_new = False
     for watch in watches:
@@ -97,6 +98,44 @@ def main():
         print("Ingen nye turer funnet.")
 
     seen["notified_ids"] = list(notified_ids)
+
+
+def write_live_routes(all_routes):
+    """Lagrer en kompakt oversikt over alle ledige biler, til bruk på nettsiden."""
+    compact = []
+    for route in all_routes:
+        compact.append(
+            {
+                "from": route["pickupLocation"]["name"],
+                "from_city": route["pickupLocation"]["city"],
+                "to": route["returnLocation"]["name"],
+                "to_city": route["returnLocation"]["city"],
+                "car_model": route.get("carModel", "Ukjent bilmodell"),
+                "available_at": route.get("availableAt"),
+                "latest_return": route.get("latestReturn"),
+            }
+        )
+    compact.sort(key=lambda r: r["available_at"] or "")
+
+    payload = {
+        "updated_at": datetime.now(timezone.utc).isoformat(),
+        "routes": compact,
+    }
+    with open(LIVE_ROUTES_PATH, "w", encoding="utf-8") as f:
+        json.dump(payload, f, ensure_ascii=False, indent=2)
+    print(f"Lagret {len(compact)} ledige biler til {LIVE_ROUTES_PATH}.")
+
+
+def main():
+    config = load_config()
+    seen = load_seen()
+
+    data = freerider_api.fetch_routes()
+    all_routes = [route for group in data for route in group.get("routes", [])]
+
+    notify_matches(config, seen, all_routes)
+    write_live_routes(all_routes)
+
     save_seen(seen)
 
 
