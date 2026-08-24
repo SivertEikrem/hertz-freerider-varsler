@@ -52,19 +52,44 @@ def matches_watch(route, watch):
     return True
 
 
+NORSKE_MAANEDER = [
+    "jan",
+    "feb",
+    "mar",
+    "apr",
+    "mai",
+    "jun",
+    "jul",
+    "aug",
+    "sep",
+    "okt",
+    "nov",
+    "des",
+]
+
+def format_dato(iso_str):
+    """Gjør om '2026-08-24T10:00:00' til '24. aug kl. 10:00'."""
+    if not iso_str:
+        return "ukjent"
+    try:
+        dt = datetime.fromisoformat(iso_str)
+    except ValueError:
+        return iso_str
+    return f"{dt.day}. {NORSKE_MAANEDER[dt.month - 1]} kl. {dt.strftime('%H:%M')}"
+
+
 def format_route_message(watch, matches):
-    label = describe_watch(watch)
-    lines = [f"\U0001F697 Fant {len(matches)} ny(e) Freerider-tur(er) for {label}:\n"]
+    blocks = []
     for route in matches:
         pickup_name = route["pickupLocation"]["name"]
         return_name = route["returnLocation"]["name"]
-        lines.append(
-            f"\u2022 {pickup_name} \u2192 {return_name}\n"
-            f"  Bil: {route.get('carModel', 'Ukjent bilmodell')}\n"
-            f"  Tilgjengelig fra: {route.get('availableAt')}\n"
-            f"  Senest levert: {route.get('latestReturn')}"
+        blocks.append(
+            f"\U0001F697 {pickup_name} \u2192 {return_name}\n"
+            f"Bil: {route.get('carModel', 'Ukjent bilmodell')}\n"
+            f"Tilbudet utl\u00f8per: {format_dato(route.get('expireTime'))}\n"
+            f"Tilgjengelig fra: {format_dato(route.get('availableAt'))}"
         )
-    return "\n\n".join(lines)
+    return "\n\n\u2014\u2014\u2014\n\n".join(blocks)
 
 
 def notify_matches(config, seen, all_routes):
