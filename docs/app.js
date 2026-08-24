@@ -1,16 +1,18 @@
 /* Freerider-ruter: enkel klientside-app for å redigere config.json i repoet
- * ditt via GitHub sitt Contents API. Ingenting sendes til noen server unntatt
- * api.github.com - GitHub-tokenen krypteres med en selvvalgt kode og lagres
- * kun lokalt i denne nettleseren (localStorage). Koden lagres aldri noe sted.
+ * ditt via GitHub sitt Contents API.
+ *
+ * Selve GitHub-tokenen lagres kryptert INNE I REPOET (docs/token.enc.json),
+ * låst med en kode du selv velger. Det betyr at du kun trenger å skrive inn
+ * den ekte tokenen ÉN gang (ved førstegangsoppsett) - alle enheter/nettlesere
+ * deretter trenger bare koden, siden den krypterte filen hentes fra repoet.
+ * REPO_OWNER/REPO_NAME kommer fra config.js.
  */
 
-const LS_OWNER = "ffr_owner";
-const LS_REPO = "ffr_repo";
-const LS_ENC = "ffr_enc"; // kryptert token: {salt, iv, ciphertext}
+const TOKEN_FILE_PATH = "docs/token.enc.json"; // sti i selve repoet (Contents API)
+const TOKEN_FILE_URL = "token.enc.json"; // relativ sti når GitHub Pages serverer den
 
-let owner = localStorage.getItem(LS_OWNER) || "";
-let repo = localStorage.getItem(LS_REPO) || "";
-let pat = ""; // holdes kun i minnet, aldri lagret i klartekst
+let pat = ""; // holdes kun i minnet denne økten, aldri lagret i klartekst
+let encryptedTokenSha = null; // trengs for å OPPDATERE token.enc.json senere
 
 let watches = [];
 let currentSha = null;
@@ -103,34 +105,20 @@ async function decryptToken(code, stored) {
   return new TextDecoder().decode(plainBuf);
 }
 
-function hasStoredToken() {
-  return !!localStorage.getItem(LS_ENC);
-}
-
-function forgetEverything() {
-  localStorage.removeItem(LS_OWNER);
-  localStorage.removeItem(LS_REPO);
-  localStorage.removeItem(LS_ENC);
-  owner = repo = pat = "";
-  $("routesPanel").style.display = "none";
-  $("addPanel").style.display = "none";
-  $("saveAllBtn").style.display = "none";
-  $("unlockPanel").style.display = "none";
-  showSettingsPanel(true);
-  showStatus("Lagrede data er slettet fra denne nettleseren.", "info");
-}
-
 /* ---------- GitHub API ---------- */
 
 async function githubRequest(path, options = {}) {
-  const resp = await fetch(`https://api.github.com/repos/${owner}/${repo}${path}`, {
-    ...options,
-    headers: {
-      Authorization: `token ${pat}`,
-      Accept: "application/vnd.github+json",
-      ...(options.headers || {}),
-    },
-  });
+  const resp = await fetch(
+    `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}${path}`,
+    {
+      ...options,
+      headers: {
+        Authorization: `token ${pat}`,
+        Accept: "application/vnd.github+json",
+        ...(options.headers || {}),
+      },
+    }
+  );
   if (!resp.ok) {
     const body = await resp.json().catch(() => ({}));
     throw new Error(`GitHub svarte ${resp.status}: ${body.message || resp.statusText}`);
@@ -158,6 +146,38 @@ async function saveConfig() {
     body: JSON.stringify(body),
   });
   currentSha = data.content.sha;
+}
+
+/** Henter den krypterte token-filen direkte fra nettsiden (offentlig, ingen
+ * auth nødvendig - samme opphav). Returnerer null hvis den ikke finnes ennå. */
+async function fetchEncryptedTokenBlob() {
+  const resp = await fetch(`${TOKEN_FILE_URL}?t=${Date.now()}`);
+  if (resp.status === 404) return null;
+  if (!resp.ok) throw new Error(`Kunne ikke hente token-fil (HTTP ${resp.status})`);
+  return resp.json();
+}
+
+/** Skriver/oppdaterer den krypterte token-filen i repoet via GitHub API.
+ * Krever at 'pat' allerede er satt (fra input eller fra en tidligere opplåsing). */
+async function writeEncryptedTokenBlob(encryptedObj) {
+  // Finn eksisterende sha først, hvis filen allerede finnes (trengs for å oppdatere).
+  let sha = null;
+  try {
+    const existing = await githubRequest(`/contents/${TOKEN_FILE_PATH}`);
+    sha = existing.sha;
+  } catch (e) {
+    // Finnes ikke ennå - helt greit, da opprettes den for første gang.
+  }
+  const body = {
+    message: "Oppdater kryptert token",
+    content: utf8ToBase64(JSON.stringify(encryptedObj)),
+    ...(sha ? { sha } : {}),
+  };
+  await githubRequest(`/contents/${TOKEN_FILE_PATH}`, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body),
+  });
 }
 
 /* ---------- Stasjonsdata (statisk fil, samme opphav) ---------- */
@@ -235,7 +255,10 @@ function markDirty() {
 
 function showSettingsPanel(show) {
   $("settingsPanel").style.display = show ? "block" : "none";
-  $("settingsToggle").style.display = hasStoredToken() ? "inline-block" : "none";
+  if (show) {
+    $("patInput").value = "";
+    $("codeInput").value = "";
+  }
 }
 
 function showUnlockPanel(show) {
@@ -245,6 +268,7 @@ function showUnlockPanel(show) {
 function showAppPanels(show) {
   $("routesPanel").style.display = show ? "block" : "none";
   $("addPanel").style.display = show ? "block" : "none";
+  $("settingsToggle").style.display = show ? "inline-block" : "none";
 }
 
 /* ---------- Lås opp med kode ---------- */
@@ -259,8 +283,8 @@ $("unlockBtn").addEventListener("click", async () => {
   btn.disabled = true;
   btn.textContent = "Låser opp...";
   try {
-    const stored = JSON.parse(localStorage.getItem(LS_ENC));
-    pat = await decryptToken(code, stored);
+    const blob = await fetchEncryptedTokenBlob();
+    pat = await decryptToken(code, blob);
     showUnlockPanel(false);
     await startApp();
   } catch (err) {
@@ -272,34 +296,30 @@ $("unlockBtn").addEventListener("click", async () => {
 });
 
 $("unlockForgetBtn").addEventListener("click", () => {
-  forgetEverything();
+  showUnlockPanel(false);
+  showSettingsPanel(true);
+  showStatus(
+    "Sett opp på nytt: lim inn en (gjerne ny) token og velg en ny kode.",
+    "info"
+  );
 });
 
 $("unlockCodeInput").addEventListener("keydown", (e) => {
   if (e.key === "Enter") $("unlockBtn").click();
 });
 
-/* ---------- Innstillinger (førstegangsoppsett / endring) ---------- */
+/* ---------- Førstegangsoppsett / endre token og kode ---------- */
 
 $("settingsToggle").addEventListener("click", () => {
-  const willShow = $("settingsPanel").style.display === "none";
-  $("settingsPanel").style.display = willShow ? "block" : "none";
-  if (willShow) {
-    $("ownerInput").value = owner;
-    $("repoInput").value = repo;
-    $("patInput").value = "";
-    $("codeInput").value = "";
-  }
+  showSettingsPanel($("settingsPanel").style.display === "none");
 });
 
 $("saveSettingsBtn").addEventListener("click", async () => {
-  const newOwner = $("ownerInput").value.trim();
-  const newRepo = $("repoInput").value.trim();
   const newPat = $("patInput").value.trim();
   const newCode = $("codeInput").value;
 
-  if (!newOwner || !newRepo || !newPat || !newCode) {
-    showStatus("Fyll ut alle feltene, inkludert en kode.", "error");
+  if (!newPat || !newCode) {
+    showStatus("Fyll ut både token og en kode.", "error");
     return;
   }
 
@@ -307,27 +327,19 @@ $("saveSettingsBtn").addEventListener("click", async () => {
   btn.disabled = true;
   btn.textContent = "Krypterer og lagrer...";
   try {
+    pat = newPat; // brukes med det samme til å skrive selve token-filen
     const encrypted = await encryptToken(newCode, newPat);
-    owner = newOwner;
-    repo = newRepo;
-    pat = newPat;
-    localStorage.setItem(LS_OWNER, owner);
-    localStorage.setItem(LS_REPO, repo);
-    localStorage.setItem(LS_ENC, JSON.stringify(encrypted));
+    await writeEncryptedTokenBlob(encrypted);
 
     $("settingsPanel").style.display = "none";
-    $("settingsToggle").style.display = "inline-block";
+    showStatus("Token lagret og kryptert i repoet.", "success");
     await startApp();
   } catch (err) {
     showStatus(`Noe gikk galt: ${err.message}`, "error");
   } finally {
     btn.disabled = false;
-    btn.textContent = "Lagre og koble til";
+    btn.textContent = "Krypter og lagre";
   }
-});
-
-$("forgetSettingsBtn").addEventListener("click", () => {
-  forgetEverything();
 });
 
 /* ---------- Legg til rute ---------- */
@@ -397,16 +409,22 @@ async function startApp() {
     clearStatus();
   } catch (err) {
     showStatus(`Kunne ikke koble til: ${err.message}`, "error");
-    showSettingsPanel(true);
   }
 }
 
 async function bootstrap() {
-  if (hasStoredToken()) {
-    $("settingsToggle").style.display = "inline-block";
-    showUnlockPanel(true);
-  } else {
-    $("settingsToggle").style.display = "none";
+  showStatus("Sjekker oppsett...", "info");
+  try {
+    const blob = await fetchEncryptedTokenBlob();
+    if (blob) {
+      clearStatus();
+      showUnlockPanel(true);
+    } else {
+      clearStatus();
+      showSettingsPanel(true);
+    }
+  } catch (err) {
+    showStatus(`Kunne ikke sjekke oppsett: ${err.message}`, "error");
     showSettingsPanel(true);
   }
 }
