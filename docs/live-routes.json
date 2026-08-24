@@ -1,0 +1,419 @@
+{
+  "updated_at": "2026-08-24T20:19:10.873316+00:00",
+  "routes": [
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "FØRDE SENTRUM",
+      "to_city": "FØRDE",
+      "car_model": "MERCEDES EQB 5D 4WD AUT EL 66K",
+      "available_at": "2026-07-03T08:00:00",
+      "latest_return": "2026-10-04T21:00:00"
+    },
+    {
+      "from": "SANDNESSJØEN SENTRUM",
+      "from_city": "SANDNESSNJØEN",
+      "to": "Arvidsjaur/Volvo / Self Service Kiosk",
+      "to_city": "Arvidsjaur",
+      "car_model": "VOLVO V90 CC AWD AUT",
+      "available_at": "2026-08-04T10:30:00",
+      "latest_return": "2026-08-26T21:45:00"
+    },
+    {
+      "from": "SANDNESSJØEN SENTRUM",
+      "from_city": "SANDNESSNJØEN",
+      "to": "Boden / Volvo",
+      "to_city": "Boden",
+      "car_model": "VOLVO V90 CC AWD AUT",
+      "available_at": "2026-08-04T10:30:00",
+      "latest_return": "2026-08-26T21:45:00"
+    },
+    {
+      "from": "SANDNESSJØEN SENTRUM",
+      "from_city": "SANDNESSNJØEN",
+      "to": "Härnösand RR",
+      "to_city": "Härnösand",
+      "car_model": "VOLVO V90 CC AWD AUT",
+      "available_at": "2026-08-04T10:30:00",
+      "latest_return": "2026-08-26T21:45:00"
+    },
+    {
+      "from": "SANDNESSJØEN SENTRUM",
+      "from_city": "SANDNESSNJØEN",
+      "to": "Luleå Bilbolaget / Self Service Kiosk",
+      "to_city": "Luleå",
+      "car_model": "VOLVO V90 CC AWD AUT",
+      "available_at": "2026-08-04T10:30:00",
+      "latest_return": "2026-08-26T21:45:00"
+    },
+    {
+      "from": "SANDNESSJØEN SENTRUM",
+      "from_city": "SANDNESSNJØEN",
+      "to": "Lycksele",
+      "to_city": "Lycksele",
+      "car_model": "VOLVO V90 CC AWD AUT",
+      "available_at": "2026-08-04T10:30:00",
+      "latest_return": "2026-08-26T21:45:00"
+    },
+    {
+      "from": "SANDNESSJØEN SENTRUM",
+      "from_city": "SANDNESSNJØEN",
+      "to": "MO I RANA LUFTHAVN",
+      "to_city": "SKONSENG",
+      "car_model": "VOLVO V90 CC AWD AUT",
+      "available_at": "2026-08-04T10:30:00",
+      "latest_return": "2026-08-26T21:45:00"
+    },
+    {
+      "from": "SANDNESSJØEN SENTRUM",
+      "from_city": "SANDNESSNJØEN",
+      "to": "Piteå / Volvo",
+      "to_city": "Öjebyn",
+      "car_model": "VOLVO V90 CC AWD AUT",
+      "available_at": "2026-08-04T10:30:00",
+      "latest_return": "2026-08-26T21:45:00"
+    },
+    {
+      "from": "SANDNESSJØEN SENTRUM",
+      "from_city": "SANDNESSNJØEN",
+      "to": "Skellefteå & Self Service Kiosk",
+      "to_city": "Skellefteå",
+      "car_model": "VOLVO V90 CC AWD AUT",
+      "available_at": "2026-08-04T10:30:00",
+      "latest_return": "2026-08-26T21:45:00"
+    },
+    {
+      "from": "SANDNESSJØEN SENTRUM",
+      "from_city": "SANDNESSNJØEN",
+      "to": "Sundsvall Bilbolaget/Self Service Kiosk",
+      "to_city": "Sundsvall",
+      "car_model": "VOLVO V90 CC AWD AUT",
+      "available_at": "2026-08-04T10:30:00",
+      "latest_return": "2026-08-26T21:45:00"
+    },
+    {
+      "from": "SANDNESSJØEN SENTRUM",
+      "from_city": "SANDNESSNJØEN",
+      "to": "Umeå Bilbolaget/Self Service Kiosk",
+      "to_city": "Umeå",
+      "car_model": "VOLVO V90 CC AWD AUT",
+      "available_at": "2026-08-04T10:30:00",
+      "latest_return": "2026-08-26T21:45:00"
+    },
+    {
+      "from": "SANDNESSJØEN SENTRUM",
+      "from_city": "SANDNESSNJØEN",
+      "to": "Örnsköldsvik Bilbolaget / Self Service Kiosk",
+      "to_city": "Örnsköldsvik",
+      "car_model": "VOLVO V90 CC AWD AUT",
+      "available_at": "2026-08-04T10:30:00",
+      "latest_return": "2026-08-26T21:45:00"
+    },
+    {
+      "from": "SANDNESSJØEN SENTRUM",
+      "from_city": "SANDNESSNJØEN",
+      "to": "Östersund DT",
+      "to_city": "Östersund",
+      "car_model": "VOLVO V90 CC AWD AUT",
+      "available_at": "2026-08-04T10:30:00",
+      "latest_return": "2026-08-26T21:45:00"
+    },
+    {
+      "from": "HARSTAD",
+      "from_city": "HARSTAD",
+      "to": "Arvidsjaur/Volvo / Self Service Kiosk",
+      "to_city": "Arvidsjaur",
+      "car_model": "VOLVO V60 CC AWD AUTOMAT",
+      "available_at": "2026-08-14T10:45:00",
+      "latest_return": "2026-08-26T21:45:00"
+    },
+    {
+      "from": "HARSTAD",
+      "from_city": "HARSTAD",
+      "to": "Boden / Volvo",
+      "to_city": "Boden",
+      "car_model": "VOLVO V60 CC AWD AUTOMAT",
+      "available_at": "2026-08-14T10:45:00",
+      "latest_return": "2026-08-26T21:45:00"
+    },
+    {
+      "from": "HARSTAD",
+      "from_city": "HARSTAD",
+      "to": "Gällivare DT",
+      "to_city": "Gällivare",
+      "car_model": "VOLVO V60 CC AWD AUTOMAT",
+      "available_at": "2026-08-14T10:45:00",
+      "latest_return": "2026-08-26T21:45:00"
+    },
+    {
+      "from": "HARSTAD",
+      "from_city": "HARSTAD",
+      "to": "Kiruna AP",
+      "to_city": "Kiruna",
+      "car_model": "VOLVO V60 CC AWD AUTOMAT",
+      "available_at": "2026-08-14T10:45:00",
+      "latest_return": "2026-08-26T21:45:00"
+    },
+    {
+      "from": "HARSTAD",
+      "from_city": "HARSTAD",
+      "to": "Luleå Bilbolaget / Self Service Kiosk",
+      "to_city": "Luleå",
+      "car_model": "VOLVO V60 CC AWD AUTOMAT",
+      "available_at": "2026-08-14T10:45:00",
+      "latest_return": "2026-08-26T21:45:00"
+    },
+    {
+      "from": "HARSTAD",
+      "from_city": "HARSTAD",
+      "to": "Lycksele",
+      "to_city": "Lycksele",
+      "car_model": "VOLVO V60 CC AWD AUTOMAT",
+      "available_at": "2026-08-14T10:45:00",
+      "latest_return": "2026-08-26T21:45:00"
+    },
+    {
+      "from": "HARSTAD",
+      "from_city": "HARSTAD",
+      "to": "NARVIK",
+      "to_city": "NARVIK",
+      "car_model": "VOLVO V60 CC AWD AUTOMAT",
+      "available_at": "2026-08-14T10:45:00",
+      "latest_return": "2026-08-26T21:45:00"
+    },
+    {
+      "from": "HARSTAD",
+      "from_city": "HARSTAD",
+      "to": "Piteå / Volvo",
+      "to_city": "Öjebyn",
+      "car_model": "VOLVO V60 CC AWD AUTOMAT",
+      "available_at": "2026-08-14T10:45:00",
+      "latest_return": "2026-08-26T21:45:00"
+    },
+    {
+      "from": "HARSTAD",
+      "from_city": "HARSTAD",
+      "to": "Skellefteå & Self Service Kiosk",
+      "to_city": "Skellefteå",
+      "car_model": "VOLVO V60 CC AWD AUTOMAT",
+      "available_at": "2026-08-14T10:45:00",
+      "latest_return": "2026-08-26T21:45:00"
+    },
+    {
+      "from": "HARSTAD",
+      "from_city": "HARSTAD",
+      "to": "Umeå Bilbolaget/Self Service Kiosk",
+      "to_city": "Umeå",
+      "car_model": "VOLVO V60 CC AWD AUTOMAT",
+      "available_at": "2026-08-14T10:45:00",
+      "latest_return": "2026-08-26T21:45:00"
+    },
+    {
+      "from": "STAVANGER SOLA",
+      "from_city": "SOLA",
+      "to": "OSLO ALNABRU",
+      "to_city": "OSLO",
+      "car_model": "TOYOTA PROACE 6M3 VARE TDI AUT",
+      "available_at": "2026-08-18T12:45:00",
+      "latest_return": "2026-08-29T19:00:00"
+    },
+    {
+      "from": "STAVANGER SOLA",
+      "from_city": "SOLA",
+      "to": "OSLO SENTRALSTASJON",
+      "to_city": "OSLO",
+      "car_model": "TOYOTA PROACE 6M3 VARE TDI AUT",
+      "available_at": "2026-08-18T12:45:00",
+      "latest_return": "2026-08-29T19:00:00"
+    },
+    {
+      "from": "STAVANGER SOLA",
+      "from_city": "SOLA",
+      "to": "OSLO SENTRUM",
+      "to_city": "OSLO",
+      "car_model": "TOYOTA PROACE 6M3 VARE TDI AUT",
+      "available_at": "2026-08-18T12:45:00",
+      "latest_return": "2026-08-29T19:00:00"
+    },
+    {
+      "from": "STAVANGER SOLA",
+      "from_city": "SOLA",
+      "to": "OSLO ØKERN",
+      "to_city": "OSLO",
+      "car_model": "TOYOTA PROACE 6M3 VARE TDI AUT",
+      "available_at": "2026-08-18T12:45:00",
+      "latest_return": "2026-08-29T19:00:00"
+    },
+    {
+      "from": "TRONDHEIM SLUPPEN",
+      "from_city": "TRONDHEIM",
+      "to": "KRISTIANSUND LUFTHAVN",
+      "to_city": "KRISTIANSUND",
+      "car_model": "VW ID.3 5D 58KWH 5D AUT ELECTR",
+      "available_at": "2026-08-20T13:00:00",
+      "latest_return": "2026-08-28T16:00:00"
+    },
+    {
+      "from": "TRONDHEIM SLUPPEN",
+      "from_city": "TRONDHEIM",
+      "to": "MOLDE LUFTHAVN",
+      "to_city": "MOLDE",
+      "car_model": "VW ID.3 5D 58KWH 5D AUT ELECTR",
+      "available_at": "2026-08-20T13:00:00",
+      "latest_return": "2026-08-28T16:00:00"
+    },
+    {
+      "from": "MO I RANA SENTRUM",
+      "from_city": "MO I RANA",
+      "to": "TRONDHEIM LUFTHAVN",
+      "to_city": "STJØRDAL",
+      "car_model": "TOYOTA COROLLA CROSS 2WD AUT H",
+      "available_at": "2026-08-21T07:45:00",
+      "latest_return": "2026-08-25T14:45:00"
+    },
+    {
+      "from": "MO I RANA SENTRUM",
+      "from_city": "MO I RANA",
+      "to": "TRONDHEIM SLUPPEN",
+      "to_city": "TRONDHEIM",
+      "car_model": "TOYOTA COROLLA CROSS 2WD AUT H",
+      "available_at": "2026-08-21T07:45:00",
+      "latest_return": "2026-08-25T14:45:00"
+    },
+    {
+      "from": "HAUGESUND LUFTHAVN",
+      "from_city": "AVALDSNES",
+      "to": "KRISTIANSAND LUFTHAVN",
+      "to_city": "KJEVIK",
+      "car_model": "TOYOTA PROACE 6M3 VARE TDI AUT",
+      "available_at": "2026-08-21T11:30:00",
+      "latest_return": "2026-08-25T21:45:00"
+    },
+    {
+      "from": "HAUGESUND LUFTHAVN",
+      "from_city": "AVALDSNES",
+      "to": "KRISTIANSAND SENTRUM",
+      "to_city": "KRISTIANSAND",
+      "car_model": "TOYOTA PROACE 6M3 VARE TDI AUT",
+      "available_at": "2026-08-21T11:30:00",
+      "latest_return": "2026-08-25T21:45:00"
+    },
+    {
+      "from": "SVOLVÆR LUFTHAVN",
+      "from_city": "SVOLVÆR",
+      "to": "BODØ LUFTHAVN",
+      "to_city": "BODØ",
+      "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
+      "available_at": "2026-08-22T08:00:00",
+      "latest_return": "2026-08-26T14:00:00"
+    },
+    {
+      "from": "SVOLVÆR LUFTHAVN",
+      "from_city": "SVOLVÆR",
+      "to": "MO I RANA SENTRUM",
+      "to_city": "MO I RANA",
+      "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
+      "available_at": "2026-08-22T08:00:00",
+      "latest_return": "2026-08-26T14:00:00"
+    },
+    {
+      "from": "SVOLVÆR SENTRUM",
+      "from_city": "SVOLVÆR",
+      "to": "BODØ SENTRUM",
+      "to_city": "BODØ",
+      "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
+      "available_at": "2026-08-22T08:00:00",
+      "latest_return": "2026-08-26T14:00:00"
+    },
+    {
+      "from": "SVOLVÆR SENTRUM",
+      "from_city": "SVOLVÆR",
+      "to": "MO I RANA SENTRUM",
+      "to_city": "MO I RANA",
+      "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
+      "available_at": "2026-08-22T08:00:00",
+      "latest_return": "2026-08-26T14:09:00"
+    },
+    {
+      "from": "BODØ LUFTHAVN",
+      "from_city": "BODØ",
+      "to": "OSLO LUFTHAVN",
+      "to_city": "GARDERMOEN",
+      "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
+      "available_at": "2026-08-23T10:15:00",
+      "latest_return": "2026-08-28T10:25:00"
+    },
+    {
+      "from": "BODØ LUFTHAVN",
+      "from_city": "BODØ",
+      "to": "STAVANGER LUFTHAVN",
+      "to_city": "STAVANGER",
+      "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
+      "available_at": "2026-08-23T10:15:00",
+      "latest_return": "2026-08-28T10:15:00"
+    },
+    {
+      "from": "BODØ LUFTHAVN",
+      "from_city": "BODØ",
+      "to": "ÅLESUND SENTRUM",
+      "to_city": "ÅLESUND",
+      "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
+      "available_at": "2026-08-23T10:15:00",
+      "latest_return": "2026-08-28T10:24:00"
+    },
+    {
+      "from": "TRONDHEIM SLUPPEN",
+      "from_city": "TRONDHEIM",
+      "to": "KRISTIANSUND LUFTHAVN",
+      "to_city": "KRISTIANSUND",
+      "car_model": "VW ID.3 5D 58KWH 5D AUT ELECTR",
+      "available_at": "2026-08-24T07:45:00",
+      "latest_return": "2026-08-28T14:00:00"
+    },
+    {
+      "from": "LEKNES LUFTHAVN",
+      "from_city": "LEKNES",
+      "to": "BODØ LUFTHAVN",
+      "to_city": "BODØ",
+      "car_model": "MG S5 62KWH AUT ELECTRIC",
+      "available_at": "2026-08-24T09:45:00",
+      "latest_return": "2026-08-28T09:30:00"
+    },
+    {
+      "from": "LEKNES LUFTHAVN",
+      "from_city": "LEKNES",
+      "to": "BODØ LUFTHAVN",
+      "to_city": "BODØ",
+      "car_model": "TOYOTA BZ4X TOURING 4X4 71KWH",
+      "available_at": "2026-08-24T09:45:00",
+      "latest_return": "2026-08-29T09:45:00"
+    },
+    {
+      "from": "BODØ LUFTHAVN",
+      "from_city": "BODØ",
+      "to": "STAVANGER LUFTHAVN",
+      "to_city": "STAVANGER",
+      "car_model": "VOLVO XC60 T6 AWD HYBRID AUT",
+      "available_at": "2026-08-24T10:00:00",
+      "latest_return": "2026-08-29T10:00:00"
+    },
+    {
+      "from": "BODØ LUFTHAVN",
+      "from_city": "BODØ",
+      "to": "TRONDHEIM LUFTHAVN",
+      "to_city": "STJØRDAL",
+      "car_model": "HYUNDAI IONIQ6 74KWH 4X4 AUT E",
+      "available_at": "2026-08-24T10:15:00",
+      "latest_return": "2026-08-29T10:15:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "BERGEN KOKSTAD",
+      "to_city": "KOKSTAD",
+      "car_model": "AUDI Q6 E-TRON 95KWH AUT ELEC",
+      "available_at": "2026-08-24T11:15:00",
+      "latest_return": "2026-08-27T21:00:00"
+    }
+  ]
+}
