@@ -2,9 +2,10 @@ name: Sjekk Hertz Freerider
 
 on:
   schedule:
-    # Kjører hvert 15. minutt. GitHub garanterer ikke eksakt timing,
-    # så det kan ta noen minutter ekstra i perioder med mye trafikk.
-    - cron: "*/15 * * * *"
+    # Kjører hvert 5. minutt (raskeste mulige intervall for GitHub Actions cron).
+    # GitHub garanterer ikke eksakt timing, så det kan ta noen minutter ekstra
+    # i perioder med mye trafikk.
+    - cron: "*/5 * * * *"
   workflow_dispatch: # gjør at du også kan trigge den manuelt fra GitHub
 
 permissions:
