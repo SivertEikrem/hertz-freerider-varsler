@@ -1,6 +1,16 @@
 {
   "watches": [
-    { "from": "TRONDHEIM SLUPPEN", "to": "OSLO SENTRALSTASJON" },
-    { "from": "TRONDHEIM SLUPPEN", "to_city": "ÅLESUND" }
+    {
+      "from": "TRONDHEIM SLUPPEN",
+      "to": "OSLO SENTRALSTASJON"
+    },
+    {
+      "from": "TRONDHEIM SLUPPEN",
+      "to_city": "ÅLESUND"
+    },
+    {
+      "from_city": "OSLO",
+      "to_city": "FØRDE"
+    }
   ]
 }
