@@ -1,8 +1,8 @@
 {
   "watches": [
     {
-      "from_city": "OSLO",
-      "to_city": "FØRDE"
+      "from": "TRONDHEIM SLUPPEN",
+      "to": "MOLDE LUFTHAVN"
     }
   ]
 }
