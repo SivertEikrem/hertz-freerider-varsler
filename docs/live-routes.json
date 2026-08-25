@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-25T13:08:48.058449+00:00",
+  "updated_at": "2026-08-25T14:00:22.184230+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -18,8 +18,8 @@
       "to_city": "Arvidsjaur",
       "car_model": "VOLVO V90 CC AWD AUT",
       "available_at": "2026-08-04T10:30:00",
-      "latest_return": "2026-08-30T21:45:00",
-      "expire_time": "2026-08-30T15:03:00"
+      "latest_return": "2026-08-31T21:45:00",
+      "expire_time": "2026-08-31T15:03:00"
     },
     {
       "from": "SANDNESSJØEN SENTRUM",
@@ -28,8 +28,8 @@
       "to_city": "Boden",
       "car_model": "VOLVO V90 CC AWD AUT",
       "available_at": "2026-08-04T10:30:00",
-      "latest_return": "2026-08-30T21:45:00",
-      "expire_time": "2026-08-30T12:59:00"
+      "latest_return": "2026-08-31T21:45:00",
+      "expire_time": "2026-08-31T13:00:00"
     },
     {
       "from": "SANDNESSJØEN SENTRUM",
@@ -38,8 +38,8 @@
       "to_city": "Härnösand",
       "car_model": "VOLVO V90 CC AWD AUT",
       "available_at": "2026-08-04T10:30:00",
-      "latest_return": "2026-08-30T21:45:00",
-      "expire_time": "2026-08-30T11:50:00"
+      "latest_return": "2026-08-31T21:45:00",
+      "expire_time": "2026-08-31T11:50:00"
     },
     {
       "from": "SANDNESSJØEN SENTRUM",
@@ -48,8 +48,8 @@
       "to_city": "Luleå",
       "car_model": "VOLVO V90 CC AWD AUT",
       "available_at": "2026-08-04T10:30:00",
-      "latest_return": "2026-08-30T21:45:00",
-      "expire_time": "2026-08-30T12:47:00"
+      "latest_return": "2026-08-31T21:45:00",
+      "expire_time": "2026-08-31T12:48:00"
     },
     {
       "from": "SANDNESSJØEN SENTRUM",
@@ -58,8 +58,8 @@
       "to_city": "Lycksele",
       "car_model": "VOLVO V90 CC AWD AUT",
       "available_at": "2026-08-04T10:30:00",
-      "latest_return": "2026-08-30T21:45:00",
-      "expire_time": "2026-08-30T15:02:00"
+      "latest_return": "2026-08-31T21:45:00",
+      "expire_time": "2026-08-31T15:03:00"
     },
     {
       "from": "SANDNESSJØEN SENTRUM",
@@ -68,8 +68,8 @@
       "to_city": "SKONSENG",
       "car_model": "VOLVO V90 CC AWD AUT",
       "available_at": "2026-08-04T10:30:00",
-      "latest_return": "2026-08-30T21:45:00",
-      "expire_time": "2026-08-30T19:42:00"
+      "latest_return": "2026-08-31T21:45:00",
+      "expire_time": "2026-08-31T19:42:00"
     },
     {
       "from": "SANDNESSJØEN SENTRUM",
@@ -78,8 +78,8 @@
       "to_city": "Öjebyn",
       "car_model": "VOLVO V90 CC AWD AUT",
       "available_at": "2026-08-04T10:30:00",
-      "latest_return": "2026-08-30T21:45:00",
-      "expire_time": "2026-08-30T13:17:00"
+      "latest_return": "2026-08-31T21:45:00",
+      "expire_time": "2026-08-31T13:17:00"
     },
     {
       "from": "SANDNESSJØEN SENTRUM",
@@ -88,8 +88,8 @@
       "to_city": "Skellefteå",
       "car_model": "VOLVO V90 CC AWD AUT",
       "available_at": "2026-08-04T10:30:00",
-      "latest_return": "2026-08-30T21:45:00",
-      "expire_time": "2026-08-30T13:09:00"
+      "latest_return": "2026-08-31T21:45:00",
+      "expire_time": "2026-08-31T13:09:00"
     },
     {
       "from": "SANDNESSJØEN SENTRUM",
@@ -98,8 +98,8 @@
       "to_city": "Stockholm (Arlanda)",
       "car_model": "VOLVO V90 CC AWD AUT",
       "available_at": "2026-08-04T10:30:00",
-      "latest_return": "2026-08-30T21:45:00",
-      "expire_time": "2026-08-30T07:15:00"
+      "latest_return": "2026-08-31T21:45:00",
+      "expire_time": "2026-08-31T07:15:00"
     },
     {
       "from": "SANDNESSJØEN SENTRUM",
@@ -108,8 +108,8 @@
       "to_city": "Sundsvall",
       "car_model": "VOLVO V90 CC AWD AUT",
       "available_at": "2026-08-04T10:30:00",
-      "latest_return": "2026-08-30T21:45:00",
-      "expire_time": "2026-08-30T11:37:00"
+      "latest_return": "2026-08-31T21:45:00",
+      "expire_time": "2026-08-31T11:37:00"
     },
     {
       "from": "SANDNESSJØEN SENTRUM",
@@ -118,8 +118,8 @@
       "to_city": "Umeå",
       "car_model": "VOLVO V90 CC AWD AUT",
       "available_at": "2026-08-04T10:30:00",
-      "latest_return": "2026-08-30T21:45:00",
-      "expire_time": "2026-08-30T12:57:00"
+      "latest_return": "2026-08-31T21:45:00",
+      "expire_time": "2026-08-31T12:57:00"
     },
     {
       "from": "SANDNESSJØEN SENTRUM",
@@ -128,8 +128,8 @@
       "to_city": "Örnsköldsvik",
       "car_model": "VOLVO V90 CC AWD AUT",
       "available_at": "2026-08-04T10:30:00",
-      "latest_return": "2026-08-30T21:45:00",
-      "expire_time": "2026-08-30T12:20:00"
+      "latest_return": "2026-08-31T21:45:00",
+      "expire_time": "2026-08-31T12:20:00"
     },
     {
       "from": "SANDNESSJØEN SENTRUM",
@@ -138,8 +138,8 @@
       "to_city": "Östersund",
       "car_model": "VOLVO V90 CC AWD AUT",
       "available_at": "2026-08-04T10:30:00",
-      "latest_return": "2026-08-30T21:45:00",
-      "expire_time": "2026-08-30T13:59:00"
+      "latest_return": "2026-08-31T21:45:00",
+      "expire_time": "2026-08-31T13:59:00"
     },
     {
       "from": "HARSTAD",
@@ -460,106 +460,6 @@
       "available_at": "2026-08-25T09:45:00",
       "latest_return": "2026-08-29T17:45:00",
       "expire_time": "2026-08-29T11:30:00"
-    },
-    {
-      "from": "TRONDHEIM SLUPPEN",
-      "from_city": "TRONDHEIM",
-      "to": "KRISTIANSUND LUFTHAVN",
-      "to_city": "KRISTIANSUND",
-      "car_model": "SERES 5 SUV 4X4 80KWH AUT ELEC",
-      "available_at": "2026-08-25T10:00:00",
-      "latest_return": "2026-08-28T17:00:00",
-      "expire_time": "2026-08-28T13:39:00"
-    },
-    {
-      "from": "TRONDHEIM SLUPPEN",
-      "from_city": "TRONDHEIM",
-      "to": "MOLDE LUFTHAVN",
-      "to_city": "MOLDE",
-      "car_model": "SERES 5 SUV 4X4 80KWH AUT ELEC",
-      "available_at": "2026-08-25T10:00:00",
-      "latest_return": "2026-08-28T17:00:00",
-      "expire_time": "2026-08-28T13:18:00"
-    },
-    {
-      "from": "ÅLESUND SENTRUM",
-      "from_city": "ÅLESUND",
-      "to": "TRONDHEIM LUFTHAVN",
-      "to_city": "STJØRDAL",
-      "car_model": "FORD TRANSIT 6M3 65KWH AUT EL",
-      "available_at": "2026-08-25T11:45:00",
-      "latest_return": "2026-08-31T21:45:00",
-      "expire_time": "2026-08-31T15:26:00"
-    },
-    {
-      "from": "ÅLESUND SENTRUM",
-      "from_city": "ÅLESUND",
-      "to": "TRONDHEIM SLUPPEN",
-      "to_city": "TRONDHEIM",
-      "car_model": "FORD TRANSIT 6M3 65KWH AUT EL",
-      "available_at": "2026-08-25T11:45:00",
-      "latest_return": "2026-08-31T21:45:00",
-      "expire_time": "2026-08-31T16:01:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "LILLESTRØM",
-      "to_city": "SKEDSMOKORSET",
-      "car_model": "MERCEDES VITO 9-SETER 4X4 AUT",
-      "available_at": "2026-08-25T12:45:00",
-      "latest_return": "2026-08-30T10:00:00",
-      "expire_time": "2026-08-30T01:34:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO ALNABRU",
-      "to_city": "OSLO",
-      "car_model": "MERCEDES VITO 9-SETER 4X4 AUT",
-      "available_at": "2026-08-25T12:45:00",
-      "latest_return": "2026-08-30T10:00:00",
-      "expire_time": "2026-08-30T01:45:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO LUFTHAVN",
-      "to_city": "GARDERMOEN",
-      "car_model": "MERCEDES VITO 9-SETER 4X4 AUT",
-      "available_at": "2026-08-25T12:45:00",
-      "latest_return": "2026-08-30T10:00:00",
-      "expire_time": "2026-08-30T01:40:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO SENTRALSTASJON",
-      "to_city": "OSLO",
-      "car_model": "MERCEDES VITO 9-SETER 4X4 AUT",
-      "available_at": "2026-08-25T12:45:00",
-      "latest_return": "2026-08-30T10:00:00",
-      "expire_time": "2026-08-30T01:51:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO SENTRUM",
-      "to_city": "OSLO",
-      "car_model": "MERCEDES VITO 9-SETER 4X4 AUT",
-      "available_at": "2026-08-25T12:45:00",
-      "latest_return": "2026-08-30T10:00:00",
-      "expire_time": "2026-08-30T01:51:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO ØKERN",
-      "to_city": "OSLO",
-      "car_model": "MERCEDES VITO 9-SETER 4X4 AUT",
-      "available_at": "2026-08-25T12:45:00",
-      "latest_return": "2026-08-30T10:00:00",
-      "expire_time": "2026-08-30T01:46:00"
     },
     {
       "from": "TRONDHEIM LUFTHAVN",
