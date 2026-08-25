@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-25T05:15:50.189331+00:00",
+  "updated_at": "2026-08-25T05:54:02.464736+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -335,33 +335,6 @@
       "latest_return": "2026-08-26T14:09:00"
     },
     {
-      "from": "BODØ LUFTHAVN",
-      "from_city": "BODØ",
-      "to": "OSLO LUFTHAVN",
-      "to_city": "GARDERMOEN",
-      "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
-      "available_at": "2026-08-23T10:15:00",
-      "latest_return": "2026-08-28T10:25:00"
-    },
-    {
-      "from": "BODØ LUFTHAVN",
-      "from_city": "BODØ",
-      "to": "STAVANGER LUFTHAVN",
-      "to_city": "STAVANGER",
-      "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
-      "available_at": "2026-08-23T10:15:00",
-      "latest_return": "2026-08-28T10:15:00"
-    },
-    {
-      "from": "BODØ LUFTHAVN",
-      "from_city": "BODØ",
-      "to": "ÅLESUND SENTRUM",
-      "to_city": "ÅLESUND",
-      "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
-      "available_at": "2026-08-23T10:15:00",
-      "latest_return": "2026-08-28T10:24:00"
-    },
-    {
       "from": "TRONDHEIM SLUPPEN",
       "from_city": "TRONDHEIM",
       "to": "KRISTIANSUND LUFTHAVN",
@@ -414,6 +387,42 @@
       "car_model": "AUDI Q6 E-TRON 95KWH AUT ELEC",
       "available_at": "2026-08-24T11:15:00",
       "latest_return": "2026-08-27T21:00:00"
+    },
+    {
+      "from": "BERGEN LUFTHAVN",
+      "from_city": "BLOMSTERDALEN",
+      "to": "FØRDE SENTRUM",
+      "to_city": "FØRDE",
+      "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
+      "available_at": "2026-08-25T05:45:00",
+      "latest_return": "2026-08-29T17:45:00"
+    },
+    {
+      "from": "BERGEN LUFTHAVN",
+      "from_city": "BLOMSTERDALEN",
+      "to": "FØRDE SENTRUM",
+      "to_city": "FØRDE",
+      "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
+      "available_at": "2026-08-25T05:45:00",
+      "latest_return": "2026-08-29T17:45:00"
+    },
+    {
+      "from": "BERGEN LUFTHAVN",
+      "from_city": "BLOMSTERDALEN",
+      "to": "SOGNDAL SENTRUM",
+      "to_city": "SOGNDAL",
+      "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
+      "available_at": "2026-08-25T05:45:00",
+      "latest_return": "2026-08-29T17:45:00"
+    },
+    {
+      "from": "BERGEN LUFTHAVN",
+      "from_city": "BLOMSTERDALEN",
+      "to": "SOGNDAL SENTRUM",
+      "to_city": "SOGNDAL",
+      "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
+      "available_at": "2026-08-25T05:45:00",
+      "latest_return": "2026-08-29T17:45:00"
     }
   ]
 }
