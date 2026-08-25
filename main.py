@@ -56,6 +56,8 @@ def matches_watch(route, watch):
     return True
 
 
+NORSKE_UKEDAGER = ["man", "tir", "ons", "tor", "fre", "l\u00f8r", "s\u00f8n"]
+
 NORSKE_MAANEDER = [
     "jan",
     "feb",
@@ -79,7 +81,7 @@ def format_dato(iso_str):
         dt = datetime.fromisoformat(iso_str)
     except ValueError:
         return iso_str
-    return f"{dt.day}. {NORSKE_MAANEDER[dt.month - 1]} kl. {dt.strftime('%H:%M')}"
+    return f"{NORSKE_UKEDAGER[dt.weekday()]} {dt.day}. {NORSKE_MAANEDER[dt.month - 1]} kl. {dt.strftime('%H:%M')}"
 
 
 def format_route_message(watch, matches):
@@ -105,7 +107,7 @@ def format_dato_kort(iso_str):
         dt = datetime.fromisoformat(iso_str)
     except ValueError:
         return iso_str
-    return f"{dt.day}. {NORSKE_MAANEDER[dt.month - 1]}"
+    return f"{NORSKE_UKEDAGER[dt.weekday()]} {dt.day}. {NORSKE_MAANEDER[dt.month - 1]}"
 
 
 def build_daily_summary(config, all_routes):
