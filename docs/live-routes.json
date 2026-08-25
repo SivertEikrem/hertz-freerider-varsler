@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-25T09:26:59.871537+00:00",
+  "updated_at": "2026-08-25T09:59:21.568756+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -398,22 +398,58 @@
       "latest_return": "2026-08-31T14:30:00"
     },
     {
-      "from": "MOLDE LUFTHAVN",
-      "from_city": "MOLDE",
-      "to": "TRONDHEIM LUFTHAVN",
-      "to_city": "STJØRDAL",
-      "car_model": "EL-Personbil",
-      "available_at": "2026-08-25T08:30:00",
-      "latest_return": "2026-08-31T14:30:00"
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "FØRDE SENTRUM",
+      "to_city": "FØRDE",
+      "car_model": "TOYOTA COROLLA CROSS 4WD AUT H",
+      "available_at": "2026-08-25T09:45:00",
+      "latest_return": "2026-08-29T17:45:00"
     },
     {
-      "from": "MOLDE LUFTHAVN",
-      "from_city": "MOLDE",
-      "to": "TRONDHEIM SLUPPEN",
-      "to_city": "TRONDHEIM",
-      "car_model": "EL-Personbil",
-      "available_at": "2026-08-25T08:30:00",
-      "latest_return": "2026-08-31T14:42:00"
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "FØRDE SENTRUM",
+      "to_city": "FØRDE",
+      "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
+      "available_at": "2026-08-25T09:45:00",
+      "latest_return": "2026-08-29T17:45:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "FØRDE SENTRUM",
+      "to_city": "FØRDE",
+      "car_model": "TOYOTA RAV4 SUV AUT 4X4 PLUGIN",
+      "available_at": "2026-08-25T09:45:00",
+      "latest_return": "2026-08-29T17:45:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "SOGNDAL SENTRUM",
+      "to_city": "SOGNDAL",
+      "car_model": "TOYOTA COROLLA CROSS 4WD AUT H",
+      "available_at": "2026-08-25T09:45:00",
+      "latest_return": "2026-08-29T17:45:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "SOGNDAL SENTRUM",
+      "to_city": "SOGNDAL",
+      "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
+      "available_at": "2026-08-25T09:45:00",
+      "latest_return": "2026-08-29T17:45:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "SOGNDAL SENTRUM",
+      "to_city": "SOGNDAL",
+      "car_model": "TOYOTA RAV4 SUV AUT 4X4 PLUGIN",
+      "available_at": "2026-08-25T09:45:00",
+      "latest_return": "2026-08-29T17:45:00"
     },
     {
       "from": "TRONDHEIM LUFTHAVN",
