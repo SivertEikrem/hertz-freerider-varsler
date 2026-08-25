@@ -22,16 +22,20 @@ function escapeHtml(str) {
   }[c]));
 }
 
+const NORSKE_UKEDAGER = ["søn", "man", "tir", "ons", "tor", "fre", "lør"]; // JS: søndag=0
+const NORSKE_MAANEDER = [
+  "jan", "feb", "mar", "apr", "mai", "jun",
+  "jul", "aug", "sep", "okt", "nov", "des",
+];
+
 function formatDate(iso) {
   if (!iso) return "ukjent";
   const d = new Date(iso);
   if (isNaN(d)) return iso;
-  return d.toLocaleString("nb-NO", {
-    day: "numeric",
-    month: "short",
-    hour: "2-digit",
-    minute: "2-digit",
-  });
+  const ukedag = NORSKE_UKEDAGER[d.getDay()];
+  const hh = String(d.getHours()).padStart(2, "0");
+  const mm = String(d.getMinutes()).padStart(2, "0");
+  return `${ukedag} ${d.getDate()}. ${NORSKE_MAANEDER[d.getMonth()]} kl. ${hh}:${mm}`;
 }
 
 function timeAgo(iso) {
