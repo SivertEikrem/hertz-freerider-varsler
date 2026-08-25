@@ -48,7 +48,7 @@ function timeAgo(iso) {
 
 function compareRoutes(a, b) {
   let result;
-  if (sortField === "from" || sortField === "to") {
+  if (sortField === "from" || sortField === "to" || sortField === "car_model") {
     result = (a[sortField] || "").localeCompare(b[sortField] || "", "nb");
   } else {
     // Datofelter: manglende dato havner alltid sist, uansett retning
