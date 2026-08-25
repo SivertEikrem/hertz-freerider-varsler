@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-25T05:54:02.464736+00:00",
+  "updated_at": "2026-08-25T06:23:38.331295+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -125,7 +125,7 @@
       "to_city": "Arvidsjaur",
       "car_model": "VOLVO V60 CC AWD AUTOMAT",
       "available_at": "2026-08-14T10:45:00",
-      "latest_return": "2026-08-26T21:45:00"
+      "latest_return": "2026-08-31T21:45:00"
     },
     {
       "from": "HARSTAD",
@@ -134,7 +134,7 @@
       "to_city": "Boden",
       "car_model": "VOLVO V60 CC AWD AUTOMAT",
       "available_at": "2026-08-14T10:45:00",
-      "latest_return": "2026-08-26T21:45:00"
+      "latest_return": "2026-08-31T21:45:00"
     },
     {
       "from": "HARSTAD",
@@ -143,7 +143,7 @@
       "to_city": "Gällivare",
       "car_model": "VOLVO V60 CC AWD AUTOMAT",
       "available_at": "2026-08-14T10:45:00",
-      "latest_return": "2026-08-26T21:45:00"
+      "latest_return": "2026-08-31T21:45:00"
     },
     {
       "from": "HARSTAD",
@@ -152,7 +152,7 @@
       "to_city": "Kiruna",
       "car_model": "VOLVO V60 CC AWD AUTOMAT",
       "available_at": "2026-08-14T10:45:00",
-      "latest_return": "2026-08-26T21:45:00"
+      "latest_return": "2026-08-31T21:45:00"
     },
     {
       "from": "HARSTAD",
@@ -161,7 +161,7 @@
       "to_city": "Luleå",
       "car_model": "VOLVO V60 CC AWD AUTOMAT",
       "available_at": "2026-08-14T10:45:00",
-      "latest_return": "2026-08-26T21:45:00"
+      "latest_return": "2026-08-31T21:45:00"
     },
     {
       "from": "HARSTAD",
@@ -170,7 +170,7 @@
       "to_city": "Lycksele",
       "car_model": "VOLVO V60 CC AWD AUTOMAT",
       "available_at": "2026-08-14T10:45:00",
-      "latest_return": "2026-08-26T21:45:00"
+      "latest_return": "2026-08-31T21:45:00"
     },
     {
       "from": "HARSTAD",
@@ -179,7 +179,7 @@
       "to_city": "NARVIK",
       "car_model": "VOLVO V60 CC AWD AUTOMAT",
       "available_at": "2026-08-14T10:45:00",
-      "latest_return": "2026-08-26T21:45:00"
+      "latest_return": "2026-08-31T21:45:00"
     },
     {
       "from": "HARSTAD",
@@ -188,7 +188,7 @@
       "to_city": "Öjebyn",
       "car_model": "VOLVO V60 CC AWD AUTOMAT",
       "available_at": "2026-08-14T10:45:00",
-      "latest_return": "2026-08-26T21:45:00"
+      "latest_return": "2026-08-31T21:45:00"
     },
     {
       "from": "HARSTAD",
@@ -197,7 +197,7 @@
       "to_city": "Skellefteå",
       "car_model": "VOLVO V60 CC AWD AUTOMAT",
       "available_at": "2026-08-14T10:45:00",
-      "latest_return": "2026-08-26T21:45:00"
+      "latest_return": "2026-08-31T21:45:00"
     },
     {
       "from": "HARSTAD",
@@ -206,7 +206,7 @@
       "to_city": "Umeå",
       "car_model": "VOLVO V60 CC AWD AUTOMAT",
       "available_at": "2026-08-14T10:45:00",
-      "latest_return": "2026-08-26T21:45:00"
+      "latest_return": "2026-08-31T21:45:00"
     },
     {
       "from": "STAVANGER SOLA",
@@ -393,25 +393,7 @@
       "from_city": "BLOMSTERDALEN",
       "to": "FØRDE SENTRUM",
       "to_city": "FØRDE",
-      "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
-      "available_at": "2026-08-25T05:45:00",
-      "latest_return": "2026-08-29T17:45:00"
-    },
-    {
-      "from": "BERGEN LUFTHAVN",
-      "from_city": "BLOMSTERDALEN",
-      "to": "FØRDE SENTRUM",
-      "to_city": "FØRDE",
       "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
-      "available_at": "2026-08-25T05:45:00",
-      "latest_return": "2026-08-29T17:45:00"
-    },
-    {
-      "from": "BERGEN LUFTHAVN",
-      "from_city": "BLOMSTERDALEN",
-      "to": "SOGNDAL SENTRUM",
-      "to_city": "SOGNDAL",
-      "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
       "available_at": "2026-08-25T05:45:00",
       "latest_return": "2026-08-29T17:45:00"
     },
