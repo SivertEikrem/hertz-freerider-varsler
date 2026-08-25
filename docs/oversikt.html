@@ -18,7 +18,16 @@
   </header>
   <p class="subtitle" id="updatedLine">Laster...</p>
 
-  <input type="text" id="filterInput" placeholder="Filtrer på stasjon eller by..." style="margin-bottom:16px;" />
+  <div style="display:flex; gap:8px; margin-bottom:16px;">
+    <input type="text" id="filterInput" placeholder="Filtrer på stasjon eller by..." style="margin-bottom:0; flex:1;" />
+    <select id="sortField" style="margin-bottom:0; width:auto;">
+      <option value="available_at">Tilgjengelig fra</option>
+      <option value="expire_time">Hentefrist</option>
+      <option value="from">Fra (alfabetisk)</option>
+      <option value="to">Til (alfabetisk)</option>
+    </select>
+    <button class="ghost" id="sortDirBtn" type="button" title="Bytt sorteringsretning">&#9650;</button>
+  </div>
 
   <div class="panel">
     <div class="route-list" id="liveList"></div>
