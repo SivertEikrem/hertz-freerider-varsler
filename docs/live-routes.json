@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-25T09:59:21.568756+00:00",
+  "updated_at": "2026-08-25T10:31:41.450898+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -245,24 +245,6 @@
       "latest_return": "2026-08-29T19:00:00"
     },
     {
-      "from": "TRONDHEIM SLUPPEN",
-      "from_city": "TRONDHEIM",
-      "to": "KRISTIANSUND LUFTHAVN",
-      "to_city": "KRISTIANSUND",
-      "car_model": "VW ID.3 5D 58KWH 5D AUT ELECTR",
-      "available_at": "2026-08-20T13:00:00",
-      "latest_return": "2026-08-28T16:00:00"
-    },
-    {
-      "from": "TRONDHEIM SLUPPEN",
-      "from_city": "TRONDHEIM",
-      "to": "MOLDE LUFTHAVN",
-      "to_city": "MOLDE",
-      "car_model": "VW ID.3 5D 58KWH 5D AUT ELECTR",
-      "available_at": "2026-08-20T13:00:00",
-      "latest_return": "2026-08-28T16:00:00"
-    },
-    {
       "from": "HAUGESUND LUFTHAVN",
       "from_city": "AVALDSNES",
       "to": "KRISTIANSAND LUFTHAVN",
@@ -450,6 +432,42 @@
       "car_model": "TOYOTA RAV4 SUV AUT 4X4 PLUGIN",
       "available_at": "2026-08-25T09:45:00",
       "latest_return": "2026-08-29T17:45:00"
+    },
+    {
+      "from": "TRONDHEIM SLUPPEN",
+      "from_city": "TRONDHEIM",
+      "to": "KRISTIANSUND LUFTHAVN",
+      "to_city": "KRISTIANSUND",
+      "car_model": "SERES 5 SUV 4X4 80KWH AUT ELEC",
+      "available_at": "2026-08-25T10:00:00",
+      "latest_return": "2026-08-28T17:00:00"
+    },
+    {
+      "from": "TRONDHEIM SLUPPEN",
+      "from_city": "TRONDHEIM",
+      "to": "MOLDE LUFTHAVN",
+      "to_city": "MOLDE",
+      "car_model": "SERES 5 SUV 4X4 80KWH AUT ELEC",
+      "available_at": "2026-08-25T10:00:00",
+      "latest_return": "2026-08-28T17:00:00"
+    },
+    {
+      "from": "TRONDHEIM SLUPPEN",
+      "from_city": "TRONDHEIM",
+      "to": "ÅLESUND SENTRUM",
+      "to_city": "ÅLESUND",
+      "car_model": "SERES 5 SUV 4X4 80KWH AUT ELEC",
+      "available_at": "2026-08-25T10:00:00",
+      "latest_return": "2026-08-28T17:00:00"
+    },
+    {
+      "from": "TRONDHEIM SLUPPEN",
+      "from_city": "TRONDHEIM",
+      "to": "ÅLESUND SENTRUM",
+      "to_city": "ÅLESUND",
+      "car_model": "SERES 5 SUV 4X4 80KWH AUT ELEC",
+      "available_at": "2026-08-25T10:00:00",
+      "latest_return": "2026-08-29T17:00:00"
     },
     {
       "from": "TRONDHEIM LUFTHAVN",
