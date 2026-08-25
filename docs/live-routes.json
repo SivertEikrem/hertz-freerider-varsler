@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-25T10:31:41.450898+00:00",
+  "updated_at": "2026-08-25T11:03:35.123320+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -393,15 +393,6 @@
       "from_city": "GARDERMOEN",
       "to": "FØRDE SENTRUM",
       "to_city": "FØRDE",
-      "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
-      "available_at": "2026-08-25T09:45:00",
-      "latest_return": "2026-08-29T17:45:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "GARDERMOEN",
-      "to": "FØRDE SENTRUM",
-      "to_city": "FØRDE",
       "car_model": "TOYOTA RAV4 SUV AUT 4X4 PLUGIN",
       "available_at": "2026-08-25T09:45:00",
       "latest_return": "2026-08-29T17:45:00"
@@ -412,15 +403,6 @@
       "to": "SOGNDAL SENTRUM",
       "to_city": "SOGNDAL",
       "car_model": "TOYOTA COROLLA CROSS 4WD AUT H",
-      "available_at": "2026-08-25T09:45:00",
-      "latest_return": "2026-08-29T17:45:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "GARDERMOEN",
-      "to": "SOGNDAL SENTRUM",
-      "to_city": "SOGNDAL",
-      "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
       "available_at": "2026-08-25T09:45:00",
       "latest_return": "2026-08-29T17:45:00"
     },
