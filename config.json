@@ -3,6 +3,10 @@
     {
       "from_city": "TRONDHEIM",
       "to_city": "ÅLESUND"
+    },
+    {
+      "from_city": "ÅLESUND",
+      "to_city": "TRONDHEIM"
     }
   ]
 }
