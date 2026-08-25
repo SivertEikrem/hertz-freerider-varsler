@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-25T06:23:38.331295+00:00",
+  "updated_at": "2026-08-25T07:15:28.977802+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -272,15 +272,6 @@
       "latest_return": "2026-08-25T14:45:00"
     },
     {
-      "from": "MO I RANA SENTRUM",
-      "from_city": "MO I RANA",
-      "to": "TRONDHEIM SLUPPEN",
-      "to_city": "TRONDHEIM",
-      "car_model": "TOYOTA COROLLA CROSS 2WD AUT H",
-      "available_at": "2026-08-21T07:45:00",
-      "latest_return": "2026-08-25T14:45:00"
-    },
-    {
       "from": "HAUGESUND LUFTHAVN",
       "from_city": "AVALDSNES",
       "to": "KRISTIANSAND LUFTHAVN",
@@ -364,29 +355,29 @@
     {
       "from": "BODØ LUFTHAVN",
       "from_city": "BODØ",
+      "to": "BERGEN LUFTHAVN",
+      "to_city": "BLOMSTERDALEN",
+      "car_model": "VOLVO XC60 T6 AWD HYBRID AUT",
+      "available_at": "2026-08-24T10:00:00",
+      "latest_return": "2026-08-29T06:27:00"
+    },
+    {
+      "from": "BODØ LUFTHAVN",
+      "from_city": "BODØ",
+      "to": "OSLO LUFTHAVN",
+      "to_city": "GARDERMOEN",
+      "car_model": "VOLVO XC60 T6 AWD HYBRID AUT",
+      "available_at": "2026-08-24T10:00:00",
+      "latest_return": "2026-08-29T06:27:00"
+    },
+    {
+      "from": "BODØ LUFTHAVN",
+      "from_city": "BODØ",
       "to": "STAVANGER LUFTHAVN",
       "to_city": "STAVANGER",
       "car_model": "VOLVO XC60 T6 AWD HYBRID AUT",
       "available_at": "2026-08-24T10:00:00",
       "latest_return": "2026-08-29T10:00:00"
-    },
-    {
-      "from": "BODØ LUFTHAVN",
-      "from_city": "BODØ",
-      "to": "TRONDHEIM LUFTHAVN",
-      "to_city": "STJØRDAL",
-      "car_model": "HYUNDAI IONIQ6 74KWH 4X4 AUT E",
-      "available_at": "2026-08-24T10:15:00",
-      "latest_return": "2026-08-29T10:15:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "GARDERMOEN",
-      "to": "BERGEN KOKSTAD",
-      "to_city": "KOKSTAD",
-      "car_model": "AUDI Q6 E-TRON 95KWH AUT ELEC",
-      "available_at": "2026-08-24T11:15:00",
-      "latest_return": "2026-08-27T21:00:00"
     },
     {
       "from": "BERGEN LUFTHAVN",
