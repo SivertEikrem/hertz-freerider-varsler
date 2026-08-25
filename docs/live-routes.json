@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-25T08:56:47.540264+00:00",
+  "updated_at": "2026-08-25T09:26:59.871537+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -369,24 +369,6 @@
       "car_model": "VOLVO XC60 T6 AWD HYBRID AUT",
       "available_at": "2026-08-24T10:00:00",
       "latest_return": "2026-08-29T10:00:00"
-    },
-    {
-      "from": "BERGEN LUFTHAVN",
-      "from_city": "BLOMSTERDALEN",
-      "to": "FØRDE SENTRUM",
-      "to_city": "FØRDE",
-      "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
-      "available_at": "2026-08-25T05:45:00",
-      "latest_return": "2026-08-29T17:45:00"
-    },
-    {
-      "from": "BERGEN LUFTHAVN",
-      "from_city": "BLOMSTERDALEN",
-      "to": "SOGNDAL SENTRUM",
-      "to_city": "SOGNDAL",
-      "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
-      "available_at": "2026-08-25T05:45:00",
-      "latest_return": "2026-08-29T17:45:00"
     },
     {
       "from": "KRISTIANSUND LUFTHAVN",
