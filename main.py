@@ -18,7 +18,7 @@ import telegram_api
 from state_store import load_config, load_seen, save_seen
 
 OSLO_TZ = ZoneInfo("Europe/Oslo")
-DAGLIG_OPPSUMMERING_TIDER = [8, 13, 18, 23]  # klokketimer (norsk lokaltid) for daglig oppsummering
+DAGLIG_OPPSUMMERING_TIDER = [14, 20]  # klokketimer (norsk lokaltid) for daglig oppsummering
 
 LIVE_ROUTES_PATH = "docs/live-routes.json"
 
@@ -206,6 +206,7 @@ def write_live_routes(all_routes):
                 "car_model": route.get("carModel", "Ukjent bilmodell"),
                 "available_at": route.get("availableAt"),
                 "latest_return": route.get("latestReturn"),
+                "expire_time": route.get("expireTime"),
             }
         )
     compact.sort(key=lambda r: r["available_at"] or "")
