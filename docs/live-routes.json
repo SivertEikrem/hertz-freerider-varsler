@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-25T08:04:52.355452+00:00",
+  "updated_at": "2026-08-25T08:56:47.540264+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -387,6 +387,60 @@
       "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
       "available_at": "2026-08-25T05:45:00",
       "latest_return": "2026-08-29T17:45:00"
+    },
+    {
+      "from": "KRISTIANSUND LUFTHAVN",
+      "from_city": "KRISTIANSUND",
+      "to": "TRONDHEIM LUFTHAVN",
+      "to_city": "STJØRDAL",
+      "car_model": "EL-Personbil",
+      "available_at": "2026-08-25T08:30:00",
+      "latest_return": "2026-08-29T15:30:00"
+    },
+    {
+      "from": "KRISTIANSUND LUFTHAVN",
+      "from_city": "KRISTIANSUND",
+      "to": "TRONDHEIM SLUPPEN",
+      "to_city": "TRONDHEIM",
+      "car_model": "EL-Personbil",
+      "available_at": "2026-08-25T08:30:00",
+      "latest_return": "2026-08-29T15:41:00"
+    },
+    {
+      "from": "KRISTIANSUND LUFTHAVN",
+      "from_city": "KRISTIANSUND",
+      "to": "TRONDHEIM SLUPPEN",
+      "to_city": "TRONDHEIM",
+      "car_model": "HONDA JAZZ 5D HYBRID AUT",
+      "available_at": "2026-08-25T08:30:00",
+      "latest_return": "2026-08-31T14:30:00"
+    },
+    {
+      "from": "MOLDE LUFTHAVN",
+      "from_city": "MOLDE",
+      "to": "TRONDHEIM LUFTHAVN",
+      "to_city": "STJØRDAL",
+      "car_model": "EL-Personbil",
+      "available_at": "2026-08-25T08:30:00",
+      "latest_return": "2026-08-31T14:30:00"
+    },
+    {
+      "from": "MOLDE LUFTHAVN",
+      "from_city": "MOLDE",
+      "to": "TRONDHEIM SLUPPEN",
+      "to_city": "TRONDHEIM",
+      "car_model": "EL-Personbil",
+      "available_at": "2026-08-25T08:30:00",
+      "latest_return": "2026-08-31T14:42:00"
+    },
+    {
+      "from": "TRONDHEIM LUFTHAVN",
+      "from_city": "STJØRDAL",
+      "to": "KRISTIANSUND LUFTHAVN",
+      "to_city": "KRISTIANSUND",
+      "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
+      "available_at": "2026-08-27T06:00:00",
+      "latest_return": "2026-08-30T21:00:00"
     }
   ]
 }
