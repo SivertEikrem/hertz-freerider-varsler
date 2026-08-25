@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-25T07:15:28.977802+00:00",
+  "updated_at": "2026-08-25T08:04:52.355452+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -261,15 +261,6 @@
       "car_model": "VW ID.3 5D 58KWH 5D AUT ELECTR",
       "available_at": "2026-08-20T13:00:00",
       "latest_return": "2026-08-28T16:00:00"
-    },
-    {
-      "from": "MO I RANA SENTRUM",
-      "from_city": "MO I RANA",
-      "to": "TRONDHEIM LUFTHAVN",
-      "to_city": "STJØRDAL",
-      "car_model": "TOYOTA COROLLA CROSS 2WD AUT H",
-      "available_at": "2026-08-21T07:45:00",
-      "latest_return": "2026-08-25T14:45:00"
     },
     {
       "from": "HAUGESUND LUFTHAVN",
