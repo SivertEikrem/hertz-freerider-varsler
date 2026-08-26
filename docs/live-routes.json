@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-26T05:21:43.305945+00:00",
+  "updated_at": "2026-08-26T05:56:14.477636+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -19,7 +19,7 @@
       "car_model": "VOLVO V90 CC AWD AUT",
       "available_at": "2026-08-04T10:30:00",
       "latest_return": "2026-08-31T21:45:00",
-      "expire_time": "2026-08-31T15:03:00"
+      "expire_time": "2026-08-31T14:54:00"
     },
     {
       "from": "SANDNESSJØEN SENTRUM",
@@ -29,7 +29,27 @@
       "car_model": "VOLVO V90 CC AWD AUT",
       "available_at": "2026-08-04T10:30:00",
       "latest_return": "2026-08-31T21:45:00",
-      "expire_time": "2026-08-31T13:00:00"
+      "expire_time": "2026-08-31T12:37:00"
+    },
+    {
+      "from": "SANDNESSJØEN SENTRUM",
+      "from_city": "SANDNESSNJØEN",
+      "to": "Gävle Bilbolaget / Self Service Kiosk",
+      "to_city": "Gävle",
+      "car_model": "VOLVO V90 CC AWD AUT",
+      "available_at": "2026-08-04T10:30:00",
+      "latest_return": "2026-08-31T21:45:00",
+      "expire_time": "2026-08-31T08:54:00"
+    },
+    {
+      "from": "SANDNESSJØEN SENTRUM",
+      "from_city": "SANDNESSNJØEN",
+      "to": "Hudiksvall & Self Service Kiosk",
+      "to_city": "Hudiksvall",
+      "car_model": "VOLVO V90 CC AWD AUT",
+      "available_at": "2026-08-04T10:30:00",
+      "latest_return": "2026-08-31T21:45:00",
+      "expire_time": "2026-08-31T10:35:00"
     },
     {
       "from": "SANDNESSJØEN SENTRUM",
@@ -39,7 +59,7 @@
       "car_model": "VOLVO V90 CC AWD AUT",
       "available_at": "2026-08-04T10:30:00",
       "latest_return": "2026-08-31T21:45:00",
-      "expire_time": "2026-08-31T11:50:00"
+      "expire_time": "2026-08-31T11:48:00"
     },
     {
       "from": "SANDNESSJØEN SENTRUM",
@@ -49,7 +69,7 @@
       "car_model": "VOLVO V90 CC AWD AUT",
       "available_at": "2026-08-04T10:30:00",
       "latest_return": "2026-08-31T21:45:00",
-      "expire_time": "2026-08-31T12:48:00"
+      "expire_time": "2026-08-31T12:24:00"
     },
     {
       "from": "SANDNESSJØEN SENTRUM",
@@ -59,7 +79,7 @@
       "car_model": "VOLVO V90 CC AWD AUT",
       "available_at": "2026-08-04T10:30:00",
       "latest_return": "2026-08-31T21:45:00",
-      "expire_time": "2026-08-31T15:03:00"
+      "expire_time": "2026-08-31T14:54:00"
     },
     {
       "from": "SANDNESSJØEN SENTRUM",
@@ -69,7 +89,17 @@
       "car_model": "VOLVO V90 CC AWD AUT",
       "available_at": "2026-08-04T10:30:00",
       "latest_return": "2026-08-31T21:45:00",
-      "expire_time": "2026-08-31T19:42:00"
+      "expire_time": "2026-08-31T19:43:00"
+    },
+    {
+      "from": "SANDNESSJØEN SENTRUM",
+      "from_city": "SANDNESSNJØEN",
+      "to": "NARVIK",
+      "to_city": "NARVIK",
+      "car_model": "VOLVO V90 CC AWD AUT",
+      "available_at": "2026-08-04T10:30:00",
+      "latest_return": "2026-08-31T21:45:00",
+      "expire_time": "2026-08-31T12:00:00"
     },
     {
       "from": "SANDNESSJØEN SENTRUM",
@@ -79,7 +109,7 @@
       "car_model": "VOLVO V90 CC AWD AUT",
       "available_at": "2026-08-04T10:30:00",
       "latest_return": "2026-08-31T21:45:00",
-      "expire_time": "2026-08-31T13:17:00"
+      "expire_time": "2026-08-31T13:09:00"
     },
     {
       "from": "SANDNESSJØEN SENTRUM",
@@ -89,7 +119,7 @@
       "car_model": "VOLVO V90 CC AWD AUT",
       "available_at": "2026-08-04T10:30:00",
       "latest_return": "2026-08-31T21:45:00",
-      "expire_time": "2026-08-31T13:09:00"
+      "expire_time": "2026-08-31T12:56:00"
     },
     {
       "from": "SANDNESSJØEN SENTRUM",
@@ -99,7 +129,17 @@
       "car_model": "VOLVO V90 CC AWD AUT",
       "available_at": "2026-08-04T10:30:00",
       "latest_return": "2026-08-31T21:45:00",
-      "expire_time": "2026-08-31T07:15:00"
+      "expire_time": "2026-08-31T07:31:00"
+    },
+    {
+      "from": "SANDNESSJØEN SENTRUM",
+      "from_city": "SANDNESSNJØEN",
+      "to": "Stockholm Centralstation / Self Service Kiosk",
+      "to_city": "STOCKHOLM",
+      "car_model": "VOLVO V90 CC AWD AUT",
+      "available_at": "2026-08-04T10:30:00",
+      "latest_return": "2026-08-31T21:45:00",
+      "expire_time": "2026-08-31T07:00:00"
     },
     {
       "from": "SANDNESSJØEN SENTRUM",
@@ -109,7 +149,17 @@
       "car_model": "VOLVO V90 CC AWD AUT",
       "available_at": "2026-08-04T10:30:00",
       "latest_return": "2026-08-31T21:45:00",
-      "expire_time": "2026-08-31T11:37:00"
+      "expire_time": "2026-08-31T11:32:00"
+    },
+    {
+      "from": "SANDNESSJØEN SENTRUM",
+      "from_city": "SANDNESSNJØEN",
+      "to": "Sälen Sälfjällstorget Self Service Kiosk",
+      "to_city": "Sälen",
+      "car_model": "VOLVO V90 CC AWD AUT",
+      "available_at": "2026-08-04T10:30:00",
+      "latest_return": "2026-08-31T21:45:00",
+      "expire_time": "2026-08-31T08:23:00"
     },
     {
       "from": "SANDNESSJØEN SENTRUM",
@@ -119,7 +169,17 @@
       "car_model": "VOLVO V90 CC AWD AUT",
       "available_at": "2026-08-04T10:30:00",
       "latest_return": "2026-08-31T21:45:00",
-      "expire_time": "2026-08-31T12:57:00"
+      "expire_time": "2026-08-31T12:51:00"
+    },
+    {
+      "from": "SANDNESSJØEN SENTRUM",
+      "from_city": "SANDNESSNJØEN",
+      "to": "Uppsala DT/Self Service Kiosk",
+      "to_city": "Uppsala",
+      "car_model": "VOLVO V90 CC AWD AUT",
+      "available_at": "2026-08-04T10:30:00",
+      "latest_return": "2026-08-31T21:45:00",
+      "expire_time": "2026-08-31T07:44:00"
     },
     {
       "from": "SANDNESSJØEN SENTRUM",
@@ -129,7 +189,7 @@
       "car_model": "VOLVO V90 CC AWD AUT",
       "available_at": "2026-08-04T10:30:00",
       "latest_return": "2026-08-31T21:45:00",
-      "expire_time": "2026-08-31T12:20:00"
+      "expire_time": "2026-08-31T12:14:00"
     },
     {
       "from": "SANDNESSJØEN SENTRUM",
@@ -139,7 +199,7 @@
       "car_model": "VOLVO V90 CC AWD AUT",
       "available_at": "2026-08-04T10:30:00",
       "latest_return": "2026-08-31T21:45:00",
-      "expire_time": "2026-08-31T13:59:00"
+      "expire_time": "2026-08-31T13:54:00"
     },
     {
       "from": "HARSTAD",
@@ -440,6 +500,36 @@
       "available_at": "2026-08-25T09:45:00",
       "latest_return": "2026-08-29T17:45:00",
       "expire_time": "2026-08-29T11:30:00"
+    },
+    {
+      "from": "BODØ LUFTHAVN",
+      "from_city": "BODØ",
+      "to": "OSLO LUFTHAVN",
+      "to_city": "GARDERMOEN",
+      "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
+      "available_at": "2026-08-26T05:15:00",
+      "latest_return": "2026-08-30T12:29:00",
+      "expire_time": "2026-08-29T18:07:00"
+    },
+    {
+      "from": "BODØ LUFTHAVN",
+      "from_city": "BODØ",
+      "to": "STAVANGER LUFTHAVN",
+      "to_city": "STAVANGER",
+      "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
+      "available_at": "2026-08-26T05:15:00",
+      "latest_return": "2026-08-30T12:15:00",
+      "expire_time": "2026-08-29T09:32:00"
+    },
+    {
+      "from": "BODØ LUFTHAVN",
+      "from_city": "BODØ",
+      "to": "ÅLESUND SENTRUM",
+      "to_city": "ÅLESUND",
+      "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
+      "available_at": "2026-08-26T05:15:00",
+      "latest_return": "2026-08-30T12:29:00",
+      "expire_time": "2026-08-29T18:57:00"
     },
     {
       "from": "TRONDHEIM LUFTHAVN",
