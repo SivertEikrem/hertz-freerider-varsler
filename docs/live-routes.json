@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-26T06:31:00.495800+00:00",
+  "updated_at": "2026-08-26T07:30:11.804572+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -358,18 +358,28 @@
       "to_city": "BODØ",
       "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
       "available_at": "2026-08-22T08:00:00",
-      "latest_return": "2026-08-26T14:00:00",
-      "expire_time": "2026-08-26T07:12:00"
+      "latest_return": "2026-08-27T14:00:00",
+      "expire_time": "2026-08-27T07:11:00"
     },
     {
-      "from": "SVOLVÆR SENTRUM",
+      "from": "SVOLVÆR LUFTHAVN",
       "from_city": "SVOLVÆR",
-      "to": "BODØ SENTRUM",
-      "to_city": "BODØ",
-      "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
+      "to": "MO I RANA LUFTHAVN",
+      "to_city": "SKONSENG",
+      "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
       "available_at": "2026-08-22T08:00:00",
-      "latest_return": "2026-08-26T14:00:00",
-      "expire_time": "2026-08-26T07:21:00"
+      "latest_return": "2026-08-27T14:00:00",
+      "expire_time": "2026-08-27T05:34:00"
+    },
+    {
+      "from": "SVOLVÆR LUFTHAVN",
+      "from_city": "SVOLVÆR",
+      "to": "MO I RANA SENTRUM",
+      "to_city": "MO I RANA",
+      "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
+      "available_at": "2026-08-22T08:00:00",
+      "latest_return": "2026-08-27T14:00:00",
+      "expire_time": "2026-08-27T05:17:00"
     },
     {
       "from": "TRONDHEIM SLUPPEN",
@@ -550,6 +560,66 @@
       "available_at": "2026-08-26T06:00:00",
       "latest_return": "2026-08-31T06:00:00",
       "expire_time": "2026-08-31T00:02:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "BERGEN ÅSANE",
+      "to_city": "BERGEN",
+      "car_model": "TOYOTA YARIS 5D 1,5 HYBRID AUT",
+      "available_at": "2026-08-26T06:45:00",
+      "latest_return": "2026-08-31T06:00:00",
+      "expire_time": "2026-08-30T21:32:00"
+    },
+    {
+      "from": "STORD SENTRUM",
+      "from_city": "STORD",
+      "to": "KONGSBERG",
+      "to_city": "KONGSBERG",
+      "car_model": "VW ID.3 5D 58KWH 5D AUT ELECTR",
+      "available_at": "2026-08-26T07:15:00",
+      "latest_return": "2026-09-06T07:00:00",
+      "expire_time": "2026-09-06T00:02:00"
+    },
+    {
+      "from": "STORD SENTRUM",
+      "from_city": "STORD",
+      "to": "OSLO LUFTHAVN",
+      "to_city": "GARDERMOEN",
+      "car_model": "VW ID.3 5D 58KWH 5D AUT ELECTR",
+      "available_at": "2026-08-26T07:15:00",
+      "latest_return": "2026-09-06T07:00:00",
+      "expire_time": "2026-09-05T21:42:00"
+    },
+    {
+      "from": "ÅLESUND LUFTHAVN",
+      "from_city": "VIGRA",
+      "to": "BERGEN LUFTHAVN",
+      "to_city": "BLOMSTERDALEN",
+      "car_model": "TOYOTA YARIS",
+      "available_at": "2026-08-26T07:30:00",
+      "latest_return": "2026-08-29T18:15:00",
+      "expire_time": "2026-08-29T08:56:00"
+    },
+    {
+      "from": "ÅLESUND LUFTHAVN",
+      "from_city": "VIGRA",
+      "to": "FØRDE SENTRUM",
+      "to_city": "FØRDE",
+      "car_model": "TOYOTA YARIS",
+      "available_at": "2026-08-26T07:30:00",
+      "latest_return": "2026-08-29T18:29:00",
+      "expire_time": "2026-08-29T13:07:00"
+    },
+    {
+      "from": "ÅLESUND LUFTHAVN",
+      "from_city": "VIGRA",
+      "to": "SOGNDAL SENTRUM",
+      "to_city": "SOGNDAL",
+      "car_model": "TOYOTA YARIS",
+      "available_at": "2026-08-26T07:30:00",
+      "latest_return": "2026-08-29T18:15:00",
+      "expire_time": "2026-08-29T12:41:00"
     }
   ]
 }
