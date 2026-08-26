@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-26T08:22:38.778945+00:00",
+  "updated_at": "2026-08-26T09:07:49.704130+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -200,116 +200,6 @@
       "available_at": "2026-08-04T10:30:00",
       "latest_return": "2026-08-31T21:45:00",
       "expire_time": "2026-08-31T13:54:00"
-    },
-    {
-      "from": "HARSTAD",
-      "from_city": "HARSTAD",
-      "to": "Arvidsjaur/Volvo / Self Service Kiosk",
-      "to_city": "Arvidsjaur",
-      "car_model": "VOLVO V60 CC AWD AUTOMAT",
-      "available_at": "2026-08-14T10:45:00",
-      "latest_return": "2026-08-31T21:45:00",
-      "expire_time": "2026-08-31T12:09:00"
-    },
-    {
-      "from": "HARSTAD",
-      "from_city": "HARSTAD",
-      "to": "Boden / Volvo",
-      "to_city": "Boden",
-      "car_model": "VOLVO V60 CC AWD AUTOMAT",
-      "available_at": "2026-08-14T10:45:00",
-      "latest_return": "2026-08-31T21:45:00",
-      "expire_time": "2026-08-31T12:29:00"
-    },
-    {
-      "from": "HARSTAD",
-      "from_city": "HARSTAD",
-      "to": "Gällivare DT",
-      "to_city": "Gällivare",
-      "car_model": "VOLVO V60 CC AWD AUTOMAT",
-      "available_at": "2026-08-14T10:45:00",
-      "latest_return": "2026-08-31T21:45:00",
-      "expire_time": "2026-08-31T15:42:00"
-    },
-    {
-      "from": "HARSTAD",
-      "from_city": "HARSTAD",
-      "to": "Kiruna AP",
-      "to_city": "Kiruna",
-      "car_model": "VOLVO V60 CC AWD AUTOMAT",
-      "available_at": "2026-08-14T10:45:00",
-      "latest_return": "2026-08-31T21:45:00",
-      "expire_time": "2026-08-31T17:29:00"
-    },
-    {
-      "from": "HARSTAD",
-      "from_city": "HARSTAD",
-      "to": "Luleå Bilbolaget / Self Service Kiosk",
-      "to_city": "Luleå",
-      "car_model": "VOLVO V60 CC AWD AUTOMAT",
-      "available_at": "2026-08-14T10:45:00",
-      "latest_return": "2026-08-31T21:45:00",
-      "expire_time": "2026-08-31T12:37:00"
-    },
-    {
-      "from": "HARSTAD",
-      "from_city": "HARSTAD",
-      "to": "Lycksele",
-      "to_city": "Lycksele",
-      "car_model": "VOLVO V60 CC AWD AUTOMAT",
-      "available_at": "2026-08-14T10:45:00",
-      "latest_return": "2026-08-31T21:45:00",
-      "expire_time": "2026-08-31T09:48:00"
-    },
-    {
-      "from": "HARSTAD",
-      "from_city": "HARSTAD",
-      "to": "NARVIK",
-      "to_city": "NARVIK",
-      "car_model": "VOLVO V60 CC AWD AUTOMAT",
-      "available_at": "2026-08-14T10:45:00",
-      "latest_return": "2026-08-31T21:45:00",
-      "expire_time": "2026-08-31T19:59:00"
-    },
-    {
-      "from": "HARSTAD",
-      "from_city": "HARSTAD",
-      "to": "Piteå / Volvo",
-      "to_city": "Öjebyn",
-      "car_model": "VOLVO V60 CC AWD AUTOMAT",
-      "available_at": "2026-08-14T10:45:00",
-      "latest_return": "2026-08-31T21:45:00",
-      "expire_time": "2026-08-31T12:03:00"
-    },
-    {
-      "from": "HARSTAD",
-      "from_city": "HARSTAD",
-      "to": "Skellefteå & Self Service Kiosk",
-      "to_city": "Skellefteå",
-      "car_model": "VOLVO V60 CC AWD AUTOMAT",
-      "available_at": "2026-08-14T10:45:00",
-      "latest_return": "2026-08-31T21:45:00",
-      "expire_time": "2026-08-31T10:50:00"
-    },
-    {
-      "from": "HARSTAD",
-      "from_city": "HARSTAD",
-      "to": "Stockholm Arlanda Flygplats / Self Service Kiosk",
-      "to_city": "Stockholm (Arlanda)",
-      "car_model": "VOLVO V60 CC AWD AUTOMAT",
-      "available_at": "2026-08-14T10:45:00",
-      "latest_return": "2026-08-31T21:45:00",
-      "expire_time": "2026-08-31T00:32:00"
-    },
-    {
-      "from": "HARSTAD",
-      "from_city": "HARSTAD",
-      "to": "Umeå Bilbolaget/Self Service Kiosk",
-      "to_city": "Umeå",
-      "car_model": "VOLVO V60 CC AWD AUTOMAT",
-      "available_at": "2026-08-14T10:45:00",
-      "latest_return": "2026-08-31T21:45:00",
-      "expire_time": "2026-08-31T08:45:00"
     },
     {
       "from": "STAVANGER SOLA",
