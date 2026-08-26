@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-26T15:56:56.805087+00:00",
+  "updated_at": "2026-08-26T16:42:53.143811+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -70,16 +70,6 @@
       "available_at": "2026-08-24T09:45:00",
       "latest_return": "2026-08-29T09:45:00",
       "expire_time": "2026-08-29T04:35:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "GARDERMOEN",
-      "to": "Göteborg Centralstation",
-      "to_city": "Göteborg",
-      "car_model": "VOLVO V60 T6 AUT AWD NE PLUS D",
-      "available_at": "2026-08-24T10:00:00",
-      "latest_return": "2026-08-26T21:00:00",
-      "expire_time": "2026-08-26T16:35:00"
     },
     {
       "from": "KRISTIANSUND LUFTHAVN",
@@ -310,26 +300,6 @@
       "available_at": "2026-08-26T07:45:00",
       "latest_return": "2026-08-28T21:00:00",
       "expire_time": "2026-08-28T15:59:00"
-    },
-    {
-      "from": "OSLO SENTRUM",
-      "from_city": "OSLO",
-      "to": "KRISTIANSAND LUFTHAVN",
-      "to_city": "KJEVIK",
-      "car_model": "RENAULT CAPTUR 5D AUT HYBRID",
-      "available_at": "2026-08-26T07:45:00",
-      "latest_return": "2026-08-28T21:00:00",
-      "expire_time": "2026-08-28T16:28:00"
-    },
-    {
-      "from": "OSLO SENTRUM",
-      "from_city": "OSLO",
-      "to": "KRISTIANSAND SENTRUM",
-      "to_city": "KRISTIANSAND",
-      "car_model": "RENAULT CAPTUR 5D AUT HYBRID",
-      "available_at": "2026-08-26T07:45:00",
-      "latest_return": "2026-08-28T21:00:00",
-      "expire_time": "2026-08-28T16:38:00"
     },
     {
       "from": "ÅLESUND LUFTHAVN",
