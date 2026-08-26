@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-26T09:07:49.704130+00:00",
+  "updated_at": "2026-08-26T09:54:19.903579+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -400,6 +400,66 @@
       "available_at": "2026-08-25T09:45:00",
       "latest_return": "2026-08-29T17:45:00",
       "expire_time": "2026-08-29T11:30:00"
+    },
+    {
+      "from": "BERGEN MINDE",
+      "from_city": "BERGEN",
+      "to": "LILLESTRØM",
+      "to_city": "SKEDSMOKORSET",
+      "car_model": "MERCEDES VITO 9-SETER 4X4 AUT",
+      "available_at": "2026-08-25T12:45:00",
+      "latest_return": "2026-08-30T10:00:00",
+      "expire_time": "2026-08-30T01:34:00"
+    },
+    {
+      "from": "BERGEN MINDE",
+      "from_city": "BERGEN",
+      "to": "OSLO ALNABRU",
+      "to_city": "OSLO",
+      "car_model": "MERCEDES VITO 9-SETER 4X4 AUT",
+      "available_at": "2026-08-25T12:45:00",
+      "latest_return": "2026-08-30T10:00:00",
+      "expire_time": "2026-08-30T01:45:00"
+    },
+    {
+      "from": "BERGEN MINDE",
+      "from_city": "BERGEN",
+      "to": "OSLO LUFTHAVN",
+      "to_city": "GARDERMOEN",
+      "car_model": "MERCEDES VITO 9-SETER 4X4 AUT",
+      "available_at": "2026-08-25T12:45:00",
+      "latest_return": "2026-08-30T10:00:00",
+      "expire_time": "2026-08-30T01:40:00"
+    },
+    {
+      "from": "BERGEN MINDE",
+      "from_city": "BERGEN",
+      "to": "OSLO SENTRALSTASJON",
+      "to_city": "OSLO",
+      "car_model": "MERCEDES VITO 9-SETER 4X4 AUT",
+      "available_at": "2026-08-25T12:45:00",
+      "latest_return": "2026-08-30T10:00:00",
+      "expire_time": "2026-08-30T01:51:00"
+    },
+    {
+      "from": "BERGEN MINDE",
+      "from_city": "BERGEN",
+      "to": "OSLO SENTRUM",
+      "to_city": "OSLO",
+      "car_model": "MERCEDES VITO 9-SETER 4X4 AUT",
+      "available_at": "2026-08-25T12:45:00",
+      "latest_return": "2026-08-30T10:00:00",
+      "expire_time": "2026-08-30T01:51:00"
+    },
+    {
+      "from": "BERGEN MINDE",
+      "from_city": "BERGEN",
+      "to": "OSLO ØKERN",
+      "to_city": "OSLO",
+      "car_model": "MERCEDES VITO 9-SETER 4X4 AUT",
+      "available_at": "2026-08-25T12:45:00",
+      "latest_return": "2026-08-30T10:00:00",
+      "expire_time": "2026-08-30T01:46:00"
     },
     {
       "from": "BODØ LUFTHAVN",
