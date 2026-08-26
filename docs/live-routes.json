@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-26T04:52:47.638086+00:00",
+  "updated_at": "2026-08-26T05:21:43.305945+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -302,16 +302,6 @@
       "expire_time": "2026-08-26T07:12:00"
     },
     {
-      "from": "SVOLVÆR LUFTHAVN",
-      "from_city": "SVOLVÆR",
-      "to": "MO I RANA SENTRUM",
-      "to_city": "MO I RANA",
-      "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
-      "available_at": "2026-08-22T08:00:00",
-      "latest_return": "2026-08-26T14:00:00",
-      "expire_time": "2026-08-26T05:21:00"
-    },
-    {
       "from": "SVOLVÆR SENTRUM",
       "from_city": "SVOLVÆR",
       "to": "BODØ SENTRUM",
@@ -320,16 +310,6 @@
       "available_at": "2026-08-22T08:00:00",
       "latest_return": "2026-08-26T14:00:00",
       "expire_time": "2026-08-26T07:21:00"
-    },
-    {
-      "from": "SVOLVÆR SENTRUM",
-      "from_city": "SVOLVÆR",
-      "to": "MO I RANA SENTRUM",
-      "to_city": "MO I RANA",
-      "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
-      "available_at": "2026-08-22T08:00:00",
-      "latest_return": "2026-08-26T14:09:00",
-      "expire_time": "2026-08-26T05:05:00"
     },
     {
       "from": "TRONDHEIM SLUPPEN",
