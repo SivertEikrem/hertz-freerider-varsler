@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-26T05:56:14.477636+00:00",
+  "updated_at": "2026-08-26T06:31:00.495800+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -532,14 +532,24 @@
       "expire_time": "2026-08-29T18:57:00"
     },
     {
-      "from": "TRONDHEIM LUFTHAVN",
-      "from_city": "STJØRDAL",
-      "to": "KRISTIANSUND LUFTHAVN",
-      "to_city": "KRISTIANSUND",
-      "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
-      "available_at": "2026-08-27T06:00:00",
-      "latest_return": "2026-08-30T21:00:00",
-      "expire_time": "2026-08-30T16:40:00"
+      "from": "EVENES LUFTHAVN",
+      "from_city": "LILAND",
+      "to": "BODØ LUFTHAVN",
+      "to_city": "BODØ",
+      "car_model": "MG 4 5D AUT 62KWH AUT ELECTRIC",
+      "available_at": "2026-08-26T06:00:00",
+      "latest_return": "2026-08-31T06:00:00",
+      "expire_time": "2026-08-30T23:14:00"
+    },
+    {
+      "from": "NARVIK",
+      "from_city": "NARVIK",
+      "to": "BODØ LUFTHAVN",
+      "to_city": "BODØ",
+      "car_model": "NISSAN ARIYA 5D 45KHW AUT ELEC",
+      "available_at": "2026-08-26T06:00:00",
+      "latest_return": "2026-08-31T06:00:00",
+      "expire_time": "2026-08-31T00:02:00"
     }
   ]
 }
