@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-26T23:48:00.881483+00:00",
+  "updated_at": "2026-08-27T05:23:38.629762+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -30,16 +30,6 @@
       "available_at": "2026-08-22T08:00:00",
       "latest_return": "2026-08-27T14:00:00",
       "expire_time": "2026-08-27T05:34:00"
-    },
-    {
-      "from": "SVOLVÆR LUFTHAVN",
-      "from_city": "SVOLVÆR",
-      "to": "MO I RANA SENTRUM",
-      "to_city": "MO I RANA",
-      "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
-      "available_at": "2026-08-22T08:00:00",
-      "latest_return": "2026-08-27T14:00:00",
-      "expire_time": "2026-08-27T05:17:00"
     },
     {
       "from": "TRONDHEIM SLUPPEN",
@@ -390,16 +380,6 @@
       "available_at": "2026-08-26T11:00:00",
       "latest_return": "2026-08-29T11:00:00",
       "expire_time": "2026-08-28T08:23:00"
-    },
-    {
-      "from": "BODØ LUFTHAVN",
-      "from_city": "BODØ",
-      "to": "TRONDHEIM LUFTHAVN",
-      "to_city": "STJØRDAL",
-      "car_model": "VOLVO XC60 T6 AWD HYBRID AUT",
-      "available_at": "2026-08-26T11:00:00",
-      "latest_return": "2026-08-27T11:09:00",
-      "expire_time": "2026-08-27T00:20:00"
     },
     {
       "from": "BODØ LUFTHAVN",
