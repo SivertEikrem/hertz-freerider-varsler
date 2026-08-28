@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-27T16:35:54.731735+00:00",
+  "updated_at": "2026-08-28T01:07:01.187778+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -112,66 +112,6 @@
       "expire_time": "2026-08-29T04:35:00"
     },
     {
-      "from": "BERGEN LUFTHAVN",
-      "from_city": "BLOMSTERDALEN",
-      "to": "LILLESTRØM",
-      "to_city": "SKEDSMOKORSET",
-      "car_model": "VW CARAVELLE 9S TDI 4X4 AUTOMA",
-      "available_at": "2026-08-25T06:30:00",
-      "latest_return": "2026-08-30T10:00:00",
-      "expire_time": "2026-08-30T00:46:00"
-    },
-    {
-      "from": "BERGEN LUFTHAVN",
-      "from_city": "BLOMSTERDALEN",
-      "to": "OSLO ALNABRU",
-      "to_city": "OSLO",
-      "car_model": "VW CARAVELLE 9S TDI 4X4 AUTOMA",
-      "available_at": "2026-08-25T06:30:00",
-      "latest_return": "2026-08-30T10:00:00",
-      "expire_time": "2026-08-30T01:04:00"
-    },
-    {
-      "from": "BERGEN LUFTHAVN",
-      "from_city": "BLOMSTERDALEN",
-      "to": "OSLO LUFTHAVN",
-      "to_city": "GARDERMOEN",
-      "car_model": "VW CARAVELLE 9S TDI 4X4 AUTOMA",
-      "available_at": "2026-08-25T06:30:00",
-      "latest_return": "2026-08-30T10:00:00",
-      "expire_time": "2026-08-30T01:18:00"
-    },
-    {
-      "from": "BERGEN LUFTHAVN",
-      "from_city": "BLOMSTERDALEN",
-      "to": "OSLO SENTRALSTASJON",
-      "to_city": "OSLO",
-      "car_model": "VW CARAVELLE 9S TDI 4X4 AUTOMA",
-      "available_at": "2026-08-25T06:30:00",
-      "latest_return": "2026-08-30T10:00:00",
-      "expire_time": "2026-08-30T01:12:00"
-    },
-    {
-      "from": "BERGEN LUFTHAVN",
-      "from_city": "BLOMSTERDALEN",
-      "to": "OSLO SENTRUM",
-      "to_city": "OSLO",
-      "car_model": "VW CARAVELLE 9S TDI 4X4 AUTOMA",
-      "available_at": "2026-08-25T06:30:00",
-      "latest_return": "2026-08-30T10:00:00",
-      "expire_time": "2026-08-30T01:14:00"
-    },
-    {
-      "from": "BERGEN LUFTHAVN",
-      "from_city": "BLOMSTERDALEN",
-      "to": "OSLO ØKERN",
-      "to_city": "OSLO",
-      "car_model": "VW CARAVELLE 9S TDI 4X4 AUTOMA",
-      "available_at": "2026-08-25T06:30:00",
-      "latest_return": "2026-08-30T10:00:00",
-      "expire_time": "2026-08-30T01:05:00"
-    },
-    {
       "from": "KRISTIANSUND LUFTHAVN",
       "from_city": "KRISTIANSUND",
       "to": "TRONDHEIM LUFTHAVN",
@@ -200,26 +140,6 @@
       "available_at": "2026-08-25T08:30:00",
       "latest_return": "2026-08-31T14:30:00",
       "expire_time": "2026-08-31T11:09:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "GARDERMOEN",
-      "to": "FØRDE SENTRUM",
-      "to_city": "FØRDE",
-      "car_model": "TOYOTA RAV4 SUV AUT 4X4 PLUGIN",
-      "available_at": "2026-08-25T09:45:00",
-      "latest_return": "2026-08-29T17:45:00",
-      "expire_time": "2026-08-29T09:39:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "GARDERMOEN",
-      "to": "SOGNDAL SENTRUM",
-      "to_city": "SOGNDAL",
-      "car_model": "TOYOTA RAV4 SUV AUT 4X4 PLUGIN",
-      "available_at": "2026-08-25T09:45:00",
-      "latest_return": "2026-08-29T17:45:00",
-      "expire_time": "2026-08-29T11:30:00"
     },
     {
       "from": "NARVIK",
@@ -566,16 +486,6 @@
       "from_city": "STAVANGER",
       "to": "KRISTIANSAND LUFTHAVN",
       "to_city": "KJEVIK",
-      "car_model": "MAZDA CX-60 5D 4X4 AUT PHEV",
-      "available_at": "2026-08-27T06:15:00",
-      "latest_return": "2026-08-29T21:00:00",
-      "expire_time": "2026-08-29T16:53:00"
-    },
-    {
-      "from": "STAVANGER LUFTHAVN",
-      "from_city": "STAVANGER",
-      "to": "KRISTIANSAND LUFTHAVN",
-      "to_city": "KJEVIK",
       "car_model": "RENAULT SCENIC 5D 87KWH AUT EL",
       "available_at": "2026-08-27T06:15:00",
       "latest_return": "2026-08-29T21:00:00",
@@ -590,16 +500,6 @@
       "available_at": "2026-08-27T06:15:00",
       "latest_return": "2026-08-29T21:00:00",
       "expire_time": "2026-08-29T16:53:00"
-    },
-    {
-      "from": "STAVANGER LUFTHAVN",
-      "from_city": "STAVANGER",
-      "to": "KRISTIANSAND SENTRUM",
-      "to_city": "KRISTIANSAND",
-      "car_model": "MAZDA CX-60 5D 4X4 AUT PHEV",
-      "available_at": "2026-08-27T06:15:00",
-      "latest_return": "2026-08-29T21:00:00",
-      "expire_time": "2026-08-29T17:02:00"
     },
     {
       "from": "STAVANGER LUFTHAVN",
@@ -620,16 +520,6 @@
       "available_at": "2026-08-27T06:15:00",
       "latest_return": "2026-08-29T21:00:00",
       "expire_time": "2026-08-29T17:03:00"
-    },
-    {
-      "from": "TRONDHEIM LUFTHAVN",
-      "from_city": "STJØRDAL",
-      "to": "OSLO LUFTHAVN",
-      "to_city": "GARDERMOEN",
-      "car_model": "SUZUKI S-CROSS 5D 4X4 AUT",
-      "available_at": "2026-08-27T06:15:00",
-      "latest_return": "2026-08-29T21:00:00",
-      "expire_time": "2026-08-29T13:26:00"
     },
     {
       "from": "TRONDHEIM LUFTHAVN",
