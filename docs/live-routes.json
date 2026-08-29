@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-29T10:31:17.276919+00:00",
+  "updated_at": "2026-08-29T15:18:14.431090+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -50,46 +50,6 @@
       "available_at": "2026-08-18T07:00:00",
       "latest_return": "2026-08-31T14:00:00",
       "expire_time": "2026-08-31T03:39:00"
-    },
-    {
-      "from": "BERGEN LUFTHAVN",
-      "from_city": "BLOMSTERDALEN",
-      "to": "FØRDE SENTRUM",
-      "to_city": "FØRDE",
-      "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
-      "available_at": "2026-08-25T05:45:00",
-      "latest_return": "2026-08-29T17:45:00",
-      "expire_time": "2026-08-29T13:56:00"
-    },
-    {
-      "from": "BERGEN LUFTHAVN",
-      "from_city": "BLOMSTERDALEN",
-      "to": "SOGNDAL SENTRUM",
-      "to_city": "SOGNDAL",
-      "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
-      "available_at": "2026-08-25T05:45:00",
-      "latest_return": "2026-08-29T17:45:00",
-      "expire_time": "2026-08-29T12:50:00"
-    },
-    {
-      "from": "KRISTIANSUND LUFTHAVN",
-      "from_city": "KRISTIANSUND",
-      "to": "TRONDHEIM LUFTHAVN",
-      "to_city": "STJØRDAL",
-      "car_model": "EL-Personbil",
-      "available_at": "2026-08-25T08:30:00",
-      "latest_return": "2026-08-29T15:30:00",
-      "expire_time": "2026-08-29T11:32:00"
-    },
-    {
-      "from": "KRISTIANSUND LUFTHAVN",
-      "from_city": "KRISTIANSUND",
-      "to": "TRONDHEIM SLUPPEN",
-      "to_city": "TRONDHEIM",
-      "car_model": "EL-Personbil",
-      "available_at": "2026-08-25T08:30:00",
-      "latest_return": "2026-08-29T15:41:00",
-      "expire_time": "2026-08-29T12:20:00"
     },
     {
       "from": "KRISTIANSUND LUFTHAVN",
@@ -160,26 +120,6 @@
       "available_at": "2026-08-26T07:30:00",
       "latest_return": "2026-09-01T18:30:00",
       "expire_time": "2026-09-01T10:44:00"
-    },
-    {
-      "from": "ÅLESUND LUFTHAVN",
-      "from_city": "VIGRA",
-      "to": "FØRDE SENTRUM",
-      "to_city": "FØRDE",
-      "car_model": "TOYOTA YARIS",
-      "available_at": "2026-08-26T07:30:00",
-      "latest_return": "2026-08-29T18:29:00",
-      "expire_time": "2026-08-29T13:07:00"
-    },
-    {
-      "from": "ÅLESUND LUFTHAVN",
-      "from_city": "VIGRA",
-      "to": "SOGNDAL SENTRUM",
-      "to_city": "SOGNDAL",
-      "car_model": "TOYOTA YARIS",
-      "available_at": "2026-08-26T07:30:00",
-      "latest_return": "2026-08-29T18:15:00",
-      "expire_time": "2026-08-29T12:41:00"
     },
     {
       "from": "ÅLESUND SENTRUM",
@@ -442,16 +382,6 @@
       "expire_time": "2026-08-29T17:03:00"
     },
     {
-      "from": "TRONDHEIM LUFTHAVN",
-      "from_city": "STJØRDAL",
-      "to": "OSLO LUFTHAVN",
-      "to_city": "GARDERMOEN",
-      "car_model": "SUZUKI S-CROSS 5D 4X4 AUT",
-      "available_at": "2026-08-27T06:15:00",
-      "latest_return": "2026-08-29T21:00:00",
-      "expire_time": "2026-08-29T13:26:00"
-    },
-    {
       "from": "STAVANGER LUFTHAVN",
       "from_city": "STAVANGER",
       "to": "KRISTIANSAND LUFTHAVN",
@@ -630,46 +560,6 @@
       "available_at": "2026-08-28T07:45:00",
       "latest_return": "2026-08-30T21:00:00",
       "expire_time": "2026-08-30T16:58:00"
-    },
-    {
-      "from": "OSLO ALNABRU",
-      "from_city": "OSLO",
-      "to": "BERGEN KOKSTAD",
-      "to_city": "KOKSTAD",
-      "car_model": "OPEL VIVARO 6M3 VARE CDTI AUT",
-      "available_at": "2026-08-28T08:45:00",
-      "latest_return": "2026-09-01T19:00:00",
-      "expire_time": "2026-09-01T10:22:00"
-    },
-    {
-      "from": "OSLO ALNABRU",
-      "from_city": "OSLO",
-      "to": "BERGEN LUFTHAVN",
-      "to_city": "BLOMSTERDALEN",
-      "car_model": "OPEL VIVARO 6M3 VARE CDTI AUT",
-      "available_at": "2026-08-28T08:45:00",
-      "latest_return": "2026-09-01T19:00:00",
-      "expire_time": "2026-09-01T10:22:00"
-    },
-    {
-      "from": "OSLO ALNABRU",
-      "from_city": "OSLO",
-      "to": "BERGEN MINDE",
-      "to_city": "BERGEN",
-      "car_model": "OPEL VIVARO 6M3 VARE CDTI AUT",
-      "available_at": "2026-08-28T08:45:00",
-      "latest_return": "2026-09-01T19:00:00",
-      "expire_time": "2026-09-01T10:27:00"
-    },
-    {
-      "from": "OSLO ALNABRU",
-      "from_city": "OSLO",
-      "to": "BERGEN ÅSANE",
-      "to_city": "BERGEN",
-      "car_model": "OPEL VIVARO 6M3 VARE CDTI AUT",
-      "available_at": "2026-08-28T08:45:00",
-      "latest_return": "2026-09-01T19:00:00",
-      "expire_time": "2026-09-01T10:40:00"
     },
     {
       "from": "TRONDHEIM SLUPPEN",
