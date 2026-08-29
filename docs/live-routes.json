@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-28T22:40:06.180425+00:00",
+  "updated_at": "2026-08-29T03:51:08.368751+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -814,16 +814,6 @@
     {
       "from": "OSLO LUFTHAVN",
       "from_city": "GARDERMOEN",
-      "to": "Göteborg Centralstation",
-      "to_city": "Göteborg",
-      "car_model": "VOLVO XC40 B3 FWD AUT PLUS DAR",
-      "available_at": "2026-08-28T14:45:00",
-      "latest_return": "2026-09-01T21:00:00",
-      "expire_time": "2026-09-01T16:34:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "GARDERMOEN",
       "to": "Göteborg Landvetter Flygplats / Self Service Kiosk",
       "to_city": "Landvetter",
       "car_model": "VOLVO V60 T6 AUT AWD NE PLUS D",
@@ -840,16 +830,6 @@
       "available_at": "2026-08-28T14:45:00",
       "latest_return": "2026-08-31T21:00:00",
       "expire_time": "2026-08-31T16:17:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "GARDERMOEN",
-      "to": "Göteborg Landvetter Flygplats / Self Service Kiosk",
-      "to_city": "Landvetter",
-      "car_model": "VOLVO XC40 B3 FWD AUT PLUS DAR",
-      "available_at": "2026-08-28T14:45:00",
-      "latest_return": "2026-09-01T21:00:00",
-      "expire_time": "2026-09-01T16:16:00"
     },
     {
       "from": "OSLO LUFTHAVN",
