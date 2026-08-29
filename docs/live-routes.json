@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-29T15:18:14.431090+00:00",
+  "updated_at": "2026-08-29T18:41:17.373757+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -342,66 +342,6 @@
       "expire_time": "2026-08-31T00:44:00"
     },
     {
-      "from": "STAVANGER LUFTHAVN",
-      "from_city": "STAVANGER",
-      "to": "KRISTIANSAND LUFTHAVN",
-      "to_city": "KJEVIK",
-      "car_model": "RENAULT SCENIC 5D 87KWH AUT EL",
-      "available_at": "2026-08-27T06:15:00",
-      "latest_return": "2026-08-29T21:00:00",
-      "expire_time": "2026-08-29T16:53:00"
-    },
-    {
-      "from": "STAVANGER LUFTHAVN",
-      "from_city": "STAVANGER",
-      "to": "KRISTIANSAND LUFTHAVN",
-      "to_city": "KJEVIK",
-      "car_model": "TOYOTA COROLLA CROSS 2WD AUT H",
-      "available_at": "2026-08-27T06:15:00",
-      "latest_return": "2026-08-29T21:00:00",
-      "expire_time": "2026-08-29T16:53:00"
-    },
-    {
-      "from": "STAVANGER LUFTHAVN",
-      "from_city": "STAVANGER",
-      "to": "KRISTIANSAND SENTRUM",
-      "to_city": "KRISTIANSAND",
-      "car_model": "RENAULT SCENIC 5D 87KWH AUT EL",
-      "available_at": "2026-08-27T06:15:00",
-      "latest_return": "2026-08-29T21:00:00",
-      "expire_time": "2026-08-29T17:02:00"
-    },
-    {
-      "from": "STAVANGER LUFTHAVN",
-      "from_city": "STAVANGER",
-      "to": "KRISTIANSAND SENTRUM",
-      "to_city": "KRISTIANSAND",
-      "car_model": "TOYOTA COROLLA CROSS 2WD AUT H",
-      "available_at": "2026-08-27T06:15:00",
-      "latest_return": "2026-08-29T21:00:00",
-      "expire_time": "2026-08-29T17:03:00"
-    },
-    {
-      "from": "STAVANGER LUFTHAVN",
-      "from_city": "STAVANGER",
-      "to": "KRISTIANSAND LUFTHAVN",
-      "to_city": "KJEVIK",
-      "car_model": "SKODA ENYAQ 4X4 77KWH AUT ELEC",
-      "available_at": "2026-08-27T07:30:00",
-      "latest_return": "2026-08-29T21:00:00",
-      "expire_time": "2026-08-29T16:50:00"
-    },
-    {
-      "from": "STAVANGER LUFTHAVN",
-      "from_city": "STAVANGER",
-      "to": "KRISTIANSAND SENTRUM",
-      "to_city": "KRISTIANSAND",
-      "car_model": "SKODA ENYAQ 4X4 77KWH AUT ELEC",
-      "available_at": "2026-08-27T07:30:00",
-      "latest_return": "2026-08-29T21:00:00",
-      "expire_time": "2026-08-29T16:59:00"
-    },
-    {
       "from": "ÅLESUND LUFTHAVN",
       "from_city": "VIGRA",
       "to": "VOSS",
@@ -640,46 +580,6 @@
       "available_at": "2026-08-28T14:30:00",
       "latest_return": "2026-09-01T21:00:00",
       "expire_time": "2026-09-01T08:50:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "GARDERMOEN",
-      "to": "Göteborg Centralstation",
-      "to_city": "Göteborg",
-      "car_model": "VOLVO XC40 B3 FWD AUT PLUS DAR",
-      "available_at": "2026-08-28T14:45:00",
-      "latest_return": "2026-08-31T21:00:00",
-      "expire_time": "2026-08-31T16:34:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "GARDERMOEN",
-      "to": "Lund DT/Self Service Kiosk",
-      "to_city": "Lund",
-      "car_model": "VOLVO XC40 B3 FWD AUT PLUS DAR",
-      "available_at": "2026-08-28T14:45:00",
-      "latest_return": "2026-08-31T21:00:00",
-      "expire_time": "2026-08-31T13:20:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "GARDERMOEN",
-      "to": "Malmö Centralstation / Self Service Kiosk",
-      "to_city": "Malmö",
-      "car_model": "VOLVO XC40 B3 FWD AUT PLUS DAR",
-      "available_at": "2026-08-28T14:45:00",
-      "latest_return": "2026-08-31T21:00:00",
-      "expire_time": "2026-08-31T13:15:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "GARDERMOEN",
-      "to": "Stockholm Kungsholmen/Self Service Kiosk",
-      "to_city": "Stockholm",
-      "car_model": "VOLVO XC40 B3 FWD AUT PLUS DAR",
-      "available_at": "2026-08-28T14:45:00",
-      "latest_return": "2026-08-31T21:00:00",
-      "expire_time": "2026-08-31T13:44:00"
     },
     {
       "from": "BERGEN LUFTHAVN",
