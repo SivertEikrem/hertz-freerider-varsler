@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-30T16:50:15.475552+00:00",
+  "updated_at": "2026-08-30T19:32:26.555350+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -462,36 +462,6 @@
       "expire_time": "2026-09-01T10:40:00"
     },
     {
-      "from": "STAVANGER LUFTHAVN",
-      "from_city": "STAVANGER",
-      "to": "KRISTIANSAND SENTRUM",
-      "to_city": "KRISTIANSAND",
-      "car_model": "BMW IX1 4X4 65KWH AUT ELECTRIC",
-      "available_at": "2026-08-28T07:45:00",
-      "latest_return": "2026-08-30T21:00:00",
-      "expire_time": "2026-08-30T16:58:00"
-    },
-    {
-      "from": "STAVANGER SENTRUM",
-      "from_city": "STAVANGER",
-      "to": "KRISTIANSAND SENTRUM",
-      "to_city": "KRISTIANSAND",
-      "car_model": "VW ID.3 5D 58KWH 5D AUT ELECTR",
-      "available_at": "2026-08-28T07:45:00",
-      "latest_return": "2026-08-30T21:00:00",
-      "expire_time": "2026-08-30T16:58:00"
-    },
-    {
-      "from": "TRONDHEIM SLUPPEN",
-      "from_city": "TRONDHEIM",
-      "to": "KRISTIANSUND LUFTHAVN",
-      "to_city": "KRISTIANSUND",
-      "car_model": "VW ID.4 5D 77KWH 4X4 AUT ELECT",
-      "available_at": "2026-08-28T09:00:00",
-      "latest_return": "2026-08-30T21:00:00",
-      "expire_time": "2026-08-30T17:41:00"
-    },
-    {
       "from": "ÅLESUND LUFTHAVN",
       "from_city": "VIGRA",
       "to": "TRONDHEIM SLUPPEN",
@@ -510,36 +480,6 @@
       "available_at": "2026-08-28T09:00:00",
       "latest_return": "2026-09-01T16:00:00",
       "expire_time": "2026-09-01T09:45:00"
-    },
-    {
-      "from": "TRONDHEIM SLUPPEN",
-      "from_city": "TRONDHEIM",
-      "to": "GJØVIK",
-      "to_city": "HUNNDALEN",
-      "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
-      "available_at": "2026-08-28T12:15:00",
-      "latest_return": "2026-09-04T14:00:00",
-      "expire_time": "2026-09-04T07:30:00"
-    },
-    {
-      "from": "TRONDHEIM SLUPPEN",
-      "from_city": "TRONDHEIM",
-      "to": "LILLEHAMMER",
-      "to_city": "LILLEHAMMER",
-      "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
-      "available_at": "2026-08-28T12:15:00",
-      "latest_return": "2026-09-04T14:00:00",
-      "expire_time": "2026-09-04T08:18:00"
-    },
-    {
-      "from": "TRONDHEIM SLUPPEN",
-      "from_city": "TRONDHEIM",
-      "to": "OSLO LUFTHAVN",
-      "to_city": "GARDERMOEN",
-      "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
-      "available_at": "2026-08-28T12:15:00",
-      "latest_return": "2026-09-04T14:00:00",
-      "expire_time": "2026-09-04T07:06:00"
     },
     {
       "from": "BERGEN LUFTHAVN",
