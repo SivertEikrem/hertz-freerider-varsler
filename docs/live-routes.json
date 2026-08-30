@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-30T12:21:20.195606+00:00",
+  "updated_at": "2026-08-30T16:50:15.475552+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -464,32 +464,12 @@
     {
       "from": "STAVANGER LUFTHAVN",
       "from_city": "STAVANGER",
-      "to": "KRISTIANSAND LUFTHAVN",
-      "to_city": "KJEVIK",
-      "car_model": "BMW IX1 4X4 65KWH AUT ELECTRIC",
-      "available_at": "2026-08-28T07:45:00",
-      "latest_return": "2026-08-30T21:00:00",
-      "expire_time": "2026-08-30T16:48:00"
-    },
-    {
-      "from": "STAVANGER LUFTHAVN",
-      "from_city": "STAVANGER",
       "to": "KRISTIANSAND SENTRUM",
       "to_city": "KRISTIANSAND",
       "car_model": "BMW IX1 4X4 65KWH AUT ELECTRIC",
       "available_at": "2026-08-28T07:45:00",
       "latest_return": "2026-08-30T21:00:00",
       "expire_time": "2026-08-30T16:58:00"
-    },
-    {
-      "from": "STAVANGER SENTRUM",
-      "from_city": "STAVANGER",
-      "to": "KRISTIANSAND LUFTHAVN",
-      "to_city": "KJEVIK",
-      "car_model": "VW ID.3 5D 58KWH 5D AUT ELECTR",
-      "available_at": "2026-08-28T07:45:00",
-      "latest_return": "2026-08-30T21:00:00",
-      "expire_time": "2026-08-30T16:50:00"
     },
     {
       "from": "STAVANGER SENTRUM",
@@ -600,26 +580,6 @@
       "available_at": "2026-08-31T06:00:00",
       "latest_return": "2026-09-05T14:00:00",
       "expire_time": "2026-09-05T09:02:00"
-    },
-    {
-      "from": "ÅLESUND SENTRUM",
-      "from_city": "ÅLESUND",
-      "to": "TRONDHEIM LUFTHAVN",
-      "to_city": "STJØRDAL",
-      "car_model": "EL BIL",
-      "available_at": "2026-08-31T06:00:00",
-      "latest_return": "2026-09-04T21:45:00",
-      "expire_time": "2026-09-04T15:29:00"
-    },
-    {
-      "from": "ÅLESUND SENTRUM",
-      "from_city": "ÅLESUND",
-      "to": "TRONDHEIM SLUPPEN",
-      "to_city": "TRONDHEIM",
-      "car_model": "EL BIL",
-      "available_at": "2026-08-31T06:00:00",
-      "latest_return": "2026-09-04T21:45:00",
-      "expire_time": "2026-09-04T16:05:00"
     }
   ]
 }
