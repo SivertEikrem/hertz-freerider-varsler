@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-01T01:53:22.342688+00:00",
+  "updated_at": "2026-09-01T06:53:59.997176+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -50,96 +50,6 @@
       "available_at": "2026-08-25T05:45:00",
       "latest_return": "2026-09-04T17:45:00",
       "expire_time": "2026-09-04T12:44:00"
-    },
-    {
-      "from": "ÅLESUND LUFTHAVN",
-      "from_city": "VIGRA",
-      "to": "BERGEN LUFTHAVN",
-      "to_city": "BLOMSTERDALEN",
-      "car_model": "TOYOTA YARIS",
-      "available_at": "2026-08-26T07:30:00",
-      "latest_return": "2026-09-04T18:15:00",
-      "expire_time": "2026-09-04T08:55:00"
-    },
-    {
-      "from": "ÅLESUND LUFTHAVN",
-      "from_city": "VIGRA",
-      "to": "FØRDE SENTRUM",
-      "to_city": "FØRDE",
-      "car_model": "TOYOTA YARIS",
-      "available_at": "2026-08-26T07:30:00",
-      "latest_return": "2026-09-04T18:29:00",
-      "expire_time": "2026-09-04T13:04:00"
-    },
-    {
-      "from": "ÅLESUND LUFTHAVN",
-      "from_city": "VIGRA",
-      "to": "SOGNDAL SENTRUM",
-      "to_city": "SOGNDAL",
-      "car_model": "TOYOTA YARIS",
-      "available_at": "2026-08-26T07:30:00",
-      "latest_return": "2026-09-04T18:15:00",
-      "expire_time": "2026-09-04T12:38:00"
-    },
-    {
-      "from": "ÅLESUND SENTRUM",
-      "from_city": "ÅLESUND",
-      "to": "BERGEN LUFTHAVN",
-      "to_city": "BLOMSTERDALEN",
-      "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
-      "available_at": "2026-08-26T07:30:00",
-      "latest_return": "2026-09-01T18:15:00",
-      "expire_time": "2026-09-01T09:26:00"
-    },
-    {
-      "from": "ÅLESUND SENTRUM",
-      "from_city": "ÅLESUND",
-      "to": "FØRDE SENTRUM",
-      "to_city": "FØRDE",
-      "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
-      "available_at": "2026-08-26T07:30:00",
-      "latest_return": "2026-09-01T18:15:00",
-      "expire_time": "2026-09-01T13:24:00"
-    },
-    {
-      "from": "ÅLESUND SENTRUM",
-      "from_city": "ÅLESUND",
-      "to": "SOGNDAL SENTRUM",
-      "to_city": "SOGNDAL",
-      "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
-      "available_at": "2026-08-26T07:30:00",
-      "latest_return": "2026-09-01T18:15:00",
-      "expire_time": "2026-09-01T13:12:00"
-    },
-    {
-      "from": "ÅLESUND LUFTHAVN",
-      "from_city": "VIGRA",
-      "to": "BERGEN LUFTHAVN",
-      "to_city": "BLOMSTERDALEN",
-      "car_model": "TOYOTA COROLLA CROSS 4WD AUT H",
-      "available_at": "2026-08-26T07:45:00",
-      "latest_return": "2026-09-01T18:30:00",
-      "expire_time": "2026-09-01T09:10:00"
-    },
-    {
-      "from": "ÅLESUND LUFTHAVN",
-      "from_city": "VIGRA",
-      "to": "FØRDE SENTRUM",
-      "to_city": "FØRDE",
-      "car_model": "TOYOTA COROLLA CROSS 4WD AUT H",
-      "available_at": "2026-08-26T07:45:00",
-      "latest_return": "2026-09-01T18:30:00",
-      "expire_time": "2026-09-01T13:05:00"
-    },
-    {
-      "from": "ÅLESUND LUFTHAVN",
-      "from_city": "VIGRA",
-      "to": "SOGNDAL SENTRUM",
-      "to_city": "SOGNDAL",
-      "car_model": "TOYOTA COROLLA CROSS 4WD AUT H",
-      "available_at": "2026-08-26T07:45:00",
-      "latest_return": "2026-09-01T18:45:00",
-      "expire_time": "2026-09-01T13:07:00"
     },
     {
       "from": "BODØ LUFTHAVN",
@@ -240,26 +150,6 @@
       "available_at": "2026-08-27T05:45:00",
       "latest_return": "2026-09-01T17:45:00",
       "expire_time": "2026-09-01T11:26:00"
-    },
-    {
-      "from": "ÅLESUND SENTRUM",
-      "from_city": "ÅLESUND",
-      "to": "FØRDE SENTRUM",
-      "to_city": "FØRDE",
-      "car_model": "PEUGEOT 208 AUT 50KWH AUT ELEC",
-      "available_at": "2026-08-27T05:45:00",
-      "latest_return": "2026-09-01T17:45:00",
-      "expire_time": "2026-09-01T13:00:00"
-    },
-    {
-      "from": "ÅLESUND SENTRUM",
-      "from_city": "ÅLESUND",
-      "to": "SOGNDAL SENTRUM",
-      "to_city": "SOGNDAL",
-      "car_model": "PEUGEOT 208 AUT 50KWH AUT ELEC",
-      "available_at": "2026-08-27T05:45:00",
-      "latest_return": "2026-09-01T17:45:00",
-      "expire_time": "2026-09-01T12:49:00"
     },
     {
       "from": "ÅLESUND LUFTHAVN",
@@ -580,6 +470,16 @@
       "available_at": "2026-08-31T10:45:00",
       "latest_return": "2026-09-06T10:45:00",
       "expire_time": "2026-09-05T14:32:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "ARENDAL",
+      "to_city": "ARENDAL",
+      "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
+      "available_at": "2026-09-01T06:30:00",
+      "latest_return": "2026-09-04T14:00:00",
+      "expire_time": "2026-09-04T09:26:00"
     }
   ]
 }
