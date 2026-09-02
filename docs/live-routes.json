@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-02T15:16:54.165921+00:00",
+  "updated_at": "2026-09-02T18:49:18.689505+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -170,16 +170,6 @@
       "available_at": "2026-08-31T07:45:00",
       "latest_return": "2026-09-05T07:48:00",
       "expire_time": "2026-09-04T19:36:00"
-    },
-    {
-      "from": "NAMSOS SENTRUM",
-      "from_city": "NAMSOS",
-      "to": "TRONDHEIM LUFTHAVN",
-      "to_city": "STJØRDAL",
-      "car_model": "HYUNDAI IONIQ6 74KWH 4X4 AUT E",
-      "available_at": "2026-08-31T07:45:00",
-      "latest_return": "2026-09-04T14:45:00",
-      "expire_time": "2026-09-04T11:49:00"
     },
     {
       "from": "TRONDHEIM LUFTHAVN",
