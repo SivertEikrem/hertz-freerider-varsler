@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-02T06:24:55.408166+00:00",
+  "updated_at": "2026-09-02T11:31:06.863784+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -288,8 +288,8 @@
       "to_city": "OSLO",
       "car_model": "HONGQI EHS9 99KWH 6S AUT ELECT",
       "available_at": "2026-08-31T11:00:00",
-      "latest_return": "2026-09-02T21:00:00",
-      "expire_time": "2026-09-02T12:38:00"
+      "latest_return": "2026-09-04T21:00:00",
+      "expire_time": "2026-09-04T12:11:00"
     },
     {
       "from": "BERGEN MINDE",
@@ -298,8 +298,8 @@
       "to_city": "GARDERMOEN",
       "car_model": "HONGQI EHS9 99KWH 6S AUT ELECT",
       "available_at": "2026-08-31T11:00:00",
-      "latest_return": "2026-09-02T21:00:00",
-      "expire_time": "2026-09-02T12:34:00"
+      "latest_return": "2026-09-04T21:00:00",
+      "expire_time": "2026-09-04T12:22:00"
     },
     {
       "from": "BERGEN MINDE",
@@ -308,8 +308,8 @@
       "to_city": "OSLO",
       "car_model": "HONGQI EHS9 99KWH 6S AUT ELECT",
       "available_at": "2026-08-31T11:00:00",
-      "latest_return": "2026-09-02T21:00:00",
-      "expire_time": "2026-09-02T12:44:00"
+      "latest_return": "2026-09-04T21:00:00",
+      "expire_time": "2026-09-04T12:18:00"
     },
     {
       "from": "BERGEN MINDE",
@@ -318,8 +318,8 @@
       "to_city": "OSLO",
       "car_model": "HONGQI EHS9 99KWH 6S AUT ELECT",
       "available_at": "2026-08-31T11:00:00",
-      "latest_return": "2026-09-02T21:00:00",
-      "expire_time": "2026-09-02T12:45:00"
+      "latest_return": "2026-09-04T21:00:00",
+      "expire_time": "2026-09-04T12:20:00"
     },
     {
       "from": "BERGEN MINDE",
@@ -328,18 +328,8 @@
       "to_city": "OSLO",
       "car_model": "HONGQI EHS9 99KWH 6S AUT ELECT",
       "available_at": "2026-08-31T11:00:00",
-      "latest_return": "2026-09-02T21:00:00",
-      "expire_time": "2026-09-02T12:39:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "GARDERMOEN",
-      "to": "ARENDAL",
-      "to_city": "ARENDAL",
-      "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
-      "available_at": "2026-09-01T06:30:00",
-      "latest_return": "2026-09-04T14:00:00",
-      "expire_time": "2026-09-04T09:26:00"
+      "latest_return": "2026-09-04T21:00:00",
+      "expire_time": "2026-09-04T12:12:00"
     },
     {
       "from": "ÅLESUND SENTRUM",
@@ -578,8 +568,8 @@
       "to_city": "Arvidsjaur",
       "car_model": "VOLVO XC40 2WD HYBRID AUT",
       "available_at": "2026-09-01T08:00:00",
-      "latest_return": "2026-09-07T21:00:00",
-      "expire_time": "2026-09-07T12:42:00"
+      "latest_return": "2026-09-08T21:00:00",
+      "expire_time": "2026-09-08T12:52:00"
     },
     {
       "from": "NARVIK",
@@ -588,8 +578,8 @@
       "to_city": "Kiruna",
       "car_model": "VOLVO XC40 2WD HYBRID AUT",
       "available_at": "2026-09-01T08:00:00",
-      "latest_return": "2026-09-07T21:00:00",
-      "expire_time": "2026-09-07T18:09:00"
+      "latest_return": "2026-09-08T21:00:00",
+      "expire_time": "2026-09-08T18:12:00"
     },
     {
       "from": "NARVIK",
@@ -598,8 +588,8 @@
       "to_city": "Luleå",
       "car_model": "VOLVO XC40 2WD HYBRID AUT",
       "available_at": "2026-09-01T08:00:00",
-      "latest_return": "2026-09-07T21:00:00",
-      "expire_time": "2026-09-07T13:09:00"
+      "latest_return": "2026-09-08T21:00:00",
+      "expire_time": "2026-09-08T13:08:00"
     },
     {
       "from": "NARVIK",
@@ -608,8 +598,8 @@
       "to_city": "Stockholm (Arlanda)",
       "car_model": "VOLVO XC40 2WD HYBRID AUT",
       "available_at": "2026-09-01T08:00:00",
-      "latest_return": "2026-09-07T21:00:00",
-      "expire_time": "2026-09-06T22:46:00"
+      "latest_return": "2026-09-08T21:00:00",
+      "expire_time": "2026-09-08T01:10:00"
     },
     {
       "from": "NARVIK",
@@ -618,8 +608,8 @@
       "to_city": "STOCKHOLM",
       "car_model": "VOLVO XC40 2WD HYBRID AUT",
       "available_at": "2026-09-01T08:00:00",
-      "latest_return": "2026-09-07T21:00:00",
-      "expire_time": "2026-09-06T22:17:00"
+      "latest_return": "2026-09-08T21:00:00",
+      "expire_time": "2026-09-08T00:40:00"
     },
     {
       "from": "STAVANGER LUFTHAVN",
@@ -640,6 +630,106 @@
       "available_at": "2026-09-01T13:00:00",
       "latest_return": "2026-09-04T21:00:00",
       "expire_time": "2026-09-04T16:52:00"
+    },
+    {
+      "from": "STAVANGER LUFTHAVN",
+      "from_city": "STAVANGER",
+      "to": "KRISTIANSAND LUFTHAVN",
+      "to_city": "KJEVIK",
+      "car_model": "TOYOTA C-HR+ 4X4 72KWH AUT ELE",
+      "available_at": "2026-09-02T06:30:00",
+      "latest_return": "2026-09-04T21:00:00",
+      "expire_time": "2026-09-04T16:52:00"
+    },
+    {
+      "from": "STAVANGER LUFTHAVN",
+      "from_city": "STAVANGER",
+      "to": "KRISTIANSAND SENTRUM",
+      "to_city": "KRISTIANSAND",
+      "car_model": "TOYOTA C-HR+ 4X4 72KWH AUT ELE",
+      "available_at": "2026-09-02T06:30:00",
+      "latest_return": "2026-09-04T21:00:00",
+      "expire_time": "2026-09-04T17:02:00"
+    },
+    {
+      "from": "BAERUM FORNEBU SELF SERVICE KIOSK",
+      "from_city": "FORNEBU",
+      "to": "KONGSBERG",
+      "to_city": "KONGSBERG",
+      "car_model": "PEUGEOT E3008 5D 87KWH AUT ELE",
+      "available_at": "2026-09-02T06:45:00",
+      "latest_return": "2026-09-03T14:00:00",
+      "expire_time": "2026-09-03T12:42:00"
+    },
+    {
+      "from": "OTTA",
+      "from_city": "OTTA",
+      "to": "MOSS",
+      "to_city": "MOSS",
+      "car_model": "TOYOTA COROLLA STV HYBRID AUT",
+      "available_at": "2026-09-02T07:15:00",
+      "latest_return": "2026-09-09T20:22:00",
+      "expire_time": "2026-09-09T15:19:00"
+    },
+    {
+      "from": "OTTA",
+      "from_city": "OTTA",
+      "to": "OSLO LUFTHAVN",
+      "to_city": "GARDERMOEN",
+      "car_model": "TOYOTA COROLLA STV HYBRID AUT",
+      "available_at": "2026-09-02T07:15:00",
+      "latest_return": "2026-09-09T20:22:00",
+      "expire_time": "2026-09-09T16:39:00"
+    },
+    {
+      "from": "OTTA",
+      "from_city": "OTTA",
+      "to": "OSLO SENTRUM",
+      "to_city": "OSLO",
+      "car_model": "TOYOTA COROLLA STV HYBRID AUT",
+      "available_at": "2026-09-02T07:15:00",
+      "latest_return": "2026-09-09T20:15:00",
+      "expire_time": "2026-09-09T15:54:00"
+    },
+    {
+      "from": "BAERUM FORNEBU SELF SERVICE KIOSK",
+      "from_city": "FORNEBU",
+      "to": "BERGEN LUFTHAVN",
+      "to_city": "BLOMSTERDALEN",
+      "car_model": "CITROEN E-C4 5D AUT ELECTRIC",
+      "available_at": "2026-09-02T09:00:00",
+      "latest_return": "2026-09-12T14:00:00",
+      "expire_time": "2026-09-12T05:34:00"
+    },
+    {
+      "from": "BAERUM FORNEBU SELF SERVICE KIOSK",
+      "from_city": "FORNEBU",
+      "to": "BERGEN MINDE",
+      "to_city": "BERGEN",
+      "car_model": "CITROEN E-C4 5D AUT ELECTRIC",
+      "available_at": "2026-09-02T09:00:00",
+      "latest_return": "2026-09-12T14:00:00",
+      "expire_time": "2026-09-12T05:39:00"
+    },
+    {
+      "from": "BAERUM FORNEBU SELF SERVICE KIOSK",
+      "from_city": "FORNEBU",
+      "to": "VOSS",
+      "to_city": "SKULESTADMO",
+      "car_model": "CITROEN E-C4 5D AUT ELECTRIC",
+      "available_at": "2026-09-02T09:00:00",
+      "latest_return": "2026-09-12T14:00:00",
+      "expire_time": "2026-09-12T07:26:00"
+    },
+    {
+      "from": "SKI",
+      "from_city": "SKI",
+      "to": "ARENDAL",
+      "to_city": "ARENDAL",
+      "car_model": "SUZUKI SWIFT 4X4",
+      "available_at": "2026-09-02T09:30:00",
+      "latest_return": "2026-09-04T14:00:00",
+      "expire_time": "2026-09-04T09:52:00"
     }
   ]
 }
