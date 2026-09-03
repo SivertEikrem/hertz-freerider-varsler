@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-03T10:14:05.422989+00:00",
+  "updated_at": "2026-09-03T14:34:13.474536+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -38,8 +38,8 @@
       "to_city": "BLOMSTERDALEN",
       "car_model": "VOLVO XC60 T6 AWD HYBRID AUT",
       "available_at": "2026-08-26T11:00:00",
-      "latest_return": "2026-09-06T11:09:00",
-      "expire_time": "2026-09-05T12:05:00"
+      "latest_return": "2026-09-11T11:09:00",
+      "expire_time": "2026-09-10T12:19:00"
     },
     {
       "from": "BODØ LUFTHAVN",
@@ -48,8 +48,8 @@
       "to_city": "BLOMSTERDALEN",
       "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
       "available_at": "2026-08-26T11:00:00",
-      "latest_return": "2026-09-06T11:11:00",
-      "expire_time": "2026-09-05T12:07:00"
+      "latest_return": "2026-09-11T11:11:00",
+      "expire_time": "2026-09-10T12:21:00"
     },
     {
       "from": "BODØ LUFTHAVN",
@@ -58,8 +58,8 @@
       "to_city": "GARDERMOEN",
       "car_model": "VOLVO XC60 T6 AWD HYBRID AUT",
       "available_at": "2026-08-26T11:00:00",
-      "latest_return": "2026-09-06T11:09:00",
-      "expire_time": "2026-09-05T16:45:00"
+      "latest_return": "2026-09-11T11:09:00",
+      "expire_time": "2026-09-10T17:01:00"
     },
     {
       "from": "BODØ LUFTHAVN",
@@ -68,8 +68,8 @@
       "to_city": "GARDERMOEN",
       "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
       "available_at": "2026-08-26T11:00:00",
-      "latest_return": "2026-09-06T11:11:00",
-      "expire_time": "2026-09-05T16:47:00"
+      "latest_return": "2026-09-11T11:11:00",
+      "expire_time": "2026-09-10T17:03:00"
     },
     {
       "from": "BODØ LUFTHAVN",
@@ -78,8 +78,8 @@
       "to_city": "STAVANGER",
       "car_model": "VOLVO XC60 T6 AWD HYBRID AUT",
       "available_at": "2026-08-26T11:00:00",
-      "latest_return": "2026-09-06T11:00:00",
-      "expire_time": "2026-09-05T08:11:00"
+      "latest_return": "2026-09-11T11:00:00",
+      "expire_time": "2026-09-10T08:20:00"
     },
     {
       "from": "BODØ LUFTHAVN",
@@ -88,8 +88,8 @@
       "to_city": "STAVANGER",
       "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
       "available_at": "2026-08-26T11:00:00",
-      "latest_return": "2026-09-06T11:00:00",
-      "expire_time": "2026-09-05T08:11:00"
+      "latest_return": "2026-09-11T11:00:00",
+      "expire_time": "2026-09-10T08:20:00"
     },
     {
       "from": "BODØ LUFTHAVN",
@@ -98,8 +98,8 @@
       "to_city": "STJØRDAL",
       "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
       "available_at": "2026-08-26T11:00:00",
-      "latest_return": "2026-09-06T11:11:00",
-      "expire_time": "2026-09-06T00:15:00"
+      "latest_return": "2026-09-11T11:11:00",
+      "expire_time": "2026-09-11T00:22:00"
     },
     {
       "from": "ÅLESUND LUFTHAVN",
@@ -199,27 +199,7 @@
       "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
       "available_at": "2026-08-31T10:45:00",
       "latest_return": "2026-09-06T10:45:00",
-      "expire_time": "2026-09-05T16:21:00"
-    },
-    {
-      "from": "BODØ LUFTHAVN",
-      "from_city": "BODØ",
-      "to": "OSLO LUFTHAVN",
-      "to_city": "GARDERMOEN",
-      "car_model": "TOYOTA COROLLA CROSS 4WD AUT H",
-      "available_at": "2026-08-31T10:45:00",
-      "latest_return": "2026-09-06T10:48:00",
-      "expire_time": "2026-09-05T16:30:00"
-    },
-    {
-      "from": "BODØ LUFTHAVN",
-      "from_city": "BODØ",
-      "to": "STAVANGER LUFTHAVN",
-      "to_city": "STAVANGER",
-      "car_model": "TOYOTA COROLLA CROSS 4WD AUT H",
-      "available_at": "2026-08-31T10:45:00",
-      "latest_return": "2026-09-06T10:45:00",
-      "expire_time": "2026-09-05T08:00:00"
+      "expire_time": "2026-09-05T16:38:00"
     },
     {
       "from": "BODØ LUFTHAVN",
@@ -229,7 +209,7 @@
       "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
       "available_at": "2026-08-31T10:45:00",
       "latest_return": "2026-09-06T10:45:00",
-      "expire_time": "2026-09-05T14:29:00"
+      "expire_time": "2026-09-05T14:45:00"
     },
     {
       "from": "BERGEN MINDE",
@@ -602,16 +582,6 @@
       "expire_time": "2026-09-04T17:02:00"
     },
     {
-      "from": "BAERUM FORNEBU SELF SERVICE KIOSK",
-      "from_city": "FORNEBU",
-      "to": "KONGSBERG",
-      "to_city": "KONGSBERG",
-      "car_model": "PEUGEOT E3008 5D 87KWH AUT ELE",
-      "available_at": "2026-09-02T06:45:00",
-      "latest_return": "2026-09-03T14:00:00",
-      "expire_time": "2026-09-03T12:42:00"
-    },
-    {
       "from": "OTTA",
       "from_city": "OTTA",
       "to": "MOSS",
@@ -682,24 +652,244 @@
       "expire_time": "2026-09-04T09:52:00"
     },
     {
-      "from": "TRONDHEIM SLUPPEN",
-      "from_city": "TRONDHEIM",
-      "to": "ÅLESUND LUFTHAVN",
-      "to_city": "VIGRA",
-      "car_model": "TOYOTA BZ4X TOURING 4X4 71KWH",
-      "available_at": "2026-09-03T08:15:00",
-      "latest_return": "2026-09-06T08:00:00",
-      "expire_time": "2026-09-06T01:41:00"
+      "from": "LEKNES LUFTHAVN",
+      "from_city": "LEKNES",
+      "to": "BODØ LUFTHAVN",
+      "to_city": "BODØ",
+      "car_model": "MG 4 5D 4X4 64KWH AUT ELECTRIC",
+      "available_at": "2026-09-03T13:15:00",
+      "latest_return": "2026-09-10T13:15:00",
+      "expire_time": "2026-09-10T08:11:00"
     },
     {
-      "from": "TRONDHEIM SLUPPEN",
-      "from_city": "TRONDHEIM",
-      "to": "ÅLESUND SENTRUM",
-      "to_city": "ÅLESUND",
-      "car_model": "TOYOTA BZ4X TOURING 4X4 71KWH",
-      "available_at": "2026-09-03T08:15:00",
-      "latest_return": "2026-09-06T08:16:00",
-      "expire_time": "2026-09-06T02:27:00"
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "Göteborg Centralstation",
+      "to_city": "Göteborg",
+      "car_model": "VOLVO V60 T6 AUT AWD NE PLUS D",
+      "available_at": "2026-09-03T13:30:00",
+      "latest_return": "2026-09-06T21:00:00",
+      "expire_time": "2026-09-06T14:56:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "Göteborg Centralstation",
+      "to_city": "Göteborg",
+      "car_model": "VOLVO V60 2,0E AUTOMAT",
+      "available_at": "2026-09-03T13:30:00",
+      "latest_return": "2026-09-06T21:00:00",
+      "expire_time": "2026-09-06T14:57:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "Göteborg Landvetter Flygplats / Self Service Kiosk",
+      "to_city": "Landvetter",
+      "car_model": "VOLVO V60 T6 AUT AWD NE PLUS D",
+      "available_at": "2026-09-03T13:30:00",
+      "latest_return": "2026-09-06T21:00:00",
+      "expire_time": "2026-09-06T15:02:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "Lund DT/Self Service Kiosk",
+      "to_city": "Lund",
+      "car_model": "VOLVO V60 2,0E AUTOMAT",
+      "available_at": "2026-09-03T13:30:00",
+      "latest_return": "2026-09-06T21:00:00",
+      "expire_time": "2026-09-06T12:58:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "Malmö Centralstation / Self Service Kiosk",
+      "to_city": "Malmö",
+      "car_model": "VOLVO V60 2,0E AUTOMAT",
+      "available_at": "2026-09-03T13:30:00",
+      "latest_return": "2026-09-06T21:00:00",
+      "expire_time": "2026-09-06T12:52:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "Stockholm Arlanda Flygplats / Self Service Kiosk",
+      "to_city": "Stockholm (Arlanda)",
+      "car_model": "VOLVO V60 T6 AUT AWD NE PLUS D",
+      "available_at": "2026-09-03T13:30:00",
+      "latest_return": "2026-09-06T21:00:00",
+      "expire_time": "2026-09-06T12:05:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "Stockholm Arlanda Flygplats / Self Service Kiosk",
+      "to_city": "Stockholm (Arlanda)",
+      "car_model": "VOLVO V60 2,0E AUTOMAT",
+      "available_at": "2026-09-03T13:30:00",
+      "latest_return": "2026-09-06T21:00:00",
+      "expire_time": "2026-09-06T12:05:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "Göteborg Centralstation",
+      "to_city": "Göteborg",
+      "car_model": "PEUGEOT 2008 5D 1,6 DIESEL",
+      "available_at": "2026-09-03T13:45:00",
+      "latest_return": "2026-09-06T21:00:00",
+      "expire_time": "2026-09-06T14:57:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "Göteborg Centralstation",
+      "to_city": "Göteborg",
+      "car_model": "PEUGEOT 3008 5D",
+      "available_at": "2026-09-03T13:45:00",
+      "latest_return": "2026-09-06T21:00:00",
+      "expire_time": "2026-09-06T14:57:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "Göteborg Centralstation",
+      "to_city": "Göteborg",
+      "car_model": "VOLVO V60 T6 AUT AWD NE PLUS D",
+      "available_at": "2026-09-03T13:45:00",
+      "latest_return": "2026-09-06T21:00:00",
+      "expire_time": "2026-09-06T14:58:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "Göteborg Landvetter Flygplats / Self Service Kiosk",
+      "to_city": "Landvetter",
+      "car_model": "PEUGEOT 2008 5D 1,6 DIESEL",
+      "available_at": "2026-09-03T13:45:00",
+      "latest_return": "2026-09-07T21:00:00",
+      "expire_time": "2026-09-07T15:03:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "Göteborg Landvetter Flygplats / Self Service Kiosk",
+      "to_city": "Landvetter",
+      "car_model": "PEUGEOT 3008 5D",
+      "available_at": "2026-09-03T13:45:00",
+      "latest_return": "2026-09-07T21:00:00",
+      "expire_time": "2026-09-07T15:04:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "Göteborg Landvetter Flygplats / Self Service Kiosk",
+      "to_city": "Landvetter",
+      "car_model": "VOLVO XC40 B3 FWD AUT PLUS DAR",
+      "available_at": "2026-09-03T13:45:00",
+      "latest_return": "2026-09-07T21:00:00",
+      "expire_time": "2026-09-07T15:06:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "Malmö Centralstation / Self Service Kiosk",
+      "to_city": "Malmö",
+      "car_model": "PEUGEOT 2008 5D 1,6 DIESEL",
+      "available_at": "2026-09-03T13:45:00",
+      "latest_return": "2026-09-06T21:00:00",
+      "expire_time": "2026-09-06T12:51:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "Malmö Centralstation / Self Service Kiosk",
+      "to_city": "Malmö",
+      "car_model": "VOLVO V60 T6 AUT AWD NE PLUS D",
+      "available_at": "2026-09-03T13:45:00",
+      "latest_return": "2026-09-06T21:00:00",
+      "expire_time": "2026-09-06T12:54:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "Malmö Centralstation / Self Service Kiosk",
+      "to_city": "Malmö",
+      "car_model": "VOLVO XC40 B3 FWD AUT PLUS DAR",
+      "available_at": "2026-09-03T13:45:00",
+      "latest_return": "2026-09-07T21:00:00",
+      "expire_time": "2026-09-07T12:56:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "Malmö Sturup Flygplats/Self Service Kiosk",
+      "to_city": "Malmö/Sturup",
+      "car_model": "VOLVO XC40 B3 FWD AUT PLUS DAR",
+      "available_at": "2026-09-03T13:45:00",
+      "latest_return": "2026-09-07T21:00:00",
+      "expire_time": "2026-09-07T12:40:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "Stockholm Arlanda Flygplats / Self Service Kiosk",
+      "to_city": "Stockholm (Arlanda)",
+      "car_model": "VOLVO V60 T6 AUT AWD NE PLUS D",
+      "available_at": "2026-09-03T13:45:00",
+      "latest_return": "2026-09-06T21:00:00",
+      "expire_time": "2026-09-06T12:05:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "Stockholm Arlanda Flygplats / Self Service Kiosk",
+      "to_city": "Stockholm (Arlanda)",
+      "car_model": "PEUGEOT 3008 5D",
+      "available_at": "2026-09-03T13:45:00",
+      "latest_return": "2026-09-07T21:00:00",
+      "expire_time": "2026-09-07T12:05:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "Stockholm Arlanda Flygplats / Self Service Kiosk",
+      "to_city": "Stockholm (Arlanda)",
+      "car_model": "VOLVO XC40 B3 FWD AUT PLUS DAR",
+      "available_at": "2026-09-03T13:45:00",
+      "latest_return": "2026-09-07T21:00:00",
+      "expire_time": "2026-09-07T12:05:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "Stockholm Arlanda Flygplats / Self Service Kiosk",
+      "to_city": "Stockholm (Arlanda)",
+      "car_model": "PEUGEOT 2008 5D 1,6 DIESEL",
+      "available_at": "2026-09-03T13:45:00",
+      "latest_return": "2026-09-07T21:00:00",
+      "expire_time": "2026-09-07T12:06:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "Stockholm Kungsholmen/Self Service Kiosk",
+      "to_city": "Stockholm",
+      "car_model": "PEUGEOT 2008 5D 1,6 DIESEL",
+      "available_at": "2026-09-03T13:45:00",
+      "latest_return": "2026-09-06T21:00:00",
+      "expire_time": "2026-09-06T11:51:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "Stockholm Kungsholmen/Self Service Kiosk",
+      "to_city": "Stockholm",
+      "car_model": "PEUGEOT 3008 5D",
+      "available_at": "2026-09-03T13:45:00",
+      "latest_return": "2026-09-06T21:00:00",
+      "expire_time": "2026-09-06T11:51:00"
     },
     {
       "from": "OSLO LUFTHAVN",
