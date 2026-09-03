@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-03T01:14:32.578909+00:00",
+  "updated_at": "2026-09-03T05:48:13.554017+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -39,7 +39,7 @@
       "car_model": "VOLVO XC60 T6 AWD HYBRID AUT",
       "available_at": "2026-08-26T11:00:00",
       "latest_return": "2026-09-06T11:09:00",
-      "expire_time": "2026-09-05T12:06:00"
+      "expire_time": "2026-09-05T12:05:00"
     },
     {
       "from": "BODØ LUFTHAVN",
@@ -49,7 +49,7 @@
       "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
       "available_at": "2026-08-26T11:00:00",
       "latest_return": "2026-09-06T11:11:00",
-      "expire_time": "2026-09-05T12:08:00"
+      "expire_time": "2026-09-05T12:07:00"
     },
     {
       "from": "BODØ LUFTHAVN",
@@ -59,7 +59,7 @@
       "car_model": "VOLVO XC60 T6 AWD HYBRID AUT",
       "available_at": "2026-08-26T11:00:00",
       "latest_return": "2026-09-06T11:09:00",
-      "expire_time": "2026-09-05T16:51:00"
+      "expire_time": "2026-09-05T16:45:00"
     },
     {
       "from": "BODØ LUFTHAVN",
@@ -69,17 +69,7 @@
       "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
       "available_at": "2026-08-26T11:00:00",
       "latest_return": "2026-09-06T11:11:00",
-      "expire_time": "2026-09-05T16:53:00"
-    },
-    {
-      "from": "BODØ LUFTHAVN",
-      "from_city": "BODØ",
-      "to": "STAVANGER LUFTHAVN",
-      "to_city": "STAVANGER",
-      "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
-      "available_at": "2026-08-26T11:00:00",
-      "latest_return": "2026-09-06T11:00:00",
-      "expire_time": "2026-09-05T08:15:00"
+      "expire_time": "2026-09-05T16:47:00"
     },
     {
       "from": "BODØ LUFTHAVN",
@@ -89,7 +79,17 @@
       "car_model": "VOLVO XC60 T6 AWD HYBRID AUT",
       "available_at": "2026-08-26T11:00:00",
       "latest_return": "2026-09-06T11:00:00",
-      "expire_time": "2026-09-05T08:16:00"
+      "expire_time": "2026-09-05T08:11:00"
+    },
+    {
+      "from": "BODØ LUFTHAVN",
+      "from_city": "BODØ",
+      "to": "STAVANGER LUFTHAVN",
+      "to_city": "STAVANGER",
+      "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
+      "available_at": "2026-08-26T11:00:00",
+      "latest_return": "2026-09-06T11:00:00",
+      "expire_time": "2026-09-05T08:11:00"
     },
     {
       "from": "BODØ LUFTHAVN",
@@ -99,7 +99,7 @@
       "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
       "available_at": "2026-08-26T11:00:00",
       "latest_return": "2026-09-06T11:11:00",
-      "expire_time": "2026-09-06T00:19:00"
+      "expire_time": "2026-09-06T00:15:00"
     },
     {
       "from": "BERGEN LUFTHAVN",
@@ -239,7 +239,7 @@
       "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
       "available_at": "2026-08-31T10:45:00",
       "latest_return": "2026-09-06T10:45:00",
-      "expire_time": "2026-09-05T16:27:00"
+      "expire_time": "2026-09-05T16:21:00"
     },
     {
       "from": "BODØ LUFTHAVN",
@@ -269,7 +269,7 @@
       "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
       "available_at": "2026-08-31T10:45:00",
       "latest_return": "2026-09-06T10:45:00",
-      "expire_time": "2026-09-05T14:32:00"
+      "expire_time": "2026-09-05T14:29:00"
     },
     {
       "from": "BERGEN MINDE",
