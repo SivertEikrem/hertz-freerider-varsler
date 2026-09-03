@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-03T05:48:13.554017+00:00",
+  "updated_at": "2026-09-03T10:14:05.422989+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -102,24 +102,24 @@
       "expire_time": "2026-09-06T00:15:00"
     },
     {
-      "from": "BERGEN LUFTHAVN",
-      "from_city": "BLOMSTERDALEN",
-      "to": "Göteborg Centralstation",
-      "to_city": "Göteborg",
-      "car_model": "VOLVO XC60 T6 AUT AWD NE PL DA",
-      "available_at": "2026-08-28T14:30:00",
-      "latest_return": "2026-09-03T21:00:00",
-      "expire_time": "2026-09-03T08:41:00"
+      "from": "ÅLESUND LUFTHAVN",
+      "from_city": "VIGRA",
+      "to": "TRONDHEIM SLUPPEN",
+      "to_city": "TRONDHEIM",
+      "car_model": "EL-Personbil",
+      "available_at": "2026-08-28T09:00:00",
+      "latest_return": "2026-09-05T16:00:00",
+      "expire_time": "2026-09-05T09:41:00"
     },
     {
-      "from": "BERGEN LUFTHAVN",
-      "from_city": "BLOMSTERDALEN",
-      "to": "Göteborg Landvetter Flygplats / Self Service Kiosk",
-      "to_city": "Landvetter",
-      "car_model": "VOLVO XC60 T6 AUT AWD NE PL DA",
-      "available_at": "2026-08-28T14:30:00",
-      "latest_return": "2026-09-03T21:00:00",
-      "expire_time": "2026-09-03T08:23:00"
+      "from": "ÅLESUND LUFTHAVN",
+      "from_city": "VIGRA",
+      "to": "TRONDHEIM SLUPPEN",
+      "to_city": "TRONDHEIM",
+      "car_model": "EL-Personbil",
+      "available_at": "2026-08-28T09:00:00",
+      "latest_return": "2026-09-05T16:00:00",
+      "expire_time": "2026-09-05T09:41:00"
     },
     {
       "from": "ÅLESUND LUFTHAVN",
@@ -128,18 +128,8 @@
       "to_city": "TRONDHEIM",
       "car_model": "EL-Personbil",
       "available_at": "2026-08-31T07:15:00",
-      "latest_return": "2026-09-04T14:15:00",
-      "expire_time": "2026-09-04T07:55:00"
-    },
-    {
-      "from": "ÅLESUND LUFTHAVN",
-      "from_city": "VIGRA",
-      "to": "TRONDHEIM SLUPPEN",
-      "to_city": "TRONDHEIM",
-      "car_model": "EL-Personbil",
-      "available_at": "2026-08-31T07:15:00",
-      "latest_return": "2026-09-04T14:15:00",
-      "expire_time": "2026-09-04T07:55:00"
+      "latest_return": "2026-09-06T14:15:00",
+      "expire_time": "2026-09-06T07:55:00"
     },
     {
       "from": "ÅLESUND SENTRUM",
@@ -148,8 +138,8 @@
       "to_city": "TRONDHEIM",
       "car_model": "EL-BIL",
       "available_at": "2026-08-31T07:15:00",
-      "latest_return": "2026-09-04T14:15:00",
-      "expire_time": "2026-09-04T08:26:00"
+      "latest_return": "2026-09-07T14:15:00",
+      "expire_time": "2026-09-07T08:27:00"
     },
     {
       "from": "HAUGESUND LUFTHAVN",
@@ -200,36 +190,6 @@
       "available_at": "2026-08-31T09:00:00",
       "latest_return": "2026-09-04T14:45:00",
       "expire_time": "2026-09-04T06:03:00"
-    },
-    {
-      "from": "ØRSTA LUFTHAVN",
-      "from_city": "ØRSTA",
-      "to": "BERGEN LUFTHAVN",
-      "to_city": "BLOMSTERDALEN",
-      "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
-      "available_at": "2026-08-31T09:00:00",
-      "latest_return": "2026-09-04T14:45:00",
-      "expire_time": "2026-09-04T07:03:00"
-    },
-    {
-      "from": "ØRSTA LUFTHAVN",
-      "from_city": "ØRSTA",
-      "to": "FØRDE SENTRUM",
-      "to_city": "FØRDE",
-      "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
-      "available_at": "2026-08-31T09:00:00",
-      "latest_return": "2026-09-04T14:45:00",
-      "expire_time": "2026-09-04T10:59:00"
-    },
-    {
-      "from": "ØRSTA LUFTHAVN",
-      "from_city": "ØRSTA",
-      "to": "SOGNDAL SENTRUM",
-      "to_city": "SOGNDAL",
-      "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
-      "available_at": "2026-08-31T09:00:00",
-      "latest_return": "2026-09-04T14:45:00",
-      "expire_time": "2026-09-04T10:47:00"
     },
     {
       "from": "BODØ LUFTHAVN",
@@ -720,6 +680,36 @@
       "available_at": "2026-09-02T09:30:00",
       "latest_return": "2026-09-04T14:00:00",
       "expire_time": "2026-09-04T09:52:00"
+    },
+    {
+      "from": "TRONDHEIM SLUPPEN",
+      "from_city": "TRONDHEIM",
+      "to": "ÅLESUND LUFTHAVN",
+      "to_city": "VIGRA",
+      "car_model": "TOYOTA BZ4X TOURING 4X4 71KWH",
+      "available_at": "2026-09-03T08:15:00",
+      "latest_return": "2026-09-06T08:00:00",
+      "expire_time": "2026-09-06T01:41:00"
+    },
+    {
+      "from": "TRONDHEIM SLUPPEN",
+      "from_city": "TRONDHEIM",
+      "to": "ÅLESUND SENTRUM",
+      "to_city": "ÅLESUND",
+      "car_model": "TOYOTA BZ4X TOURING 4X4 71KWH",
+      "available_at": "2026-09-03T08:15:00",
+      "latest_return": "2026-09-06T08:16:00",
+      "expire_time": "2026-09-06T02:27:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "STAVANGER LUFTHAVN",
+      "to_city": "STAVANGER",
+      "car_model": "TOYOTA RAV4 SUV AUT 4X4 PLUGIN",
+      "available_at": "2026-09-06T07:00:00",
+      "latest_return": "2026-09-09T06:45:00",
+      "expire_time": "2026-09-08T21:35:00"
     }
   ]
 }
