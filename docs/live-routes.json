@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-04T13:45:28.403023+00:00",
+  "updated_at": "2026-09-04T17:12:50.645991+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -242,66 +242,6 @@
       "expire_time": "2026-09-06T04:36:00"
     },
     {
-      "from": "STAVANGER LUFTHAVN",
-      "from_city": "STAVANGER",
-      "to": "KRISTIANSAND LUFTHAVN",
-      "to_city": "KJEVIK",
-      "car_model": "VW ID.3 5D 58KWH 5D AUT ELECTR",
-      "available_at": "2026-09-01T07:45:00",
-      "latest_return": "2026-09-04T21:00:00",
-      "expire_time": "2026-09-04T16:52:00"
-    },
-    {
-      "from": "STAVANGER LUFTHAVN",
-      "from_city": "STAVANGER",
-      "to": "KRISTIANSAND LUFTHAVN",
-      "to_city": "KJEVIK",
-      "car_model": "MERCEDES EQB 5D 4WD AUT EL 66K",
-      "available_at": "2026-09-01T07:45:00",
-      "latest_return": "2026-09-04T21:00:00",
-      "expire_time": "2026-09-04T16:52:00"
-    },
-    {
-      "from": "STAVANGER LUFTHAVN",
-      "from_city": "STAVANGER",
-      "to": "KRISTIANSAND SENTRUM",
-      "to_city": "KRISTIANSAND",
-      "car_model": "VW ID.3 5D 58KWH 5D AUT ELECTR",
-      "available_at": "2026-09-01T07:45:00",
-      "latest_return": "2026-09-04T21:00:00",
-      "expire_time": "2026-09-04T17:02:00"
-    },
-    {
-      "from": "STAVANGER LUFTHAVN",
-      "from_city": "STAVANGER",
-      "to": "KRISTIANSAND SENTRUM",
-      "to_city": "KRISTIANSAND",
-      "car_model": "MERCEDES EQB 5D 4WD AUT EL 66K",
-      "available_at": "2026-09-01T07:45:00",
-      "latest_return": "2026-09-04T21:00:00",
-      "expire_time": "2026-09-04T17:02:00"
-    },
-    {
-      "from": "STAVANGER SOLA",
-      "from_city": "SOLA",
-      "to": "KRISTIANSAND LUFTHAVN",
-      "to_city": "KJEVIK",
-      "car_model": "VW ID.3 5D 58KWH 5D AUT ELECTR",
-      "available_at": "2026-09-01T07:45:00",
-      "latest_return": "2026-09-04T21:00:00",
-      "expire_time": "2026-09-04T16:54:00"
-    },
-    {
-      "from": "STAVANGER SOLA",
-      "from_city": "SOLA",
-      "to": "KRISTIANSAND LUFTHAVN",
-      "to_city": "KJEVIK",
-      "car_model": "SKODA ENYAQ 4X4 77KWH AUT ELEC",
-      "available_at": "2026-09-01T07:45:00",
-      "latest_return": "2026-09-04T21:00:00",
-      "expire_time": "2026-09-04T16:54:00"
-    },
-    {
       "from": "STAVANGER SOLA",
       "from_city": "SOLA",
       "to": "KRISTIANSAND LUFTHAVN",
@@ -310,26 +250,6 @@
       "available_at": "2026-09-01T07:45:00",
       "latest_return": "2026-09-06T21:45:00",
       "expire_time": "2026-09-06T17:33:00"
-    },
-    {
-      "from": "STAVANGER SOLA",
-      "from_city": "SOLA",
-      "to": "KRISTIANSAND SENTRUM",
-      "to_city": "KRISTIANSAND",
-      "car_model": "VW ID.3 5D 58KWH 5D AUT ELECTR",
-      "available_at": "2026-09-01T07:45:00",
-      "latest_return": "2026-09-04T21:00:00",
-      "expire_time": "2026-09-04T17:03:00"
-    },
-    {
-      "from": "STAVANGER SOLA",
-      "from_city": "SOLA",
-      "to": "KRISTIANSAND SENTRUM",
-      "to_city": "KRISTIANSAND",
-      "car_model": "SKODA ENYAQ 4X4 77KWH AUT ELEC",
-      "available_at": "2026-09-01T07:45:00",
-      "latest_return": "2026-09-04T21:00:00",
-      "expire_time": "2026-09-04T17:04:00"
     },
     {
       "from": "STAVANGER SOLA",
@@ -424,42 +344,12 @@
     {
       "from": "STAVANGER LUFTHAVN",
       "from_city": "STAVANGER",
-      "to": "KRISTIANSAND LUFTHAVN",
-      "to_city": "KJEVIK",
+      "to": "LYNGDAL",
+      "to_city": "LYNGDAL",
       "car_model": "VW ID.4 5D 77KWH 4X4 AUT ELECT",
       "available_at": "2026-09-01T13:00:00",
-      "latest_return": "2026-09-04T21:00:00",
-      "expire_time": "2026-09-04T16:44:00"
-    },
-    {
-      "from": "STAVANGER LUFTHAVN",
-      "from_city": "STAVANGER",
-      "to": "KRISTIANSAND SENTRUM",
-      "to_city": "KRISTIANSAND",
-      "car_model": "VW ID.4 5D 77KWH 4X4 AUT ELECT",
-      "available_at": "2026-09-01T13:00:00",
-      "latest_return": "2026-09-04T21:00:00",
-      "expire_time": "2026-09-04T16:52:00"
-    },
-    {
-      "from": "STAVANGER LUFTHAVN",
-      "from_city": "STAVANGER",
-      "to": "KRISTIANSAND LUFTHAVN",
-      "to_city": "KJEVIK",
-      "car_model": "TOYOTA C-HR+ 4X4 72KWH AUT ELE",
-      "available_at": "2026-09-02T06:30:00",
-      "latest_return": "2026-09-04T21:00:00",
-      "expire_time": "2026-09-04T16:52:00"
-    },
-    {
-      "from": "STAVANGER LUFTHAVN",
-      "from_city": "STAVANGER",
-      "to": "KRISTIANSAND SENTRUM",
-      "to_city": "KRISTIANSAND",
-      "car_model": "TOYOTA C-HR+ 4X4 72KWH AUT ELE",
-      "available_at": "2026-09-02T06:30:00",
-      "latest_return": "2026-09-04T21:00:00",
-      "expire_time": "2026-09-04T17:02:00"
+      "latest_return": "2026-09-08T21:00:00",
+      "expire_time": "2026-09-08T17:57:00"
     },
     {
       "from": "LEKNES LUFTHAVN",
@@ -599,7 +489,7 @@
       "car_model": "TOYOTA COROLLA CROSS 2WD AUT H",
       "available_at": "2026-09-04T07:00:00",
       "latest_return": "2026-09-06T21:00:00",
-      "expire_time": "2026-09-06T11:41:00"
+      "expire_time": "2026-09-06T12:06:00"
     },
     {
       "from": "BERGEN LUFTHAVN",
@@ -609,7 +499,17 @@
       "car_model": "TOYOTA COROLLA CROSS 2WD AUT H",
       "available_at": "2026-09-04T07:00:00",
       "latest_return": "2026-09-06T21:00:00",
-      "expire_time": "2026-09-06T11:51:00"
+      "expire_time": "2026-09-06T12:15:00"
+    },
+    {
+      "from": "BERGEN LUFTHAVN",
+      "from_city": "BLOMSTERDALEN",
+      "to": "MANDAL",
+      "to_city": "LINDESNES",
+      "car_model": "TOYOTA COROLLA CROSS 2WD AUT H",
+      "available_at": "2026-09-04T07:00:00",
+      "latest_return": "2026-09-06T21:00:00",
+      "expire_time": "2026-09-06T13:11:00"
     },
     {
       "from": "ÅLESUND LUFTHAVN",
@@ -692,26 +592,6 @@
       "expire_time": "2026-09-08T09:27:00"
     },
     {
-      "from": "KRISTIANSUND LUFTHAVN",
-      "from_city": "KRISTIANSUND",
-      "to": "TRONDHEIM LUFTHAVN",
-      "to_city": "STJØRDAL",
-      "car_model": "FORD CUSTOM",
-      "available_at": "2026-09-04T13:00:00",
-      "latest_return": "2026-09-08T12:50:00",
-      "expire_time": "2026-09-08T08:58:00"
-    },
-    {
-      "from": "KRISTIANSUND LUFTHAVN",
-      "from_city": "KRISTIANSUND",
-      "to": "TRONDHEIM SLUPPEN",
-      "to_city": "TRONDHEIM",
-      "car_model": "FORD CUSTOM",
-      "available_at": "2026-09-04T13:00:00",
-      "latest_return": "2026-09-08T12:45:00",
-      "expire_time": "2026-09-08T09:27:00"
-    },
-    {
       "from": "OSLO LUFTHAVN",
       "from_city": "GARDERMOEN",
       "to": "Göteborg Landvetter Flygplats / Self Service Kiosk",
@@ -720,6 +600,16 @@
       "available_at": "2026-09-04T13:00:00",
       "latest_return": "2026-09-08T21:00:00",
       "expire_time": "2026-09-08T16:00:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "KRISTIANSAND SENTRUM",
+      "to_city": "KRISTIANSAND",
+      "car_model": "TOYOTA RAV4 4X4 HYBRID AUT",
+      "available_at": "2026-09-05T10:00:00",
+      "latest_return": "2026-09-07T10:00:00",
+      "expire_time": "2026-09-07T04:47:00"
     },
     {
       "from": "TROMSØ LUFTHAVN",
