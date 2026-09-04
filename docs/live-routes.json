@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-04T00:35:38.084285+00:00",
+  "updated_at": "2026-09-04T05:04:14.741826+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -160,26 +160,6 @@
       "available_at": "2026-08-31T07:45:00",
       "latest_return": "2026-09-05T07:48:00",
       "expire_time": "2026-09-04T19:36:00"
-    },
-    {
-      "from": "TRONDHEIM LUFTHAVN",
-      "from_city": "STJØRDAL",
-      "to": "BERGEN LUFTHAVN",
-      "to_city": "BLOMSTERDALEN",
-      "car_model": "TOYOTA C-HR+ 4X4 72KWH AUT ELE",
-      "available_at": "2026-08-31T09:00:00",
-      "latest_return": "2026-09-04T14:45:00",
-      "expire_time": "2026-09-04T02:21:00"
-    },
-    {
-      "from": "TRONDHEIM LUFTHAVN",
-      "from_city": "STJØRDAL",
-      "to": "FØRDE SENTRUM",
-      "to_city": "FØRDE",
-      "car_model": "TOYOTA C-HR+ 4X4 72KWH AUT ELE",
-      "available_at": "2026-08-31T09:00:00",
-      "latest_return": "2026-09-04T14:45:00",
-      "expire_time": "2026-09-04T04:32:00"
     },
     {
       "from": "TRONDHEIM LUFTHAVN",
@@ -760,16 +740,6 @@
       "available_at": "2026-09-03T13:45:00",
       "latest_return": "2026-09-06T21:00:00",
       "expire_time": "2026-09-06T11:51:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "GARDERMOEN",
-      "to": "STAVANGER LUFTHAVN",
-      "to_city": "STAVANGER",
-      "car_model": "TOYOTA RAV4 SUV AUT 4X4 PLUGIN",
-      "available_at": "2026-09-06T07:00:00",
-      "latest_return": "2026-09-09T06:45:00",
-      "expire_time": "2026-09-08T21:35:00"
     }
   ]
 }
