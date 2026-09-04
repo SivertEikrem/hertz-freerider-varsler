@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-04T21:47:24.184467+00:00",
+  "updated_at": "2026-09-04T23:29:23.475912+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -350,46 +350,6 @@
       "available_at": "2026-09-03T13:15:00",
       "latest_return": "2026-09-10T13:15:00",
       "expire_time": "2026-09-10T08:11:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "GARDERMOEN",
-      "to": "Göteborg Centralstation",
-      "to_city": "Göteborg",
-      "car_model": "VOLVO V60 2,0E AUTOMAT",
-      "available_at": "2026-09-03T13:30:00",
-      "latest_return": "2026-09-06T21:00:00",
-      "expire_time": "2026-09-06T14:57:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "GARDERMOEN",
-      "to": "Lund DT/Self Service Kiosk",
-      "to_city": "Lund",
-      "car_model": "VOLVO V60 2,0E AUTOMAT",
-      "available_at": "2026-09-03T13:30:00",
-      "latest_return": "2026-09-06T21:00:00",
-      "expire_time": "2026-09-06T12:58:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "GARDERMOEN",
-      "to": "Malmö Centralstation / Self Service Kiosk",
-      "to_city": "Malmö",
-      "car_model": "VOLVO V60 2,0E AUTOMAT",
-      "available_at": "2026-09-03T13:30:00",
-      "latest_return": "2026-09-06T21:00:00",
-      "expire_time": "2026-09-06T12:52:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "GARDERMOEN",
-      "to": "Stockholm Arlanda Flygplats / Self Service Kiosk",
-      "to_city": "Stockholm (Arlanda)",
-      "car_model": "VOLVO V60 2,0E AUTOMAT",
-      "available_at": "2026-09-03T13:30:00",
-      "latest_return": "2026-09-06T21:00:00",
-      "expire_time": "2026-09-06T12:05:00"
     },
     {
       "from": "OSLO LUFTHAVN",
