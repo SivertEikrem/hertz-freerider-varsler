@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-05T09:33:13.054384+00:00",
+  "updated_at": "2026-09-05T13:01:08.545055+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -107,39 +107,9 @@
       "to": "TRONDHEIM SLUPPEN",
       "to_city": "TRONDHEIM",
       "car_model": "EL-Personbil",
-      "available_at": "2026-08-28T09:00:00",
-      "latest_return": "2026-09-05T16:00:00",
-      "expire_time": "2026-09-05T09:41:00"
-    },
-    {
-      "from": "ÅLESUND LUFTHAVN",
-      "from_city": "VIGRA",
-      "to": "TRONDHEIM SLUPPEN",
-      "to_city": "TRONDHEIM",
-      "car_model": "EL-Personbil",
-      "available_at": "2026-08-28T09:00:00",
-      "latest_return": "2026-09-05T16:00:00",
-      "expire_time": "2026-09-05T09:41:00"
-    },
-    {
-      "from": "ÅLESUND LUFTHAVN",
-      "from_city": "VIGRA",
-      "to": "TRONDHEIM SLUPPEN",
-      "to_city": "TRONDHEIM",
-      "car_model": "EL-Personbil",
       "available_at": "2026-08-31T07:15:00",
       "latest_return": "2026-09-06T14:15:00",
       "expire_time": "2026-09-06T07:55:00"
-    },
-    {
-      "from": "ÅLESUND SENTRUM",
-      "from_city": "ÅLESUND",
-      "to": "TRONDHEIM SLUPPEN",
-      "to_city": "TRONDHEIM",
-      "car_model": "EL-BIL",
-      "available_at": "2026-08-31T07:15:00",
-      "latest_return": "2026-09-07T14:15:00",
-      "expire_time": "2026-09-07T08:27:00"
     },
     {
       "from": "BODØ LUFTHAVN",
@@ -520,16 +490,6 @@
       "available_at": "2026-09-04T11:00:00",
       "latest_return": "2026-09-08T14:00:00",
       "expire_time": "2026-09-08T09:27:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "GARDERMOEN",
-      "to": "Göteborg Landvetter Flygplats / Self Service Kiosk",
-      "to_city": "Landvetter",
-      "car_model": "VOLVO XC40 4X4 HYBRID AUT",
-      "available_at": "2026-09-04T13:00:00",
-      "latest_return": "2026-09-08T21:00:00",
-      "expire_time": "2026-09-08T16:00:00"
     },
     {
       "from": "OSLO LUFTHAVN",
