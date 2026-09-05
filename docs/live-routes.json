@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-05T05:45:42.168927+00:00",
+  "updated_at": "2026-09-05T09:33:13.054384+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -330,6 +330,36 @@
       "available_at": "2026-09-01T13:00:00",
       "latest_return": "2026-09-08T21:00:00",
       "expire_time": "2026-09-08T17:57:00"
+    },
+    {
+      "from": "BAERUM FORNEBU SELF SERVICE KIOSK",
+      "from_city": "FORNEBU",
+      "to": "BERGEN LUFTHAVN",
+      "to_city": "BLOMSTERDALEN",
+      "car_model": "CITROEN E-C4 5D AUT ELECTRIC",
+      "available_at": "2026-09-02T09:00:00",
+      "latest_return": "2026-09-12T14:00:00",
+      "expire_time": "2026-09-12T05:34:00"
+    },
+    {
+      "from": "BAERUM FORNEBU SELF SERVICE KIOSK",
+      "from_city": "FORNEBU",
+      "to": "BERGEN MINDE",
+      "to_city": "BERGEN",
+      "car_model": "CITROEN E-C4 5D AUT ELECTRIC",
+      "available_at": "2026-09-02T09:00:00",
+      "latest_return": "2026-09-12T14:00:00",
+      "expire_time": "2026-09-12T05:39:00"
+    },
+    {
+      "from": "BAERUM FORNEBU SELF SERVICE KIOSK",
+      "from_city": "FORNEBU",
+      "to": "VOSS",
+      "to_city": "SKULESTADMO",
+      "car_model": "CITROEN E-C4 5D AUT ELECTRIC",
+      "available_at": "2026-09-02T09:00:00",
+      "latest_return": "2026-09-12T14:00:00",
+      "expire_time": "2026-09-12T07:26:00"
     },
     {
       "from": "LEKNES LUFTHAVN",
