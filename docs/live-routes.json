@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-05T01:15:08.241734+00:00",
+  "updated_at": "2026-09-05T05:45:42.168927+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -140,16 +140,6 @@
       "available_at": "2026-08-31T07:15:00",
       "latest_return": "2026-09-07T14:15:00",
       "expire_time": "2026-09-07T08:27:00"
-    },
-    {
-      "from": "HAUGESUND LUFTHAVN",
-      "from_city": "AVALDSNES",
-      "to": "OSLO LUFTHAVN",
-      "to_city": "GARDERMOEN",
-      "car_model": "HYUNDAI IONIQ6 74KWH AUT ELECT",
-      "available_at": "2026-08-31T07:45:00",
-      "latest_return": "2026-09-05T14:45:00",
-      "expire_time": "2026-09-05T05:43:00"
     },
     {
       "from": "BODØ LUFTHAVN",
