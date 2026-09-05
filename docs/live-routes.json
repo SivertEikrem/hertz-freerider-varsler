@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-05T13:01:08.545055+00:00",
+  "updated_at": "2026-09-05T16:01:11.550142+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -120,36 +120,6 @@
       "available_at": "2026-08-31T10:45:00",
       "latest_return": "2026-09-06T10:45:00",
       "expire_time": "2026-09-05T16:38:00"
-    },
-    {
-      "from": "BODØ LUFTHAVN",
-      "from_city": "BODØ",
-      "to": "TØNSBERG",
-      "to_city": "TØNSBERG",
-      "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
-      "available_at": "2026-08-31T10:45:00",
-      "latest_return": "2026-09-06T10:45:00",
-      "expire_time": "2026-09-05T14:45:00"
-    },
-    {
-      "from": "ÅLESUND SENTRUM",
-      "from_city": "ÅLESUND",
-      "to": "TRONDHEIM LUFTHAVN",
-      "to_city": "STJØRDAL",
-      "car_model": "FORD TRANSIT 6M3 65KWH AUT EL",
-      "available_at": "2026-09-01T07:15:00",
-      "latest_return": "2026-09-05T21:45:00",
-      "expire_time": "2026-09-05T15:17:00"
-    },
-    {
-      "from": "ÅLESUND SENTRUM",
-      "from_city": "ÅLESUND",
-      "to": "TRONDHEIM SLUPPEN",
-      "to_city": "TRONDHEIM",
-      "car_model": "FORD TRANSIT 6M3 65KWH AUT EL",
-      "available_at": "2026-09-01T07:15:00",
-      "latest_return": "2026-09-05T21:45:00",
-      "expire_time": "2026-09-05T15:54:00"
     },
     {
       "from": "KRISTIANSUND LUFTHAVN",
