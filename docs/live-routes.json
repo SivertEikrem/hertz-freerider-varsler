@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-05T22:06:55.674702+00:00",
+  "updated_at": "2026-09-05T23:51:25.253355+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -370,56 +370,6 @@
       "available_at": "2026-09-04T07:00:00",
       "latest_return": "2026-09-06T21:00:00",
       "expire_time": "2026-09-06T13:11:00"
-    },
-    {
-      "from": "ÅLESUND LUFTHAVN",
-      "from_city": "VIGRA",
-      "to": "Göteborg Centralstation",
-      "to_city": "Göteborg",
-      "car_model": "VOLVO V60 T6 AUT AWD NE PLUS D",
-      "available_at": "2026-09-04T09:45:00",
-      "latest_return": "2026-09-09T21:00:00",
-      "expire_time": "2026-09-09T08:34:00"
-    },
-    {
-      "from": "ÅLESUND LUFTHAVN",
-      "from_city": "VIGRA",
-      "to": "Göteborg Landvetter Flygplats / Self Service Kiosk",
-      "to_city": "Landvetter",
-      "car_model": "VOLVO V60 T6 AUT AWD NE PLUS D",
-      "available_at": "2026-09-04T09:45:00",
-      "latest_return": "2026-09-09T21:00:00",
-      "expire_time": "2026-09-09T08:16:00"
-    },
-    {
-      "from": "ÅLESUND LUFTHAVN",
-      "from_city": "VIGRA",
-      "to": "OSLO LUFTHAVN",
-      "to_city": "GARDERMOEN",
-      "car_model": "VOLVO V60 T6 AUT AWD NE PLUS D",
-      "available_at": "2026-09-04T09:45:00",
-      "latest_return": "2026-09-09T21:00:00",
-      "expire_time": "2026-09-09T12:39:00"
-    },
-    {
-      "from": "ÅLESUND LUFTHAVN",
-      "from_city": "VIGRA",
-      "to": "Stockholm Arlanda Flygplats / Self Service Kiosk",
-      "to_city": "Stockholm (Arlanda)",
-      "car_model": "VOLVO V60 T6 AUT AWD NE PLUS D",
-      "available_at": "2026-09-04T09:45:00",
-      "latest_return": "2026-09-09T21:00:00",
-      "expire_time": "2026-09-09T06:04:00"
-    },
-    {
-      "from": "ÅLESUND LUFTHAVN",
-      "from_city": "VIGRA",
-      "to": "Stockholm Kungsholmen/Self Service Kiosk",
-      "to_city": "Stockholm",
-      "car_model": "VOLVO V60 T6 AUT AWD NE PLUS D",
-      "available_at": "2026-09-04T09:45:00",
-      "latest_return": "2026-09-09T21:00:00",
-      "expire_time": "2026-09-09T06:03:00"
     },
     {
       "from": "TROMSØ LUFTHAVN",
