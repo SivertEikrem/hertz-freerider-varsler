@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-05T16:01:11.550142+00:00",
+  "updated_at": "2026-09-05T18:13:38.950793+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -110,16 +110,6 @@
       "available_at": "2026-08-31T07:15:00",
       "latest_return": "2026-09-06T14:15:00",
       "expire_time": "2026-09-06T07:55:00"
-    },
-    {
-      "from": "BODØ LUFTHAVN",
-      "from_city": "BODØ",
-      "to": "OSLO LUFTHAVN",
-      "to_city": "GARDERMOEN",
-      "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
-      "available_at": "2026-08-31T10:45:00",
-      "latest_return": "2026-09-06T10:45:00",
-      "expire_time": "2026-09-05T16:38:00"
     },
     {
       "from": "KRISTIANSUND LUFTHAVN",
