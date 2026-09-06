@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-06T01:34:32.564323+00:00",
+  "updated_at": "2026-09-06T06:29:01.030827+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -140,16 +140,6 @@
       "available_at": "2026-09-01T07:30:00",
       "latest_return": "2026-09-06T21:00:00",
       "expire_time": "2026-09-06T12:16:00"
-    },
-    {
-      "from": "KRISTIANSUND LUFTHAVN",
-      "from_city": "KRISTIANSUND",
-      "to": "STAVANGER LUFTHAVN",
-      "to_city": "STAVANGER",
-      "car_model": "TOYOTA COROLLA CROSS 2WD AUT H",
-      "available_at": "2026-09-01T07:30:00",
-      "latest_return": "2026-09-06T21:00:00",
-      "expire_time": "2026-09-06T04:36:00"
     },
     {
       "from": "STAVANGER SOLA",
