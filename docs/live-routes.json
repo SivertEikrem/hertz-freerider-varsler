@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-06T11:13:16.326301+00:00",
+  "updated_at": "2026-09-06T14:09:38.838771+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -102,16 +102,6 @@
       "expire_time": "2026-09-11T00:22:00"
     },
     {
-      "from": "KRISTIANSUND LUFTHAVN",
-      "from_city": "KRISTIANSUND",
-      "to": "OSLO LUFTHAVN",
-      "to_city": "GARDERMOEN",
-      "car_model": "TOYOTA COROLLA CROSS 2WD AUT H",
-      "available_at": "2026-09-01T07:30:00",
-      "latest_return": "2026-09-06T21:00:00",
-      "expire_time": "2026-09-06T12:16:00"
-    },
-    {
       "from": "STAVANGER SOLA",
       "from_city": "SOLA",
       "to": "KRISTIANSAND LUFTHAVN",
@@ -152,36 +142,6 @@
       "expire_time": "2026-09-08T17:57:00"
     },
     {
-      "from": "BAERUM FORNEBU SELF SERVICE KIOSK",
-      "from_city": "FORNEBU",
-      "to": "BERGEN LUFTHAVN",
-      "to_city": "BLOMSTERDALEN",
-      "car_model": "CITROEN E-C4 5D AUT ELECTRIC",
-      "available_at": "2026-09-02T09:00:00",
-      "latest_return": "2026-09-12T14:00:00",
-      "expire_time": "2026-09-12T05:34:00"
-    },
-    {
-      "from": "BAERUM FORNEBU SELF SERVICE KIOSK",
-      "from_city": "FORNEBU",
-      "to": "BERGEN MINDE",
-      "to_city": "BERGEN",
-      "car_model": "CITROEN E-C4 5D AUT ELECTRIC",
-      "available_at": "2026-09-02T09:00:00",
-      "latest_return": "2026-09-12T14:00:00",
-      "expire_time": "2026-09-12T05:39:00"
-    },
-    {
-      "from": "BAERUM FORNEBU SELF SERVICE KIOSK",
-      "from_city": "FORNEBU",
-      "to": "VOSS",
-      "to_city": "SKULESTADMO",
-      "car_model": "CITROEN E-C4 5D AUT ELECTRIC",
-      "available_at": "2026-09-02T09:00:00",
-      "latest_return": "2026-09-12T14:00:00",
-      "expire_time": "2026-09-12T07:26:00"
-    },
-    {
       "from": "LEKNES LUFTHAVN",
       "from_city": "LEKNES",
       "to": "BODØ LUFTHAVN",
@@ -190,76 +150,6 @@
       "available_at": "2026-09-03T13:15:00",
       "latest_return": "2026-09-10T13:15:00",
       "expire_time": "2026-09-10T08:11:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "GARDERMOEN",
-      "to": "Göteborg Centralstation",
-      "to_city": "Göteborg",
-      "car_model": "PEUGEOT 3008 5D",
-      "available_at": "2026-09-03T13:45:00",
-      "latest_return": "2026-09-06T21:00:00",
-      "expire_time": "2026-09-06T14:57:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "GARDERMOEN",
-      "to": "Göteborg Landvetter Flygplats / Self Service Kiosk",
-      "to_city": "Landvetter",
-      "car_model": "PEUGEOT 3008 5D",
-      "available_at": "2026-09-03T13:45:00",
-      "latest_return": "2026-09-07T21:00:00",
-      "expire_time": "2026-09-07T15:04:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "GARDERMOEN",
-      "to": "Stockholm Arlanda Flygplats / Self Service Kiosk",
-      "to_city": "Stockholm (Arlanda)",
-      "car_model": "PEUGEOT 3008 5D",
-      "available_at": "2026-09-03T13:45:00",
-      "latest_return": "2026-09-07T21:00:00",
-      "expire_time": "2026-09-07T12:05:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "GARDERMOEN",
-      "to": "Stockholm Kungsholmen/Self Service Kiosk",
-      "to_city": "Stockholm",
-      "car_model": "PEUGEOT 3008 5D",
-      "available_at": "2026-09-03T13:45:00",
-      "latest_return": "2026-09-06T21:00:00",
-      "expire_time": "2026-09-06T11:51:00"
-    },
-    {
-      "from": "BERGEN LUFTHAVN",
-      "from_city": "BLOMSTERDALEN",
-      "to": "KRISTIANSAND LUFTHAVN",
-      "to_city": "KJEVIK",
-      "car_model": "TOYOTA COROLLA CROSS 2WD AUT H",
-      "available_at": "2026-09-04T07:00:00",
-      "latest_return": "2026-09-06T21:00:00",
-      "expire_time": "2026-09-06T12:06:00"
-    },
-    {
-      "from": "BERGEN LUFTHAVN",
-      "from_city": "BLOMSTERDALEN",
-      "to": "KRISTIANSAND SENTRUM",
-      "to_city": "KRISTIANSAND",
-      "car_model": "TOYOTA COROLLA CROSS 2WD AUT H",
-      "available_at": "2026-09-04T07:00:00",
-      "latest_return": "2026-09-06T21:00:00",
-      "expire_time": "2026-09-06T12:15:00"
-    },
-    {
-      "from": "BERGEN LUFTHAVN",
-      "from_city": "BLOMSTERDALEN",
-      "to": "MANDAL",
-      "to_city": "LINDESNES",
-      "car_model": "TOYOTA COROLLA CROSS 2WD AUT H",
-      "available_at": "2026-09-04T07:00:00",
-      "latest_return": "2026-09-06T21:00:00",
-      "expire_time": "2026-09-06T13:11:00"
     },
     {
       "from": "TROMSØ LUFTHAVN",
