@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-06T14:09:38.838771+00:00",
+  "updated_at": "2026-09-06T16:59:15.709159+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -110,16 +110,6 @@
       "available_at": "2026-09-01T07:45:00",
       "latest_return": "2026-09-06T21:45:00",
       "expire_time": "2026-09-06T17:33:00"
-    },
-    {
-      "from": "STAVANGER SOLA",
-      "from_city": "SOLA",
-      "to": "KRISTIANSAND SENTRUM",
-      "to_city": "KRISTIANSAND",
-      "car_model": "TOYOTA COROLLA CROSS 2WD AUT H",
-      "available_at": "2026-09-01T07:45:00",
-      "latest_return": "2026-09-06T21:00:00",
-      "expire_time": "2026-09-06T16:58:00"
     },
     {
       "from": "STAVANGER SOLA",
