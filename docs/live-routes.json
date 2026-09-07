@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-07T15:14:10.279826+00:00",
+  "updated_at": "2026-09-07T19:09:29.707464+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -212,6 +212,26 @@
       "expire_time": "2026-09-11T05:35:00"
     },
     {
+      "from": "ANDENES",
+      "from_city": "ANDENES",
+      "to": "EVENES LUFTHAVN",
+      "to_city": "LILAND",
+      "car_model": "POLESTAR 2 5D 79KWH AWD AUT EL",
+      "available_at": "2026-09-07T18:30:00",
+      "latest_return": "2026-09-13T18:00:00",
+      "expire_time": "2026-09-13T13:52:00"
+    },
+    {
+      "from": "ANDENES",
+      "from_city": "ANDENES",
+      "to": "HARSTAD SENTRUM",
+      "to_city": "HARSTAD",
+      "car_model": "POLESTAR 2 5D 79KWH AWD AUT EL",
+      "available_at": "2026-09-07T18:30:00",
+      "latest_return": "2026-09-13T18:00:00",
+      "expire_time": "2026-09-13T14:12:00"
+    },
+    {
       "from": "BERGEN MINDE",
       "from_city": "BERGEN",
       "to": "OSLO ALNABRU",
@@ -860,6 +880,46 @@
       "available_at": "2026-09-08T10:00:00",
       "latest_return": "2026-09-11T21:20:00",
       "expire_time": "2026-09-11T12:46:00"
+    },
+    {
+      "from": "TROMSØ LUFTHAVN",
+      "from_city": "TROMSØ",
+      "to": "EVENES LUFTHAVN",
+      "to_city": "LILAND",
+      "car_model": "VOLVO XC60 T6 AWD HYBRID AUT",
+      "available_at": "2026-09-13T12:00:00",
+      "latest_return": "2026-09-19T18:00:00",
+      "expire_time": "2026-09-19T13:32:00"
+    },
+    {
+      "from": "TROMSØ LUFTHAVN",
+      "from_city": "TROMSØ",
+      "to": "HARSTAD SENTRUM",
+      "to_city": "HARSTAD",
+      "car_model": "VOLVO XC60 T6 AWD HYBRID AUT",
+      "available_at": "2026-09-13T12:00:00",
+      "latest_return": "2026-09-19T18:00:00",
+      "expire_time": "2026-09-19T12:46:00"
+    },
+    {
+      "from": "STOKMARKNES LUFTHAVN",
+      "from_city": "STOKMARKNES",
+      "to": "EVENES LUFTHAVN",
+      "to_city": "LILAND",
+      "car_model": "MITSUBISHI OUTLANDER HYBRID 4X",
+      "available_at": "2026-09-14T11:00:00",
+      "latest_return": "2026-09-20T18:00:00",
+      "expire_time": "2026-09-20T15:11:00"
+    },
+    {
+      "from": "STOKMARKNES LUFTHAVN",
+      "from_city": "STOKMARKNES",
+      "to": "HARSTAD SENTRUM",
+      "to_city": "HARSTAD",
+      "car_model": "MITSUBISHI OUTLANDER HYBRID 4X",
+      "available_at": "2026-09-14T11:00:00",
+      "latest_return": "2026-09-20T18:00:00",
+      "expire_time": "2026-09-20T15:57:00"
     }
   ]
 }
