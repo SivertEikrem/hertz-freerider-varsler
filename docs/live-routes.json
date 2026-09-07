@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-07T00:12:01.525533+00:00",
+  "updated_at": "2026-09-07T04:35:41.867314+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -22,26 +22,6 @@
       "expire_time": "2026-09-07T07:21:00"
     },
     {
-      "from": "SVOLVÆR LUFTHAVN",
-      "from_city": "SVOLVÆR",
-      "to": "MOSJØEN SENTRUM",
-      "to_city": "MOSJØEN",
-      "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
-      "available_at": "2026-08-18T07:00:00",
-      "latest_return": "2026-09-07T14:00:00",
-      "expire_time": "2026-09-07T04:15:00"
-    },
-    {
-      "from": "BODØ LUFTHAVN",
-      "from_city": "BODØ",
-      "to": "BERGEN LUFTHAVN",
-      "to_city": "BLOMSTERDALEN",
-      "car_model": "VOLVO XC60 T6 AWD HYBRID AUT",
-      "available_at": "2026-08-26T11:00:00",
-      "latest_return": "2026-09-11T11:09:00",
-      "expire_time": "2026-09-10T12:19:00"
-    },
-    {
       "from": "BODØ LUFTHAVN",
       "from_city": "BODØ",
       "to": "BERGEN LUFTHAVN",
@@ -56,30 +36,10 @@
       "from_city": "BODØ",
       "to": "OSLO LUFTHAVN",
       "to_city": "GARDERMOEN",
-      "car_model": "VOLVO XC60 T6 AWD HYBRID AUT",
-      "available_at": "2026-08-26T11:00:00",
-      "latest_return": "2026-09-11T11:09:00",
-      "expire_time": "2026-09-10T17:01:00"
-    },
-    {
-      "from": "BODØ LUFTHAVN",
-      "from_city": "BODØ",
-      "to": "OSLO LUFTHAVN",
-      "to_city": "GARDERMOEN",
       "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
       "available_at": "2026-08-26T11:00:00",
       "latest_return": "2026-09-11T11:11:00",
       "expire_time": "2026-09-10T17:03:00"
-    },
-    {
-      "from": "BODØ LUFTHAVN",
-      "from_city": "BODØ",
-      "to": "STAVANGER LUFTHAVN",
-      "to_city": "STAVANGER",
-      "car_model": "VOLVO XC60 T6 AWD HYBRID AUT",
-      "available_at": "2026-08-26T11:00:00",
-      "latest_return": "2026-09-11T11:00:00",
-      "expire_time": "2026-09-10T08:20:00"
     },
     {
       "from": "BODØ LUFTHAVN",
