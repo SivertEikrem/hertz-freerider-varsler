@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-08T12:51:47.180443+00:00",
+  "updated_at": "2026-09-08T16:52:58.879397+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -172,46 +172,6 @@
       "expire_time": "2026-09-10T08:11:00"
     },
     {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "GARDERMOEN",
-      "to": "Göteborg Centralstation",
-      "to_city": "Göteborg",
-      "car_model": "LYNK&CO 01 AUT LADDHYBRID",
-      "available_at": "2026-09-04T08:30:00",
-      "latest_return": "2026-09-08T21:00:00",
-      "expire_time": "2026-09-08T16:39:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "GARDERMOEN",
-      "to": "Malmö Centralstation / Self Service Kiosk",
-      "to_city": "Malmö",
-      "car_model": "LYNK&CO 01 AUT LADDHYBRID",
-      "available_at": "2026-09-04T08:30:00",
-      "latest_return": "2026-09-08T21:00:00",
-      "expire_time": "2026-09-08T13:09:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "GARDERMOEN",
-      "to": "Stockholm Arlanda Flygplats / Self Service Kiosk",
-      "to_city": "Stockholm (Arlanda)",
-      "car_model": "LYNK&CO 01 AUT LADDHYBRID",
-      "available_at": "2026-09-04T08:30:00",
-      "latest_return": "2026-09-08T21:00:00",
-      "expire_time": "2026-09-08T13:28:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "GARDERMOEN",
-      "to": "Stockholm Kungsholmen/Self Service Kiosk",
-      "to_city": "Stockholm",
-      "car_model": "LYNK&CO 01 AUT LADDHYBRID",
-      "available_at": "2026-09-04T08:30:00",
-      "latest_return": "2026-09-08T21:00:00",
-      "expire_time": "2026-09-08T13:24:00"
-    },
-    {
       "from": "TROMSØ LUFTHAVN",
       "from_city": "TROMSØ",
       "to": "BODØ LUFTHAVN",
@@ -238,8 +198,18 @@
       "to_city": "LILAND",
       "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
       "available_at": "2026-09-04T11:00:00",
-      "latest_return": "2026-09-08T18:00:00",
-      "expire_time": "2026-09-08T13:35:00"
+      "latest_return": "2026-09-15T18:00:00",
+      "expire_time": "2026-09-15T13:38:00"
+    },
+    {
+      "from": "LEKNES LUFTHAVN",
+      "from_city": "LEKNES",
+      "to": "HARSTAD SENTRUM",
+      "to_city": "HARSTAD",
+      "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
+      "available_at": "2026-09-04T11:00:00",
+      "latest_return": "2026-09-15T14:00:00",
+      "expire_time": "2026-09-15T09:29:00"
     },
     {
       "from": "BODØ SENTRUM",
@@ -1110,6 +1080,56 @@
       "available_at": "2026-09-08T11:15:00",
       "latest_return": "2026-09-14T17:15:00",
       "expire_time": "2026-09-14T01:15:00"
+    },
+    {
+      "from": "BERGEN LUFTHAVN",
+      "from_city": "BLOMSTERDALEN",
+      "to": "OSLO ALNABRU",
+      "to_city": "OSLO",
+      "car_model": "HONGQI EHS9 99KWH 6S AUT ELECT",
+      "available_at": "2026-09-08T13:45:00",
+      "latest_return": "2026-09-11T21:00:00",
+      "expire_time": "2026-09-11T12:30:00"
+    },
+    {
+      "from": "BERGEN LUFTHAVN",
+      "from_city": "BLOMSTERDALEN",
+      "to": "OSLO LUFTHAVN",
+      "to_city": "GARDERMOEN",
+      "car_model": "HONGQI EHS9 99KWH 6S AUT ELECT",
+      "available_at": "2026-09-08T13:45:00",
+      "latest_return": "2026-09-11T21:00:00",
+      "expire_time": "2026-09-11T12:24:00"
+    },
+    {
+      "from": "BERGEN LUFTHAVN",
+      "from_city": "BLOMSTERDALEN",
+      "to": "OSLO SENTRALSTASJON",
+      "to_city": "OSLO",
+      "car_model": "HONGQI EHS9 99KWH 6S AUT ELECT",
+      "available_at": "2026-09-08T13:45:00",
+      "latest_return": "2026-09-11T21:00:00",
+      "expire_time": "2026-09-11T12:38:00"
+    },
+    {
+      "from": "BERGEN LUFTHAVN",
+      "from_city": "BLOMSTERDALEN",
+      "to": "OSLO SENTRUM",
+      "to_city": "OSLO",
+      "car_model": "HONGQI EHS9 99KWH 6S AUT ELECT",
+      "available_at": "2026-09-08T13:45:00",
+      "latest_return": "2026-09-11T21:00:00",
+      "expire_time": "2026-09-11T12:39:00"
+    },
+    {
+      "from": "BERGEN LUFTHAVN",
+      "from_city": "BLOMSTERDALEN",
+      "to": "OSLO ØKERN",
+      "to_city": "OSLO",
+      "car_model": "HONGQI EHS9 99KWH 6S AUT ELECT",
+      "available_at": "2026-09-08T13:45:00",
+      "latest_return": "2026-09-11T21:00:00",
+      "expire_time": "2026-09-11T12:32:00"
     },
     {
       "from": "TROMSØ LUFTHAVN",
