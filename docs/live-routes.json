@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-08T03:20:21.785884+00:00",
+  "updated_at": "2026-09-08T08:12:51.422143+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -70,6 +70,66 @@
       "available_at": "2026-08-26T11:00:00",
       "latest_return": "2026-09-11T11:11:00",
       "expire_time": "2026-09-11T00:15:00"
+    },
+    {
+      "from": "ÅLESUND LUFTHAVN",
+      "from_city": "VIGRA",
+      "to": "TRONDHEIM LUFTHAVN",
+      "to_city": "STJØRDAL",
+      "car_model": "EL-Personbil",
+      "available_at": "2026-08-28T09:00:00",
+      "latest_return": "2026-09-12T08:03:00",
+      "expire_time": "2026-09-12T01:03:00"
+    },
+    {
+      "from": "ÅLESUND LUFTHAVN",
+      "from_city": "VIGRA",
+      "to": "TRONDHEIM LUFTHAVN",
+      "to_city": "STJØRDAL",
+      "car_model": "EL-Personbil",
+      "available_at": "2026-08-28T09:00:00",
+      "latest_return": "2026-09-12T15:03:00",
+      "expire_time": "2026-09-12T08:05:00"
+    },
+    {
+      "from": "ÅLESUND LUFTHAVN",
+      "from_city": "VIGRA",
+      "to": "TRONDHEIM SLUPPEN",
+      "to_city": "TRONDHEIM",
+      "car_model": "EL-Personbil",
+      "available_at": "2026-08-28T09:00:00",
+      "latest_return": "2026-09-12T16:00:00",
+      "expire_time": "2026-09-12T09:40:00"
+    },
+    {
+      "from": "ÅLESUND LUFTHAVN",
+      "from_city": "VIGRA",
+      "to": "TRONDHEIM SLUPPEN",
+      "to_city": "TRONDHEIM",
+      "car_model": "EL-Personbil",
+      "available_at": "2026-08-28T09:00:00",
+      "latest_return": "2026-09-12T16:00:00",
+      "expire_time": "2026-09-12T09:40:00"
+    },
+    {
+      "from": "ÅLESUND LUFTHAVN",
+      "from_city": "VIGRA",
+      "to": "TRONDHEIM LUFTHAVN",
+      "to_city": "STJØRDAL",
+      "car_model": "EL-Personbil",
+      "available_at": "2026-08-31T07:15:00",
+      "latest_return": "2026-09-12T15:04:00",
+      "expire_time": "2026-09-12T08:06:00"
+    },
+    {
+      "from": "ÅLESUND LUFTHAVN",
+      "from_city": "VIGRA",
+      "to": "TRONDHEIM SLUPPEN",
+      "to_city": "TRONDHEIM",
+      "car_model": "EL-Personbil",
+      "available_at": "2026-08-31T07:15:00",
+      "latest_return": "2026-09-12T14:15:00",
+      "expire_time": "2026-09-12T07:56:00"
     },
     {
       "from": "BODØ LUFTHAVN",
@@ -230,6 +290,146 @@
       "available_at": "2026-09-07T18:30:00",
       "latest_return": "2026-09-13T18:00:00",
       "expire_time": "2026-09-13T14:12:00"
+    },
+    {
+      "from": "STAVANGER SOLA",
+      "from_city": "SOLA",
+      "to": "OSLO ALNABRU",
+      "to_city": "OSLO",
+      "car_model": "TOYOTA PROACE 6M3 VARE TDI AUT",
+      "available_at": "2026-09-08T08:00:00",
+      "latest_return": "2026-09-13T19:00:00",
+      "expire_time": "2026-09-13T10:32:00"
+    },
+    {
+      "from": "STAVANGER SOLA",
+      "from_city": "SOLA",
+      "to": "OSLO ALNABRU",
+      "to_city": "OSLO",
+      "car_model": "TOYOTA PROACE 6M3 VARE TDI AUT",
+      "available_at": "2026-09-08T08:00:00",
+      "latest_return": "2026-09-13T19:00:00",
+      "expire_time": "2026-09-13T10:32:00"
+    },
+    {
+      "from": "STAVANGER SOLA",
+      "from_city": "SOLA",
+      "to": "OSLO ALNABRU",
+      "to_city": "OSLO",
+      "car_model": "TOYOTA PROACE 6M3 VARE TDI AUT",
+      "available_at": "2026-09-08T08:00:00",
+      "latest_return": "2026-09-13T19:00:00",
+      "expire_time": "2026-09-13T10:32:00"
+    },
+    {
+      "from": "STAVANGER SOLA",
+      "from_city": "SOLA",
+      "to": "OSLO LUFTHAVN",
+      "to_city": "GARDERMOEN",
+      "car_model": "TOYOTA PROACE 6M3 VARE TDI AUT",
+      "available_at": "2026-09-08T08:00:00",
+      "latest_return": "2026-09-13T19:00:00",
+      "expire_time": "2026-09-13T10:00:00"
+    },
+    {
+      "from": "STAVANGER SOLA",
+      "from_city": "SOLA",
+      "to": "OSLO LUFTHAVN",
+      "to_city": "GARDERMOEN",
+      "car_model": "TOYOTA PROACE 6M3 VARE TDI AUT",
+      "available_at": "2026-09-08T08:00:00",
+      "latest_return": "2026-09-13T19:00:00",
+      "expire_time": "2026-09-13T10:00:00"
+    },
+    {
+      "from": "STAVANGER SOLA",
+      "from_city": "SOLA",
+      "to": "OSLO LUFTHAVN",
+      "to_city": "GARDERMOEN",
+      "car_model": "TOYOTA PROACE 6M3 VARE TDI AUT",
+      "available_at": "2026-09-08T08:00:00",
+      "latest_return": "2026-09-13T19:00:00",
+      "expire_time": "2026-09-13T10:00:00"
+    },
+    {
+      "from": "STAVANGER SOLA",
+      "from_city": "SOLA",
+      "to": "OSLO SENTRALSTASJON",
+      "to_city": "OSLO",
+      "car_model": "TOYOTA PROACE 6M3 VARE TDI AUT",
+      "available_at": "2026-09-08T08:00:00",
+      "latest_return": "2026-09-09T19:00:00",
+      "expire_time": "2026-09-09T10:38:00"
+    },
+    {
+      "from": "STAVANGER SOLA",
+      "from_city": "SOLA",
+      "to": "OSLO SENTRALSTASJON",
+      "to_city": "OSLO",
+      "car_model": "TOYOTA PROACE 6M3 VARE TDI AUT",
+      "available_at": "2026-09-08T08:00:00",
+      "latest_return": "2026-09-13T19:00:00",
+      "expire_time": "2026-09-13T10:38:00"
+    },
+    {
+      "from": "STAVANGER SOLA",
+      "from_city": "SOLA",
+      "to": "OSLO SENTRALSTASJON",
+      "to_city": "OSLO",
+      "car_model": "TOYOTA PROACE 6M3 VARE TDI AUT",
+      "available_at": "2026-09-08T08:00:00",
+      "latest_return": "2026-09-13T19:00:00",
+      "expire_time": "2026-09-13T10:38:00"
+    },
+    {
+      "from": "STAVANGER SOLA",
+      "from_city": "SOLA",
+      "to": "OSLO ØKERN",
+      "to_city": "OSLO",
+      "car_model": "TOYOTA PROACE 6M3 VARE TDI AUT",
+      "available_at": "2026-09-08T08:00:00",
+      "latest_return": "2026-09-13T19:00:00",
+      "expire_time": "2026-09-13T10:33:00"
+    },
+    {
+      "from": "STAVANGER SOLA",
+      "from_city": "SOLA",
+      "to": "OSLO ØKERN",
+      "to_city": "OSLO",
+      "car_model": "TOYOTA PROACE 6M3 VARE TDI AUT",
+      "available_at": "2026-09-08T08:00:00",
+      "latest_return": "2026-09-13T19:00:00",
+      "expire_time": "2026-09-13T10:33:00"
+    },
+    {
+      "from": "STAVANGER SOLA",
+      "from_city": "SOLA",
+      "to": "OSLO ØKERN",
+      "to_city": "OSLO",
+      "car_model": "TOYOTA PROACE 6M3 VARE TDI AUT",
+      "available_at": "2026-09-08T08:00:00",
+      "latest_return": "2026-09-13T19:00:00",
+      "expire_time": "2026-09-13T10:33:00"
+    },
+    {
+      "from": "ÅLESUND SENTRUM",
+      "from_city": "ÅLESUND",
+      "to": "TRONDHEIM LUFTHAVN",
+      "to_city": "STJØRDAL",
+      "car_model": "TOYOTA RAV4 4X4 HYBRID AUT",
+      "available_at": "2026-09-08T08:00:00",
+      "latest_return": "2026-09-12T21:45:00",
+      "expire_time": "2026-09-12T15:19:00"
+    },
+    {
+      "from": "ÅLESUND SENTRUM",
+      "from_city": "ÅLESUND",
+      "to": "TRONDHEIM SLUPPEN",
+      "to_city": "TRONDHEIM",
+      "car_model": "TOYOTA RAV4 4X4 HYBRID AUT",
+      "available_at": "2026-09-08T08:00:00",
+      "latest_return": "2026-09-12T21:45:00",
+      "expire_time": "2026-09-12T15:57:00"
     },
     {
       "from": "BERGEN MINDE",
