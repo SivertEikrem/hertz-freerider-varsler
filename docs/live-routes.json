@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-08T16:52:58.879397+00:00",
+  "updated_at": "2026-09-08T19:38:23.443697+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -152,16 +152,6 @@
       "expire_time": "2026-09-09T14:35:00"
     },
     {
-      "from": "STAVANGER LUFTHAVN",
-      "from_city": "STAVANGER",
-      "to": "LYNGDAL",
-      "to_city": "LYNGDAL",
-      "car_model": "VW ID.4 5D 77KWH 4X4 AUT ELECT",
-      "available_at": "2026-09-01T13:00:00",
-      "latest_return": "2026-09-08T21:00:00",
-      "expire_time": "2026-09-08T17:57:00"
-    },
-    {
       "from": "LEKNES LUFTHAVN",
       "from_city": "LEKNES",
       "to": "BODØ LUFTHAVN",
@@ -230,26 +220,6 @@
       "available_at": "2026-09-07T07:00:00",
       "latest_return": "2026-09-15T14:00:00",
       "expire_time": "2026-09-15T06:57:00"
-    },
-    {
-      "from": "SVOLVÆR LUFTHAVN",
-      "from_city": "SVOLVÆR",
-      "to": "EVENES LUFTHAVN",
-      "to_city": "LILAND",
-      "car_model": "VW ID.3 5D 58KWH 5D AUT ELECTR",
-      "available_at": "2026-09-07T08:00:00",
-      "latest_return": "2026-09-15T08:00:00",
-      "expire_time": "2026-09-15T04:54:00"
-    },
-    {
-      "from": "SVOLVÆR LUFTHAVN",
-      "from_city": "SVOLVÆR",
-      "to": "HARSTAD SENTRUM",
-      "to_city": "HARSTAD",
-      "car_model": "VW ID.3 5D 58KWH 5D AUT ELECTR",
-      "available_at": "2026-09-07T08:00:00",
-      "latest_return": "2026-09-15T08:02:00",
-      "expire_time": "2026-09-15T05:02:00"
     },
     {
       "from": "EVENES LUFTHAVN",
