@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-09T13:40:43.755707+00:00",
+  "updated_at": "2026-09-09T17:16:27.954749+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -140,26 +140,6 @@
       "available_at": "2026-08-31T07:15:00",
       "latest_return": "2026-09-12T14:15:00",
       "expire_time": "2026-09-12T07:56:00"
-    },
-    {
-      "from": "BODØ LUFTHAVN",
-      "from_city": "BODØ",
-      "to": "OSLO LUFTHAVN",
-      "to_city": "GARDERMOEN",
-      "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
-      "available_at": "2026-08-31T10:45:00",
-      "latest_return": "2026-09-10T10:45:00",
-      "expire_time": "2026-09-09T16:27:00"
-    },
-    {
-      "from": "BODØ LUFTHAVN",
-      "from_city": "BODØ",
-      "to": "TØNSBERG",
-      "to_city": "TØNSBERG",
-      "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
-      "available_at": "2026-08-31T10:45:00",
-      "latest_return": "2026-09-10T10:45:00",
-      "expire_time": "2026-09-09T14:35:00"
     },
     {
       "from": "LEKNES LUFTHAVN",
@@ -1117,16 +1097,6 @@
       "to": "STAVANGER LUFTHAVN",
       "to_city": "STAVANGER",
       "car_model": "TOYOTA CAMRY 4D HYBRID AUT",
-      "available_at": "2026-09-09T08:00:00",
-      "latest_return": "2026-09-15T08:00:00",
-      "expire_time": "2026-09-14T23:00:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "GARDERMOEN",
-      "to": "STAVANGER LUFTHAVN",
-      "to_city": "STAVANGER",
-      "car_model": "TESLA MODEL Y 75KWH AWD AUT EL",
       "available_at": "2026-09-09T08:00:00",
       "latest_return": "2026-09-15T08:00:00",
       "expire_time": "2026-09-14T23:00:00"
