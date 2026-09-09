@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-09T04:36:05.179156+00:00",
+  "updated_at": "2026-09-09T09:09:52.688955+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -38,8 +38,18 @@
       "to_city": "BLOMSTERDALEN",
       "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
       "available_at": "2026-08-26T11:00:00",
-      "latest_return": "2026-09-11T11:11:00",
-      "expire_time": "2026-09-10T12:13:00"
+      "latest_return": "2026-09-15T11:11:00",
+      "expire_time": "2026-09-14T12:13:00"
+    },
+    {
+      "from": "BODØ LUFTHAVN",
+      "from_city": "BODØ",
+      "to": "HAUGESUND LUFTHAVN",
+      "to_city": "AVALDSNES",
+      "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
+      "available_at": "2026-08-26T11:00:00",
+      "latest_return": "2026-09-15T07:55:00",
+      "expire_time": "2026-09-14T06:30:00"
     },
     {
       "from": "BODØ LUFTHAVN",
@@ -48,8 +58,8 @@
       "to_city": "GARDERMOEN",
       "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
       "available_at": "2026-08-26T11:00:00",
-      "latest_return": "2026-09-11T11:11:00",
-      "expire_time": "2026-09-10T16:53:00"
+      "latest_return": "2026-09-15T11:11:00",
+      "expire_time": "2026-09-14T16:46:00"
     },
     {
       "from": "BODØ LUFTHAVN",
@@ -58,8 +68,8 @@
       "to_city": "STAVANGER",
       "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
       "available_at": "2026-08-26T11:00:00",
-      "latest_return": "2026-09-11T11:00:00",
-      "expire_time": "2026-09-10T08:15:00"
+      "latest_return": "2026-09-15T11:00:00",
+      "expire_time": "2026-09-14T08:17:00"
     },
     {
       "from": "BODØ LUFTHAVN",
@@ -68,8 +78,8 @@
       "to_city": "STJØRDAL",
       "car_model": "TOYOTA BZ4X 64KWH 4WD AUT EL",
       "available_at": "2026-08-26T11:00:00",
-      "latest_return": "2026-09-11T11:11:00",
-      "expire_time": "2026-09-11T00:15:00"
+      "latest_return": "2026-09-15T11:11:00",
+      "expire_time": "2026-09-15T00:14:00"
     },
     {
       "from": "ÅLESUND LUFTHAVN",
@@ -200,26 +210,6 @@
       "available_at": "2026-09-04T11:00:00",
       "latest_return": "2026-09-15T14:00:00",
       "expire_time": "2026-09-15T09:29:00"
-    },
-    {
-      "from": "BODØ SENTRUM",
-      "from_city": "BODØ",
-      "to": "EVENES LUFTHAVN",
-      "to_city": "LILAND",
-      "car_model": "VW ID.3 5D 58KWH 5D AUT ELECTR",
-      "available_at": "2026-09-07T07:00:00",
-      "latest_return": "2026-09-15T18:00:00",
-      "expire_time": "2026-09-15T11:05:00"
-    },
-    {
-      "from": "BODØ SENTRUM",
-      "from_city": "BODØ",
-      "to": "HARSTAD SENTRUM",
-      "to_city": "HARSTAD",
-      "car_model": "VW ID.3 5D 58KWH 5D AUT ELECTR",
-      "available_at": "2026-09-07T07:00:00",
-      "latest_return": "2026-09-15T14:00:00",
-      "expire_time": "2026-09-15T06:57:00"
     },
     {
       "from": "EVENES LUFTHAVN",
@@ -1100,6 +1090,256 @@
       "available_at": "2026-09-08T13:45:00",
       "latest_return": "2026-09-11T21:00:00",
       "expire_time": "2026-09-11T12:32:00"
+    },
+    {
+      "from": "BERGEN LUFTHAVN",
+      "from_city": "BLOMSTERDALEN",
+      "to": "STAVANGER LUFTHAVN",
+      "to_city": "STAVANGER",
+      "car_model": "TOYOTA PROACE 8-SETER AUT TDI",
+      "available_at": "2026-09-09T05:00:00",
+      "latest_return": "2026-09-15T05:00:00",
+      "expire_time": "2026-09-14T23:53:00"
+    },
+    {
+      "from": "BERGEN LUFTHAVN",
+      "from_city": "BLOMSTERDALEN",
+      "to": "STAVANGER SOLA",
+      "to_city": "SOLA",
+      "car_model": "TOYOTA PROACE 8-SETER AUT TDI",
+      "available_at": "2026-09-09T05:00:00",
+      "latest_return": "2026-09-15T05:11:00",
+      "expire_time": "2026-09-15T00:07:00"
+    },
+    {
+      "from": "FØRDE SENTRUM",
+      "from_city": "FØRDE",
+      "to": "GOL",
+      "to_city": "GOL",
+      "car_model": "FORD TRANSIT CON 3,7M3 VARE AU",
+      "available_at": "2026-09-09T06:30:00",
+      "latest_return": "2026-09-13T21:00:00",
+      "expire_time": "2026-09-13T16:20:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "STAVANGER LUFTHAVN",
+      "to_city": "STAVANGER",
+      "car_model": "TOYOTA BZ4X 4X4 69KWH AUT ELEC",
+      "available_at": "2026-09-09T07:45:00",
+      "latest_return": "2026-09-15T07:45:00",
+      "expire_time": "2026-09-14T22:44:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "STAVANGER LUFTHAVN",
+      "to_city": "STAVANGER",
+      "car_model": "TOYOTA COROLLA CROSS 4WD AUT H",
+      "available_at": "2026-09-09T07:45:00",
+      "latest_return": "2026-09-15T07:45:00",
+      "expire_time": "2026-09-14T22:44:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "STAVANGER LUFTHAVN",
+      "to_city": "STAVANGER",
+      "car_model": "TOYOTA YARIS CROSS 5D AUT HYBR",
+      "available_at": "2026-09-09T07:45:00",
+      "latest_return": "2026-09-15T07:45:00",
+      "expire_time": "2026-09-14T22:45:00"
+    },
+    {
+      "from": "SANDEFJORD LUFTHAVN",
+      "from_city": "SANDEFJORD",
+      "to": "HAUGESUND LUFTHAVN",
+      "to_city": "AVALDSNES",
+      "car_model": "MG S6 SUV 75KWH 4X4 AUT ELECTR",
+      "available_at": "2026-09-09T07:45:00",
+      "latest_return": "2026-09-15T07:52:00",
+      "expire_time": "2026-09-15T00:06:00"
+    },
+    {
+      "from": "SANDEFJORD LUFTHAVN",
+      "from_city": "SANDEFJORD",
+      "to": "STAVANGER LUFTHAVN",
+      "to_city": "STAVANGER",
+      "car_model": "MG S6 SUV 75KWH 4X4 AUT ELECTR",
+      "available_at": "2026-09-09T07:45:00",
+      "latest_return": "2026-09-15T07:45:00",
+      "expire_time": "2026-09-15T00:45:00"
+    },
+    {
+      "from": "FØRDE LUFTHAVN",
+      "from_city": "BYGSTAD",
+      "to": "STAVANGER LUFTHAVN",
+      "to_city": "STAVANGER",
+      "car_model": "MG 4 5D 51KWH AUT ELECTRIC",
+      "available_at": "2026-09-09T08:00:00",
+      "latest_return": "2026-09-15T08:00:00",
+      "expire_time": "2026-09-14T23:15:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "STAVANGER LUFTHAVN",
+      "to_city": "STAVANGER",
+      "car_model": "TOYOTA YARIS",
+      "available_at": "2026-09-09T08:00:00",
+      "latest_return": "2026-09-15T08:00:00",
+      "expire_time": "2026-09-14T23:00:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "STAVANGER LUFTHAVN",
+      "to_city": "STAVANGER",
+      "car_model": "TOYOTA CAMRY 4D HYBRID AUT",
+      "available_at": "2026-09-09T08:00:00",
+      "latest_return": "2026-09-15T08:00:00",
+      "expire_time": "2026-09-14T23:00:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "STAVANGER LUFTHAVN",
+      "to_city": "STAVANGER",
+      "car_model": "TESLA MODEL Y 75KWH AWD AUT EL",
+      "available_at": "2026-09-09T08:00:00",
+      "latest_return": "2026-09-15T08:00:00",
+      "expire_time": "2026-09-14T23:00:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "STAVANGER LUFTHAVN",
+      "to_city": "STAVANGER",
+      "car_model": "TOYOTA COROLLA CROSS 4WD AUT H",
+      "available_at": "2026-09-09T08:00:00",
+      "latest_return": "2026-09-15T08:00:00",
+      "expire_time": "2026-09-14T23:00:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "STAVANGER LUFTHAVN",
+      "to_city": "STAVANGER",
+      "car_model": "VW ID.4 5D 77KWH 4X4 AUT ELECT",
+      "available_at": "2026-09-09T08:00:00",
+      "latest_return": "2026-09-15T08:00:00",
+      "expire_time": "2026-09-14T23:00:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "STAVANGER LUFTHAVN",
+      "to_city": "STAVANGER",
+      "car_model": "TOYOTA COROLLA CROSS 4WD AUT H",
+      "available_at": "2026-09-09T08:00:00",
+      "latest_return": "2026-09-15T08:00:00",
+      "expire_time": "2026-09-14T23:00:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "GARDERMOEN",
+      "to": "STAVANGER LUFTHAVN",
+      "to_city": "STAVANGER",
+      "car_model": "TOYOTA YARIS CROSS 5D AUT HYBR",
+      "available_at": "2026-09-09T08:00:00",
+      "latest_return": "2026-09-15T08:00:00",
+      "expire_time": "2026-09-14T23:02:00"
+    },
+    {
+      "from": "ÅLESUND LUFTHAVN",
+      "from_city": "VIGRA",
+      "to": "STAVANGER LUFTHAVN",
+      "to_city": "STAVANGER",
+      "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
+      "available_at": "2026-09-09T08:00:00",
+      "latest_return": "2026-09-15T08:00:00",
+      "expire_time": "2026-09-14T17:27:00"
+    },
+    {
+      "from": "ARENDAL",
+      "from_city": "ARENDAL",
+      "to": "STAVANGER LUFTHAVN",
+      "to_city": "STAVANGER",
+      "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
+      "available_at": "2026-09-09T08:15:00",
+      "latest_return": "2026-09-15T08:15:00",
+      "expire_time": "2026-09-15T03:33:00"
+    },
+    {
+      "from": "BERGEN LUFTHAVN",
+      "from_city": "BLOMSTERDALEN",
+      "to": "STAVANGER LUFTHAVN",
+      "to_city": "STAVANGER",
+      "car_model": "TOYOTA YARIS CROSS 5D AUT HYBR",
+      "available_at": "2026-09-09T08:15:00",
+      "latest_return": "2026-09-15T08:15:00",
+      "expire_time": "2026-09-15T03:00:00"
+    },
+    {
+      "from": "KONGSVINGER",
+      "from_city": "KONGSVINGER",
+      "to": "OSLO LUFTHAVN",
+      "to_city": "GARDERMOEN",
+      "car_model": "VW ID.3 5D 58KWH 5D AUT ELECTR",
+      "available_at": "2026-09-09T08:15:00",
+      "latest_return": "2026-09-15T08:14:00",
+      "expire_time": "2026-09-15T06:56:00"
+    },
+    {
+      "from": "KONGSVINGER",
+      "from_city": "KONGSVINGER",
+      "to": "STAVANGER LUFTHAVN",
+      "to_city": "STAVANGER",
+      "car_model": "VW ID.3 5D 58KWH 5D AUT ELECTR",
+      "available_at": "2026-09-09T08:15:00",
+      "latest_return": "2026-09-15T08:00:00",
+      "expire_time": "2026-09-14T22:15:00"
+    },
+    {
+      "from": "MOLDE LUFTHAVN",
+      "from_city": "MOLDE",
+      "to": "STAVANGER LUFTHAVN",
+      "to_city": "STAVANGER",
+      "car_model": "TOYOTA YARIS CROSS 5D AUT HYBR",
+      "available_at": "2026-09-09T08:15:00",
+      "latest_return": "2026-09-15T08:15:00",
+      "expire_time": "2026-09-14T16:56:00"
+    },
+    {
+      "from": "BERGEN LUFTHAVN",
+      "from_city": "BLOMSTERDALEN",
+      "to": "STAVANGER LUFTHAVN",
+      "to_city": "STAVANGER",
+      "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
+      "available_at": "2026-09-09T08:45:00",
+      "latest_return": "2026-09-15T08:45:00",
+      "expire_time": "2026-09-15T03:27:00"
+    },
+    {
+      "from": "BERGEN LUFTHAVN",
+      "from_city": "BLOMSTERDALEN",
+      "to": "STAVANGER LUFTHAVN",
+      "to_city": "STAVANGER",
+      "car_model": "VOLVO XC60 T6 AWD HYBRID AUT",
+      "available_at": "2026-09-09T08:45:00",
+      "latest_return": "2026-09-15T08:45:00",
+      "expire_time": "2026-09-15T03:27:00"
+    },
+    {
+      "from": "KRISTIANSUND LUFTHAVN",
+      "from_city": "KRISTIANSUND",
+      "to": "STAVANGER LUFTHAVN",
+      "to_city": "STAVANGER",
+      "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
+      "available_at": "2026-09-09T08:45:00",
+      "latest_return": "2026-09-15T08:45:00",
+      "expire_time": "2026-09-14T16:12:00"
     },
     {
       "from": "TROMSØ LUFTHAVN",
