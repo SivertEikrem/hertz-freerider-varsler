@@ -202,9 +202,9 @@ def write_live_routes(all_routes):
         compact.append(
             {
                 "from": route["pickupLocation"]["name"],
-                "from_city": route["pickupLocation"]["city"],
+                "from_city": freerider_api.canonical_city(route["pickupLocation"]["city"]),
                 "to": route["returnLocation"]["name"],
-                "to_city": route["returnLocation"]["city"],
+                "to_city": freerider_api.canonical_city(route["returnLocation"]["city"]),
                 "car_model": route.get("carModel", "Ukjent bilmodell"),
                 "available_at": route.get("availableAt"),
                 "latest_return": route.get("latestReturn"),
