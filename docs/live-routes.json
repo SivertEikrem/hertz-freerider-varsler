@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-10T13:40:47.968254+00:00",
+  "updated_at": "2026-09-10T17:10:44.081321+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -1372,26 +1372,6 @@
       "expire_time": "2026-09-14T02:51:00"
     },
     {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "OSLO",
-      "to": "TRONDHEIM LUFTHAVN",
-      "to_city": "TRONDHEIM",
-      "car_model": "TOYOTA C-HR+ 4X4 72KWH AUT ELE",
-      "available_at": "2026-09-10T08:00:00",
-      "latest_return": "2026-09-15T17:00:00",
-      "expire_time": "2026-09-15T09:28:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "OSLO",
-      "to": "TRONDHEIM SLUPPEN",
-      "to_city": "TRONDHEIM",
-      "car_model": "TOYOTA C-HR+ 4X4 72KWH AUT ELE",
-      "available_at": "2026-09-10T08:00:00",
-      "latest_return": "2026-09-15T16:12:00",
-      "expire_time": "2026-09-15T09:17:00"
-    },
-    {
       "from": "ÅLESUND SENTRUM",
       "from_city": "ÅLESUND",
       "to": "TRONDHEIM LUFTHAVN",
@@ -1460,36 +1440,6 @@
       "available_at": "2026-09-10T11:00:00",
       "latest_return": "2026-09-13T21:00:00",
       "expire_time": "2026-09-13T13:28:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "OSLO",
-      "to": "Göteborg Centralstation",
-      "to_city": "GÖTEBORG",
-      "car_model": "VOLVO EX40 AUT SMER 82KWH ULTR",
-      "available_at": "2026-09-10T12:15:00",
-      "latest_return": "2026-09-14T21:45:00",
-      "expire_time": "2026-09-14T16:59:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "OSLO",
-      "to": "Göteborg Landvetter Flygplats / Self Service Kiosk",
-      "to_city": "LANDVETTER",
-      "car_model": "VOLVO EX40 AUT SMER 82KWH ULTR",
-      "available_at": "2026-09-10T12:15:00",
-      "latest_return": "2026-09-14T21:45:00",
-      "expire_time": "2026-09-14T16:39:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "OSLO",
-      "to": "Mora DT",
-      "to_city": "MORA",
-      "car_model": "VOLVO EX40 AUT SMER 82KWH ULTR",
-      "available_at": "2026-09-10T12:15:00",
-      "latest_return": "2026-09-14T20:15:00",
-      "expire_time": "2026-09-14T15:26:00"
     },
     {
       "from": "SVOLVÆR LUFTHAVN",
