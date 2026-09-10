@@ -258,13 +258,6 @@ function renderRoutes() {
   list.innerHTML = watches
     .map((watch, i) => {
       const { from, to } = describeWatch(watch);
-      const matches = liveRoutes.filter((r) => matchesWatch(r, watch));
-      const availabilityHtml =
-        matches.length > 0
-          ? `<div class="availability available">&#9989; ${matches.length} ledig${
-              matches.length === 1 ? "" : "e"
-            } n\u00e5: ${matches.map((m) => escapeHtml(m.car_model)).join(", ")}</div>`
-          : `<div class="availability none">Ingen ledige biler akkurat n\u00e5</div>`;
       return `
         <div class="route-card">
           <div class="route-row">
@@ -272,7 +265,6 @@ function renderRoutes() {
             <span class="route-arrow">&#8594;</span>
             <span class="route-to">${escapeHtml(to)}</span>
           </div>
-          ${availabilityHtml}
           <button class="remove-btn" data-index="${i}" type="button">Fjern denne ruten</button>
         </div>
         ${i < watches.length - 1 ? '<div class="lane-divider"></div>' : ""}
@@ -286,12 +278,72 @@ function renderRoutes() {
       watches.splice(idx, 1);
       markDirty();
       renderRoutes();
+      renderAvailable();
     });
   });
 }
 
 function markDirty() {
   $("saveAllBtn").style.display = "block";
+}
+
+const NORSKE_UKEDAGER = ["søn", "man", "tir", "ons", "tor", "fre", "lør"];
+const NORSKE_MAANEDER = [
+  "jan", "feb", "mar", "apr", "mai", "jun",
+  "jul", "aug", "sep", "okt", "nov", "des",
+];
+
+function formatDate(iso) {
+  if (!iso) return "ukjent";
+  const d = new Date(iso);
+  if (isNaN(d)) return iso;
+  const ukedag = NORSKE_UKEDAGER[d.getDay()];
+  const hh = String(d.getHours()).padStart(2, "0");
+  const mm = String(d.getMinutes()).padStart(2, "0");
+  return `${ukedag} ${d.getDate()}. ${NORSKE_MAANEDER[d.getMonth()]} kl. ${hh}:${mm}`;
+}
+
+function renderAvailable() {
+  const list = $("availableList");
+
+  if (watches.length === 0) {
+    list.innerHTML = `<div class="empty-state">Legg til en rute for å se tilgjengelige biler her.</div>`;
+    return;
+  }
+
+  const seen = new Set();
+  const matched = [];
+  for (const route of liveRoutes) {
+    if (!watches.some((w) => matchesWatch(route, w))) continue;
+    const key = `${route.from}|${route.to}|${route.available_at}|${route.car_model}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    matched.push(route);
+  }
+
+  if (matched.length === 0) {
+    list.innerHTML = `<div class="empty-state">Ingen ledige biler akkurat n\u00e5 for rutene dine.</div>`;
+    return;
+  }
+
+  list.innerHTML = matched
+    .map(
+      (r, i) => `
+      <div class="route-card">
+        <div class="route-row">
+          <span class="route-from">${escapeHtml(r.from)}</span>
+          <span class="route-arrow">&#8594;</span>
+          <span class="route-to">${escapeHtml(r.to)}</span>
+        </div>
+        <div class="route-meta">
+          ${escapeHtml(r.car_model)}<br />
+          Tilgjengelig fra ${formatDate(r.available_at)} &middot; hentefrist ${formatDate(r.expire_time)}
+        </div>
+      </div>
+      ${i < matched.length - 1 ? '<div class="lane-divider"></div>' : ""}
+    `
+    )
+    .join("");
 }
 
 /* ---------- Paneler ---------- */
@@ -311,6 +363,7 @@ function showUnlockPanel(show) {
 function showAppPanels(show) {
   $("routesPanel").style.display = show ? "block" : "none";
   $("addPanel").style.display = show ? "block" : "none";
+  $("availablePanel").style.display = show ? "block" : "none";
   $("settingsToggle").style.display = show ? "inline-block" : "none";
 }
 
@@ -420,6 +473,7 @@ $("addRouteBtn").addEventListener("click", () => {
   watches.push(watch);
   markDirty();
   renderRoutes();
+  renderAvailable();
   clearStatus();
 });
 
@@ -448,6 +502,7 @@ async function startApp() {
     populateSelect($("fromSelect"), fromMode);
     populateSelect($("toSelect"), toMode);
     renderRoutes();
+    renderAvailable();
     showAppPanels(true);
     clearStatus();
   } catch (err) {
