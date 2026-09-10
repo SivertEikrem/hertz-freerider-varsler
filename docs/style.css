@@ -261,6 +261,23 @@ button.ghost:hover {
   text-align: center;
 }
 
+.availability {
+  font-size: 13px;
+  text-align: center;
+  margin-top: 8px;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.availability.available {
+  color: var(--success);
+  background: rgba(76, 175, 125, 0.1);
+}
+
+.availability.none {
+  color: var(--text-muted);
+}
+
 .remove-btn {
   display: block;
   margin: 10px auto 0;
