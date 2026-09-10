@@ -15,6 +15,7 @@ let pat = ""; // holdes kun i minnet denne økten, aldri lagret i klartekst
 let encryptedTokenSha = null; // trengs for å OPPDATERE token.enc.json senere
 
 let watches = [];
+let liveRoutes = [];
 let currentSha = null;
 let stations = [];
 let cities = [];
@@ -189,6 +190,40 @@ async function loadStations() {
   cities = data.cities;
 }
 
+async function loadLiveRoutes() {
+  try {
+    const resp = await fetch(`live-routes.json?t=${Date.now()}`);
+    if (!resp.ok) {
+      liveRoutes = [];
+      return;
+    }
+    const data = await resp.json();
+    liveRoutes = data.routes || [];
+  } catch (e) {
+    liveRoutes = [];
+  }
+}
+
+function normalize(value) {
+  return (value || "").trim().toUpperCase();
+}
+
+function matchesWatch(route, watch) {
+  if (watch.from) {
+    if (normalize(route.from) !== normalize(watch.from)) return false;
+  } else if (watch.from_city) {
+    if (normalize(route.from_city) !== normalize(watch.from_city)) return false;
+  }
+
+  if (watch.to) {
+    if (normalize(route.to) !== normalize(watch.to)) return false;
+  } else if (watch.to_city) {
+    if (normalize(route.to_city) !== normalize(watch.to_city)) return false;
+  }
+
+  return true;
+}
+
 function populateSelect(select, mode) {
   const items = mode === "station" ? stations : cities;
   select.innerHTML = items
@@ -223,6 +258,13 @@ function renderRoutes() {
   list.innerHTML = watches
     .map((watch, i) => {
       const { from, to } = describeWatch(watch);
+      const matches = liveRoutes.filter((r) => matchesWatch(r, watch));
+      const availabilityHtml =
+        matches.length > 0
+          ? `<div class="availability available">&#9989; ${matches.length} ledig${
+              matches.length === 1 ? "" : "e"
+            } n\u00e5: ${matches.map((m) => escapeHtml(m.car_model)).join(", ")}</div>`
+          : `<div class="availability none">Ingen ledige biler akkurat n\u00e5</div>`;
       return `
         <div class="route-card">
           <div class="route-row">
@@ -230,6 +272,7 @@ function renderRoutes() {
             <span class="route-arrow">&#8594;</span>
             <span class="route-to">${escapeHtml(to)}</span>
           </div>
+          ${availabilityHtml}
           <button class="remove-btn" data-index="${i}" type="button">Fjern denne ruten</button>
         </div>
         ${i < watches.length - 1 ? '<div class="lane-divider"></div>' : ""}
@@ -401,7 +444,7 @@ $("saveAllBtn").addEventListener("click", async () => {
 async function startApp() {
   showStatus("Henter data...", "info");
   try {
-    await Promise.all([loadConfig(), loadStations()]);
+    await Promise.all([loadConfig(), loadStations(), loadLiveRoutes()]);
     populateSelect($("fromSelect"), fromMode);
     populateSelect($("toSelect"), toMode);
     renderRoutes();
