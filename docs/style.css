@@ -261,21 +261,24 @@ button.ghost:hover {
   text-align: center;
 }
 
-.availability {
+.available-group {
+  margin-bottom: 28px;
+}
+
+.available-group:last-child {
+  margin-bottom: 0;
+}
+
+.available-group-title {
+  font-family: "IBM Plex Mono", monospace;
   font-size: 13px;
-  text-align: center;
-  margin-top: 8px;
-  padding: 6px 10px;
-  border-radius: 6px;
-}
-
-.availability.available {
-  color: var(--success);
-  background: rgba(76, 175, 125, 0.1);
-}
-
-.availability.none {
-  color: var(--text-muted);
+  font-weight: 500;
+  color: var(--yellow);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin: 0 0 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
 }
 
 .remove-btn {
