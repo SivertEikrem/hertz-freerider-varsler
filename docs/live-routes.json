@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-11T15:02:08.429093+00:00",
+  "updated_at": "2026-09-11T18:27:36.795682+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -50,26 +50,6 @@
       "available_at": "2026-08-28T09:00:00",
       "latest_return": "2026-09-12T16:00:00",
       "expire_time": "2026-09-12T09:40:00"
-    },
-    {
-      "from": "ÅLESUND LUFTHAVN",
-      "from_city": "ÅLESUND",
-      "to": "TRONDHEIM LUFTHAVN",
-      "to_city": "TRONDHEIM",
-      "car_model": "EL-Personbil",
-      "available_at": "2026-08-31T07:15:00",
-      "latest_return": "2026-09-12T15:04:00",
-      "expire_time": "2026-09-12T08:06:00"
-    },
-    {
-      "from": "ÅLESUND LUFTHAVN",
-      "from_city": "ÅLESUND",
-      "to": "TRONDHEIM SLUPPEN",
-      "to_city": "TRONDHEIM",
-      "car_model": "EL-Personbil",
-      "available_at": "2026-08-31T07:15:00",
-      "latest_return": "2026-09-12T14:15:00",
-      "expire_time": "2026-09-12T07:56:00"
     },
     {
       "from": "STAVANGER SOLA",
