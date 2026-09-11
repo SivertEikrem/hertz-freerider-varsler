@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-11T11:14:56.157823+00:00",
+  "updated_at": "2026-09-11T15:02:08.429093+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -78,8 +78,8 @@
       "to_city": "OSLO",
       "car_model": "TOYOTA PROACE 6M3 VARE TDI AUT",
       "available_at": "2026-09-08T08:00:00",
-      "latest_return": "2026-09-13T19:00:00",
-      "expire_time": "2026-09-13T10:32:00"
+      "latest_return": "2026-09-15T19:00:00",
+      "expire_time": "2026-09-15T10:51:00"
     },
     {
       "from": "STAVANGER SOLA",
@@ -88,8 +88,8 @@
       "to_city": "OSLO",
       "car_model": "TOYOTA PROACE 6M3 VARE TDI AUT",
       "available_at": "2026-09-08T08:00:00",
-      "latest_return": "2026-09-13T19:00:00",
-      "expire_time": "2026-09-13T10:32:00"
+      "latest_return": "2026-09-15T19:00:00",
+      "expire_time": "2026-09-15T10:51:00"
     },
     {
       "from": "STAVANGER SOLA",
@@ -98,8 +98,8 @@
       "to_city": "OSLO",
       "car_model": "TOYOTA PROACE 6M3 VARE TDI AUT",
       "available_at": "2026-09-08T08:00:00",
-      "latest_return": "2026-09-13T19:00:00",
-      "expire_time": "2026-09-13T10:32:00"
+      "latest_return": "2026-09-15T19:00:00",
+      "expire_time": "2026-09-15T10:51:00"
     },
     {
       "from": "STAVANGER SOLA",
@@ -108,8 +108,8 @@
       "to_city": "OSLO",
       "car_model": "TOYOTA PROACE 6M3 VARE TDI AUT",
       "available_at": "2026-09-08T08:00:00",
-      "latest_return": "2026-09-13T19:00:00",
-      "expire_time": "2026-09-13T10:00:00"
+      "latest_return": "2026-09-15T19:00:00",
+      "expire_time": "2026-09-15T10:21:00"
     },
     {
       "from": "STAVANGER SOLA",
@@ -118,8 +118,8 @@
       "to_city": "OSLO",
       "car_model": "TOYOTA PROACE 6M3 VARE TDI AUT",
       "available_at": "2026-09-08T08:00:00",
-      "latest_return": "2026-09-13T19:00:00",
-      "expire_time": "2026-09-13T10:00:00"
+      "latest_return": "2026-09-15T19:00:00",
+      "expire_time": "2026-09-15T10:21:00"
     },
     {
       "from": "STAVANGER SOLA",
@@ -128,8 +128,8 @@
       "to_city": "OSLO",
       "car_model": "TOYOTA PROACE 6M3 VARE TDI AUT",
       "available_at": "2026-09-08T08:00:00",
-      "latest_return": "2026-09-13T19:00:00",
-      "expire_time": "2026-09-13T10:00:00"
+      "latest_return": "2026-09-15T19:00:00",
+      "expire_time": "2026-09-15T10:21:00"
     },
     {
       "from": "STAVANGER SOLA",
@@ -138,8 +138,8 @@
       "to_city": "OSLO",
       "car_model": "TOYOTA PROACE 6M3 VARE TDI AUT",
       "available_at": "2026-09-08T08:00:00",
-      "latest_return": "2026-09-13T19:00:00",
-      "expire_time": "2026-09-13T10:38:00"
+      "latest_return": "2026-09-15T19:00:00",
+      "expire_time": "2026-09-15T10:57:00"
     },
     {
       "from": "STAVANGER SOLA",
@@ -148,8 +148,18 @@
       "to_city": "OSLO",
       "car_model": "TOYOTA PROACE 6M3 VARE TDI AUT",
       "available_at": "2026-09-08T08:00:00",
-      "latest_return": "2026-09-13T19:00:00",
-      "expire_time": "2026-09-13T10:38:00"
+      "latest_return": "2026-09-15T19:00:00",
+      "expire_time": "2026-09-15T10:57:00"
+    },
+    {
+      "from": "STAVANGER SOLA",
+      "from_city": "STAVANGER",
+      "to": "OSLO SENTRALSTASJON",
+      "to_city": "OSLO",
+      "car_model": "TOYOTA PROACE 6M3 VARE TDI AUT",
+      "available_at": "2026-09-08T08:00:00",
+      "latest_return": "2026-09-15T19:00:00",
+      "expire_time": "2026-09-15T10:57:00"
     },
     {
       "from": "STAVANGER SOLA",
@@ -158,8 +168,8 @@
       "to_city": "OSLO",
       "car_model": "TOYOTA PROACE 6M3 VARE TDI AUT",
       "available_at": "2026-09-08T08:00:00",
-      "latest_return": "2026-09-13T19:00:00",
-      "expire_time": "2026-09-13T10:33:00"
+      "latest_return": "2026-09-15T19:00:00",
+      "expire_time": "2026-09-15T10:52:00"
     },
     {
       "from": "STAVANGER SOLA",
@@ -168,8 +178,8 @@
       "to_city": "OSLO",
       "car_model": "TOYOTA PROACE 6M3 VARE TDI AUT",
       "available_at": "2026-09-08T08:00:00",
-      "latest_return": "2026-09-13T19:00:00",
-      "expire_time": "2026-09-13T10:33:00"
+      "latest_return": "2026-09-15T19:00:00",
+      "expire_time": "2026-09-15T10:52:00"
     },
     {
       "from": "STAVANGER SOLA",
@@ -178,8 +188,8 @@
       "to_city": "OSLO",
       "car_model": "TOYOTA PROACE 6M3 VARE TDI AUT",
       "available_at": "2026-09-08T08:00:00",
-      "latest_return": "2026-09-13T19:00:00",
-      "expire_time": "2026-09-13T10:33:00"
+      "latest_return": "2026-09-15T19:00:00",
+      "expire_time": "2026-09-15T10:52:00"
     },
     {
       "from": "ÅLESUND SENTRUM",
@@ -200,606 +210,6 @@
       "available_at": "2026-09-08T08:00:00",
       "latest_return": "2026-09-12T21:45:00",
       "expire_time": "2026-09-12T15:57:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO ALNABRU",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 9-SETER DIESEL",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:15:00",
-      "expire_time": "2026-09-11T12:39:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO ALNABRU",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 9-SETER DIESEL",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:15:00",
-      "expire_time": "2026-09-11T12:39:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO ALNABRU",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 9-SETER DIESEL",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:15:00",
-      "expire_time": "2026-09-11T12:39:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO ALNABRU",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 9-SETER DIESEL",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:15:00",
-      "expire_time": "2026-09-11T12:39:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO ALNABRU",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 9-SETER DIESEL",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:15:00",
-      "expire_time": "2026-09-11T12:39:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO ALNABRU",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 9-SETER DIESEL",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:15:00",
-      "expire_time": "2026-09-11T12:41:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO ALNABRU",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 9-SETER DIESEL",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:15:00",
-      "expire_time": "2026-09-11T12:41:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO ALNABRU",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 9-SETER DIESEL",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:15:00",
-      "expire_time": "2026-09-11T12:41:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO ALNABRU",
-      "to_city": "OSLO",
-      "car_model": "VW CARAVELLE 9S TDI 4X4 AUTOMA",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:23:00",
-      "expire_time": "2026-09-11T12:49:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO ALNABRU",
-      "to_city": "OSLO",
-      "car_model": "VW CARAVELLE 9S TDI 4X4 AUTOMA",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:23:00",
-      "expire_time": "2026-09-11T12:49:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO ALNABRU",
-      "to_city": "OSLO",
-      "car_model": "VW CARAVELLE 9S TDI 4X4 AUTOMA",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:23:00",
-      "expire_time": "2026-09-11T12:49:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO ALNABRU",
-      "to_city": "OSLO",
-      "car_model": "VW CARAVELLE 9S TDI 4X4 AUTOMA",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:23:00",
-      "expire_time": "2026-09-11T12:49:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO ALNABRU",
-      "to_city": "OSLO",
-      "car_model": "VW CARAVELLE 9S TDI 4X4 AUTOMA",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:23:00",
-      "expire_time": "2026-09-11T12:49:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO LUFTHAVN",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 9-SETER DIESEL",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:20:00",
-      "expire_time": "2026-09-11T12:44:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO LUFTHAVN",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 9-SETER DIESEL",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:20:00",
-      "expire_time": "2026-09-11T12:44:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO LUFTHAVN",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 9-SETER DIESEL",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:20:00",
-      "expire_time": "2026-09-11T12:44:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO LUFTHAVN",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 9-SETER DIESEL",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:20:00",
-      "expire_time": "2026-09-11T12:44:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO LUFTHAVN",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 9-SETER DIESEL",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:20:00",
-      "expire_time": "2026-09-11T12:44:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO LUFTHAVN",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 9-SETER DIESEL",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:20:00",
-      "expire_time": "2026-09-11T12:44:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO LUFTHAVN",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 9-SETER DIESEL",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:20:00",
-      "expire_time": "2026-09-11T12:44:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO LUFTHAVN",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 9-SETER DIESEL",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:20:00",
-      "expire_time": "2026-09-11T12:44:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO SENTRALSTASJON",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 9-SETER DIESEL",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:20:00",
-      "expire_time": "2026-09-11T12:50:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO SENTRALSTASJON",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 9-SETER DIESEL",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:20:00",
-      "expire_time": "2026-09-11T12:50:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO SENTRALSTASJON",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 9-SETER DIESEL",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:20:00",
-      "expire_time": "2026-09-11T12:50:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO SENTRALSTASJON",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 9-SETER DIESEL",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:20:00",
-      "expire_time": "2026-09-11T12:50:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO SENTRALSTASJON",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 9-SETER DIESEL",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:20:00",
-      "expire_time": "2026-09-11T12:52:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO SENTRALSTASJON",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 9-SETER DIESEL",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:20:00",
-      "expire_time": "2026-09-11T12:52:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO SENTRALSTASJON",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 9-SETER DIESEL",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:20:00",
-      "expire_time": "2026-09-11T12:52:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO SENTRALSTASJON",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 9-SETER DIESEL",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:20:00",
-      "expire_time": "2026-09-11T12:52:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO SENTRALSTASJON",
-      "to_city": "OSLO",
-      "car_model": "VW CARAVELLE 9S TDI 4X4 AUTOMA",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:23:00",
-      "expire_time": "2026-09-11T12:55:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO SENTRALSTASJON",
-      "to_city": "OSLO",
-      "car_model": "VW CARAVELLE 9S TDI 4X4 AUTOMA",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:23:00",
-      "expire_time": "2026-09-11T12:55:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO SENTRALSTASJON",
-      "to_city": "OSLO",
-      "car_model": "VW CARAVELLE 9S TDI 4X4 AUTOMA",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:23:00",
-      "expire_time": "2026-09-11T12:55:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO SENTRALSTASJON",
-      "to_city": "OSLO",
-      "car_model": "VW CARAVELLE 9S TDI 4X4 AUTOMA",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:23:00",
-      "expire_time": "2026-09-11T12:55:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO SENTRALSTASJON",
-      "to_city": "OSLO",
-      "car_model": "VW CARAVELLE 9S TDI 4X4 AUTOMA",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:23:00",
-      "expire_time": "2026-09-11T12:55:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO SENTRUM",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 9-SETER DIESEL",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:20:00",
-      "expire_time": "2026-09-11T12:52:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO SENTRUM",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 9-SETER DIESEL",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:20:00",
-      "expire_time": "2026-09-11T12:52:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO SENTRUM",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 9-SETER DIESEL",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:20:00",
-      "expire_time": "2026-09-11T12:52:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO SENTRUM",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 9-SETER DIESEL",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:20:00",
-      "expire_time": "2026-09-11T12:52:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO SENTRUM",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 9-SETER DIESEL",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:20:00",
-      "expire_time": "2026-09-11T12:52:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO SENTRUM",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 9-SETER DIESEL",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:20:00",
-      "expire_time": "2026-09-11T12:52:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO SENTRUM",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 9-SETER DIESEL",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:20:00",
-      "expire_time": "2026-09-11T12:52:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO SENTRUM",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 9-SETER DIESEL",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:20:00",
-      "expire_time": "2026-09-11T12:52:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO SENTRUM",
-      "to_city": "OSLO",
-      "car_model": "VW CARAVELLE 9S TDI 4X4 AUTOMA",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:23:00",
-      "expire_time": "2026-09-11T12:55:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO SENTRUM",
-      "to_city": "OSLO",
-      "car_model": "VW CARAVELLE 9S TDI 4X4 AUTOMA",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:23:00",
-      "expire_time": "2026-09-11T12:55:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO SENTRUM",
-      "to_city": "OSLO",
-      "car_model": "VW CARAVELLE 9S TDI 4X4 AUTOMA",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:23:00",
-      "expire_time": "2026-09-11T12:55:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO SENTRUM",
-      "to_city": "OSLO",
-      "car_model": "VW CARAVELLE 9S TDI 4X4 AUTOMA",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:23:00",
-      "expire_time": "2026-09-11T12:55:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO SENTRUM",
-      "to_city": "OSLO",
-      "car_model": "VW CARAVELLE 9S TDI 4X4 AUTOMA",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:23:00",
-      "expire_time": "2026-09-11T12:55:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO ØKERN",
-      "to_city": "OSLO",
-      "car_model": "VW CARAVELLE 9S TDI 4X4 AUTOMA",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:15:00",
-      "expire_time": "2026-09-11T12:42:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO ØKERN",
-      "to_city": "OSLO",
-      "car_model": "VW CARAVELLE 9S TDI 4X4 AUTOMA",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:15:00",
-      "expire_time": "2026-09-11T12:42:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO ØKERN",
-      "to_city": "OSLO",
-      "car_model": "VW CARAVELLE 9S TDI 4X4 AUTOMA",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:15:00",
-      "expire_time": "2026-09-11T12:42:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO ØKERN",
-      "to_city": "OSLO",
-      "car_model": "VW CARAVELLE 9S TDI 4X4 AUTOMA",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:15:00",
-      "expire_time": "2026-09-11T12:42:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO ØKERN",
-      "to_city": "OSLO",
-      "car_model": "VW CARAVELLE 9S TDI 4X4 AUTOMA",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:15:00",
-      "expire_time": "2026-09-11T12:42:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO ØKERN",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 9-SETER DIESEL",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:20:00",
-      "expire_time": "2026-09-11T12:46:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO ØKERN",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 9-SETER DIESEL",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:20:00",
-      "expire_time": "2026-09-11T12:46:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO ØKERN",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 9-SETER DIESEL",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:20:00",
-      "expire_time": "2026-09-11T12:46:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO ØKERN",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 9-SETER DIESEL",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:20:00",
-      "expire_time": "2026-09-11T12:46:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO ØKERN",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 9-SETER DIESEL",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:20:00",
-      "expire_time": "2026-09-11T12:46:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO ØKERN",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 9-SETER DIESEL",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:20:00",
-      "expire_time": "2026-09-11T12:46:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO ØKERN",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 9-SETER DIESEL",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:20:00",
-      "expire_time": "2026-09-11T12:46:00"
-    },
-    {
-      "from": "BERGEN MINDE",
-      "from_city": "BERGEN",
-      "to": "OSLO ØKERN",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 9-SETER DIESEL",
-      "available_at": "2026-09-08T10:00:00",
-      "latest_return": "2026-09-11T21:20:00",
-      "expire_time": "2026-09-11T12:46:00"
     },
     {
       "from": "EVENES LUFTHAVN",
@@ -1250,26 +660,6 @@
       "available_at": "2026-09-10T08:00:00",
       "latest_return": "2026-09-16T21:45:00",
       "expire_time": "2026-09-16T15:57:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "OSLO",
-      "to": "TRONDHEIM LUFTHAVN",
-      "to_city": "TRONDHEIM",
-      "car_model": "CITROEN E-C4 54KWH AUT ELECTRI",
-      "available_at": "2026-09-10T08:15:00",
-      "latest_return": "2026-09-15T18:15:00",
-      "expire_time": "2026-09-15T10:44:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "OSLO",
-      "to": "TRONDHEIM SLUPPEN",
-      "to_city": "TRONDHEIM",
-      "car_model": "CITROEN E-C4 54KWH AUT ELECTRI",
-      "available_at": "2026-09-10T08:15:00",
-      "latest_return": "2026-09-15T18:23:00",
-      "expire_time": "2026-09-15T11:29:00"
     },
     {
       "from": "BÆRUM RUD",
