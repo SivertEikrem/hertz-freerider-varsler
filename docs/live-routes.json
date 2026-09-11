@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-11T01:20:19.281590+00:00",
+  "updated_at": "2026-09-11T06:10:45.216775+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -130,16 +130,6 @@
       "available_at": "2026-09-07T10:30:00",
       "latest_return": "2026-09-11T14:00:00",
       "expire_time": "2026-09-11T07:23:00"
-    },
-    {
-      "from": "EVENES LUFTHAVN",
-      "from_city": "LILAND",
-      "to": "MO I RANA SENTRUM",
-      "to_city": "MO I RANA",
-      "car_model": "FORD RANGER 4X4TDCI",
-      "available_at": "2026-09-07T10:30:00",
-      "latest_return": "2026-09-11T14:00:00",
-      "expire_time": "2026-09-11T05:35:00"
     },
     {
       "from": "ANDENES",
@@ -1438,8 +1428,18 @@
       "to_city": "STOCKHOLM (ARLANDA)",
       "car_model": "VOLVO XC90 T8 RECH AUT AWD ULT",
       "available_at": "2026-09-10T11:00:00",
-      "latest_return": "2026-09-13T21:00:00",
-      "expire_time": "2026-09-13T13:28:00"
+      "latest_return": "2026-09-14T21:45:00",
+      "expire_time": "2026-09-14T14:21:00"
+    },
+    {
+      "from": "SVOLVÆR LUFTHAVN",
+      "from_city": "SVOLVÆR",
+      "to": "Kiruna AP",
+      "to_city": "KIRUNA",
+      "car_model": "KIA SPORTAGE SUV 4X4 AUT PHEV",
+      "available_at": "2026-09-10T12:30:00",
+      "latest_return": "2026-09-14T21:45:00",
+      "expire_time": "2026-09-14T15:29:00"
     },
     {
       "from": "SVOLVÆR LUFTHAVN",
@@ -1449,7 +1449,7 @@
       "car_model": "KIA SPORTAGE SUV 4X4 AUT PHEV",
       "available_at": "2026-09-10T12:30:00",
       "latest_return": "2026-09-14T21:45:00",
-      "expire_time": "2026-09-14T10:23:00"
+      "expire_time": "2026-09-14T10:33:00"
     },
     {
       "from": "SVOLVÆR LUFTHAVN",
@@ -1458,8 +1458,8 @@
       "to_city": "OSLO",
       "car_model": "KIA SPORTAGE SUV 4X4 AUT PHEV",
       "available_at": "2026-09-10T12:30:00",
-      "latest_return": "2026-09-13T21:45:00",
-      "expire_time": "2026-09-12T22:20:00"
+      "latest_return": "2026-09-14T21:45:00",
+      "expire_time": "2026-09-13T22:21:00"
     },
     {
       "from": "SVOLVÆR LUFTHAVN",
@@ -1469,7 +1469,7 @@
       "car_model": "KIA SPORTAGE SUV 4X4 AUT PHEV",
       "available_at": "2026-09-10T12:30:00",
       "latest_return": "2026-09-14T21:45:00",
-      "expire_time": "2026-09-14T00:51:00"
+      "expire_time": "2026-09-14T00:57:00"
     },
     {
       "from": "TROMSØ LUFTHAVN",
