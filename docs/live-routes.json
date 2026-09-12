@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-12T09:35:11.477675+00:00",
+  "updated_at": "2026-09-12T13:07:10.241633+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -196,16 +196,6 @@
       "from_city": "OSLO",
       "to": "STAVANGER LUFTHAVN",
       "to_city": "STAVANGER",
-      "car_model": "TOYOTA COROLLA CROSS 4WD AUT H",
-      "available_at": "2026-09-09T07:45:00",
-      "latest_return": "2026-09-15T07:45:00",
-      "expire_time": "2026-09-14T22:44:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "OSLO",
-      "to": "STAVANGER LUFTHAVN",
-      "to_city": "STAVANGER",
       "car_model": "TOYOTA YARIS CROSS 5D AUT HYBR",
       "available_at": "2026-09-09T07:45:00",
       "latest_return": "2026-09-15T07:45:00",
@@ -247,16 +237,6 @@
       "to": "STAVANGER LUFTHAVN",
       "to_city": "STAVANGER",
       "car_model": "TOYOTA YARIS",
-      "available_at": "2026-09-09T08:00:00",
-      "latest_return": "2026-09-15T08:00:00",
-      "expire_time": "2026-09-14T23:00:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "OSLO",
-      "to": "STAVANGER LUFTHAVN",
-      "to_city": "STAVANGER",
-      "car_model": "TOYOTA COROLLA CROSS 4WD AUT H",
       "available_at": "2026-09-09T08:00:00",
       "latest_return": "2026-09-15T08:00:00",
       "expire_time": "2026-09-14T23:00:00"
@@ -402,26 +382,6 @@
       "expire_time": "2026-09-13T12:03:00"
     },
     {
-      "from": "BERGEN LUFTHAVN",
-      "from_city": "BERGEN",
-      "to": "OSLO LUFTHAVN",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA YARIS 5D 1,5 HYBRID AUT",
-      "available_at": "2026-09-10T06:30:00",
-      "latest_return": "2026-09-12T21:00:00",
-      "expire_time": "2026-09-12T12:16:00"
-    },
-    {
-      "from": "BERGEN LUFTHAVN",
-      "from_city": "BERGEN",
-      "to": "OSLO LUFTHAVN",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA COROLLA CROSS 2WD AUT H",
-      "available_at": "2026-09-10T06:30:00",
-      "latest_return": "2026-09-12T21:00:00",
-      "expire_time": "2026-09-12T12:16:00"
-    },
-    {
       "from": "STAVANGER SOLA",
       "from_city": "STAVANGER",
       "to": "KRISTIANSAND LUFTHAVN",
@@ -460,16 +420,6 @@
       "available_at": "2026-09-10T06:45:00",
       "latest_return": "2026-09-13T21:00:00",
       "expire_time": "2026-09-13T12:03:00"
-    },
-    {
-      "from": "BERGEN LUFTHAVN",
-      "from_city": "BERGEN",
-      "to": "OSLO LUFTHAVN",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
-      "available_at": "2026-09-10T06:45:00",
-      "latest_return": "2026-09-12T21:00:00",
-      "expire_time": "2026-09-12T12:16:00"
     },
     {
       "from": "OSLO LUFTHAVN",
@@ -580,26 +530,6 @@
       "available_at": "2026-09-10T08:00:00",
       "latest_return": "2026-09-16T21:45:00",
       "expire_time": "2026-09-16T15:57:00"
-    },
-    {
-      "from": "BÆRUM RUD",
-      "from_city": "RUD",
-      "to": "PORSGRUNN",
-      "to_city": "PORSGRUNN",
-      "car_model": "VW ID.7 WAGON 86KWH 4X4 AUT EL",
-      "available_at": "2026-09-10T08:30:00",
-      "latest_return": "2026-09-12T14:00:00",
-      "expire_time": "2026-09-12T12:00:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "OSLO",
-      "to": "PORSGRUNN",
-      "to_city": "PORSGRUNN",
-      "car_model": "NISSAN QASHQAI 5D 1,6 PURE DRI",
-      "available_at": "2026-09-10T08:30:00",
-      "latest_return": "2026-09-12T14:00:00",
-      "expire_time": "2026-09-12T11:08:00"
     },
     {
       "from": "SVOLVÆR LUFTHAVN",
