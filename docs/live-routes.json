@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-12T16:15:57.662421+00:00",
+  "updated_at": "2026-09-12T18:31:22.612804+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -170,6 +170,16 @@
       "available_at": "2026-09-09T05:00:00",
       "latest_return": "2026-09-15T05:11:00",
       "expire_time": "2026-09-15T00:07:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "OSLO",
+      "to": "STAVANGER LUFTHAVN",
+      "to_city": "STAVANGER",
+      "car_model": "TOYOTA BZ4X 4X4 69KWH AUT ELEC",
+      "available_at": "2026-09-09T07:45:00",
+      "latest_return": "2026-09-15T07:45:00",
+      "expire_time": "2026-09-14T22:44:00"
     },
     {
       "from": "OSLO LUFTHAVN",
