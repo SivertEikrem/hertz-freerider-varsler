@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-12T05:43:58.366915+00:00",
+  "updated_at": "2026-09-12T09:35:11.477675+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -10,36 +10,6 @@
       "available_at": "2026-07-03T08:00:00",
       "latest_return": "2026-10-04T21:00:00",
       "expire_time": "2026-10-04T12:58:00"
-    },
-    {
-      "from": "ÅLESUND LUFTHAVN",
-      "from_city": "ÅLESUND",
-      "to": "TRONDHEIM LUFTHAVN",
-      "to_city": "TRONDHEIM",
-      "car_model": "EL-Personbil",
-      "available_at": "2026-08-28T09:00:00",
-      "latest_return": "2026-09-12T15:03:00",
-      "expire_time": "2026-09-12T08:05:00"
-    },
-    {
-      "from": "ÅLESUND LUFTHAVN",
-      "from_city": "ÅLESUND",
-      "to": "TRONDHEIM SLUPPEN",
-      "to_city": "TRONDHEIM",
-      "car_model": "EL-Personbil",
-      "available_at": "2026-08-28T09:00:00",
-      "latest_return": "2026-09-12T16:00:00",
-      "expire_time": "2026-09-12T09:40:00"
-    },
-    {
-      "from": "ÅLESUND LUFTHAVN",
-      "from_city": "ÅLESUND",
-      "to": "TRONDHEIM SLUPPEN",
-      "to_city": "TRONDHEIM",
-      "car_model": "EL-Personbil",
-      "available_at": "2026-08-28T09:00:00",
-      "latest_return": "2026-09-12T16:00:00",
-      "expire_time": "2026-09-12T09:40:00"
     },
     {
       "from": "STAVANGER SOLA",
@@ -220,16 +190,6 @@
       "available_at": "2026-09-09T05:00:00",
       "latest_return": "2026-09-15T05:11:00",
       "expire_time": "2026-09-15T00:07:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "OSLO",
-      "to": "STAVANGER LUFTHAVN",
-      "to_city": "STAVANGER",
-      "car_model": "TOYOTA BZ4X 4X4 69KWH AUT ELEC",
-      "available_at": "2026-09-09T07:45:00",
-      "latest_return": "2026-09-15T07:45:00",
-      "expire_time": "2026-09-14T22:44:00"
     },
     {
       "from": "OSLO LUFTHAVN",
