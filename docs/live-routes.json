@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-11T23:13:13.508774+00:00",
+  "updated_at": "2026-09-12T01:05:52.410471+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -10,16 +10,6 @@
       "available_at": "2026-07-03T08:00:00",
       "latest_return": "2026-10-04T21:00:00",
       "expire_time": "2026-10-04T12:58:00"
-    },
-    {
-      "from": "ÅLESUND LUFTHAVN",
-      "from_city": "ÅLESUND",
-      "to": "TRONDHEIM LUFTHAVN",
-      "to_city": "TRONDHEIM",
-      "car_model": "EL-Personbil",
-      "available_at": "2026-08-28T09:00:00",
-      "latest_return": "2026-09-12T08:03:00",
-      "expire_time": "2026-09-12T01:03:00"
     },
     {
       "from": "ÅLESUND LUFTHAVN",
