@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-13T17:28:26.912022+00:00",
+  "updated_at": "2026-09-13T21:39:57.399119+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -257,6 +257,16 @@
       "to": "STAVANGER LUFTHAVN",
       "to_city": "STAVANGER",
       "car_model": "TOYOTA YARIS",
+      "available_at": "2026-09-09T08:00:00",
+      "latest_return": "2026-09-15T08:00:00",
+      "expire_time": "2026-09-14T23:00:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "OSLO",
+      "to": "STAVANGER LUFTHAVN",
+      "to_city": "STAVANGER",
+      "car_model": "TESLA MODEL Y 75KWH AWD AUT EL",
       "available_at": "2026-09-09T08:00:00",
       "latest_return": "2026-09-15T08:00:00",
       "expire_time": "2026-09-14T23:00:00"
@@ -524,26 +534,6 @@
     {
       "from": "BERGEN LUFTHAVN",
       "from_city": "BERGEN",
-      "to": "TRONDHEIM LUFTHAVN",
-      "to_city": "TRONDHEIM",
-      "car_model": "TOYOTA RAV4 4X4 HYBRID AUT",
-      "available_at": "2026-09-13T12:15:00",
-      "latest_return": "2026-09-17T16:15:00",
-      "expire_time": "2026-09-17T04:02:00"
-    },
-    {
-      "from": "BERGEN LUFTHAVN",
-      "from_city": "BERGEN",
-      "to": "TRONDHEIM SLUPPEN",
-      "to_city": "TRONDHEIM",
-      "car_model": "TOYOTA RAV4 4X4 HYBRID AUT",
-      "available_at": "2026-09-13T12:15:00",
-      "latest_return": "2026-09-17T16:22:00",
-      "expire_time": "2026-09-17T04:43:00"
-    },
-    {
-      "from": "BERGEN LUFTHAVN",
-      "from_city": "BERGEN",
       "to": "ÅLESUND LUFTHAVN",
       "to_city": "ÅLESUND",
       "car_model": "FORD EXPLORER 77KWH 4X4 AUT EL",
@@ -560,6 +550,46 @@
       "available_at": "2026-09-13T15:00:00",
       "latest_return": "2026-09-18T15:00:00",
       "expire_time": "2026-09-18T08:32:00"
+    },
+    {
+      "from": "ÅLESUND LUFTHAVN",
+      "from_city": "ÅLESUND",
+      "to": "TRONDHEIM LUFTHAVN",
+      "to_city": "TRONDHEIM",
+      "car_model": "PERSONBIL",
+      "available_at": "2026-09-13T18:30:00",
+      "latest_return": "2026-09-16T18:30:00",
+      "expire_time": "2026-09-16T11:51:00"
+    },
+    {
+      "from": "ÅLESUND LUFTHAVN",
+      "from_city": "ÅLESUND",
+      "to": "TRONDHEIM LUFTHAVN",
+      "to_city": "TRONDHEIM",
+      "car_model": "PERSONBIL",
+      "available_at": "2026-09-13T18:30:00",
+      "latest_return": "2026-09-16T18:30:00",
+      "expire_time": "2026-09-16T11:51:00"
+    },
+    {
+      "from": "ÅLESUND LUFTHAVN",
+      "from_city": "ÅLESUND",
+      "to": "TRONDHEIM SLUPPEN",
+      "to_city": "TRONDHEIM",
+      "car_model": "PERSONBIL",
+      "available_at": "2026-09-13T18:30:00",
+      "latest_return": "2026-09-16T14:42:00",
+      "expire_time": "2026-09-16T08:36:00"
+    },
+    {
+      "from": "ÅLESUND LUFTHAVN",
+      "from_city": "ÅLESUND",
+      "to": "TRONDHEIM SLUPPEN",
+      "to_city": "TRONDHEIM",
+      "car_model": "PERSONBIL",
+      "available_at": "2026-09-13T18:30:00",
+      "latest_return": "2026-09-16T14:42:00",
+      "expire_time": "2026-09-16T08:36:00"
     },
     {
       "from": "STOKMARKNES LUFTHAVN",
