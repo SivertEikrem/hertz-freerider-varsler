@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-13T05:01:14.470354+00:00",
+  "updated_at": "2026-09-13T10:12:28.307726+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -170,16 +170,6 @@
       "available_at": "2026-09-09T05:00:00",
       "latest_return": "2026-09-15T05:11:00",
       "expire_time": "2026-09-15T00:07:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "OSLO",
-      "to": "STAVANGER LUFTHAVN",
-      "to_city": "STAVANGER",
-      "car_model": "TOYOTA BZ4X 4X4 69KWH AUT ELEC",
-      "available_at": "2026-09-09T07:45:00",
-      "latest_return": "2026-09-15T07:45:00",
-      "expire_time": "2026-09-14T22:44:00"
     },
     {
       "from": "OSLO LUFTHAVN",
@@ -500,26 +490,6 @@
       "available_at": "2026-09-10T07:45:00",
       "latest_return": "2026-09-14T14:46:00",
       "expire_time": "2026-09-14T02:51:00"
-    },
-    {
-      "from": "ÅLESUND SENTRUM",
-      "from_city": "ÅLESUND",
-      "to": "TRONDHEIM LUFTHAVN",
-      "to_city": "TRONDHEIM",
-      "car_model": "FORD TRANSIT 6M3 65KWH AUT EL",
-      "available_at": "2026-09-10T08:00:00",
-      "latest_return": "2026-09-16T21:45:00",
-      "expire_time": "2026-09-16T15:20:00"
-    },
-    {
-      "from": "ÅLESUND SENTRUM",
-      "from_city": "ÅLESUND",
-      "to": "TRONDHEIM SLUPPEN",
-      "to_city": "TRONDHEIM",
-      "car_model": "FORD TRANSIT 6M3 65KWH AUT EL",
-      "available_at": "2026-09-10T08:00:00",
-      "latest_return": "2026-09-16T21:45:00",
-      "expire_time": "2026-09-16T15:57:00"
     },
     {
       "from": "SVOLVÆR LUFTHAVN",
