@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-14T13:19:21.476486+00:00",
+  "updated_at": "2026-09-14T18:45:04.201551+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -282,16 +282,6 @@
       "expire_time": "2026-09-14T23:02:00"
     },
     {
-      "from": "ÅLESUND LUFTHAVN",
-      "from_city": "ÅLESUND",
-      "to": "STAVANGER LUFTHAVN",
-      "to_city": "STAVANGER",
-      "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
-      "available_at": "2026-09-09T08:00:00",
-      "latest_return": "2026-09-15T08:00:00",
-      "expire_time": "2026-09-14T17:27:00"
-    },
-    {
       "from": "ARENDAL",
       "from_city": "ARENDAL",
       "to": "STAVANGER LUFTHAVN",
@@ -300,16 +290,6 @@
       "available_at": "2026-09-09T08:15:00",
       "latest_return": "2026-09-15T08:15:00",
       "expire_time": "2026-09-15T03:33:00"
-    },
-    {
-      "from": "MOLDE LUFTHAVN",
-      "from_city": "MOLDE",
-      "to": "STAVANGER LUFTHAVN",
-      "to_city": "STAVANGER",
-      "car_model": "TOYOTA YARIS CROSS 5D AUT HYBR",
-      "available_at": "2026-09-09T08:15:00",
-      "latest_return": "2026-09-15T08:15:00",
-      "expire_time": "2026-09-14T17:21:00"
     },
     {
       "from": "OSLO LUFTHAVN",
@@ -342,16 +322,6 @@
       "expire_time": "2026-09-15T03:27:00"
     },
     {
-      "from": "KRISTIANSUND LUFTHAVN",
-      "from_city": "KRISTIANSUND",
-      "to": "STAVANGER LUFTHAVN",
-      "to_city": "STAVANGER",
-      "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
-      "available_at": "2026-09-09T08:45:00",
-      "latest_return": "2026-09-15T08:45:00",
-      "expire_time": "2026-09-14T16:12:00"
-    },
-    {
       "from": "BERGEN LUFTHAVN",
       "from_city": "BERGEN",
       "to": "STAVANGER LUFTHAVN",
@@ -368,8 +338,38 @@
       "to_city": "KIRUNA",
       "car_model": "KIA SPORTAGE SUV 4X4 AUT PHEV",
       "available_at": "2026-09-10T12:30:00",
-      "latest_return": "2026-09-14T21:45:00",
-      "expire_time": "2026-09-14T15:29:00"
+      "latest_return": "2026-09-15T21:45:00",
+      "expire_time": "2026-09-15T15:15:00"
+    },
+    {
+      "from": "SVOLVÆR LUFTHAVN",
+      "from_city": "SVOLVÆR",
+      "to": "Luleå Flygplats / Self Service Kiosk",
+      "to_city": "LULEÅ",
+      "car_model": "KIA SPORTAGE SUV 4X4 AUT PHEV",
+      "available_at": "2026-09-10T12:30:00",
+      "latest_return": "2026-09-15T21:45:00",
+      "expire_time": "2026-09-15T10:18:00"
+    },
+    {
+      "from": "SVOLVÆR LUFTHAVN",
+      "from_city": "SVOLVÆR",
+      "to": "OSLO SENTRALSTASJON",
+      "to_city": "OSLO",
+      "car_model": "KIA SPORTAGE SUV 4X4 AUT PHEV",
+      "available_at": "2026-09-10T12:30:00",
+      "latest_return": "2026-09-15T21:45:00",
+      "expire_time": "2026-09-14T22:30:00"
+    },
+    {
+      "from": "SVOLVÆR LUFTHAVN",
+      "from_city": "SVOLVÆR",
+      "to": "Stockholm Arlanda Flygplats / Self Service Kiosk",
+      "to_city": "STOCKHOLM (ARLANDA)",
+      "car_model": "KIA SPORTAGE SUV 4X4 AUT PHEV",
+      "available_at": "2026-09-10T12:30:00",
+      "latest_return": "2026-09-15T21:45:00",
+      "expire_time": "2026-09-15T00:39:00"
     },
     {
       "from": "ÅLESUND LUFTHAVN",
@@ -500,26 +500,6 @@
       "available_at": "2026-09-13T18:30:00",
       "latest_return": "2026-09-16T14:42:00",
       "expire_time": "2026-09-16T08:36:00"
-    },
-    {
-      "from": "OSLO SENTRALSTASJON",
-      "from_city": "OSLO",
-      "to": "TRONDHEIM LUFTHAVN",
-      "to_city": "TRONDHEIM",
-      "car_model": "MAZDA 6E 4D 68KWH AUT ELECTRIC",
-      "available_at": "2026-09-14T07:00:00",
-      "latest_return": "2026-09-18T14:00:00",
-      "expire_time": "2026-09-18T05:51:00"
-    },
-    {
-      "from": "OSLO SENTRALSTASJON",
-      "from_city": "OSLO",
-      "to": "TRONDHEIM SLUPPEN",
-      "to_city": "TRONDHEIM",
-      "car_model": "MAZDA 6E 4D 68KWH AUT ELECTRIC",
-      "available_at": "2026-09-14T07:00:00",
-      "latest_return": "2026-09-18T14:12:00",
-      "expire_time": "2026-09-18T06:45:00"
     },
     {
       "from": "LILLEHAMMER",
