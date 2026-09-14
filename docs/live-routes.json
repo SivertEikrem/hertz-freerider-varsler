@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-13T23:28:57.788614+00:00",
+  "updated_at": "2026-09-14T01:21:13.281861+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -180,16 +180,6 @@
       "available_at": "2026-09-08T11:15:00",
       "latest_return": "2026-09-14T16:28:00",
       "expire_time": "2026-09-14T09:46:00"
-    },
-    {
-      "from": "EVENES LUFTHAVN",
-      "from_city": "LILAND",
-      "to": "TRONDHEIM SLUPPEN",
-      "to_city": "TRONDHEIM",
-      "car_model": "TOYOTA BZ4X 4X4 69KWH AUT ELEC",
-      "available_at": "2026-09-08T11:15:00",
-      "latest_return": "2026-09-14T17:15:00",
-      "expire_time": "2026-09-14T01:15:00"
     },
     {
       "from": "BERGEN LUFTHAVN",
@@ -420,16 +410,6 @@
       "available_at": "2026-09-10T12:30:00",
       "latest_return": "2026-09-14T21:45:00",
       "expire_time": "2026-09-14T10:33:00"
-    },
-    {
-      "from": "SVOLVÆR LUFTHAVN",
-      "from_city": "SVOLVÆR",
-      "to": "Stockholm Arlanda Flygplats / Self Service Kiosk",
-      "to_city": "STOCKHOLM (ARLANDA)",
-      "car_model": "KIA SPORTAGE SUV 4X4 AUT PHEV",
-      "available_at": "2026-09-10T12:30:00",
-      "latest_return": "2026-09-14T21:45:00",
-      "expire_time": "2026-09-14T00:57:00"
     },
     {
       "from": "ÅLESUND LUFTHAVN",
