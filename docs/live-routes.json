@@ -1,26 +1,6 @@
 {
-  "updated_at": "2026-09-15T10:12:47.982898+00:00",
+  "updated_at": "2026-09-15T14:59:24.666063+00:00",
   "routes": [
-    {
-      "from": "BODØ LUFTHAVN",
-      "from_city": "BODØ",
-      "to": "OSLO LUFTHAVN",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
-      "available_at": "2026-08-31T10:45:00",
-      "latest_return": "2026-09-16T10:45:00",
-      "expire_time": "2026-09-15T16:41:00"
-    },
-    {
-      "from": "BODØ LUFTHAVN",
-      "from_city": "BODØ",
-      "to": "TØNSBERG",
-      "to_city": "TØNSBERG",
-      "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
-      "available_at": "2026-08-31T10:45:00",
-      "latest_return": "2026-09-16T10:45:00",
-      "expire_time": "2026-09-15T14:43:00"
-    },
     {
       "from": "EVENES LUFTHAVN",
       "from_city": "LILAND",
@@ -40,126 +20,6 @@
       "available_at": "2026-09-07T10:30:00",
       "latest_return": "2026-09-18T14:00:00",
       "expire_time": "2026-09-18T05:47:00"
-    },
-    {
-      "from": "STAVANGER SOLA",
-      "from_city": "STAVANGER",
-      "to": "OSLO ALNABRU",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 6M3 VARE TDI AUT",
-      "available_at": "2026-09-08T08:00:00",
-      "latest_return": "2026-09-15T19:00:00",
-      "expire_time": "2026-09-15T10:51:00"
-    },
-    {
-      "from": "STAVANGER SOLA",
-      "from_city": "STAVANGER",
-      "to": "OSLO ALNABRU",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 6M3 VARE TDI AUT",
-      "available_at": "2026-09-08T08:00:00",
-      "latest_return": "2026-09-15T19:00:00",
-      "expire_time": "2026-09-15T10:51:00"
-    },
-    {
-      "from": "STAVANGER SOLA",
-      "from_city": "STAVANGER",
-      "to": "OSLO ALNABRU",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 6M3 VARE TDI AUT",
-      "available_at": "2026-09-08T08:00:00",
-      "latest_return": "2026-09-15T19:00:00",
-      "expire_time": "2026-09-15T10:51:00"
-    },
-    {
-      "from": "STAVANGER SOLA",
-      "from_city": "STAVANGER",
-      "to": "OSLO LUFTHAVN",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 6M3 VARE TDI AUT",
-      "available_at": "2026-09-08T08:00:00",
-      "latest_return": "2026-09-15T19:00:00",
-      "expire_time": "2026-09-15T10:21:00"
-    },
-    {
-      "from": "STAVANGER SOLA",
-      "from_city": "STAVANGER",
-      "to": "OSLO LUFTHAVN",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 6M3 VARE TDI AUT",
-      "available_at": "2026-09-08T08:00:00",
-      "latest_return": "2026-09-15T19:00:00",
-      "expire_time": "2026-09-15T10:21:00"
-    },
-    {
-      "from": "STAVANGER SOLA",
-      "from_city": "STAVANGER",
-      "to": "OSLO LUFTHAVN",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 6M3 VARE TDI AUT",
-      "available_at": "2026-09-08T08:00:00",
-      "latest_return": "2026-09-15T19:00:00",
-      "expire_time": "2026-09-15T10:21:00"
-    },
-    {
-      "from": "STAVANGER SOLA",
-      "from_city": "STAVANGER",
-      "to": "OSLO SENTRALSTASJON",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 6M3 VARE TDI AUT",
-      "available_at": "2026-09-08T08:00:00",
-      "latest_return": "2026-09-15T19:00:00",
-      "expire_time": "2026-09-15T10:57:00"
-    },
-    {
-      "from": "STAVANGER SOLA",
-      "from_city": "STAVANGER",
-      "to": "OSLO SENTRALSTASJON",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 6M3 VARE TDI AUT",
-      "available_at": "2026-09-08T08:00:00",
-      "latest_return": "2026-09-15T19:00:00",
-      "expire_time": "2026-09-15T10:57:00"
-    },
-    {
-      "from": "STAVANGER SOLA",
-      "from_city": "STAVANGER",
-      "to": "OSLO SENTRALSTASJON",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 6M3 VARE TDI AUT",
-      "available_at": "2026-09-08T08:00:00",
-      "latest_return": "2026-09-15T19:00:00",
-      "expire_time": "2026-09-15T10:57:00"
-    },
-    {
-      "from": "STAVANGER SOLA",
-      "from_city": "STAVANGER",
-      "to": "OSLO ØKERN",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 6M3 VARE TDI AUT",
-      "available_at": "2026-09-08T08:00:00",
-      "latest_return": "2026-09-15T19:00:00",
-      "expire_time": "2026-09-15T10:52:00"
-    },
-    {
-      "from": "STAVANGER SOLA",
-      "from_city": "STAVANGER",
-      "to": "OSLO ØKERN",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 6M3 VARE TDI AUT",
-      "available_at": "2026-09-08T08:00:00",
-      "latest_return": "2026-09-15T19:00:00",
-      "expire_time": "2026-09-15T10:52:00"
-    },
-    {
-      "from": "STAVANGER SOLA",
-      "from_city": "STAVANGER",
-      "to": "OSLO ØKERN",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA PROACE 6M3 VARE TDI AUT",
-      "available_at": "2026-09-08T08:00:00",
-      "latest_return": "2026-09-15T19:00:00",
-      "expire_time": "2026-09-15T10:52:00"
     },
     {
       "from": "BERGEN LUFTHAVN",
@@ -248,8 +108,8 @@
       "to_city": "KIRUNA",
       "car_model": "KIA SPORTAGE SUV 4X4 AUT PHEV",
       "available_at": "2026-09-10T12:30:00",
-      "latest_return": "2026-09-15T21:45:00",
-      "expire_time": "2026-09-15T15:15:00"
+      "latest_return": "2026-09-16T21:45:00",
+      "expire_time": "2026-09-16T15:14:00"
     },
     {
       "from": "SVOLVÆR LUFTHAVN",
@@ -258,8 +118,28 @@
       "to_city": "LULEÅ",
       "car_model": "KIA SPORTAGE SUV 4X4 AUT PHEV",
       "available_at": "2026-09-10T12:30:00",
-      "latest_return": "2026-09-15T21:45:00",
-      "expire_time": "2026-09-15T10:18:00"
+      "latest_return": "2026-09-16T21:45:00",
+      "expire_time": "2026-09-16T10:15:00"
+    },
+    {
+      "from": "SVOLVÆR LUFTHAVN",
+      "from_city": "SVOLVÆR",
+      "to": "OSLO SENTRALSTASJON",
+      "to_city": "OSLO",
+      "car_model": "KIA SPORTAGE SUV 4X4 AUT PHEV",
+      "available_at": "2026-09-10T12:30:00",
+      "latest_return": "2026-09-16T21:45:00",
+      "expire_time": "2026-09-15T22:13:00"
+    },
+    {
+      "from": "SVOLVÆR LUFTHAVN",
+      "from_city": "SVOLVÆR",
+      "to": "Stockholm Arlanda Flygplats / Self Service Kiosk",
+      "to_city": "STOCKHOLM (ARLANDA)",
+      "car_model": "KIA SPORTAGE SUV 4X4 AUT PHEV",
+      "available_at": "2026-09-10T12:30:00",
+      "latest_return": "2026-09-16T21:45:00",
+      "expire_time": "2026-09-16T00:35:00"
     },
     {
       "from": "ÅLESUND LUFTHAVN",
@@ -542,16 +422,6 @@
       "expire_time": "2026-09-19T02:49:00"
     },
     {
-      "from": "Örebro Tage Rejmes / Self Service Kiosk",
-      "from_city": "ÖREBRO",
-      "to": "OSLO LUFTHAVN",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA BZ4X AUT 64 KWH BEV",
-      "available_at": "2026-09-14T07:45:00",
-      "latest_return": "2026-09-19T16:45:00",
-      "expire_time": "2026-09-19T11:37:00"
-    },
-    {
       "from": "ÅLESUND SENTRUM",
       "from_city": "ÅLESUND",
       "to": "TRONDHEIM LUFTHAVN",
@@ -632,16 +502,6 @@
       "expire_time": "2026-09-18T14:53:00"
     },
     {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "OSLO",
-      "to": "STAVANGER LUFTHAVN",
-      "to_city": "STAVANGER",
-      "car_model": "TOYOTA YARIS CROSS 5D AUT HYBR",
-      "available_at": "2026-09-15T06:30:00",
-      "latest_return": "2026-09-19T06:30:00",
-      "expire_time": "2026-09-18T21:14:00"
-    },
-    {
       "from": "ÅLESUND LUFTHAVN",
       "from_city": "ÅLESUND",
       "to": "STAVANGER LUFTHAVN",
@@ -670,6 +530,26 @@
       "available_at": "2026-09-15T07:30:00",
       "latest_return": "2026-09-16T21:45:00",
       "expire_time": "2026-09-16T11:17:00"
+    },
+    {
+      "from": "ARENDAL",
+      "from_city": "ARENDAL",
+      "to": "PORSGRUNN",
+      "to_city": "PORSGRUNN",
+      "car_model": "CITROEN C5 X AUT PHEV",
+      "available_at": "2026-09-15T12:00:00",
+      "latest_return": "2026-09-19T12:00:00",
+      "expire_time": "2026-09-19T10:12:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "OSLO",
+      "to": "PORSGRUNN",
+      "to_city": "PORSGRUNN",
+      "car_model": "NISSAN QASHQAI 5D 1,6 PURE DRI",
+      "available_at": "2026-09-15T12:00:00",
+      "latest_return": "2026-09-19T12:00:00",
+      "expire_time": "2026-09-19T08:47:00"
     },
     {
       "from": "MOLDE LUFTHAVN",
