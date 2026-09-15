@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-15T18:43:23.441419+00:00",
+  "updated_at": "2026-09-15T21:45:39.752766+00:00",
   "routes": [
     {
       "from": "EVENES LUFTHAVN",
@@ -450,16 +450,6 @@
       "available_at": "2026-09-14T11:00:00",
       "latest_return": "2026-09-20T14:00:00",
       "expire_time": "2026-09-20T05:38:00"
-    },
-    {
-      "from": "ÅLESUND LUFTHAVN",
-      "from_city": "ÅLESUND",
-      "to": "BERGEN LUFTHAVN",
-      "to_city": "BERGEN",
-      "car_model": "VOLVO XC90 AWD AUT T6 HYBRID",
-      "available_at": "2026-09-15T05:30:00",
-      "latest_return": "2026-09-16T05:36:00",
-      "expire_time": "2026-09-15T20:10:00"
     },
     {
       "from": "ÅLESUND LUFTHAVN",
