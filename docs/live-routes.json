@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-15T14:59:24.666063+00:00",
+  "updated_at": "2026-09-15T18:43:23.441419+00:00",
   "routes": [
     {
       "from": "EVENES LUFTHAVN",
@@ -392,36 +392,6 @@
       "expire_time": "2026-09-19T07:40:00"
     },
     {
-      "from": "STAVANGER SOLA",
-      "from_city": "STAVANGER",
-      "to": "OSLO LUFTHAVN",
-      "to_city": "OSLO",
-      "car_model": "VW ID.4 5D 77KWH 4X4 AUT ELECT",
-      "available_at": "2026-09-14T07:45:00",
-      "latest_return": "2026-09-19T16:45:00",
-      "expire_time": "2026-09-19T07:41:00"
-    },
-    {
-      "from": "STAVANGER SOLA",
-      "from_city": "STAVANGER",
-      "to": "TRONDHEIM LUFTHAVN",
-      "to_city": "TRONDHEIM",
-      "car_model": "VW ID.4 5D 77KWH 4X4 AUT ELECT",
-      "available_at": "2026-09-14T07:45:00",
-      "latest_return": "2026-09-19T16:47:00",
-      "expire_time": "2026-09-19T00:32:00"
-    },
-    {
-      "from": "STAVANGER SOLA",
-      "from_city": "STAVANGER",
-      "to": "ÅLESUND SENTRUM",
-      "to_city": "ÅLESUND",
-      "car_model": "VW ID.4 5D 77KWH 4X4 AUT ELECT",
-      "available_at": "2026-09-14T07:45:00",
-      "latest_return": "2026-09-19T16:47:00",
-      "expire_time": "2026-09-19T02:49:00"
-    },
-    {
       "from": "ÅLESUND SENTRUM",
       "from_city": "ÅLESUND",
       "to": "TRONDHEIM LUFTHAVN",
@@ -540,16 +510,6 @@
       "available_at": "2026-09-15T12:00:00",
       "latest_return": "2026-09-19T12:00:00",
       "expire_time": "2026-09-19T10:12:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "OSLO",
-      "to": "PORSGRUNN",
-      "to_city": "PORSGRUNN",
-      "car_model": "NISSAN QASHQAI 5D 1,6 PURE DRI",
-      "available_at": "2026-09-15T12:00:00",
-      "latest_return": "2026-09-19T12:00:00",
-      "expire_time": "2026-09-19T08:47:00"
     },
     {
       "from": "MOLDE LUFTHAVN",
