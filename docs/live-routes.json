@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-15T00:34:36.245571+00:00",
+  "updated_at": "2026-09-15T05:18:29.005403+00:00",
   "routes": [
     {
       "from": "OSLO LUFTHAVN",
@@ -172,46 +172,6 @@
       "expire_time": "2026-09-15T10:52:00"
     },
     {
-      "from": "SANDEFJORD LUFTHAVN",
-      "from_city": "SANDEFJORD",
-      "to": "STAVANGER LUFTHAVN",
-      "to_city": "STAVANGER",
-      "car_model": "MG S6 SUV 75KWH 4X4 AUT ELECTR",
-      "available_at": "2026-09-09T07:45:00",
-      "latest_return": "2026-09-15T07:45:00",
-      "expire_time": "2026-09-15T00:45:00"
-    },
-    {
-      "from": "ARENDAL",
-      "from_city": "ARENDAL",
-      "to": "STAVANGER LUFTHAVN",
-      "to_city": "STAVANGER",
-      "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
-      "available_at": "2026-09-09T08:15:00",
-      "latest_return": "2026-09-15T08:15:00",
-      "expire_time": "2026-09-15T03:33:00"
-    },
-    {
-      "from": "BERGEN LUFTHAVN",
-      "from_city": "BERGEN",
-      "to": "STAVANGER LUFTHAVN",
-      "to_city": "STAVANGER",
-      "car_model": "VOLVO XC60 T6 AWD HYBRID AUT",
-      "available_at": "2026-09-09T08:45:00",
-      "latest_return": "2026-09-15T08:45:00",
-      "expire_time": "2026-09-15T03:27:00"
-    },
-    {
-      "from": "BERGEN LUFTHAVN",
-      "from_city": "BERGEN",
-      "to": "STAVANGER LUFTHAVN",
-      "to_city": "STAVANGER",
-      "car_model": "TOYOTA PROACE 9-SETER DIESEL",
-      "available_at": "2026-09-10T07:00:00",
-      "latest_return": "2026-09-15T07:00:00",
-      "expire_time": "2026-09-15T01:48:00"
-    },
-    {
       "from": "SVOLVÆR LUFTHAVN",
       "from_city": "SVOLVÆR",
       "to": "Kiruna AP",
@@ -230,16 +190,6 @@
       "available_at": "2026-09-10T12:30:00",
       "latest_return": "2026-09-15T21:45:00",
       "expire_time": "2026-09-15T10:18:00"
-    },
-    {
-      "from": "SVOLVÆR LUFTHAVN",
-      "from_city": "SVOLVÆR",
-      "to": "Stockholm Arlanda Flygplats / Self Service Kiosk",
-      "to_city": "STOCKHOLM (ARLANDA)",
-      "car_model": "KIA SPORTAGE SUV 4X4 AUT PHEV",
-      "available_at": "2026-09-10T12:30:00",
-      "latest_return": "2026-09-15T21:45:00",
-      "expire_time": "2026-09-15T00:39:00"
     },
     {
       "from": "OSLO LUFTHAVN",
