@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-15T21:45:39.752766+00:00",
+  "updated_at": "2026-09-15T23:47:08.564719+00:00",
   "routes": [
     {
       "from": "EVENES LUFTHAVN",
@@ -120,16 +120,6 @@
       "available_at": "2026-09-10T12:30:00",
       "latest_return": "2026-09-16T21:45:00",
       "expire_time": "2026-09-16T10:15:00"
-    },
-    {
-      "from": "SVOLVÆR LUFTHAVN",
-      "from_city": "SVOLVÆR",
-      "to": "OSLO SENTRALSTASJON",
-      "to_city": "OSLO",
-      "car_model": "KIA SPORTAGE SUV 4X4 AUT PHEV",
-      "available_at": "2026-09-10T12:30:00",
-      "latest_return": "2026-09-16T21:45:00",
-      "expire_time": "2026-09-15T22:13:00"
     },
     {
       "from": "SVOLVÆR LUFTHAVN",
