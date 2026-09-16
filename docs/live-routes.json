@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-16T01:59:43.853843+00:00",
+  "updated_at": "2026-09-16T07:18:22.777113+00:00",
   "routes": [
     {
       "from": "EVENES LUFTHAVN",
@@ -29,7 +29,7 @@
       "car_model": "TOYOTA PROACE 8-SETER AUT TDI",
       "available_at": "2026-09-09T05:00:00",
       "latest_return": "2026-09-19T05:00:00",
-      "expire_time": "2026-09-18T23:48:00"
+      "expire_time": "2026-09-18T23:53:00"
     },
     {
       "from": "BERGEN LUFTHAVN",
@@ -39,7 +39,7 @@
       "car_model": "TOYOTA PROACE 8-SETER AUT TDI",
       "available_at": "2026-09-09T05:00:00",
       "latest_return": "2026-09-19T05:11:00",
-      "expire_time": "2026-09-19T00:01:00"
+      "expire_time": "2026-09-19T00:05:00"
     },
     {
       "from": "OSLO LUFTHAVN",
@@ -434,12 +434,22 @@
     {
       "from": "ÅLESUND LUFTHAVN",
       "from_city": "ÅLESUND",
+      "to": "BERGEN LUFTHAVN",
+      "to_city": "BERGEN",
+      "car_model": "VOLVO XC90 AWD AUT T6 HYBRID",
+      "available_at": "2026-09-15T05:30:00",
+      "latest_return": "2026-09-19T05:36:00",
+      "expire_time": "2026-09-18T20:12:00"
+    },
+    {
+      "from": "ÅLESUND LUFTHAVN",
+      "from_city": "ÅLESUND",
       "to": "STAVANGER LUFTHAVN",
       "to_city": "STAVANGER",
       "car_model": "VOLVO XC90 AWD AUT T6 HYBRID",
       "available_at": "2026-09-15T05:30:00",
       "latest_return": "2026-09-19T05:30:00",
-      "expire_time": "2026-09-18T14:53:00"
+      "expire_time": "2026-09-18T14:52:00"
     },
     {
       "from": "ÅLESUND LUFTHAVN",
@@ -480,6 +490,146 @@
       "available_at": "2026-09-15T12:00:00",
       "latest_return": "2026-09-19T12:00:00",
       "expire_time": "2026-09-19T10:12:00"
+    },
+    {
+      "from": "BERGEN LUFTHAVN",
+      "from_city": "BERGEN",
+      "to": "KRISTIANSAND LUFTHAVN",
+      "to_city": "KRISTIANSAND",
+      "car_model": "TOYOTA COROLLA CROSS 2WD AUT H",
+      "available_at": "2026-09-16T06:45:00",
+      "latest_return": "2026-09-18T21:00:00",
+      "expire_time": "2026-09-18T11:51:00"
+    },
+    {
+      "from": "BERGEN LUFTHAVN",
+      "from_city": "BERGEN",
+      "to": "KRISTIANSAND LUFTHAVN",
+      "to_city": "KRISTIANSAND",
+      "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
+      "available_at": "2026-09-16T06:45:00",
+      "latest_return": "2026-09-18T21:00:00",
+      "expire_time": "2026-09-18T11:51:00"
+    },
+    {
+      "from": "BERGEN LUFTHAVN",
+      "from_city": "BERGEN",
+      "to": "KRISTIANSAND LUFTHAVN",
+      "to_city": "KRISTIANSAND",
+      "car_model": "TOYOTA YARIS 5D 1,5 HYBRID AUT",
+      "available_at": "2026-09-16T06:45:00",
+      "latest_return": "2026-09-18T21:00:00",
+      "expire_time": "2026-09-18T11:52:00"
+    },
+    {
+      "from": "BERGEN LUFTHAVN",
+      "from_city": "BERGEN",
+      "to": "KRISTIANSAND SENTRUM",
+      "to_city": "KRISTIANSAND",
+      "car_model": "TOYOTA YARIS 5D 1,5 HYBRID AUT",
+      "available_at": "2026-09-16T06:45:00",
+      "latest_return": "2026-09-18T21:00:00",
+      "expire_time": "2026-09-18T12:00:00"
+    },
+    {
+      "from": "BERGEN LUFTHAVN",
+      "from_city": "BERGEN",
+      "to": "KRISTIANSAND SENTRUM",
+      "to_city": "KRISTIANSAND",
+      "car_model": "TOYOTA COROLLA CROSS 2WD AUT H",
+      "available_at": "2026-09-16T06:45:00",
+      "latest_return": "2026-09-18T21:00:00",
+      "expire_time": "2026-09-18T12:00:00"
+    },
+    {
+      "from": "BERGEN LUFTHAVN",
+      "from_city": "BERGEN",
+      "to": "KRISTIANSAND SENTRUM",
+      "to_city": "KRISTIANSAND",
+      "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
+      "available_at": "2026-09-16T06:45:00",
+      "latest_return": "2026-09-18T21:00:00",
+      "expire_time": "2026-09-18T12:00:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "OSLO",
+      "to": "KRISTIANSAND LUFTHAVN",
+      "to_city": "KRISTIANSAND",
+      "car_model": "MG 4 5D AUT 62KWH AUT ELECTRIC",
+      "available_at": "2026-09-16T06:45:00",
+      "latest_return": "2026-09-18T21:00:00",
+      "expire_time": "2026-09-18T15:48:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "OSLO",
+      "to": "KRISTIANSAND SENTRUM",
+      "to_city": "KRISTIANSAND",
+      "car_model": "MG 4 5D AUT 62KWH AUT ELECTRIC",
+      "available_at": "2026-09-16T06:45:00",
+      "latest_return": "2026-09-18T21:00:00",
+      "expire_time": "2026-09-18T15:58:00"
+    },
+    {
+      "from": "STAVANGER SOLA",
+      "from_city": "STAVANGER",
+      "to": "KRISTIANSAND LUFTHAVN",
+      "to_city": "KRISTIANSAND",
+      "car_model": "VW ID.3 5D 58KWH 5D AUT ELECTR",
+      "available_at": "2026-09-16T06:45:00",
+      "latest_return": "2026-09-18T21:00:00",
+      "expire_time": "2026-09-18T16:54:00"
+    },
+    {
+      "from": "STAVANGER SOLA",
+      "from_city": "STAVANGER",
+      "to": "KRISTIANSAND LUFTHAVN",
+      "to_city": "KRISTIANSAND",
+      "car_model": "VW ID.3 5D 58KWH 5D AUT ELECTR",
+      "available_at": "2026-09-16T06:45:00",
+      "latest_return": "2026-09-18T21:00:00",
+      "expire_time": "2026-09-18T16:54:00"
+    },
+    {
+      "from": "STAVANGER SOLA",
+      "from_city": "STAVANGER",
+      "to": "KRISTIANSAND SENTRUM",
+      "to_city": "KRISTIANSAND",
+      "car_model": "VW ID.3 5D 58KWH 5D AUT ELECTR",
+      "available_at": "2026-09-16T06:45:00",
+      "latest_return": "2026-09-18T21:00:00",
+      "expire_time": "2026-09-18T17:04:00"
+    },
+    {
+      "from": "STAVANGER SOLA",
+      "from_city": "STAVANGER",
+      "to": "KRISTIANSAND SENTRUM",
+      "to_city": "KRISTIANSAND",
+      "car_model": "VW ID.3 5D 58KWH 5D AUT ELECTR",
+      "available_at": "2026-09-16T06:45:00",
+      "latest_return": "2026-09-18T21:00:00",
+      "expire_time": "2026-09-18T17:04:00"
+    },
+    {
+      "from": "TRONDHEIM LUFTHAVN",
+      "from_city": "TRONDHEIM",
+      "to": "ÅLESUND LUFTHAVN",
+      "to_city": "ÅLESUND",
+      "car_model": "VOLVO EX30 SUV 64KWH 4X4 AUT E",
+      "available_at": "2026-09-18T08:00:00",
+      "latest_return": "2026-09-20T21:00:00",
+      "expire_time": "2026-09-20T13:41:00"
+    },
+    {
+      "from": "TRONDHEIM LUFTHAVN",
+      "from_city": "TRONDHEIM",
+      "to": "ÅLESUND SENTRUM",
+      "to_city": "ÅLESUND",
+      "car_model": "VOLVO EX30 SUV 64KWH 4X4 AUT E",
+      "available_at": "2026-09-18T08:00:00",
+      "latest_return": "2026-09-20T21:00:00",
+      "expire_time": "2026-09-20T14:11:00"
     },
     {
       "from": "MOLDE LUFTHAVN",
