@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-16T20:16:04.713693+00:00",
+  "updated_at": "2026-09-16T23:03:26.552787+00:00",
   "routes": [
     {
       "from": "EVENES LUFTHAVN",
@@ -40,16 +40,6 @@
       "available_at": "2026-09-09T05:00:00",
       "latest_return": "2026-09-19T05:11:00",
       "expire_time": "2026-09-19T00:05:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "OSLO",
-      "to": "STAVANGER LUFTHAVN",
-      "to_city": "STAVANGER",
-      "car_model": "TOYOTA YARIS",
-      "available_at": "2026-09-09T08:00:00",
-      "latest_return": "2026-09-19T08:00:00",
-      "expire_time": "2026-09-18T22:36:00"
     },
     {
       "from": "KRISTIANSUND LUFTHAVN",
@@ -400,26 +390,6 @@
       "available_at": "2026-09-16T06:45:00",
       "latest_return": "2026-09-18T21:00:00",
       "expire_time": "2026-09-18T17:04:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "OSLO",
-      "to": "ARENDAL",
-      "to_city": "ARENDAL",
-      "car_model": "TOYOTA YARIS CROSS 5D AUT HYBR",
-      "available_at": "2026-09-16T07:30:00",
-      "latest_return": "2026-09-18T18:00:00",
-      "expire_time": "2026-09-18T13:39:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "OSLO",
-      "to": "GRIMSTAD",
-      "to_city": "GRIMSTAD",
-      "car_model": "TOYOTA YARIS CROSS 5D AUT HYBR",
-      "available_at": "2026-09-16T07:30:00",
-      "latest_return": "2026-09-18T18:00:00",
-      "expire_time": "2026-09-18T13:24:00"
     },
     {
       "from": "BODØ LUFTHAVN",
