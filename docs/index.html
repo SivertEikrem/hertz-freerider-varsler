@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9A%97%3C/text%3E%3C/svg%3E" />
 <title>Freerider-ruter</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,6 +21,7 @@
     </div>
   </header>
   <p class="subtitle">Velg hvilke ruter botten skal varsle deg om.</p>
+  <p class="stats-line" id="statsLine"></p>
 
   <div id="status" class="status"></div>
 
@@ -53,7 +55,8 @@
           <button type="button" data-mode="station" class="active">Stasjon</button>
           <button type="button" data-mode="city">By</button>
         </div>
-        <select id="fromSelect"></select>
+        <input type="text" id="fromSelect" list="fromDatalist" placeholder="Skriv for å søke..." autocomplete="off" />
+        <datalist id="fromDatalist"></datalist>
       </div>
       <div class="arrow-col">&#8594;</div>
       <div>
@@ -62,7 +65,8 @@
           <button type="button" data-mode="station" class="active">Stasjon</button>
           <button type="button" data-mode="city">By</button>
         </div>
-        <select id="toSelect"></select>
+        <input type="text" id="toSelect" list="toDatalist" placeholder="Skriv for å søke..." autocomplete="off" />
+        <datalist id="toDatalist"></datalist>
       </div>
     </div>
 
@@ -77,7 +81,8 @@
 
   <!-- Tilgjengelig nå for dine ruter -->
   <section class="panel" id="availablePanel" style="display:none;">
-    <h2>Tilgjengelig n\u00e5 for dine ruter</h2>
+    <h2>Tilgjengelig nå for dine ruter</h2>
+    <input type="text" id="availableFilterInput" placeholder="Filtrer på stasjon, by eller bil..." style="margin-bottom:16px;" />
     <div class="route-list" id="availableList"></div>
   </section>
 
