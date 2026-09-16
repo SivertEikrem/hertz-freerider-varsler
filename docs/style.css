@@ -1,15 +1,20 @@
 :root {
-  --bg: #10151b;
-  --surface: #1a222b;
-  --surface-alt: #212b36;
-  --line: #2b3745;
-  --text: #edeff2;
-  --text-muted: #8b94a3;
-  --yellow: #f4c542;
-  --teal: #3db3ae;
-  --danger: #e4572e;
-  --success: #4caf7d;
-  --radius: 10px;
+  /* Billett/kupong-palett: varm, nøytral mørk asfalt - ikke blåsvart SaaS-mørke */
+  --bg: #14100d;
+  --surface: #1e1811;
+  --surface-raised: #262019;
+  --rule: #3a3226;
+  --ink: #e9e4d8;
+  --ink-muted: #948c7c;
+
+  /* To distinkte aksenter med hver sin jobb, ikke én farge brukt på alt */
+  --claim: #c2451f; /* stempel-oransje: primærhandling og hastegrad */
+  --claim-soft: rgba(194, 69, 31, 0.14);
+  --route: #7fa05c; /* rutestrek-grønn: tilgjengelig/suksess */
+  --route-soft: rgba(127, 160, 92, 0.14);
+
+  --radius-panel: 3px;
+  --radius-card: 6px;
 }
 
 * {
@@ -23,14 +28,14 @@ html {
 body {
   margin: 0;
   background: var(--bg);
-  color: var(--text);
-  font-family: "Work Sans", system-ui, sans-serif;
+  color: var(--ink);
+  font-family: "Karla", system-ui, sans-serif;
   line-height: 1.5;
   min-height: 100vh;
 }
 
 a {
-  color: var(--yellow);
+  color: var(--route);
 }
 
 .wrap {
@@ -48,77 +53,75 @@ header.top {
   margin-bottom: 6px;
 }
 
+h1 {
+  font-family: "Archivo", "Karla", sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  font-size: 23px;
+  margin: 0;
+}
+
+h1 span.free {
+  color: var(--claim);
+}
+
 @media (max-width: 400px) {
   header.top h1 {
     font-size: 19px;
   }
 }
 
-h1 {
-  font-family: "Oswald", "Work Sans", sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  font-size: 22px;
-  margin: 0;
-}
-
-h1 span.free {
-  color: var(--yellow);
-}
-
 .subtitle {
-  color: var(--text-muted);
+  color: var(--ink-muted);
   font-size: 14px;
   margin: 0 0 8px;
 }
 
 .stats-line {
-  font-family: "IBM Plex Mono", monospace;
-  color: var(--teal);
-  font-size: 12.5px;
+  color: var(--route);
+  font-size: 13px;
   margin: 0 0 24px;
 }
 
 .urgent {
-  color: var(--danger);
-  font-weight: 500;
+  color: var(--claim);
+  font-weight: 600;
 }
 
 button.icon-btn {
   background: none;
-  border: 1px solid var(--line);
-  color: var(--text-muted);
-  border-radius: 8px;
-  padding: 6px 10px;
+  border: 1px solid var(--rule);
+  color: var(--ink-muted);
+  border-radius: var(--radius-panel);
+  padding: 7px 11px;
   font-size: 13px;
   cursor: pointer;
   font-family: inherit;
 }
 
 button.icon-btn:hover {
-  border-color: var(--text-muted);
-  color: var(--text);
+  border-color: var(--ink-muted);
+  color: var(--ink);
 }
 
-/* --- Kort/panel --- */
+/* --- Paneler: arkiv/tavle-preg, IKKE samme avrundede kort som rute-billettene --- */
 
 .panel {
   background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 20px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-panel);
+  padding: 22px 20px;
   margin-bottom: 20px;
 }
 
 .panel h2 {
-  font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--text-muted);
+  font-family: "Archivo", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
   margin: 0 0 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--rule);
 }
 
 /* --- Innstillinger-skjema --- */
@@ -126,7 +129,7 @@ button.icon-btn:hover {
 label {
   display: block;
   font-size: 13px;
-  color: var(--text-muted);
+  color: var(--ink-muted);
   margin-bottom: 6px;
 }
 
@@ -134,20 +137,28 @@ input[type="text"],
 input[type="password"],
 select {
   width: 100%;
-  background: var(--surface-alt);
-  border: 1px solid var(--line);
-  color: var(--text);
-  border-radius: 8px;
+  background: var(--surface-raised);
+  border: 1px solid var(--rule);
+  color: var(--ink);
+  border-radius: var(--radius-panel);
   padding: 10px 12px;
   font-size: 14px;
-  font-family: "IBM Plex Mono", monospace;
+  font-family: inherit;
   margin-bottom: 14px;
+}
+
+/* Kode/token-felt: monospace er her en reell funksjon (lettere å lese tegn for tegn) */
+#patInput,
+#codeInput,
+#unlockCodeInput {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  letter-spacing: 0.03em;
 }
 
 input:focus,
 select:focus,
 button:focus-visible {
-  outline: 2px solid var(--yellow);
+  outline: 2px solid var(--claim);
   outline-offset: 1px;
 }
 
@@ -159,21 +170,21 @@ button:focus-visible {
 
 .hint {
   font-size: 12px;
-  color: var(--text-muted);
+  color: var(--ink-muted);
   margin-top: -8px;
   margin-bottom: 14px;
 }
 
 button.primary {
-  background: var(--yellow);
-  color: #14181d;
+  background: var(--claim);
+  color: #fff5ee;
   border: none;
-  font-weight: 600;
-  border-radius: 8px;
+  font-weight: 700;
+  border-radius: var(--radius-panel);
   padding: 11px 18px;
   font-size: 14px;
   cursor: pointer;
-  font-family: "Work Sans", sans-serif;
+  font-family: "Archivo", sans-serif;
 }
 
 button.primary:hover {
@@ -187,69 +198,62 @@ button.primary:disabled {
 
 button.ghost {
   background: none;
-  border: 1px solid var(--line);
-  color: var(--text);
-  border-radius: 8px;
+  border: 1px solid var(--rule);
+  color: var(--ink);
+  border-radius: var(--radius-panel);
   padding: 10px 16px;
   font-size: 14px;
   cursor: pointer;
-  font-family: "Work Sans", sans-serif;
+  font-family: inherit;
 }
 
 button.ghost:hover {
-  border-color: var(--text-muted);
+  border-color: var(--ink-muted);
 }
 
-/* --- Rutekort ("manifest") --- */
+/* --- Rute-billetter: stanset hull i kantene, som en avrevet billettstubb --- */
 
 .route-list {
   display: flex;
   flex-direction: column;
+  gap: 14px;
 }
 
 .route-card {
-  padding: 16px 4px;
   position: relative;
+  background: var(--surface-raised);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-card);
+  padding: 16px 22px;
 }
 
-.route-card:not(:last-child) {
-  border-bottom: none;
+.route-card::before,
+.route-card::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 50%;
 }
 
-.lane-divider {
-  height: 1px;
-  background-image: repeating-linear-gradient(
-    to right,
-    var(--line) 0,
-    var(--line) 10px,
-    transparent 10px,
-    transparent 18px
-  );
-  background-size: 200% 100%;
-  animation: drive 6s linear infinite;
+.route-card::before {
+  left: -8px;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .lane-divider {
-    animation: none;
-  }
-}
-
-@keyframes drive {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: -200px 0;
-  }
+.route-card::after {
+  right: -8px;
 }
 
 .route-row {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   gap: 10px;
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 14.5px;
+  font-size: 15px;
+  font-weight: 600;
 }
 
 .route-from,
@@ -262,47 +266,27 @@ button.ghost:hover {
 }
 
 .route-arrow {
-  color: var(--yellow);
+  color: var(--claim);
   font-size: 15px;
 }
 
 .route-meta {
-  font-size: 12px;
-  color: var(--text-muted);
-  margin-top: 6px;
-  text-align: center;
-}
-
-.available-group {
-  margin-bottom: 28px;
-}
-
-.available-group:last-child {
-  margin-bottom: 0;
-}
-
-.available-group-title {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--yellow);
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-  margin: 0 0 12px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid var(--line);
+  font-size: 12.5px;
+  color: var(--ink-muted);
+  margin-top: 8px;
+  line-height: 1.6;
 }
 
 .remove-btn {
   display: block;
-  margin: 10px auto 0;
+  margin: 10px 0 0;
   background: none;
   border: none;
-  color: var(--danger);
+  color: var(--claim);
   font-size: 12px;
   cursor: pointer;
-  font-family: "Work Sans", sans-serif;
-  padding: 4px 8px;
+  font-family: inherit;
+  padding: 0;
 }
 
 .remove-btn:hover {
@@ -310,9 +294,8 @@ button.ghost:hover {
 }
 
 .empty-state {
-  text-align: center;
-  color: var(--text-muted);
-  padding: 24px 8px;
+  color: var(--ink-muted);
+  padding: 8px 2px;
   font-size: 14px;
 }
 
@@ -326,19 +309,19 @@ button.ghost:hover {
 
 .mode-toggle button {
   flex: 1;
-  background: var(--surface-alt);
-  border: 1px solid var(--line);
-  color: var(--text-muted);
-  border-radius: 8px;
+  background: var(--surface-raised);
+  border: 1px solid var(--rule);
+  color: var(--ink-muted);
+  border-radius: var(--radius-panel);
   padding: 9px;
   font-size: 13px;
   cursor: pointer;
-  font-family: "Work Sans", sans-serif;
+  font-family: inherit;
 }
 
 .mode-toggle button.active {
-  border-color: var(--yellow);
-  color: var(--yellow);
+  border-color: var(--claim);
+  color: var(--claim);
 }
 
 .add-grid {
@@ -349,7 +332,7 @@ button.ghost:hover {
 }
 
 .add-grid .arrow-col {
-  color: var(--yellow);
+  color: var(--claim);
   padding-bottom: 24px;
   font-size: 16px;
 }
@@ -367,10 +350,28 @@ button.ghost:hover {
   }
 }
 
+/* --- Grupperte tilgjengelighets-seksjoner --- */
+
+.available-group {
+  margin-bottom: 26px;
+}
+
+.available-group:last-child {
+  margin-bottom: 0;
+}
+
+.available-group-title {
+  font-family: "Archivo", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0 0 12px;
+}
+
 /* --- Statusmeldinger --- */
 
 .status {
-  border-radius: 8px;
+  border-radius: var(--radius-panel);
   padding: 10px 14px;
   font-size: 13px;
   margin-bottom: 16px;
@@ -382,26 +383,25 @@ button.ghost:hover {
 }
 
 .status.error {
-  background: rgba(228, 87, 46, 0.12);
-  color: #ff8f66;
-  border: 1px solid rgba(228, 87, 46, 0.35);
+  background: var(--claim-soft);
+  color: #ff9269;
+  border: 1px solid rgba(194, 69, 31, 0.35);
 }
 
 .status.success {
-  background: rgba(76, 175, 125, 0.12);
-  color: #7fd9ab;
-  border: 1px solid rgba(76, 175, 125, 0.35);
+  background: var(--route-soft);
+  color: #a7d187;
+  border: 1px solid rgba(127, 160, 92, 0.35);
 }
 
 .status.info {
-  background: rgba(61, 179, 174, 0.1);
-  color: var(--teal);
-  border: 1px solid rgba(61, 179, 174, 0.3);
+  background: rgba(148, 140, 124, 0.12);
+  color: var(--ink-muted);
+  border: 1px solid var(--rule);
 }
 
 footer.foot {
-  text-align: center;
-  color: var(--text-muted);
+  color: var(--ink-muted);
   font-size: 12px;
   margin-top: 32px;
 }
