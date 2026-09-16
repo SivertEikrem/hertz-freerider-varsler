@@ -224,10 +224,11 @@ function matchesWatch(route, watch) {
   return true;
 }
 
-function populateSelect(select, mode) {
+function populateDatalist(datalistId, mode) {
   const items = mode === "station" ? stations : cities;
-  select.innerHTML = items
-    .map((name) => `<option value="${escapeHtml(name)}">${escapeHtml(name)}</option>`)
+  const datalist = document.getElementById(datalistId);
+  datalist.innerHTML = items
+    .map((name) => `<option value="${escapeHtml(name)}"></option>`)
     .join("");
 }
 
@@ -279,6 +280,7 @@ function renderRoutes() {
       markDirty();
       renderRoutes();
       renderAvailable();
+      updateStatsLine();
     });
   });
 }
@@ -303,46 +305,116 @@ function formatDate(iso) {
   return `${ukedag} ${d.getDate()}. ${NORSKE_MAANEDER[d.getMonth()]} kl. ${hh}:${mm}`;
 }
 
+/** Returnerer {text, urgent} - en kort "om X timer/dager"-tekst, og om det haster (< 24t). */
+function timeUntil(iso) {
+  if (!iso) return { text: "", urgent: false };
+  const diffMs = new Date(iso).getTime() - Date.now();
+  if (isNaN(diffMs)) return { text: "", urgent: false };
+  if (diffMs <= 0) return { text: "utløpt", urgent: true };
+
+  const diffMin = Math.round(diffMs / 60000);
+  const hours = Math.floor(diffMin / 60);
+  const days = Math.floor(hours / 24);
+
+  let text;
+  if (days >= 1) {
+    text = `om ${days} dag${days === 1 ? "" : "er"}`;
+  } else if (hours >= 1) {
+    text = `om ${hours} time${hours === 1 ? "" : "r"}`;
+  } else {
+    text = `om ${diffMin} min`;
+  }
+  return { text, urgent: hours < 24 };
+}
+
+function updateStatsLine() {
+  const el = $("statsLine");
+  if (!el) return;
+  const antallRuter = watches.length;
+  const antallBiler = watches.reduce(
+    (sum, w) => sum + liveRoutes.filter((r) => matchesWatch(r, w)).length,
+    0
+  );
+  if (antallRuter === 0) {
+    el.textContent = "";
+    return;
+  }
+  el.textContent = `${antallRuter} rute${antallRuter === 1 ? "" : "r"} overvåkes \u00b7 ${antallBiler} bil${
+    antallBiler === 1 ? "" : "er"
+  } tilgjengelig n\u00e5`;
+  document.title = antallBiler > 0 ? `(${antallBiler}) Freerider-ruter` : "Freerider-ruter";
+}
+
+let refreshTimer = null;
+
+function startAutoRefresh() {
+  if (refreshTimer) clearInterval(refreshTimer);
+  refreshTimer = setInterval(async () => {
+    await loadLiveRoutes();
+    renderAvailable();
+    updateStatsLine();
+  }, 3 * 60 * 1000); // hvert 3. minutt
+}
+
 function renderAvailable() {
-  const list = $("availableList");
+  const container = $("availableList");
 
   if (watches.length === 0) {
-    list.innerHTML = `<div class="empty-state">Legg til en rute for å se tilgjengelige biler her.</div>`;
+    container.innerHTML = `<div class="empty-state">Legg til en rute for å se tilgjengelige biler her.</div>`;
     return;
   }
 
-  const seen = new Set();
-  const matched = [];
-  for (const route of liveRoutes) {
-    if (!watches.some((w) => matchesWatch(route, w))) continue;
-    const key = `${route.from}|${route.to}|${route.available_at}|${route.car_model}`;
-    if (seen.has(key)) continue;
-    seen.add(key);
-    matched.push(route);
-  }
+  const query = ($("availableFilterInput").value || "").trim().toLowerCase();
 
-  if (matched.length === 0) {
-    list.innerHTML = `<div class="empty-state">Ingen ledige biler akkurat n\u00e5 for rutene dine.</div>`;
-    return;
-  }
+  container.innerHTML = watches
+    .map((watch) => {
+      const { from, to } = describeWatch(watch);
+      let matches = liveRoutes.filter((r) => matchesWatch(r, watch));
 
-  list.innerHTML = matched
-    .map(
-      (r, i) => `
-      <div class="route-card">
-        <div class="route-row">
-          <span class="route-from">${escapeHtml(r.from)}</span>
-          <span class="route-arrow">&#8594;</span>
-          <span class="route-to">${escapeHtml(r.to)}</span>
+      if (query) {
+        matches = matches.filter((r) =>
+          [r.from, r.from_city, r.to, r.to_city, r.car_model]
+            .join(" ")
+            .toLowerCase()
+            .includes(query)
+        );
+      }
+
+      const bodyHtml =
+        matches.length === 0
+          ? `<div class="empty-state">${
+              query ? "Ingen treff på filteret." : "Ingen ledige biler akkurat nå."
+            }</div>`
+          : matches
+              .map((r, i) => {
+                const countdown = timeUntil(r.expire_time);
+                return `
+              <div class="route-card">
+                <div class="route-row">
+                  <span class="route-from">${escapeHtml(r.from)}</span>
+                  <span class="route-arrow">&#8594;</span>
+                  <span class="route-to">${escapeHtml(r.to)}</span>
+                </div>
+                <div class="route-meta">
+                  ${escapeHtml(r.car_model)}<br />
+                  Tilgjengelig fra ${formatDate(r.available_at)}<br />
+                  <span class="${countdown.urgent ? "urgent" : ""}">Hentefrist ${formatDate(
+                  r.expire_time
+                )}${countdown.text ? ` (${countdown.text})` : ""}</span>
+                </div>
+              </div>
+              ${i < matches.length - 1 ? '<div class="lane-divider"></div>' : ""}
+            `;
+              })
+              .join("");
+
+      return `
+        <div class="available-group">
+          <h3 class="available-group-title">${escapeHtml(from)} &#8594; ${escapeHtml(to)}</h3>
+          ${bodyHtml}
         </div>
-        <div class="route-meta">
-          ${escapeHtml(r.car_model)}<br />
-          Tilgjengelig fra ${formatDate(r.available_at)} &middot; hentefrist ${formatDate(r.expire_time)}
-        </div>
-      </div>
-      ${i < matched.length - 1 ? '<div class="lane-divider"></div>' : ""}
-    `
-    )
+      `;
+    })
     .join("");
 }
 
@@ -452,28 +524,41 @@ function setupModeToggle(toggleEl, onChange) {
 
 setupModeToggle($("fromModeToggle"), (mode) => {
   fromMode = mode;
-  populateSelect($("fromSelect"), fromMode);
+  $("fromSelect").value = "";
+  populateDatalist("fromDatalist", fromMode);
 });
 
 setupModeToggle($("toModeToggle"), (mode) => {
   toMode = mode;
-  populateSelect($("toSelect"), toMode);
+  $("toSelect").value = "";
+  populateDatalist("toDatalist", toMode);
 });
 
+$("availableFilterInput").addEventListener("input", renderAvailable);
+
 $("addRouteBtn").addEventListener("click", () => {
-  const fromValue = $("fromSelect").value;
-  const toValue = $("toSelect").value;
+  const fromValue = $("fromSelect").value.trim();
+  const toValue = $("toSelect").value.trim();
   if (!fromValue || !toValue) {
     showStatus("Velg både fra og til før du legger til.", "error");
+    return;
+  }
+  const fromItems = fromMode === "station" ? stations : cities;
+  const toItems = toMode === "station" ? stations : cities;
+  if (!fromItems.includes(fromValue) || !toItems.includes(toValue)) {
+    showStatus("Velg et gyldig alternativ fra listen (bruk søkeforslagene).", "error");
     return;
   }
   const watch = {};
   watch[fromMode === "station" ? "from" : "from_city"] = fromValue;
   watch[toMode === "station" ? "to" : "to_city"] = toValue;
   watches.push(watch);
+  $("fromSelect").value = "";
+  $("toSelect").value = "";
   markDirty();
   renderRoutes();
   renderAvailable();
+  updateStatsLine();
   clearStatus();
 });
 
@@ -499,12 +584,14 @@ async function startApp() {
   showStatus("Henter data...", "info");
   try {
     await Promise.all([loadConfig(), loadStations(), loadLiveRoutes()]);
-    populateSelect($("fromSelect"), fromMode);
-    populateSelect($("toSelect"), toMode);
+    populateDatalist("fromDatalist", fromMode);
+    populateDatalist("toDatalist", toMode);
     renderRoutes();
     renderAvailable();
+    updateStatsLine();
     showAppPanels(true);
     clearStatus();
+    startAutoRefresh();
   } catch (err) {
     showStatus(`Kunne ikke koble til: ${err.message}`, "error");
   }
