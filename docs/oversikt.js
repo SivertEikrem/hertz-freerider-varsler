@@ -48,6 +48,28 @@ function timeAgo(iso) {
   return `${hours} time${hours === 1 ? "" : "r"} siden`;
 }
 
+/** Returnerer {text, urgent} - en kort "om X timer/dager"-tekst, og om det haster (< 24t). */
+function timeUntil(iso) {
+  if (!iso) return { text: "", urgent: false };
+  const diffMs = new Date(iso).getTime() - Date.now();
+  if (isNaN(diffMs)) return { text: "", urgent: false };
+  if (diffMs <= 0) return { text: "utløpt", urgent: true };
+
+  const diffMin = Math.round(diffMs / 60000);
+  const hours = Math.floor(diffMin / 60);
+  const days = Math.floor(hours / 24);
+
+  let text;
+  if (days >= 1) {
+    text = `om ${days} dag${days === 1 ? "" : "er"}`;
+  } else if (hours >= 1) {
+    text = `om ${hours} time${hours === 1 ? "" : "r"}`;
+  } else {
+    text = `om ${diffMin} min`;
+  }
+  return { text, urgent: hours < 24 };
+}
+
 /* ---------- Sortering ---------- */
 
 function compareRoutes(a, b) {
@@ -106,7 +128,9 @@ function render(routes) {
     return;
   }
   list.innerHTML = routes
-    .map((r, i) => `
+    .map((r, i) => {
+      const countdown = timeUntil(r.expire_time);
+      return `
       <div class="route-card">
         <div class="route-row">
           <span class="route-from">${escapeHtml(r.from)}</span>
@@ -115,13 +139,19 @@ function render(routes) {
         </div>
         <div class="route-meta">
           ${escapeHtml(r.car_model)}<br />
-          Tilgjengelig fra ${formatDate(r.available_at)} &middot; hentefrist ${formatDate(r.expire_time)}
+          Tilgjengelig fra ${formatDate(r.available_at)}<br />
+          <span class="${countdown.urgent ? "urgent" : ""}">Hentefrist ${formatDate(r.expire_time)}${
+        countdown.text ? ` (${countdown.text})` : ""
+      }</span>
         </div>
       </div>
       ${i < routes.length - 1 ? '<div class="lane-divider"></div>' : ""}
-    `)
+    `;
+    })
     .join("");
 }
+
+let lastUpdatedAt = null;
 
 async function load() {
   try {
@@ -129,12 +159,25 @@ async function load() {
     if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
     const data = await resp.json();
     allRoutes = data.routes || [];
-    $("updatedLine").textContent = `${allRoutes.length} ledige biler - sist oppdatert ${timeAgo(data.updated_at)}`;
+    lastUpdatedAt = data.updated_at;
+    updateUpdatedLine();
     applySortAndFilter();
+    document.title = allRoutes.length > 0 ? `(${allRoutes.length}) Ledige biler` : "Ledige biler - Freerider";
   } catch (err) {
     $("updatedLine").textContent = "Kunne ikke laste listen.";
     $("liveList").innerHTML = `<div class="empty-state">Fant ikke live-routes.json ennå. Den opprettes av botten ved neste kjøring.</div>`;
   }
 }
+
+function updateUpdatedLine() {
+  if (!lastUpdatedAt) return;
+  $("updatedLine").textContent = `${allRoutes.length} ledige biler - sist oppdatert ${timeAgo(lastUpdatedAt)}`;
+}
+
+// Frisk opp "sist oppdatert for X minutter siden"-teksten jevnlig, uten å hente nye data
+setInterval(updateUpdatedLine, 30 * 1000);
+
+// Hent faktisk nye data hvert 3. minutt
+setInterval(load, 3 * 60 * 1000);
 
 load();
