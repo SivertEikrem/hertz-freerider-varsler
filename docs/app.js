@@ -268,7 +268,6 @@ function renderRoutes() {
           </div>
           <button class="remove-btn" data-index="${i}" type="button">Fjern denne ruten</button>
         </div>
-        ${i < watches.length - 1 ? '<div class="lane-divider"></div>' : ""}
       `;
     })
     .join("");
@@ -339,7 +338,7 @@ function updateStatsLine() {
     el.textContent = "";
     return;
   }
-  el.textContent = `${antallRuter} rute${antallRuter === 1 ? "" : "r"} overvåkes \u00b7 ${antallBiler} bil${
+  el.textContent = `${antallRuter} rute${antallRuter === 1 ? "" : "r"} overvåkes, ${antallBiler} bil${
     antallBiler === 1 ? "" : "er"
   } tilgjengelig n\u00e5`;
   document.title = antallBiler > 0 ? `(${antallBiler}) Freerider-ruter` : "Freerider-ruter";
@@ -403,7 +402,6 @@ function renderAvailable() {
                 )}${countdown.text ? ` (${countdown.text})` : ""}</span>
                 </div>
               </div>
-              ${i < matches.length - 1 ? '<div class="lane-divider"></div>' : ""}
             `;
               })
               .join("");
