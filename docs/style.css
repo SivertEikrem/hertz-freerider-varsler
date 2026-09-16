@@ -70,7 +70,19 @@ h1 span.free {
 .subtitle {
   color: var(--text-muted);
   font-size: 14px;
+  margin: 0 0 8px;
+}
+
+.stats-line {
+  font-family: "IBM Plex Mono", monospace;
+  color: var(--teal);
+  font-size: 12.5px;
   margin: 0 0 24px;
+}
+
+.urgent {
+  color: var(--danger);
+  font-weight: 500;
 }
 
 button.icon-btn {
