@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-16T12:50:54.876446+00:00",
+  "updated_at": "2026-09-16T17:16:17.783244+00:00",
   "routes": [
     {
       "from": "EVENES LUFTHAVN",
@@ -52,16 +52,6 @@
       "expire_time": "2026-09-18T22:36:00"
     },
     {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "OSLO",
-      "to": "STAVANGER LUFTHAVN",
-      "to_city": "STAVANGER",
-      "car_model": "TOYOTA YARIS CROSS 5D AUT HYBR",
-      "available_at": "2026-09-09T08:00:00",
-      "latest_return": "2026-09-19T08:00:00",
-      "expire_time": "2026-09-18T22:36:00"
-    },
-    {
       "from": "KRISTIANSUND LUFTHAVN",
       "from_city": "KRISTIANSUND",
       "to": "STAVANGER LUFTHAVN",
@@ -100,16 +90,6 @@
       "available_at": "2026-09-10T07:45:00",
       "latest_return": "2026-09-18T18:46:00",
       "expire_time": "2026-09-18T06:48:00"
-    },
-    {
-      "from": "SVOLVÆR LUFTHAVN",
-      "from_city": "SVOLVÆR",
-      "to": "Kiruna AP",
-      "to_city": "KIRUNA",
-      "car_model": "KIA SPORTAGE SUV 4X4 AUT PHEV",
-      "available_at": "2026-09-10T12:30:00",
-      "latest_return": "2026-09-16T21:45:00",
-      "expire_time": "2026-09-16T15:14:00"
     },
     {
       "from": "ÅLESUND LUFTHAVN",
@@ -434,29 +414,9 @@
     {
       "from": "OSLO LUFTHAVN",
       "from_city": "OSLO",
-      "to": "ARENDAL",
-      "to_city": "ARENDAL",
-      "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
-      "available_at": "2026-09-16T07:30:00",
-      "latest_return": "2026-09-18T18:00:00",
-      "expire_time": "2026-09-18T13:39:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "OSLO",
       "to": "GRIMSTAD",
       "to_city": "GRIMSTAD",
       "car_model": "TOYOTA YARIS CROSS 5D AUT HYBR",
-      "available_at": "2026-09-16T07:30:00",
-      "latest_return": "2026-09-18T18:00:00",
-      "expire_time": "2026-09-18T13:24:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "OSLO",
-      "to": "GRIMSTAD",
-      "to_city": "GRIMSTAD",
-      "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
       "available_at": "2026-09-16T07:30:00",
       "latest_return": "2026-09-18T18:00:00",
       "expire_time": "2026-09-18T13:24:00"
