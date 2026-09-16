@@ -145,7 +145,6 @@ function render(routes) {
       }</span>
         </div>
       </div>
-      ${i < routes.length - 1 ? '<div class="lane-divider"></div>' : ""}
     `;
     })
     .join("");
