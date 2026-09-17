@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-17T19:14:34.727037+00:00",
+  "updated_at": "2026-09-17T22:10:04.941938+00:00",
   "routes": [
     {
       "from": "EVENES LUFTHAVN",
@@ -660,46 +660,6 @@
       "available_at": "2026-09-17T13:30:00",
       "latest_return": "2026-09-22T15:38:00",
       "expire_time": "2026-09-22T03:11:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "OSLO",
-      "to": "BERGEN KOKSTAD",
-      "to_city": "BERGEN",
-      "car_model": "HONGQI EH7 11KWH AUT ELECTRIC",
-      "available_at": "2026-09-17T14:00:00",
-      "latest_return": "2026-09-20T20:00:00",
-      "expire_time": "2026-09-20T11:26:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "OSLO",
-      "to": "BERGEN LUFTHAVN",
-      "to_city": "BERGEN",
-      "car_model": "HONGQI EH7 11KWH AUT ELECTRIC",
-      "available_at": "2026-09-17T14:00:00",
-      "latest_return": "2026-09-20T20:00:00",
-      "expire_time": "2026-09-20T11:27:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "OSLO",
-      "to": "BERGEN MINDE",
-      "to_city": "BERGEN",
-      "car_model": "HONGQI EH7 11KWH AUT ELECTRIC",
-      "available_at": "2026-09-17T14:00:00",
-      "latest_return": "2026-09-20T20:00:00",
-      "expire_time": "2026-09-20T11:32:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "OSLO",
-      "to": "BERGEN ÅSANE",
-      "to_city": "BERGEN",
-      "car_model": "HONGQI EH7 11KWH AUT ELECTRIC",
-      "available_at": "2026-09-17T14:00:00",
-      "latest_return": "2026-09-20T20:00:00",
-      "expire_time": "2026-09-20T11:45:00"
     },
     {
       "from": "MOLDE LUFTHAVN",
