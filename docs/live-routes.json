@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-17T01:20:58.342965+00:00",
+  "updated_at": "2026-09-17T06:14:53.847033+00:00",
   "routes": [
     {
       "from": "EVENES LUFTHAVN",
@@ -112,26 +112,6 @@
       "expire_time": "2026-09-19T07:54:00"
     },
     {
-      "from": "BERGEN LUFTHAVN",
-      "from_city": "BERGEN",
-      "to": "TRONDHEIM LUFTHAVN",
-      "to_city": "TRONDHEIM",
-      "car_model": "FORD EXPLORER 77KWH 4X4 AUT EL",
-      "available_at": "2026-09-13T12:15:00",
-      "latest_return": "2026-09-17T14:15:00",
-      "expire_time": "2026-09-17T02:02:00"
-    },
-    {
-      "from": "BERGEN LUFTHAVN",
-      "from_city": "BERGEN",
-      "to": "ÅLESUND LUFTHAVN",
-      "to_city": "ÅLESUND",
-      "car_model": "FORD EXPLORER 77KWH 4X4 AUT EL",
-      "available_at": "2026-09-13T12:15:00",
-      "latest_return": "2026-09-17T14:21:00",
-      "expire_time": "2026-09-17T05:24:00"
-    },
-    {
       "from": "EVENES LUFTHAVN",
       "from_city": "LILAND",
       "to": "BODØ SENTRUM",
@@ -140,6 +120,26 @@
       "available_at": "2026-09-13T15:00:00",
       "latest_return": "2026-09-18T15:00:00",
       "expire_time": "2026-09-18T08:32:00"
+    },
+    {
+      "from": "OSLO SENTRUM",
+      "from_city": "OSLO",
+      "to": "TRONDHEIM LUFTHAVN",
+      "to_city": "TRONDHEIM",
+      "car_model": "POLESTAR 4 SUV 94KWH 4X4 AUT E",
+      "available_at": "2026-09-14T07:00:00",
+      "latest_return": "2026-09-18T14:00:00",
+      "expire_time": "2026-09-18T05:42:00"
+    },
+    {
+      "from": "OSLO SENTRUM",
+      "from_city": "OSLO",
+      "to": "TRONDHEIM SLUPPEN",
+      "to_city": "TRONDHEIM",
+      "car_model": "POLESTAR 4 SUV 94KWH 4X4 AUT E",
+      "available_at": "2026-09-14T07:00:00",
+      "latest_return": "2026-09-18T14:11:00",
+      "expire_time": "2026-09-18T06:35:00"
     },
     {
       "from": "LILLEHAMMER",
