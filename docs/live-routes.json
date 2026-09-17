@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-17T11:41:50.500220+00:00",
+  "updated_at": "2026-09-17T15:39:12.421669+00:00",
   "routes": [
     {
       "from": "EVENES LUFTHAVN",
@@ -110,16 +110,6 @@
       "available_at": "2026-09-11T10:30:00",
       "latest_return": "2026-09-19T10:30:00",
       "expire_time": "2026-09-18T19:52:00"
-    },
-    {
-      "from": "EVENES LUFTHAVN",
-      "from_city": "LILAND",
-      "to": "BODØ SENTRUM",
-      "to_city": "BODØ",
-      "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
-      "available_at": "2026-09-13T15:00:00",
-      "latest_return": "2026-09-18T15:00:00",
-      "expire_time": "2026-09-18T08:32:00"
     },
     {
       "from": "OSLO SENTRUM",
@@ -292,6 +282,16 @@
       "expire_time": "2026-09-18T14:52:00"
     },
     {
+      "from": "Stockholm Centralstation / Self Service Kiosk",
+      "from_city": "STOCKHOLM",
+      "to": "OSLO LUFTHAVN",
+      "to_city": "OSLO",
+      "car_model": "TOYOTA BZ4X AUT 64 KWH BEV",
+      "available_at": "2026-09-15T06:00:00",
+      "latest_return": "2026-09-19T06:00:00",
+      "expire_time": "2026-09-18T22:15:00"
+    },
+    {
       "from": "ÅLESUND LUFTHAVN",
       "from_city": "ÅLESUND",
       "to": "STAVANGER LUFTHAVN",
@@ -300,16 +300,6 @@
       "available_at": "2026-09-15T06:45:00",
       "latest_return": "2026-09-19T06:45:00",
       "expire_time": "2026-09-18T16:08:00"
-    },
-    {
-      "from": "LEKNES LUFTHAVN",
-      "from_city": "LEKNES",
-      "to": "BODØ LUFTHAVN",
-      "to_city": "BODØ",
-      "car_model": "SKODA ELROQ 58KWH AUT ELECTRIC",
-      "available_at": "2026-09-15T07:30:00",
-      "latest_return": "2026-09-20T14:30:00",
-      "expire_time": "2026-09-20T09:21:00"
     },
     {
       "from": "ARENDAL",
@@ -472,26 +462,6 @@
       "expire_time": "2026-09-19T15:58:00"
     },
     {
-      "from": "ASKER BILLINGSTAD",
-      "from_city": "BILLINGSTAD",
-      "to": "BERGEN LUFTHAVN",
-      "to_city": "BERGEN",
-      "car_model": "TOYOTA PROACE 9-SETER DIESEL",
-      "available_at": "2026-09-17T07:15:00",
-      "latest_return": "2026-09-18T21:22:00",
-      "expire_time": "2026-09-18T13:02:00"
-    },
-    {
-      "from": "ASKER BILLINGSTAD",
-      "from_city": "BILLINGSTAD",
-      "to": "BERGEN MINDE",
-      "to_city": "BERGEN",
-      "car_model": "TOYOTA PROACE 9-SETER DIESEL",
-      "available_at": "2026-09-17T07:15:00",
-      "latest_return": "2026-09-18T21:15:00",
-      "expire_time": "2026-09-18T12:59:00"
-    },
-    {
       "from": "MO I RANA LUFTHAVN",
       "from_city": "MO I RANA",
       "to": "TRONDHEIM LUFTHAVN",
@@ -632,6 +602,26 @@
       "expire_time": "2026-09-25T03:52:00"
     },
     {
+      "from": "ÅLESUND SENTRUM",
+      "from_city": "ÅLESUND",
+      "to": "TRONDHEIM LUFTHAVN",
+      "to_city": "TRONDHEIM",
+      "car_model": "TOYOTA COROLLA CROSS 2WD AUT H",
+      "available_at": "2026-09-17T12:15:00",
+      "latest_return": "2026-09-26T21:45:00",
+      "expire_time": "2026-09-26T15:23:00"
+    },
+    {
+      "from": "ÅLESUND SENTRUM",
+      "from_city": "ÅLESUND",
+      "to": "TRONDHEIM SLUPPEN",
+      "to_city": "TRONDHEIM",
+      "car_model": "TOYOTA COROLLA CROSS 2WD AUT H",
+      "available_at": "2026-09-17T12:15:00",
+      "latest_return": "2026-09-26T21:45:00",
+      "expire_time": "2026-09-26T15:57:00"
+    },
+    {
       "from": "KIRKENES LUFTHAVN",
       "from_city": "KIRKENES",
       "to": "BODØ LUFTHAVN",
@@ -670,6 +660,46 @@
       "available_at": "2026-09-17T13:30:00",
       "latest_return": "2026-09-22T15:38:00",
       "expire_time": "2026-09-22T03:11:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "OSLO",
+      "to": "BERGEN KOKSTAD",
+      "to_city": "BERGEN",
+      "car_model": "HONGQI EH7 11KWH AUT ELECTRIC",
+      "available_at": "2026-09-17T14:00:00",
+      "latest_return": "2026-09-20T20:00:00",
+      "expire_time": "2026-09-20T11:26:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "OSLO",
+      "to": "BERGEN LUFTHAVN",
+      "to_city": "BERGEN",
+      "car_model": "HONGQI EH7 11KWH AUT ELECTRIC",
+      "available_at": "2026-09-17T14:00:00",
+      "latest_return": "2026-09-20T20:00:00",
+      "expire_time": "2026-09-20T11:27:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "OSLO",
+      "to": "BERGEN MINDE",
+      "to_city": "BERGEN",
+      "car_model": "HONGQI EH7 11KWH AUT ELECTRIC",
+      "available_at": "2026-09-17T14:00:00",
+      "latest_return": "2026-09-20T20:00:00",
+      "expire_time": "2026-09-20T11:32:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "OSLO",
+      "to": "BERGEN ÅSANE",
+      "to_city": "BERGEN",
+      "car_model": "HONGQI EH7 11KWH AUT ELECTRIC",
+      "available_at": "2026-09-17T14:00:00",
+      "latest_return": "2026-09-20T20:00:00",
+      "expire_time": "2026-09-20T11:45:00"
     },
     {
       "from": "MOLDE LUFTHAVN",
