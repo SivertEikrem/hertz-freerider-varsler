@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-18T21:50:48.167339+00:00",
+  "updated_at": "2026-09-18T23:41:56.629639+00:00",
   "routes": [
     {
       "from": "KRISTIANSUND LUFTHAVN",
@@ -457,6 +457,16 @@
       "to": "STAVANGER LUFTHAVN",
       "to_city": "STAVANGER",
       "car_model": "MG HS SUV 2WD AUT PHEV",
+      "available_at": "2026-09-18T05:15:00",
+      "latest_return": "2026-09-22T05:15:00",
+      "expire_time": "2026-09-21T20:15:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "OSLO",
+      "to": "STAVANGER LUFTHAVN",
+      "to_city": "STAVANGER",
+      "car_model": "VOLVO EX30 SUV 64KWH 4X4 AUT E",
       "available_at": "2026-09-18T05:15:00",
       "latest_return": "2026-09-22T05:15:00",
       "expire_time": "2026-09-21T20:15:00"
