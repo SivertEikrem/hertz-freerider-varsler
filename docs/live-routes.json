@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-20T01:36:28.813011+00:00",
+  "updated_at": "2026-09-20T06:58:43.257079+00:00",
   "routes": [
     {
       "from": "KRISTIANSUND LUFTHAVN",
@@ -270,6 +270,26 @@
       "available_at": "2026-09-17T08:00:00",
       "latest_return": "2026-09-22T08:04:00",
       "expire_time": "2026-09-22T01:43:00"
+    },
+    {
+      "from": "Borås, Borås Bil / Self Service Kiosk",
+      "from_city": "BORÅS",
+      "to": "OSLO LUFTHAVN",
+      "to_city": "OSLO",
+      "car_model": "VOLVO C40 RECH S 69KWH AUT PLU",
+      "available_at": "2026-09-17T10:00:00",
+      "latest_return": "2026-09-25T10:11:00",
+      "expire_time": "2026-09-25T04:52:00"
+    },
+    {
+      "from": "Borås, Borås Bil / Self Service Kiosk",
+      "from_city": "BORÅS",
+      "to": "OSLO SENTRALSTASJON",
+      "to_city": "OSLO",
+      "car_model": "VOLVO C40 RECH S 69KWH AUT PLU",
+      "available_at": "2026-09-17T10:00:00",
+      "latest_return": "2026-09-25T10:00:00",
+      "expire_time": "2026-09-25T03:52:00"
     },
     {
       "from": "ÅLESUND SENTRUM",
