@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-20T06:58:43.257079+00:00",
+  "updated_at": "2026-09-20T12:00:10.713521+00:00",
   "routes": [
     {
       "from": "KRISTIANSUND LUFTHAVN",
@@ -170,26 +170,6 @@
       "available_at": "2026-09-15T06:45:00",
       "latest_return": "2026-09-22T06:45:00",
       "expire_time": "2026-09-21T16:37:00"
-    },
-    {
-      "from": "BERGEN LUFTHAVN",
-      "from_city": "BERGEN",
-      "to": "KRISTIANSAND LUFTHAVN",
-      "to_city": "KRISTIANSAND",
-      "car_model": "TOYOTA YARIS 5D 1,5 HYBRID AUT",
-      "available_at": "2026-09-16T06:45:00",
-      "latest_return": "2026-09-20T21:00:00",
-      "expire_time": "2026-09-20T11:42:00"
-    },
-    {
-      "from": "BERGEN LUFTHAVN",
-      "from_city": "BERGEN",
-      "to": "KRISTIANSAND SENTRUM",
-      "to_city": "KRISTIANSAND",
-      "car_model": "TOYOTA YARIS 5D 1,5 HYBRID AUT",
-      "available_at": "2026-09-16T06:45:00",
-      "latest_return": "2026-09-20T21:00:00",
-      "expire_time": "2026-09-20T11:51:00"
     },
     {
       "from": "MO I RANA LUFTHAVN",
@@ -422,16 +402,6 @@
       "expire_time": "2026-09-20T15:17:00"
     },
     {
-      "from": "HAUGESUND LUFTHAVN",
-      "from_city": "HAUGESUND",
-      "to": "STAVANGER LUFTHAVN",
-      "to_city": "STAVANGER",
-      "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
-      "available_at": "2026-09-18T06:30:00",
-      "latest_return": "2026-09-20T13:00:00",
-      "expire_time": "2026-09-20T11:03:00"
-    },
-    {
       "from": "MOLDE LUFTHAVN",
       "from_city": "MOLDE",
       "to": "STAVANGER LUFTHAVN",
@@ -540,36 +510,6 @@
       "available_at": "2026-09-18T11:00:00",
       "latest_return": "2026-09-22T11:00:00",
       "expire_time": "2026-09-21T20:14:00"
-    },
-    {
-      "from": "STRYN",
-      "from_city": "STRYN",
-      "to": "BERGEN LUFTHAVN",
-      "to_city": "BERGEN",
-      "car_model": "TOYOTA COROLLA CROSS 4WD AUT H",
-      "available_at": "2026-09-18T11:00:00",
-      "latest_return": "2026-09-22T11:10:00",
-      "expire_time": "2026-09-22T04:49:00"
-    },
-    {
-      "from": "STRYN",
-      "from_city": "STRYN",
-      "to": "OSLO LUFTHAVN",
-      "to_city": "OSLO",
-      "car_model": "TOYOTA COROLLA CROSS 4WD AUT H",
-      "available_at": "2026-09-18T11:00:00",
-      "latest_return": "2026-09-22T11:10:00",
-      "expire_time": "2026-09-22T04:14:00"
-    },
-    {
-      "from": "STRYN",
-      "from_city": "STRYN",
-      "to": "STAVANGER LUFTHAVN",
-      "to_city": "STAVANGER",
-      "car_model": "TOYOTA COROLLA CROSS 4WD AUT H",
-      "available_at": "2026-09-18T11:00:00",
-      "latest_return": "2026-09-22T11:00:00",
-      "expire_time": "2026-09-21T23:29:00"
     },
     {
       "from": "TRONDHEIM LUFTHAVN",
