@@ -1,16 +1,6 @@
 {
-  "updated_at": "2026-09-21T13:03:27.251141+00:00",
+  "updated_at": "2026-09-21T18:38:26.664955+00:00",
   "routes": [
-    {
-      "from": "KRISTIANSUND LUFTHAVN",
-      "from_city": "KRISTIANSUND",
-      "to": "STAVANGER LUFTHAVN",
-      "to_city": "STAVANGER",
-      "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
-      "available_at": "2026-09-09T08:45:00",
-      "latest_return": "2026-09-22T08:45:00",
-      "expire_time": "2026-09-21T16:35:00"
-    },
     {
       "from": "ÅLESUND LUFTHAVN",
       "from_city": "ÅLESUND",
@@ -52,16 +42,6 @@
       "expire_time": "2026-09-23T07:48:00"
     },
     {
-      "from": "ÅLESUND LUFTHAVN",
-      "from_city": "ÅLESUND",
-      "to": "STAVANGER LUFTHAVN",
-      "to_city": "STAVANGER",
-      "car_model": "TOYOTA YARIS CROSS 5D AUT HYBR",
-      "available_at": "2026-09-15T06:45:00",
-      "latest_return": "2026-09-22T06:45:00",
-      "expire_time": "2026-09-21T16:37:00"
-    },
-    {
       "from": "MO I RANA LUFTHAVN",
       "from_city": "MO I RANA",
       "to": "TRONDHEIM LUFTHAVN",
@@ -80,26 +60,6 @@
       "available_at": "2026-09-17T07:15:00",
       "latest_return": "2026-09-23T16:29:00",
       "expire_time": "2026-09-23T08:33:00"
-    },
-    {
-      "from": "OSLO ALNABRU",
-      "from_city": "OSLO",
-      "to": "BERGEN LUFTHAVN",
-      "to_city": "BERGEN",
-      "car_model": "VW CARAVELLE 9S TDI 4X4 AUTOMA",
-      "available_at": "2026-09-17T07:15:00",
-      "latest_return": "2026-09-22T21:21:00",
-      "expire_time": "2026-09-22T12:48:00"
-    },
-    {
-      "from": "OSLO ALNABRU",
-      "from_city": "OSLO",
-      "to": "BERGEN MINDE",
-      "to_city": "BERGEN",
-      "car_model": "VW CARAVELLE 9S TDI 4X4 AUTOMA",
-      "available_at": "2026-09-17T07:15:00",
-      "latest_return": "2026-09-22T21:15:00",
-      "expire_time": "2026-09-22T12:45:00"
     },
     {
       "from": "BAERUM FORNEBU SELF SERVICE KIOSK",
@@ -250,16 +210,6 @@
       "available_at": "2026-09-18T05:15:00",
       "latest_return": "2026-09-22T05:15:00",
       "expire_time": "2026-09-21T20:15:00"
-    },
-    {
-      "from": "MOLDE LUFTHAVN",
-      "from_city": "MOLDE",
-      "to": "STAVANGER LUFTHAVN",
-      "to_city": "STAVANGER",
-      "car_model": "TOYOTA YARIS CROSS 5D AUT HYBR",
-      "available_at": "2026-09-18T08:15:00",
-      "latest_return": "2026-09-22T08:15:00",
-      "expire_time": "2026-09-21T17:29:00"
     },
     {
       "from": "TRONDHEIM LUFTHAVN",
