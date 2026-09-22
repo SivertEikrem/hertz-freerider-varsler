@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>Ledige biler — Freerider-ruter</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9A%97%3C/text%3E%3C/svg%3E" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2028%2028%22%3E%3Crect%20width%3D%2228%22%20height%3D%2228%22%20rx%3D%227%22%20fill%3D%22%25230b0f14%22/%3E%3Cpath%20d%3D%22M6%2020%20C%2010%2020%2012%208%2020%208%22%20stroke%3D%22%25234c8dff%22%20stroke-width%3D%222.4%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22/%3E%3Ccircle%20cx%3D%226%22%20cy%3D%2220%22%20r%3D%222.4%22%20fill%3D%22%2523e7ecf2%22/%3E%3Ccircle%20cx%3D%2220%22%20cy%3D%228%22%20r%3D%222.4%22%20fill%3D%22%25234c8dff%22/%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;590;620&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -14,7 +14,15 @@
 
 <nav class="nav">
   <div class="shell nav-row">
-    <a class="brand" href="index.html">Free<span class="accent">rider</span>-ruter</a>
+    <a class="brand" href="index.html">
+      <svg class="brand-mark" viewBox="0 0 28 28" width="26" height="26" aria-hidden="true">
+        <rect width="28" height="28" rx="7" fill="var(--surface-raised)" />
+        <path d="M6 20 C 10 20 12 8 20 8" stroke="var(--accent)" stroke-width="2.4" fill="none" stroke-linecap="round" />
+        <circle cx="6" cy="20" r="2.4" fill="var(--ink)" />
+        <circle cx="20" cy="8" r="2.4" fill="var(--accent)" />
+      </svg>
+      <span class="brand-text">Freerider-ruter</span>
+    </a>
     <div class="nav-links"></div>
     <div class="nav-actions">
       <a class="btn btn-secondary btn-small" href="app.html">Mine ruter</a>
