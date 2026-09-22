@@ -96,6 +96,12 @@
       <h2>Tilgjengelig nå for dine ruter</h2>
     </div>
     <div class="board">
+      <div class="board-map-wrap" id="mapWrap"></div>
+      <p class="board-map-hint">Klikk et punkt for å filtrere listen under.</p>
+      <div id="selectionBar" class="board-selection" style="display:none;">
+        <span id="selectionText"></span>
+        <button type="button" id="clearSelectionBtn">Vis alle &#10005;</button>
+      </div>
       <div class="field" style="margin-bottom: 14px;">
         <input type="text" id="availableFilterInput" placeholder="Filtrer på stasjon, by eller bil …" style="background: var(--surface-raised); border-color: var(--line); color: var(--ink);" />
       </div>
@@ -107,6 +113,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="supabase-client.js"></script>
+<script src="route-map.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
