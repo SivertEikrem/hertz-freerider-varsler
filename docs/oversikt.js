@@ -12,7 +12,7 @@ const LS_SORT_DIR = "ffr_sort_dir";
 let allRoutes = [];
 let sortField = localStorage.getItem(LS_SORT_FIELD) || "available_at";
 let sortDir = localStorage.getItem(LS_SORT_DIR) || "asc";
-let selectedCity = null;
+let selectedCities = null;
 let clearMapSelection = null;
 
 function escapeHtml(str) {
@@ -74,8 +74,8 @@ function applySortAndFilter() {
   const q = $("filterInput").value.trim().toLowerCase();
   let list = allRoutes;
 
-  if (selectedCity) {
-    list = list.filter((r) => r.from_city === selectedCity || r.to_city === selectedCity);
+  if (selectedCities) {
+    list = list.filter((r) => selectedCities.includes(r.from_city) || selectedCities.includes(r.to_city));
   }
   if (q) {
     list = list.filter((r) =>
@@ -110,15 +110,15 @@ $("filterInput").addEventListener("input", applySortAndFilter);
 
 $("clearSelectionBtn").addEventListener("click", () => {
   if (clearMapSelection) clearMapSelection();
-  onCitySelected(null);
+  onCitySelected(null, null);
 });
 
-function onCitySelected(city) {
-  selectedCity = city;
+function onCitySelected(cities, label) {
+  selectedCities = cities;
   const bar = $("selectionBar");
-  if (city) {
+  if (cities && cities.length) {
     bar.style.display = "flex";
-    $("selectionText").textContent = `Viser ruter til/fra ${city}`;
+    $("selectionText").textContent = `Viser ruter til/fra ${label}`;
   } else {
     bar.style.display = "none";
   }
@@ -136,6 +136,7 @@ function render(routes) {
     return `
       <div class="board-row">
         <div class="board-route">
+          <span class="dot ${countdown.urgent ? "urgent" : "on"}"></span>
           <span>${escapeHtml(r.from)}</span>
           <span class="arrow">&#8594;</span>
           <span>${escapeHtml(r.to)}</span>
