@@ -144,7 +144,7 @@ function renderRouteMap(container, liveRoutes, onSelect) {
   let regionLines = "";
   MAP_REGION_LINES.forEach(({ y, label }) => {
     regionLines += `
-      <line x1="20" y1="${y}" x2="${MAP_VIEWBOX.w - 20}" y2="${y}" stroke="var(--board-line)" stroke-width="1" stroke-dasharray="1 6" />
+      <line x1="20" y1="${y}" x2="${MAP_VIEWBOX.w - 20}" y2="${y}" stroke="var(--line)" stroke-width="1" stroke-dasharray="1 6" />
       <text class="map-region-label" x="${MAP_VIEWBOX.w - 24}" y="${y - 8}" text-anchor="end">${label}</text>
     `;
   });
