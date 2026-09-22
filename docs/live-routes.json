@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-21T22:11:32.870928+00:00",
+  "updated_at": "2026-09-22T00:48:27.157775+00:00",
   "routes": [
     {
       "from": "LILLEHAMMER",
@@ -340,16 +340,6 @@
       "available_at": "2026-09-21T07:00:00",
       "latest_return": "2026-09-24T16:01:00",
       "expire_time": "2026-09-24T09:09:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "OSLO",
-      "to": "BERGEN MINDE",
-      "to_city": "BERGEN",
-      "car_model": "TOYOTA PROACE 9-SETER DIESEL",
-      "available_at": "2026-09-21T08:30:00",
-      "latest_return": "2026-09-22T08:30:00",
-      "expire_time": "2026-09-21T23:51:00"
     },
     {
       "from": "KRISTIANSAND SENTRUM",
