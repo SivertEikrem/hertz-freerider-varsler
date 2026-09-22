@@ -94,18 +94,6 @@ const CLUSTER_MEMBERS = [
 ];
 const CLUSTER_ANCHOR = [178, 596]; // posisjon på hovedkartet
 
-// Håndplassert lokalt diagram for detaljkartet — ikke geografisk avledet,
-// bare gitt nok innbyrdes avstand til at etiketter ikke kolliderer.
-const CLUSTER_LOCAL = {
-  "HØNEFOSS": [68, 68], "SKEDSMOKORSET": [185, 82], "KONGSVINGER": [235, 62],
-  "DRAMMEN": [62, 148], "RUD": [88, 128], "FORNEBU": [108, 120], "OSLO": [150, 110],
-  "BILLINGSTAD": [100, 140], "SKI": [168, 155], "ASKIM": [222, 148],
-  "KONGSBERG": [30, 182], "MOSS": [138, 195], "SARPSBORG": [218, 188],
-  "FREDRIKSTAD": [192, 208], "HALDEN": [238, 222],
-  "TØNSBERG": [108, 228], "SANDEFJORD": [96, 250], "LARVIK": [84, 268], "PORSGRUNN": [48, 252],
-};
-const CLUSTER_VIEWBOX = { w: 268, h: 290 };
-
 const MAP_REGION_LINES = [
   { y: 335.7, label: "NORD-NORGE" },
   { y: 457.1, label: "MIDT-NORGE" },
@@ -139,38 +127,13 @@ function resolveLabelOverlap(items, minGap) {
   return items;
 }
 
-function buildLocalDiagram(memberCounts) {
-  let dots = "", labels = "";
-  const items = [];
-  Object.keys(memberCounts).forEach((name) => {
-    const pos = CLUSTER_LOCAL[name];
-    if (!pos) return;
-    const [x, y] = pos;
-    const count = memberCounts[name];
-    const r = Math.min(5 + count * 1.3, 12);
-    const anchorEnd = x > CLUSTER_VIEWBOX.w * 0.62;
-    items.push({ name, x, y, r, count, anchor: anchorEnd ? "end" : "start", labelY: y + 3.5 });
-  });
-  resolveLabelOverlap(items, 12);
-  items.forEach(({ name, x, y, r, count, anchor, labelY }) => {
-    const lx = anchor === "end" ? x - r - 6 : x + r + 6;
-    dots += `<circle class="map-node-ring" cx="${x}" cy="${y}" r="${r + 4}"></circle>
-      <circle class="map-node" data-cluster-member="${mapEscapeHtml(name)}" cx="${x}" cy="${y}" r="${r}"></circle>`;
-    labels += `<text class="map-label" data-cluster-member="${mapEscapeHtml(name)}" x="${lx}" y="${labelY}" text-anchor="${anchor}">${mapEscapeHtml(name)}${count > 1 ? ` (${count})` : ""}</text>`;
-    if (Math.abs(labelY - (y + 3.5)) > 5) {
-      labels += `<line x1="${x}" y1="${y}" x2="${lx - (anchor === "end" ? -3 : 3)}" y2="${labelY - 3.5}" stroke="var(--line)" stroke-width="1" />`;
-    }
-  });
-  return `<div class="board-map-wrap"><svg viewBox="0 0 ${CLUSTER_VIEWBOX.w} ${CLUSTER_VIEWBOX.h}" role="img" aria-label="Detaljkart over Oslofjord-området">${dots}${labels}</svg></div>`;
-}
-
 /**
  * Bygger og setter inn et interaktivt, skjematisk Norges-kart basert på
  * gjeldende ledige ruter. Ikke geografisk presist — en stilisert
  * rutediagram-fremstilling, i tradisjonen til flyselskapers rutekart.
  * Oslofjord-regionen (for tett til å vises enkeltvis i denne skalaen)
- * samles i én node på hovedkartet, med et eget forstørret detaljkart
- * som vises under når minst én av byene der har en ledig rute.
+ * samles i én node på hovedkartet, med reelt bynavn bevart for filtrering
+ * av listen under.
  *
  * @param {HTMLElement} container - elementet kartet settes inn i
  * @param {Array} liveRoutes - rader fra live-routes.json (samme format som appen ellers bruker)
@@ -188,7 +151,6 @@ function renderRouteMap(container, liveRoutes, onSelect) {
 
   // --- Aggreger per (klynge-bevisst) nodenøkkel og per rute-par ---
   const nodeCounts = new Map(); // nodeKey -> antall treff (inn + ut)
-  const clusterMemberCounts = {}; // reelt bynavn -> antall (for detaljkartet)
   const pairs = new Map(); // "NØKKEL_A→NØKKEL_B" -> { a, b, count, urgent }
   const realCitiesForNode = new Map(); // nodeKey -> Set(reelle bynavn) — for filtrering
 
@@ -201,7 +163,6 @@ function renderRouteMap(container, liveRoutes, onSelect) {
       nodeCounts.set(key, (nodeCounts.get(key) || 0) + 1);
       if (!realCitiesForNode.has(key)) realCitiesForNode.set(key, new Set());
       realCitiesForNode.get(key).add(city);
-      if (memberOf[city]) clusterMemberCounts[city] = (clusterMemberCounts[city] || 0) + 1;
     });
 
     const isUrgent = r.expire_time && new Date(r.expire_time).getTime() - now < URGENT_MS;
@@ -317,10 +278,6 @@ function renderRouteMap(container, liveRoutes, onSelect) {
       ${nodes}
     </svg>
     ${canCrop ? `<button type="button" class="map-expand-btn" id="mapExpandBtn">Vis hele Norge</button>` : ""}
-    <div id="clusterInset" style="${clusterActive ? "" : "display:none;"} margin-top:10px;">
-      <p class="board-map-hint" style="margin-top:0;">Oslofjorden — forstørret</p>
-      ${clusterActive ? buildLocalDiagram(clusterMemberCounts) : ""}
-    </div>
   `;
 
   if (canCrop) {
@@ -353,10 +310,6 @@ function renderRouteMap(container, liveRoutes, onSelect) {
         if (!connected) el.classList.add("dimmed");
       }
     });
-    container.querySelectorAll(".map-node[data-cluster-member], .map-label[data-cluster-member]").forEach((el) => {
-      el.classList.remove("active");
-      if (selectedKey === CLUSTER_ID) return; // hele klyngen valgt via hoved-noden — ikke fremhev enkeltmedlem
-    });
   }
 
   function selectKey(key, realCities, label) {
@@ -377,14 +330,6 @@ function renderRouteMap(container, liveRoutes, onSelect) {
       const key = el.dataset.key;
       const realCities = [...(realCitiesForNode.get(key) || [key])];
       selectKey(key, realCities, mapLabel(key));
-    });
-  });
-
-  container.querySelectorAll(".map-node[data-cluster-member], .map-label[data-cluster-member]").forEach((el) => {
-    el.style.cursor = "pointer";
-    el.addEventListener("click", () => {
-      const name = el.dataset.clusterMember;
-      selectKey(`member:${name}`, [name], name);
     });
   });
 
