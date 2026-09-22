@@ -7,7 +7,7 @@
  */
 
 // Brukernavnet på Telegram-boten din, UTEN @. Sett denne når boten er opprettet.
-const TELEGRAM_BOT_USERNAME = Gratis_tur_bot;
+const TELEGRAM_BOT_USERNAME = "Gratis_tur_bot";
 
 const $ = (id) => document.getElementById(id);
 
