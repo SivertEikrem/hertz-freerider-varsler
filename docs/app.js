@@ -7,7 +7,7 @@
  */
 
 // Brukernavnet på Telegram-boten din, UTEN @. Sett denne når boten er opprettet.
-const TELEGRAM_BOT_USERNAME = "Gratis_tur_bot";
+const TELEGRAM_BOT_USERNAME = "DinFreeriderBot";
 
 const $ = (id) => document.getElementById(id);
 
@@ -336,7 +336,7 @@ function updateStatsLine() {
 function renderAvailable() {
   const container = $("availableList");
   if (routes.length === 0) {
-    container.innerHTML = `<div class="empty-state">Legg til en rute for å se tilgjengelige biler her.</div>`;
+    container.innerHTML = `<div class="board-empty">Legg til en rute for å se tilgjengelige biler her.</div>`;
     return;
   }
   const query = ($("availableFilterInput").value || "").trim().toLowerCase();
@@ -350,27 +350,29 @@ function renderAvailable() {
       );
     }
     const bodyHtml = matches.length === 0
-      ? `<div class="empty-state">${query ? "Ingen treff på filteret." : "Ingen ledige biler akkurat nå."}</div>`
+      ? `<div class="board-empty">${query ? "Ingen treff på filteret." : "Ingen ledige biler akkurat nå."}</div>`
       : matches.map((r) => {
           const countdown = timeUntil(r.expire_time);
           return `
-            <div class="available-card">
-              <div class="route-path" style="font-size:14px;">
+            <div class="board-row">
+              <div class="board-route">
                 <span>${escapeHtml(r.from)}</span>
-                <span class="route-arrow">&#8594;</span>
+                <span class="arrow">&#8594;</span>
                 <span>${escapeHtml(r.to)}</span>
               </div>
-              <div class="route-meta">
-                ${escapeHtml(r.car_model)} · Tilgjengelig fra ${formatDate(r.available_at)}<br />
-                <span style="${countdown.urgent ? "color:var(--urgent);font-weight:600;" : ""}">Hentefrist ${formatDate(r.expire_time)}${countdown.text ? ` (${countdown.text})` : ""}</span>
+              <div class="board-countdown${countdown.urgent ? " urgent" : ""}">${countdown.text || "—"}</div>
+              <div class="board-meta">
+                <span class="car">${escapeHtml(r.car_model)}</span>
+                <span>Fra ${formatDate(r.available_at)}</span>
+                <span>Frist ${formatDate(r.expire_time)}</span>
               </div>
             </div>
           `;
         }).join("");
 
     return `
-      <div class="available-group">
-        <h3 class="available-group-title">${escapeHtml(from)} &#8594; ${escapeHtml(to)}</h3>
+      <div style="margin-bottom: 18px;">
+        <h3 style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.03em; color:var(--board-ink-dim); margin:0 0 8px; text-transform:uppercase;">${escapeHtml(from)} &#8594; ${escapeHtml(to)}</h3>
         ${bodyHtml}
       </div>
     `;
