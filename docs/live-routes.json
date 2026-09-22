@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-22T05:32:35.002753+00:00",
+  "updated_at": "2026-09-22T10:18:17.695133+00:00",
   "routes": [
     {
       "from": "KRISTIANSUND LUFTHAVN",
@@ -18,8 +18,8 @@
       "to_city": "MOLDE",
       "car_model": "FORD KUGA 2WD HYBRID AUT",
       "available_at": "2026-09-14T07:15:00",
-      "latest_return": "2026-09-23T14:17:00",
-      "expire_time": "2026-09-23T08:03:00"
+      "latest_return": "2026-09-26T16:17:00",
+      "expire_time": "2026-09-26T09:58:00"
     },
     {
       "from": "LILLEHAMMER",
@@ -28,8 +28,8 @@
       "to_city": "OSLO",
       "car_model": "FORD KUGA 2WD HYBRID AUT",
       "available_at": "2026-09-14T07:15:00",
-      "latest_return": "2026-09-23T16:32:00",
-      "expire_time": "2026-09-23T14:40:00"
+      "latest_return": "2026-09-26T16:32:00",
+      "expire_time": "2026-09-26T14:37:00"
     },
     {
       "from": "LILLEHAMMER",
@@ -38,8 +38,8 @@
       "to_city": "TRONDHEIM",
       "car_model": "FORD KUGA 2WD HYBRID AUT",
       "available_at": "2026-09-14T07:15:00",
-      "latest_return": "2026-09-23T14:15:00",
-      "expire_time": "2026-09-23T07:48:00"
+      "latest_return": "2026-09-26T16:15:00",
+      "expire_time": "2026-09-26T09:43:00"
     },
     {
       "from": "MO I RANA LUFTHAVN",
@@ -48,8 +48,8 @@
       "to_city": "TRONDHEIM",
       "car_model": "FORD EXPLORER 77KWH 4X4 AUT EL",
       "available_at": "2026-09-17T07:15:00",
-      "latest_return": "2026-09-23T15:15:00",
-      "expire_time": "2026-09-23T07:51:00"
+      "latest_return": "2026-09-26T15:15:00",
+      "expire_time": "2026-09-26T07:44:00"
     },
     {
       "from": "MO I RANA LUFTHAVN",
@@ -58,8 +58,8 @@
       "to_city": "TRONDHEIM",
       "car_model": "FORD EXPLORER 77KWH 4X4 AUT EL",
       "available_at": "2026-09-17T07:15:00",
-      "latest_return": "2026-09-23T16:29:00",
-      "expire_time": "2026-09-23T08:33:00"
+      "latest_return": "2026-09-26T16:29:00",
+      "expire_time": "2026-09-26T08:21:00"
     },
     {
       "from": "BAERUM FORNEBU SELF SERVICE KIOSK",
@@ -100,56 +100,6 @@
       "available_at": "2026-09-18T10:00:00",
       "latest_return": "2026-09-23T21:00:00",
       "expire_time": "2026-09-23T14:12:00"
-    },
-    {
-      "from": "ARENDAL",
-      "from_city": "ARENDAL",
-      "to": "STAVANGER LUFTHAVN",
-      "to_city": "STAVANGER",
-      "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
-      "available_at": "2026-09-18T11:00:00",
-      "latest_return": "2026-09-22T11:00:00",
-      "expire_time": "2026-09-22T06:22:00"
-    },
-    {
-      "from": "BERGEN LUFTHAVN",
-      "from_city": "BERGEN",
-      "to": "STAVANGER LUFTHAVN",
-      "to_city": "STAVANGER",
-      "car_model": "MG 4 5D 51KWH AUT ELECTRIC",
-      "available_at": "2026-09-18T11:00:00",
-      "latest_return": "2026-09-22T11:00:00",
-      "expire_time": "2026-09-22T05:47:00"
-    },
-    {
-      "from": "BERGEN LUFTHAVN",
-      "from_city": "BERGEN",
-      "to": "STAVANGER LUFTHAVN",
-      "to_city": "STAVANGER",
-      "car_model": "POLESTAR 4 SUV 94KWH 4X4 AUT E",
-      "available_at": "2026-09-18T11:00:00",
-      "latest_return": "2026-09-22T11:00:00",
-      "expire_time": "2026-09-22T05:47:00"
-    },
-    {
-      "from": "KRISTIANSUND LUFTHAVN",
-      "from_city": "KRISTIANSUND",
-      "to": "STAVANGER LUFTHAVN",
-      "to_city": "STAVANGER",
-      "car_model": "FORD TRANSIT 6M3 TDCI VARE",
-      "available_at": "2026-09-18T11:00:00",
-      "latest_return": "2026-09-25T11:00:00",
-      "expire_time": "2026-09-24T18:46:00"
-    },
-    {
-      "from": "MANDAL",
-      "from_city": "LINDESNES",
-      "to": "STAVANGER LUFTHAVN",
-      "to_city": "STAVANGER",
-      "car_model": "TOYOTA COROLLA CROSS 4WD AUT H",
-      "available_at": "2026-09-18T11:00:00",
-      "latest_return": "2026-09-22T11:00:00",
-      "expire_time": "2026-09-22T07:53:00"
     },
     {
       "from": "TRONDHEIM LUFTHAVN",
@@ -262,16 +212,6 @@
       "expire_time": "2026-09-26T23:29:00"
     },
     {
-      "from": "OSLO SENTRALSTASJON",
-      "from_city": "OSLO",
-      "to": "VOSS",
-      "to_city": "SKULESTADMO",
-      "car_model": "MAZDA 2",
-      "available_at": "2026-09-21T06:15:00",
-      "latest_return": "2026-09-27T06:15:00",
-      "expire_time": "2026-09-26T23:37:00"
-    },
-    {
       "from": "BAERUM FORNEBU SELF SERVICE KIOSK",
       "from_city": "FORNEBU",
       "to": "TRONDHEIM LUFTHAVN",
@@ -320,6 +260,76 @@
       "available_at": "2026-09-21T10:15:00",
       "latest_return": "2026-09-24T18:00:00",
       "expire_time": "2026-09-24T16:38:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "OSLO",
+      "to": "TRONDHEIM LUFTHAVN",
+      "to_city": "TRONDHEIM",
+      "car_model": "FORD COURIER",
+      "available_at": "2026-09-22T07:00:00",
+      "latest_return": "2026-09-26T14:00:00",
+      "expire_time": "2026-09-26T06:26:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "OSLO",
+      "to": "TRONDHEIM SLUPPEN",
+      "to_city": "TRONDHEIM",
+      "car_model": "FORD COURIER",
+      "available_at": "2026-09-22T07:00:00",
+      "latest_return": "2026-09-26T14:10:00",
+      "expire_time": "2026-09-26T07:14:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "OSLO",
+      "to": "TRONDHEIM LUFTHAVN",
+      "to_city": "TRONDHEIM",
+      "car_model": "CITROEN E-C4 54KWH AUT ELECTRI",
+      "available_at": "2026-09-22T07:15:00",
+      "latest_return": "2026-09-26T16:15:00",
+      "expire_time": "2026-09-26T08:39:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "OSLO",
+      "to": "TRONDHEIM SLUPPEN",
+      "to_city": "TRONDHEIM",
+      "car_model": "CITROEN E-C4 54KWH AUT ELECTRI",
+      "available_at": "2026-09-22T07:15:00",
+      "latest_return": "2026-09-26T16:22:00",
+      "expire_time": "2026-09-26T09:26:00"
+    },
+    {
+      "from": "STAVANGER SOLA",
+      "from_city": "STAVANGER",
+      "to": "OSLO LUFTHAVN",
+      "to_city": "OSLO",
+      "car_model": "FORD EXPLORER 77KWH 4X4 AUT EL",
+      "available_at": "2026-09-22T07:30:00",
+      "latest_return": "2026-09-26T16:36:00",
+      "expire_time": "2026-09-26T07:23:00"
+    },
+    {
+      "from": "STAVANGER SOLA",
+      "from_city": "STAVANGER",
+      "to": "TRONDHEIM LUFTHAVN",
+      "to_city": "TRONDHEIM",
+      "car_model": "FORD EXPLORER 77KWH 4X4 AUT EL",
+      "available_at": "2026-09-22T07:30:00",
+      "latest_return": "2026-09-26T16:30:00",
+      "expire_time": "2026-09-26T00:06:00"
+    },
+    {
+      "from": "STAVANGER SOLA",
+      "from_city": "STAVANGER",
+      "to": "ÅLESUND LUFTHAVN",
+      "to_city": "ÅLESUND",
+      "car_model": "FORD EXPLORER 77KWH 4X4 AUT EL",
+      "available_at": "2026-09-22T07:30:00",
+      "latest_return": "2026-09-26T16:36:00",
+      "expire_time": "2026-09-26T02:03:00"
     }
   ]
 }
