@@ -247,12 +247,5 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="supabase-client.js"></script>
-<script>
-  // Innloggede brukere som klikker seg til forsiden (f.eks. via logoen) skal
-  // rett til dashbordet sitt, ikke se markedsføringssiden på nytt.
-  sb.auth.getSession().then(({ data }) => {
-    if (data.session) window.location.href = "app.html";
-  });
-</script>
 </body>
 </html>
