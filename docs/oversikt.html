@@ -36,37 +36,38 @@
 </div>
 
 <div class="shell" style="max-width: var(--max); padding-bottom: 100px;">
-  <div class="board">
-    <div class="board-head">
-      <h1 style="margin:0;">Norgeskartet</h1>
+  <section class="panel">
+    <div class="panel-head">
+      <h2>Alle tilgjengelig</h2>
       <div class="board-live">
         <span class="pulse"></span>
         <span id="updatedLine">Laster …</span>
       </div>
     </div>
+    <div class="board">
+      <div class="board-map-wrap" id="mapWrap"></div>
+      <p class="board-map-hint">Punktstørrelsen viser antall ruter til/fra byen. Klikk for å filtrere listen under.</p>
 
-    <div class="board-map-wrap" id="mapWrap"></div>
-    <p class="board-map-hint">Punktstørrelsen viser antall ruter til/fra byen. Klikk for å filtrere listen under.</p>
+      <div id="selectionBar" class="board-selection" style="display:none;">
+        <span id="selectionText"></span>
+        <button type="button" id="clearSelectionBtn">Vis alle &#10005;</button>
+      </div>
 
-    <div id="selectionBar" class="board-selection" style="display:none;">
-      <span id="selectionText"></span>
-      <button type="button" id="clearSelectionBtn">Vis alle &#10005;</button>
+      <div class="board-controls">
+        <input type="text" id="filterInput" placeholder="Filtrer på stasjon eller by …" />
+        <select id="sortField">
+          <option value="available_at">Tilgjengelig fra</option>
+          <option value="expire_time">Hentefrist</option>
+          <option value="from">Fra (alfabetisk)</option>
+          <option value="to">Til (alfabetisk)</option>
+          <option value="car_model">Bil (alfabetisk)</option>
+        </select>
+        <button type="button" id="sortDirBtn" title="Bytt sorteringsretning">&#9650;</button>
+      </div>
+
+      <div class="board-list" id="liveList"></div>
     </div>
-
-    <div class="board-controls">
-      <input type="text" id="filterInput" placeholder="Filtrer på stasjon eller by …" />
-      <select id="sortField">
-        <option value="available_at">Tilgjengelig fra</option>
-        <option value="expire_time">Hentefrist</option>
-        <option value="from">Fra (alfabetisk)</option>
-        <option value="to">Til (alfabetisk)</option>
-        <option value="car_model">Bil (alfabetisk)</option>
-      </select>
-      <button type="button" id="sortDirBtn" title="Bytt sorteringsretning">&#9650;</button>
-    </div>
-
-    <div class="board-list" id="liveList"></div>
-  </div>
+  </section>
 
   <p style="font-size:13px; color:var(--ink-tertiary); text-align:center; margin-top:16px;">Listen oppdateres hvert 15. minutt — ikke sanntid til sekundet.</p>
 </div>
