@@ -213,7 +213,7 @@ section {
 .brand {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 9px;
   font-size: 16px;
   font-weight: 620;
   letter-spacing: -0.01em;
@@ -221,8 +221,12 @@ section {
   color: var(--ink);
 }
 
-.brand .accent {
-  color: var(--accent);
+.brand-mark {
+  flex: none;
+}
+
+.brand-text {
+  white-space: nowrap;
 }
 
 .nav-links {
