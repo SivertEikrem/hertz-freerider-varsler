@@ -8,7 +8,7 @@ on:
   workflow_dispatch: # gjør at du også kan trigge den manuelt fra GitHub
 
 permissions:
-  contents: write # trengs for å kunne committe seen.json tilbake
+  contents: write # trengs for å kunne committe docs/live-routes.json tilbake
 
 jobs:
   check:
@@ -29,13 +29,14 @@ jobs:
       - name: Kjør sjekk
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: python main.py
 
-      - name: Lagre oppdatert tilstand
+      - name: Lagre oppdatert live-oversikt
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add seen.json docs/live-routes.json
-          git diff --staged --quiet || git commit -m "Oppdater sette turer og live-oversikt [skip ci]"
+          git add docs/live-routes.json
+          git diff --staged --quiet || git commit -m "Oppdater live-oversikt [skip ci]"
           git push
