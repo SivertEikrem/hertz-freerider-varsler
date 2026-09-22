@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dine ruter — Freerider-ruter</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9A%97%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;590;620&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="nav app-nav">
+  <div class="shell nav-row">
+    <a class="brand" href="index.html">Free<span class="accent">rider</span>-ruter</a>
+    <div class="nav-links">
+      <a href="oversikt.html">Ledig oversikt</a>
+    </div>
+    <div class="nav-actions app-user">
+      <span class="email" id="userEmail"></span>
+      <button class="btn btn-secondary btn-small" id="logoutBtn">Logg ut</button>
+    </div>
+  </div>
+</nav>
+
+<div class="shell app-header">
+  <h1>Dine ruter</h1>
+  <p id="statsLine"></p>
+</div>
+
+<div class="shell" style="max-width: var(--max-narrow); padding-bottom: 100px;">
+
+  <div id="status" class="status"></div>
+
+  <!-- Telegram-tilkobling -->
+  <section class="panel">
+    <div class="panel-head">
+      <h2>Varsling</h2>
+    </div>
+    <div class="connect-row">
+      <div class="connect-status">
+        <span class="dot off" id="telegramDot"></span>
+        <span id="telegramStatusText">Sjekker tilkobling …</span>
+      </div>
+      <button class="btn btn-primary btn-small" id="connectTelegramBtn" style="display:none;">Koble til Telegram</button>
+      <button class="btn btn-secondary btn-small" id="disconnectTelegramBtn" style="display:none;">Koble fra</button>
+    </div>
+  </section>
+
+  <!-- Legg til rute -->
+  <section class="panel">
+    <div class="panel-head">
+      <h2>Legg til ny rute</h2>
+    </div>
+    <div class="add-grid">
+      <div>
+        <label style="font-size:13px; color:var(--ink-secondary); display:block; margin-bottom:6px;">Fra</label>
+        <div class="mode-toggle" id="fromModeToggle">
+          <button type="button" data-mode="station" class="active">Stasjon</button>
+          <button type="button" data-mode="city">By</button>
+        </div>
+        <div class="field">
+          <input type="text" id="fromSelect" list="fromDatalist" placeholder="Skriv for å søke …" autocomplete="off" />
+          <datalist id="fromDatalist"></datalist>
+        </div>
+      </div>
+      <div class="arrow-col">&#8594;</div>
+      <div>
+        <label style="font-size:13px; color:var(--ink-secondary); display:block; margin-bottom:6px;">Til</label>
+        <div class="mode-toggle" id="toModeToggle">
+          <button type="button" data-mode="station" class="active">Stasjon</button>
+          <button type="button" data-mode="city">By</button>
+        </div>
+        <div class="field">
+          <input type="text" id="toSelect" list="toDatalist" placeholder="Skriv for å søke …" autocomplete="off" />
+          <datalist id="toDatalist"></datalist>
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-primary" id="addRouteBtn" type="button">Legg til i listen</button>
+  </section>
+
+  <!-- Ruteliste -->
+  <section class="panel">
+    <div class="panel-head">
+      <h2>Overvåkede ruter</h2>
+    </div>
+    <div class="route-list" id="routeList"></div>
+  </section>
+
+  <!-- Tilgjengelig nå -->
+  <section class="panel">
+    <div class="panel-head">
+      <h2>Tilgjengelig nå for dine ruter</h2>
+    </div>
+    <div class="field">
+      <input type="text" id="availableFilterInput" placeholder="Filtrer på stasjon, by eller bil …" />
+    </div>
+    <div class="route-list" id="availableList"></div>
+  </section>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-client.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

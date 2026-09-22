@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ledige biler — Freerider-ruter</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9A%97%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;590;620&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="shell nav-row">
+    <a class="brand" href="index.html">Free<span class="accent">rider</span>-ruter</a>
+    <div class="nav-links"></div>
+    <div class="nav-actions">
+      <a class="btn btn-secondary btn-small" href="app.html">Mine ruter</a>
+    </div>
+  </div>
+</nav>
+
+<div class="shell app-header">
+  <h1>Ledige biler nå</h1>
+  <p id="updatedLine">Laster …</p>
+</div>
+
+<div class="shell" style="max-width: var(--max-narrow); padding-bottom: 100px;">
+  <section class="panel">
+    <div style="display:flex; gap:10px; margin-bottom:18px; flex-wrap:wrap;">
+      <div class="field" style="flex:1; min-width:200px; margin-bottom:0;">
+        <input type="text" id="filterInput" placeholder="Filtrer på stasjon eller by …" />
+      </div>
+      <select id="sortField" style="border:1px solid var(--line); border-radius: var(--radius-sm); padding: 0 12px; font-size:14px; background:var(--surface); color:var(--ink);">
+        <option value="available_at">Tilgjengelig fra</option>
+        <option value="expire_time">Hentefrist</option>
+        <option value="from">Fra (alfabetisk)</option>
+        <option value="to">Til (alfabetisk)</option>
+        <option value="car_model">Bil (alfabetisk)</option>
+      </select>
+      <button class="btn btn-secondary btn-small" id="sortDirBtn" type="button" title="Bytt sorteringsretning">&#9650;</button>
+    </div>
+    <div class="route-list" id="liveList"></div>
+  </section>
+  <p style="font-size:13px; color:var(--ink-tertiary); text-align:center;">Listen oppdateres hvert 15. minutt — ikke sanntid til sekundet.</p>
+</div>
+
+<script src="oversikt.js"></script>
+</body>
+</html>
