@@ -51,6 +51,7 @@
 html {
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
+  scroll-padding-top: env(safe-area-inset-top, 0px);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -184,7 +185,7 @@ section {
 
 .nav {
   position: sticky;
-  top: 0;
+  top: env(safe-area-inset-top, 0px);
   z-index: 40;
   background: rgba(255, 255, 255, 0.78);
   backdrop-filter: saturate(180%) blur(16px);
@@ -234,6 +235,29 @@ section {
   display: flex;
   align-items: center;
   gap: 14px;
+}
+
+@media (max-width: 640px) {
+  .nav-links {
+    display: none;
+  }
+  .app-nav .nav-links {
+    display: flex;
+    font-size: 13px;
+    gap: 12px;
+  }
+  .nav-actions {
+    gap: 8px;
+  }
+  .brand {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 420px) {
+  .app-user .email {
+    display: none;
+  }
 }
 
 /* --- Knapper -------------------------------------------------------- */
@@ -329,6 +353,7 @@ input:focus-visible {
 .hero-actions {
   display: flex;
   gap: 14px;
+  flex-wrap: wrap;
   justify-content: center;
   margin-top: 30px;
 }
