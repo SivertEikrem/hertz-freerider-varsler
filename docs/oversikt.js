@@ -1,6 +1,7 @@
-/* Viser den ferskeste listen over ledige Freerider-biler, hentet fra
- * live-routes.json (som botten selv skriver hvert 15. minutt). Offentlig
- * side — krever ikke innlogging, samme som før.
+/* Viser den ferskeste listen over ledige Freerider-biler, som et
+ * skjematisk rutekart + avgangstavle. Data hentes fra live-routes.json
+ * (skrevet av botten hvert 15. minutt). Offentlig side — krever ikke
+ * innlogging.
  */
 
 const $ = (id) => document.getElementById(id);
@@ -11,6 +12,8 @@ const LS_SORT_DIR = "ffr_sort_dir";
 let allRoutes = [];
 let sortField = localStorage.getItem(LS_SORT_FIELD) || "available_at";
 let sortDir = localStorage.getItem(LS_SORT_DIR) || "asc";
+let selectedCity = null;
+let clearMapSelection = null;
 
 function escapeHtml(str) {
   return String(str).replace(/[&<>"']/g, (c) => ({
@@ -70,6 +73,10 @@ function compareRoutes(a, b) {
 function applySortAndFilter() {
   const q = $("filterInput").value.trim().toLowerCase();
   let list = allRoutes;
+
+  if (selectedCity) {
+    list = list.filter((r) => r.from_city === selectedCity || r.to_city === selectedCity);
+  }
   if (q) {
     list = list.filter((r) =>
       [r.from, r.from_city, r.to, r.to_city].join(" ").toLowerCase().includes(q)
@@ -101,24 +108,43 @@ $("sortDirBtn").addEventListener("click", () => {
 
 $("filterInput").addEventListener("input", applySortAndFilter);
 
+$("clearSelectionBtn").addEventListener("click", () => {
+  if (clearMapSelection) clearMapSelection();
+  onCitySelected(null);
+});
+
+function onCitySelected(city) {
+  selectedCity = city;
+  const bar = $("selectionBar");
+  if (city) {
+    bar.style.display = "flex";
+    $("selectionText").textContent = `Viser ruter til/fra ${city}`;
+  } else {
+    bar.style.display = "none";
+  }
+  applySortAndFilter();
+}
+
 function render(routes) {
   const list = $("liveList");
   if (routes.length === 0) {
-    list.innerHTML = `<div class="empty-state">Ingen treff.</div>`;
+    list.innerHTML = `<div class="board-empty">Ingen treff.</div>`;
     return;
   }
   list.innerHTML = routes.map((r) => {
     const countdown = timeUntil(r.expire_time);
     return `
-      <div class="route-card">
-        <div class="route-path">
+      <div class="board-row">
+        <div class="board-route">
           <span>${escapeHtml(r.from)}</span>
-          <span class="route-arrow">&#8594;</span>
+          <span class="arrow">&#8594;</span>
           <span>${escapeHtml(r.to)}</span>
         </div>
-        <div class="route-meta">
-          ${escapeHtml(r.car_model)} · Tilgjengelig fra ${formatDate(r.available_at)}<br />
-          <span style="${countdown.urgent ? "color:var(--urgent);font-weight:600;" : ""}">Hentefrist ${formatDate(r.expire_time)}${countdown.text ? ` (${countdown.text})` : ""}</span>
+        <div class="board-countdown${countdown.urgent ? " urgent" : ""}">${countdown.text || "—"}</div>
+        <div class="board-meta">
+          <span class="car">${escapeHtml(r.car_model)}</span>
+          <span>Fra ${formatDate(r.available_at)}</span>
+          <span>Frist ${formatDate(r.expire_time)}</span>
         </div>
       </div>
     `;
@@ -135,17 +161,18 @@ async function load() {
     allRoutes = data.routes || [];
     lastUpdatedAt = data.updated_at;
     updateUpdatedLine();
+    clearMapSelection = renderRouteMap($("mapWrap"), allRoutes, onCitySelected);
     applySortAndFilter();
     document.title = allRoutes.length > 0 ? `(${allRoutes.length}) Ledige biler` : "Ledige biler — Freerider-ruter";
   } catch (err) {
     $("updatedLine").textContent = "Kunne ikke laste listen.";
-    $("liveList").innerHTML = `<div class="empty-state">Fant ikke live-routes.json ennå. Den opprettes av botten ved neste kjøring.</div>`;
+    $("liveList").innerHTML = `<div class="board-empty">Fant ikke live-routes.json ennå. Den opprettes av botten ved neste kjøring.</div>`;
   }
 }
 
 function updateUpdatedLine() {
   if (!lastUpdatedAt) return;
-  $("updatedLine").textContent = `${allRoutes.length} ledige biler — sist oppdatert ${timeAgo(lastUpdatedAt)}`;
+  $("updatedLine").textContent = `${allRoutes.length} ledige — sist oppdatert ${timeAgo(lastUpdatedAt)}`;
 }
 
 setInterval(updateUpdatedLine, 30 * 1000);
