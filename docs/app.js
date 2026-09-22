@@ -372,7 +372,7 @@ function renderAvailable() {
 
     return `
       <div style="margin-bottom: 18px;">
-        <h3 style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.03em; color:var(--board-ink-dim); margin:0 0 8px; text-transform:uppercase;">${escapeHtml(from)} &#8594; ${escapeHtml(to)}</h3>
+        <h3 style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.03em; color:var(--ink-secondary); margin:0 0 8px; text-transform:uppercase;">${escapeHtml(from)} &#8594; ${escapeHtml(to)}</h3>
         ${bodyHtml}
       </div>
     `;
