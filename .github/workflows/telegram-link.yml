@@ -24,6 +24,12 @@ jobs:
       - name: Installer avhengigheter
         run: pip install -r requirements.txt
 
+      - name: Debug secret (midlertidig)
+        env:
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: |
+          echo "Lengde: ${#SUPABASE_SERVICE_ROLE_KEY}"
+          echo "Starter med: ${SUPABASE_SERVICE_ROLE_KEY:0:6}"
       - name: Sjekk etter nye tilkoblinger
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
@@ -31,11 +37,5 @@ jobs:
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: python telegram_link.py
 
-      - name: Debug secret (midlertidig)
-        env:
-          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
-        run: |
-          echo "Lengde: ${#SUPABASE_SERVICE_ROLE_KEY}"
-          echo "Starter med: ${SUPABASE_SERVICE_ROLE_KEY:0:6}"
 
       
