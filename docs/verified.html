@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>E-post bekreftet — Freerider-ruter</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9A%97%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;590;620&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="auth-shell">
+  <nav class="nav">
+    <div class="shell nav-row">
+      <a class="brand" href="index.html">Free<span class="accent">rider</span>-ruter</a>
+      <div></div>
+      <div></div>
+    </div>
+  </nav>
+
+  <div class="auth-center">
+    <div class="auth-card" style="text-align:center; max-width: 420px;">
+
+      <div id="checkingState">
+        <h1>Bekrefter …</h1>
+        <p class="sub">Et øyeblikk.</p>
+      </div>
+
+      <div id="successState" style="display:none;">
+        <svg viewBox="0 0 64 64" width="56" style="margin: 0 auto 20px;" role="img" aria-hidden="true">
+          <circle cx="32" cy="32" r="30" class="illo-stroke illo-available" stroke-width="2" />
+          <path d="M20 33 L28 41 L45 23" class="illo-stroke illo-available" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <h1>E-posten din er bekreftet</h1>
+        <p class="sub">Du er nå logget inn.</p>
+        <a class="btn btn-primary btn-block" href="app.html">Gå til dine ruter</a>
+      </div>
+
+      <div id="errorState" style="display:none;">
+        <h1>Fikk ikke bekreftet</h1>
+        <p class="sub">Lenken kan være utløpt eller allerede brukt.</p>
+        <a class="btn btn-secondary btn-block" href="login.html">Til innlogging</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-client.js"></script>
+<script>
+  // supabase-js leser automatisk access_token fra URL-en (etter #) og
+  // oppretter en økt av den, så vi trenger bare å sjekke om det lyktes.
+  (async () => {
+    const { data, error } = await sb.auth.getSession();
+
+    document.getElementById("checkingState").style.display = "none";
+
+    if (error || !data.session) {
+      document.getElementById("errorState").style.display = "block";
+      return;
+    }
+
+    document.getElementById("successState").style.display = "block";
+    setTimeout(() => { window.location.href = "app.html"; }, 2500);
+  })();
+</script>
+
+</body>
+</html>
