@@ -1069,10 +1069,6 @@ input:focus-visible {
   border-color: var(--ink-tertiary);
 }
 
-#clusterInset .board-map-wrap {
-  margin-bottom: 0;
-}
-
 .map-label {
   font-family: "IBM Plex Mono", monospace;
   font-size: 10.5px;
