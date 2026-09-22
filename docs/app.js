@@ -19,6 +19,8 @@ let routes = []; // rader fra Supabase: {id, from_station, from_city, to_station
 let fromMode = "station";
 let toMode = "station";
 let telegramPollTimer = null;
+let selectedCities = null;
+let clearMapSelection = null;
 
 function showStatus(message, kind) {
   const el = $("status");
@@ -73,6 +75,7 @@ async function bootstrap() {
   populateDatalist("fromDatalist", fromMode);
   populateDatalist("toDatalist", toMode);
   renderRoutes();
+  renderMap();
   renderAvailable();
   updateStatsLine();
 
@@ -83,9 +86,14 @@ async function bootstrap() {
   $("availableFilterInput").addEventListener("input", renderAvailable);
   $("connectTelegramBtn").addEventListener("click", connectTelegram);
   $("disconnectTelegramBtn").addEventListener("click", disconnectTelegram);
+  $("clearSelectionBtn").addEventListener("click", () => {
+    if (clearMapSelection) clearMapSelection();
+    onCitySelected(null, null);
+  });
 
   setInterval(async () => {
     await loadLiveRoutes();
+    renderMap();
     renderAvailable();
     updateStatsLine();
   }, 3 * 60 * 1000);
@@ -151,6 +159,7 @@ async function addRoute() {
   clearStatus();
   await loadRoutes();
   renderRoutes();
+  renderMap();
   renderAvailable();
   updateStatsLine();
 }
@@ -163,6 +172,7 @@ async function removeRoute(id) {
   }
   await loadRoutes();
   renderRoutes();
+  renderMap();
   renderAvailable();
   updateStatsLine();
 }
@@ -333,6 +343,27 @@ function updateStatsLine() {
   document.title = antallBiler > 0 ? `(${antallBiler}) Freerider-ruter` : "Freerider-ruter";
 }
 
+function renderMap() {
+  const wrap = $("mapWrap");
+  if (!wrap) return;
+  const allMatches = routes.flatMap((w) => liveRoutes.filter((r) => matchesWatch(r, w)));
+  clearMapSelection = renderRouteMap(wrap, allMatches, onCitySelected);
+}
+
+function onCitySelected(cities, label) {
+  selectedCities = cities;
+  const bar = $("selectionBar");
+  if (bar) {
+    if (cities && cities.length) {
+      bar.style.display = "flex";
+      $("selectionText").textContent = `Viser ruter til/fra ${label}`;
+    } else {
+      bar.style.display = "none";
+    }
+  }
+  renderAvailable();
+}
+
 function renderAvailable() {
   const container = $("availableList");
   if (routes.length === 0) {
@@ -344,6 +375,9 @@ function renderAvailable() {
   container.innerHTML = routes.map((w) => {
     const { from, to } = describeWatch(w);
     let matches = liveRoutes.filter((r) => matchesWatch(r, w));
+    if (selectedCities) {
+      matches = matches.filter((r) => selectedCities.includes(r.from_city) || selectedCities.includes(r.to_city));
+    }
     if (query) {
       matches = matches.filter((r) =>
         [r.from, r.from_city, r.to, r.to_city, r.car_model].join(" ").toLowerCase().includes(query)
@@ -356,6 +390,7 @@ function renderAvailable() {
           return `
             <div class="board-row">
               <div class="board-route">
+                <span class="dot ${countdown.urgent ? "urgent" : "on"}"></span>
                 <span>${escapeHtml(r.from)}</span>
                 <span class="arrow">&#8594;</span>
                 <span>${escapeHtml(r.to)}</span>
