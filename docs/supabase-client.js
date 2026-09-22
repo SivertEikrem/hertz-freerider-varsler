@@ -10,7 +10,7 @@
  * ditt, etter at du har fulgt SETUP.md.
  * ================================================================== */
 
-const SUPABASE_URL = "https://dosiwzxfzhfhwapmjxam.supabase.co/rest/v1/";
+const SUPABASE_URL = "https://dosiwzxfzhfhwapmjxam.supabase.co/rest/v1";
 const SUPABASE_ANON_KEY = "sb_publishable_tkAa8eaBG9b4-Hs0AxR9fg_0lLHC-Dc";
 
 const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
