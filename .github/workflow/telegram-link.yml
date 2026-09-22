@@ -1,0 +1,32 @@
+name: Koble Telegram-kontoer
+
+# Egen, hyppigere jobb enn hovedsjekken - reagerer på "/start <kode>" fra
+# nye brukere som sitter og venter på at tilkoblingen skal fullføres.
+
+on:
+  schedule:
+    - cron: "*/2 * * * *"
+  workflow_dispatch:
+
+jobs:
+  link:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sjekk ut repo
+        uses: actions/checkout@v4
+
+      - name: Sett opp Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Installer avhengigheter
+        run: pip install -r requirements.txt
+
+      - name: Sjekk etter nye tilkoblinger
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: python telegram_link.py
