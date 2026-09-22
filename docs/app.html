@@ -3,8 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>Freerider-ruter — varsling for Hertz Freerider</title>
-<meta name="description" content="Få beskjed på Telegram i det sekundet en Hertz Freerider-tur åpner seg på ruten din. Gratis, uoffisielt verktøy for Freerider-brukere i Norge." />
+<title>Dine ruter — Freerider-ruter</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9A%97%3C/text%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,239 +12,108 @@
 </head>
 <body>
 
-<nav class="nav">
+<nav class="nav app-nav">
   <div class="shell nav-row">
     <a class="brand" href="index.html">Free<span class="accent">rider</span>-ruter</a>
-    <div class="nav-links" id="navLinks">
-      <a href="#funksjoner">Funksjoner</a>
-      <a href="#slik-funker-det">Slik funker det</a>
+    <div class="nav-links">
+      <a href="oversikt.html">Ledig oversikt</a>
     </div>
-    <div class="nav-actions">
-      <a class="btn btn-secondary btn-small" href="login.html">Logg inn</a>
-      <a class="btn btn-primary btn-small" href="login.html?mode=signup">Kom i gang</a>
+    <div class="nav-actions app-user">
+      <span class="email" id="userEmail"></span>
+      <button class="btn btn-secondary btn-small" id="logoutBtn">Logg ut</button>
     </div>
   </div>
 </nav>
 
-<header class="hero">
-  <div class="shell-narrow">
-    <p class="eyebrow">Gratis · for Freerider-brukere i Norge</p>
-    <h1 class="display-1">Bilen dukker opp.<br />Du får vite det først.</h1>
-    <p class="lede">
-      Freerider-ruter overvåker Hertz sine gratis relokaliseringsturer
-      døgnet rundt og varsler deg på Telegram i det øyeblikket en tur
-      dukker opp på ruten din — før den rekker å bli tatt av noen andre.
-    </p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="login.html?mode=signup">Kom i gang gratis</a>
-      <a class="btn btn-secondary" href="#slik-funker-det">Se hvordan det funker</a>
+<div class="shell app-header">
+  <h1>Dine ruter</h1>
+  <p id="statsLine"></p>
+</div>
+
+<div class="shell" style="max-width: var(--max-narrow); padding-bottom: 100px;">
+
+  <div id="status" class="status"></div>
+
+  <!-- Telegram-tilkobling -->
+  <section class="panel">
+    <div class="panel-head">
+      <h2>Varsling</h2>
     </div>
-  </div>
-
-  <div class="shell hero-art">
-<svg viewBox="0 0 960 300" width="100%" role="img" aria-label="Illustrasjon av en bil som kjører langs en overvåket rute om natten, fra Ålesund til Trondheim">
-      <defs>
-        <radialGradient id="heroGlow" cx="50%" cy="35%" r="65%">
-          <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.16" />
-          <stop offset="100%" stop-color="var(--accent)" stop-opacity="0" />
-        </radialGradient>
-        <radialGradient id="headlightGlow" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.55" />
-          <stop offset="100%" stop-color="var(--accent)" stop-opacity="0" />
-        </radialGradient>
-      </defs>
-
-      <!-- Nattehimmel: mykt glødende bakgrunn + stjerner -->
-      <ellipse cx="480" cy="100" rx="520" ry="220" fill="url(#heroGlow)" />
-      <g>
-<circle cx="608.3" cy="18.4" r="0.88" fill="var(--ink)" opacity="0.38" />
-<circle cx="697.6" cy="106.4" r="1.49" fill="var(--ink)" opacity="0.3" />
-<circle cx="408.2" cy="19.0" r="0.82" fill="var(--ink)" opacity="0.55" />
-<circle cx="44.4" cy="41.8" r="1.25" fill="var(--ink)" opacity="0.58" />
-<circle cx="222.8" cy="94.6" r="1.41" fill="var(--ink)" opacity="0.25" />
-<circle cx="761.4" cy="109.2" r="0.94" fill="var(--ink)" opacity="0.34" />
-<circle cx="900.6" cy="60.4" r="0.69" fill="var(--ink)" opacity="0.31" />
-<circle cx="799.7" cy="96.5" r="1.41" fill="var(--ink)" opacity="0.69" />
-<circle cx="513.3" cy="146.4" r="0.98" fill="var(--ink)" opacity="0.58" />
-<circle cx="783.1" cy="98.5" r="1.46" fill="var(--ink)" opacity="0.6" />
-<circle cx="668.2" cy="21.2" r="0.83" fill="var(--ink)" opacity="0.42" />
-<circle cx="93.4" cy="46.4" r="0.7" fill="var(--ink)" opacity="0.42" />
-<circle cx="604.8" cy="64.3" r="0.97" fill="var(--ink)" opacity="0.38" />
-<circle cx="265.6" cy="141.4" r="1.25" fill="var(--ink)" opacity="0.62" />
-<circle cx="177.4" cy="113.4" r="0.76" fill="var(--ink)" opacity="0.48" />
-<circle cx="930.4" cy="101.4" r="1.16" fill="var(--ink)" opacity="0.66" />
-<circle cx="795.4" cy="119.8" r="0.83" fill="var(--ink)" opacity="0.27" />
-<circle cx="310.2" cy="51.1" r="0.81" fill="var(--ink)" opacity="0.82" />
-<circle cx="826.3" cy="57.5" r="1.26" fill="var(--ink)" opacity="0.49" />
-<circle cx="861.4" cy="76.9" r="0.86" fill="var(--ink)" opacity="0.4" />
-<circle cx="536.5" cy="50.5" r="1.18" fill="var(--ink)" opacity="0.79" />
-<circle cx="387.4" cy="44.6" r="1.6" fill="var(--ink)" opacity="0.56" />
-<circle cx="103.6" cy="21.4" r="0.71" fill="var(--ink)" opacity="0.63" />
-<circle cx="748.7" cy="72.0" r="0.66" fill="var(--ink)" opacity="0.48" />
-<circle cx="936.4" cy="86.4" r="1.57" fill="var(--ink)" opacity="0.77" />
-<circle cx="30.6" cy="112.3" r="1.28" fill="var(--ink)" opacity="0.57" />
-      </g>
-
-      <!-- Fjell, to lag for dybde -->
-      <path d="M0 300 L0 258 L70 232 L150 262 L230 220 L330 260 L420 236 L520 268 L610 224 L710 264 L800 238 L880 266 L960 244 L960 300 Z" fill="var(--surface-alt)" opacity="0.9" />
-      <path d="M0 300 L0 278 L90 250 L190 282 L280 252 L380 286 L470 258 L560 288 L660 254 L760 284 L850 260 L960 280 L960 300 Z" fill="var(--surface-raised)" />
-
-      <!-- Vei: asfaltbase + stiplet kjørefelt-linje -->
-      <path d="M90 230 C 280 130, 570 265, 760 95" stroke="var(--surface-raised)" stroke-width="15" fill="none" stroke-linecap="round" />
-      <path d="M90 230 C 280 130, 570 265, 760 95" class="illo-stroke" stroke-width="1.5" stroke-dasharray="10 9" stroke-linecap="round" opacity="0.6" />
-
-      <!-- By A: Ålesund -->
-      <g transform="translate(90,230)">
-        <path d="M0 -22 C 9 -22 16 -15 16 -6 C 16 6 0 20 0 20 C 0 20 -16 6 -16 -6 C -16 -15 -9 -22 0 -22 Z" class="illo-stroke" stroke-width="1.5" fill="var(--surface)" />
-        <circle cx="0" cy="-6" r="5.5" class="illo-dot" />
-        <text x="0" y="42" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" letter-spacing="0.03em" fill="var(--ink-secondary)">ÅLESUND</text>
-      </g>
-
-      <!-- By B: Trondheim -->
-      <g transform="translate(760,95)">
-        <path d="M0 -22 C 9 -22 16 -15 16 -6 C 16 6 0 20 0 20 C 0 20 -16 6 -16 -6 C -16 -15 -9 -22 0 -22 Z" class="illo-stroke illo-accent" stroke-width="1.5" fill="var(--surface)" />
-        <circle cx="0" cy="-6" r="5.5" fill="var(--accent)" />
-        <text x="0" y="-32" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" letter-spacing="0.03em" fill="var(--accent)">TRONDHEIM</text>
-      </g>
-
-      <!-- Lyskjegle foran bilen -->
-      <ellipse cx="452" cy="188.8" rx="34" ry="16" fill="url(#headlightGlow)" />
-
-      <!-- Fartsstriper -->
-      <line x1="368" y1="182" x2="392" y2="181.5" class="illo-stroke" stroke-width="1.5" opacity="0.4" stroke-linecap="round" />
-      <line x1="372" y1="192" x2="398" y2="191.6" class="illo-stroke" stroke-width="1.5" opacity="0.25" stroke-linecap="round" />
-
-      <!-- Bil, sett ovenfra, pekende langs veien -->
-      <g transform="translate(425,188.8)">
-        <rect x="-20" y="-10" width="40" height="20" rx="7" class="illo-stroke" stroke-width="2" fill="var(--surface)" />
-        <rect x="-9" y="-6.5" width="16" height="13" rx="3" class="illo-stroke" stroke-width="1.3" fill="var(--surface-alt)" />
-        <circle cx="-10" cy="11" r="4" class="illo-stroke" stroke-width="2" fill="var(--surface)" />
-        <circle cx="10" cy="11" r="4" class="illo-stroke" stroke-width="2" fill="var(--surface)" />
-        <circle cx="17" cy="-5" r="1.6" fill="var(--accent)" />
-        <circle cx="17" cy="5" r="1.6" fill="var(--accent)" />
-      </g>
-
-      <!-- Varselboble -->
-      <g transform="translate(560,26)">
-        <rect x="-2" y="2" width="172" height="58" rx="14" fill="var(--surface)" opacity="0.5" />
-        <rect x="0" y="0" width="172" height="58" rx="14" fill="var(--surface-alt)" stroke="var(--line)" />
-        <circle cx="24" cy="29" r="5" fill="var(--available)" />
-        <text x="40" y="26" font-family="Instrument Sans, sans-serif" font-size="12.5" font-weight="600" fill="var(--ink)">Ny tur ledig</text>
-        <text x="40" y="42" font-family="IBM Plex Mono, monospace" font-size="11" fill="var(--ink-secondary)">Ålesund → Trondheim</text>
-      </g>
-    </svg>
-  </div>
-</header>
-
-<section id="funksjoner" class="section-alt">
-  <div class="shell">
-    <div class="feature-row">
-      <div class="feature-copy">
-        <h3>Overvåk så mange ruter du vil</h3>
-        <p>
-          Legg inn rutene du er interessert i — mellom to konkrete stasjoner,
-          eller alle stasjoner i en by. Ingen grense på antall, og du kan
-          endre listen når som helst.
-        </p>
+    <div class="connect-row">
+      <div class="connect-status">
+        <span class="dot off" id="telegramDot"></span>
+        <span id="telegramStatusText">Sjekker tilkobling …</span>
       </div>
-      <div class="feature-art">
-        <svg viewBox="0 0 220 180" width="220" role="img" aria-hidden="true">
-          <circle cx="40" cy="140" r="6" class="illo-dot" />
-          <circle cx="180" cy="40" r="6" fill="var(--accent)" />
-          <path d="M40 140 C 90 90, 120 60, 180 40" class="illo-stroke illo-accent" stroke-width="2" />
-          <circle cx="40" cy="40" r="6" fill="var(--available)" />
-          <path d="M40 40 C 90 60, 130 100, 180 40" class="illo-stroke illo-available" stroke-width="1.5" stroke-dasharray="1 7" />
-          <circle cx="180" cy="140" r="6" class="illo-dot" opacity="0.4" />
-          <path d="M40 140 C 100 150, 140 150, 180 140" class="illo-stroke" stroke-width="1.5" opacity="0.35" stroke-dasharray="1 7" />
-        </svg>
+      <button class="btn btn-primary btn-small" id="connectTelegramBtn" style="display:none;">Koble til Telegram</button>
+      <button class="btn btn-secondary btn-small" id="disconnectTelegramBtn" style="display:none;">Koble fra</button>
+    </div>
+  </section>
+
+  <!-- Legg til rute -->
+  <section class="panel">
+    <div class="panel-head">
+      <h2>Legg til ny rute</h2>
+    </div>
+    <div class="add-grid">
+      <div>
+        <label style="font-size:13px; color:var(--ink-secondary); display:block; margin-bottom:6px;">Fra</label>
+        <div class="mode-toggle" id="fromModeToggle">
+          <button type="button" data-mode="station" class="active">Stasjon</button>
+          <button type="button" data-mode="city">By</button>
+        </div>
+        <div class="field">
+          <input type="text" id="fromSelect" list="fromDatalist" placeholder="Skriv for å søke …" autocomplete="off" />
+          <datalist id="fromDatalist"></datalist>
+        </div>
+      </div>
+      <div class="arrow-col">&#8594;</div>
+      <div>
+        <label style="font-size:13px; color:var(--ink-secondary); display:block; margin-bottom:6px;">Til</label>
+        <div class="mode-toggle" id="toModeToggle">
+          <button type="button" data-mode="station" class="active">Stasjon</button>
+          <button type="button" data-mode="city">By</button>
+        </div>
+        <div class="field">
+          <input type="text" id="toSelect" list="toDatalist" placeholder="Skriv for å søke …" autocomplete="off" />
+          <datalist id="toDatalist"></datalist>
+        </div>
       </div>
     </div>
+    <button class="btn btn-primary" id="addRouteBtn" type="button">Legg til i listen</button>
+  </section>
 
-    <div class="feature-row reverse">
-      <div class="feature-copy">
-        <h3>Varsel i det sekundet det skjer</h3>
-        <p>
-          Boten sjekker Hertz sine ledige turer hvert 15. minutt. Så snart
-          en av rutene dine dukker opp, kommer det rett i Telegram — med
-          bilmodell, stasjon og hvor lenge tilbudet gjelder.
-        </p>
-      </div>
-      <div class="feature-art">
-        <svg viewBox="0 0 220 180" width="220" role="img" aria-hidden="true">
-          <path d="M60 130 L 110 40 L 160 130 L 110 108 Z" class="illo-stroke illo-accent" stroke-width="2" stroke-linejoin="round" />
-          <circle cx="150" cy="55" r="20" fill="var(--surface)" stroke="var(--line)" />
-          <circle cx="150" cy="55" r="5" fill="var(--urgent)" />
-        </svg>
-      </div>
+  <!-- Ruteliste -->
+  <section class="panel">
+    <div class="panel-head">
+      <h2>Overvåkede ruter</h2>
     </div>
+    <div class="route-list" id="routeList"></div>
+  </section>
 
-    <div class="feature-row">
-      <div class="feature-copy">
-        <h3>Full oversikt, når du vil ha den</h3>
-        <p>
-          Vil du bare bla gjennom alt som er ledig akkurat nå, uavhengig
-          av rutene dine? Oversiktssiden viser alle Freerider-turer i
-          Norge, sorterbart og filtrerbart.
-        </p>
-      </div>
-      <div class="feature-art">
-        <svg viewBox="0 0 220 180" width="220" role="img" aria-hidden="true">
-          <rect x="35" y="45" width="150" height="24" rx="7" class="illo-stroke" stroke-width="1.5" />
-          <rect x="35" y="78" width="150" height="24" rx="7" class="illo-stroke illo-accent" stroke-width="1.5" />
-          <rect x="35" y="111" width="150" height="24" rx="7" class="illo-stroke" stroke-width="1.5" opacity="0.5" />
-          <circle cx="52" cy="90" r="4" fill="var(--available)" />
-        </svg>
-      </div>
+  <!-- Tilgjengelig nå -->
+  <section class="panel">
+    <div class="panel-head">
+      <h2>Tilgjengelig nå for dine ruter</h2>
     </div>
-  </div>
-</section>
-
-<section id="slik-funker-det">
-  <div class="shell-narrow" style="text-align:center;">
-    <p class="eyebrow">Slik funker det</p>
-    <h2 class="display-2">I gang på under to minutter</h2>
-  </div>
-  <div class="shell">
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <h4>Opprett konto</h4>
-        <p>Registrer deg med e-post — tar under et minutt, ingen betaling nødvendig.</p>
+    <div class="board">
+      <div class="board-map-wrap" id="mapWrap"></div>
+      <p class="board-map-hint">Klikk et punkt for å filtrere listen under.</p>
+      <div id="selectionBar" class="board-selection" style="display:none;">
+        <span id="selectionText"></span>
+        <button type="button" id="clearSelectionBtn">Vis alle &#10005;</button>
       </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <h4>Koble til Telegram</h4>
-        <p>Trykk én knapp for å koble kontoen din til varslingsboten. Ingen oppsett utover det.</p>
+      <div class="field" style="margin-bottom: 14px;">
+        <input type="text" id="availableFilterInput" placeholder="Filtrer på stasjon, by eller bil …" style="background: var(--surface-raised); border-color: var(--line); color: var(--ink);" />
       </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <h4>Velg ruter og vent</h4>
-        <p>Legg inn rutene du følger med på. Vi tar det derfra og varsler deg når noe dukker opp.</p>
-      </div>
+      <div class="board-list" id="availableList"></div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section-accent cta-band">
-  <div class="shell-narrow">
-    <p class="eyebrow">Gratis, alltid</p>
-    <h2 class="display-2">Slutt å oppdatere siden manuelt.</h2>
-    <a class="btn btn-on-accent" href="login.html?mode=signup">Kom i gang gratis</a>
-  </div>
-</section>
-
-<footer class="site-footer">
-  <div class="shell footer-row">
-    <span>© 2026 Freerider-ruter. Ikke tilknyttet Hertz.</span>
-    <div class="footer-links">
-      <a href="login.html">Logg inn</a>
-      <a href="https://github.com/SivertEikrem/hertz-freerider-varsler" target="_blank" rel="noopener">Kildekode</a>
-      <a href="https://hertzfreerider.no" target="_blank" rel="noopener">hertzfreerider.no</a>
-    </div>
-  </div>
-</footer>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="supabase-client.js"></script>
+<script src="route-map.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
