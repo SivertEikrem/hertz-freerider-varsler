@@ -99,6 +99,22 @@ const MAP_REGION_LINES = [
   { y: 457.1, label: "MIDT-NORGE" },
 ];
 const MAP_VIEWBOX = { w: 620, h: 700, minY: 20, maxY: 700 };
+
+// Forenklet, håndkalibrert silhuett av Norge i samme projeksjon som
+// CITY_COORDS — kun ment som en svak visuell bakgrunn, ikke en presis
+// kartgrense.
+const NORWAY_OUTLINE_PATH =
+  "M 101.2 675.7 C 96.4 668.4, 79.4 643.3, 72.6 632.0 C 65.8 620.7, 63.4 619.0, 60.4 607.7 " +
+  "C 57.4 596.4, 56.3 581.0, 54.3 564.0 C 52.3 547.0, 45.5 522.3, 48.2 505.7 C 50.9 489.1, 60.1 476.1, 70.6 464.4 " +
+  "C 81.1 452.7, 97.1 445.0, 111.4 435.3 C 125.7 425.6, 144.7 421.1, 156.3 406.1 C 167.9 391.1, 170.6 367.6, 180.8 345.4 " +
+  "C 191.0 323.1, 207.3 292.8, 217.5 272.6 C 227.7 252.4, 240.0 239.4, 242.0 224.0 C 244.0 208.6, 222.6 194.1, 229.7 180.3 " +
+  "C 236.8 166.5, 266.4 153.1, 284.8 141.4 C 303.2 129.7, 319.5 122.9, 339.9 109.9 C 360.3 97.0, 383.1 75.0, 407.2 63.7 " +
+  "C 431.3 52.4, 466.0 41.9, 484.7 41.9 C 503.4 41.9, 505.4 54.4, 519.4 63.7 C 533.4 73.0, 559.6 90.4, 568.4 97.7 " +
+  "C 577.2 105.0, 580.6 99.3, 572.4 107.4 C 564.2 115.5, 545.9 140.6, 519.4 146.3 C 492.9 152.0, 444.9 137.4, 413.3 141.4 " +
+  "C 381.7 145.4, 355.5 141.4, 329.7 170.6 C 303.9 199.8, 278.4 275.8, 258.3 316.3 C 238.2 356.8, 218.5 385.1, 209.3 413.4 " +
+  "C 200.1 441.7, 203.5 466.1, 203.2 486.3 C 202.9 506.6, 206.6 520.3, 207.3 534.9 C 208.0 549.5, 209.7 559.5, 207.3 573.7 " +
+  "C 204.9 587.9, 198.1 611.0, 193.0 619.9 C 187.9 628.8, 182.1 624.7, 176.7 627.1 C 171.3 629.5, 169.6 627.5, 160.4 634.4 " +
+  "C 151.2 641.3, 131.5 661.5, 121.6 668.4 C 111.7 675.3, 104.6 674.5, 101.2 675.7 Z";
 const MIN_CROP_HEIGHT = 260;
 const CROP_PADDING = 70;
 
@@ -272,6 +288,7 @@ function renderRouteMap(container, liveRoutes, onSelect) {
 
   container.innerHTML = `
     <svg id="mainMapSvg" viewBox="${expanded ? fullViewBox : croppedViewBox}" role="img" aria-label="Skjematisk kart over ledige Freerider-ruter i Norge">
+      <path class="map-outline" d="${NORWAY_OUTLINE_PATH}"></path>
       ${regionLines}
       ${dimNodes}
       ${arcs}
