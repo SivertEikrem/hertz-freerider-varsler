@@ -193,11 +193,11 @@ function renderRouteMap(container, liveRoutes, onSelect) {
   Object.keys(CITY_COORDS).forEach((name) => {
     if (activeKeys.has(name) || memberOf[name]) return;
     const [x, y] = CITY_COORDS[name];
-    dimNodes += `<circle class="map-node-dim" cx="${x}" cy="${y}" r="2.2"></circle>`;
+    dimNodes += `<circle class="map-node-dim" cx="${x}" cy="${y}" r="2.2"><title>${mapEscapeHtml(name)}</title></circle>`;
   });
   if (!clusterActive) {
     const [cx, cy] = CLUSTER_ANCHOR;
-    dimNodes += `<circle class="map-node-dim" cx="${cx}" cy="${cy}" r="2.6"></circle>`;
+    dimNodes += `<circle class="map-node-dim" cx="${cx}" cy="${cy}" r="2.6"><title>${mapEscapeHtml(CLUSTER_LABEL)}</title></circle>`;
   }
 
   // --- Automatisk beskjæring nord/sør, basert på aktive noder ---
@@ -265,7 +265,7 @@ function renderRouteMap(container, liveRoutes, onSelect) {
     const label = mapLabel(key);
     nodes += `
       <circle class="map-node-ring" cx="${x}" cy="${y}" r="${r + 5}"></circle>
-      <circle class="map-node${key === CLUSTER_ID ? " map-node-cluster" : ""}" data-key="${mapEscapeHtml(key)}" cx="${x}" cy="${y}" r="${r}"></circle>
+      <circle class="map-node${key === CLUSTER_ID ? " map-node-cluster" : ""}" data-key="${mapEscapeHtml(key)}" cx="${x}" cy="${y}" r="${r}"><title>${mapEscapeHtml(label)}</title></circle>
       <text class="map-label" data-key="${mapEscapeHtml(key)}" x="${lx}" y="${labelY}" text-anchor="${anchor}">${mapEscapeHtml(label)}${count > 1 ? ` (${count})` : ""}</text>
     `;
     if (Math.abs(labelY - (y + 3.5)) > 5) {
