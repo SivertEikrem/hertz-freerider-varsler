@@ -752,7 +752,8 @@ input:focus-visible {
 }
 
 .app-header {
-  padding: 40px 0 8px;
+  padding-top: 40px;
+  padding-bottom: 8px;
 }
 
 .app-header h1 {
