@@ -1103,13 +1103,13 @@ input:focus-visible {
 .map-outline {
   fill: none;
   stroke: var(--ink);
-  stroke-width: 1.3;
-  opacity: 0.14;
+  stroke-width: 1;
+  opacity: 0.22;
   vector-effect: non-scaling-stroke;
 }
 
 :root[data-theme="light"] .map-outline {
-  opacity: 0.1;
+  opacity: 0.16;
 }
 
 .map-region-label {
