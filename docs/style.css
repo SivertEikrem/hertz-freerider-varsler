@@ -8,10 +8,30 @@
    og av avgangstavler/rutekart for selve dataen.
    =================================================================== */
 
+/* ===================================================================
+   Freerider-ruter — design system
+   To temaer, samme identitet: "nattkjøring / instrumentpanel" i mørk
+   modus, en rolig lys variant i lys modus. Begge deler samme rute- og
+   statusfarge-logikk (blå aksent, grønn = ledig, oransje = haster),
+   forankret i selve produktet snarere enn en generisk SaaS-standard.
+   Styres av data-theme på <html>, satt av theme.js.
+   =================================================================== */
+
 :root {
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+
+  --max: 1120px;
+  --max-narrow: 720px;
+}
+
+/* --- Mørkt tema (standard, og fallback før theme.js rekker å kjøre) --- */
+:root,
+:root[data-theme="dark"] {
   color-scheme: dark;
 
-  /* --- Farger --------------------------------------------------- */
   --ink: #e7ecf2;              /* primærtekst — nesten hvit, ikke ren #fff */
   --ink-secondary: #98a3af;    /* sekundærtekst, bildetekster */
   --ink-tertiary: #62707d;     /* minst fremtredende tekst, placeholders */
@@ -36,16 +56,48 @@
   --urgent: #ff9159;           /* haster: tilbudet utløper snart */
   --urgent-soft: rgba(255, 145, 89, 0.14);
 
-  --radius-sm: 8px;
-  --radius-md: 14px;
-  --radius-lg: 22px;
-  --radius-pill: 999px;
-
   --shadow-card: 0 1px 0 rgba(255, 255, 255, 0.03) inset, 0 10px 24px rgba(0, 0, 0, 0.35);
   --shadow-raised: 0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 20px 48px rgba(0, 0, 0, 0.5);
 
-  --max: 1120px;
-  --max-narrow: 720px;
+  --nav-blur-bg: rgba(11, 15, 20, 0.74);
+  --glow-available: rgba(61, 220, 132, 0.45);
+  --glow-available-ring: rgba(61, 220, 132, 0.5);
+  --glow-urgent: rgba(255, 145, 89, 0.45);
+}
+
+/* --- Lyst tema --- */
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  --ink: #1d1d1f;
+  --ink-secondary: #6e6e76;
+  --ink-tertiary: #a1a1a6;
+
+  --surface: #ffffff;
+  --surface-alt: #f5f5f7;
+  --surface-raised: #fbfbfc;
+
+  --line: #d2d2d7;
+  --line-soft: #e8e8ed;
+  --line-dark: rgba(0, 0, 0, 0.1);
+
+  --accent: #0058a3;
+  --accent-hover: #00478a;
+  --accent-soft: rgba(0, 88, 163, 0.08);
+
+  --available: #1f7a4d;
+  --available-soft: rgba(31, 122, 77, 0.1);
+
+  --urgent: #c2451f;
+  --urgent-soft: rgba(194, 69, 31, 0.1);
+
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.04), 0 8px 24px rgba(0, 0, 0, 0.05);
+  --shadow-raised: 0 2px 6px rgba(0, 0, 0, 0.06), 0 16px 40px rgba(0, 0, 0, 0.08);
+
+  --nav-blur-bg: rgba(255, 255, 255, 0.78);
+  --glow-available: rgba(0, 0, 0, 0);
+  --glow-available-ring: rgba(31, 122, 77, 0.35);
+  --glow-urgent: rgba(0, 0, 0, 0);
 }
 
 /* --- Reset ----------------------------------------------------- */
@@ -202,7 +254,7 @@ section {
   position: sticky;
   top: env(safe-area-inset-top, 0px);
   z-index: 40;
-  background: rgba(11, 15, 20, 0.74);
+  background: var(--nav-blur-bg);
   backdrop-filter: saturate(180%) blur(16px);
   -webkit-backdrop-filter: saturate(180%) blur(16px);
   border-bottom: 1px solid var(--line-soft);
@@ -350,6 +402,26 @@ section {
 .btn-small {
   padding: 8px 16px;
   font-size: 13.5px;
+}
+
+.theme-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink-secondary);
+  cursor: pointer;
+  flex: none;
+  padding: 0;
+}
+
+.theme-toggle-btn:hover {
+  color: var(--ink);
+  border-color: var(--ink-tertiary);
 }
 
 .btn-block {
@@ -994,13 +1066,13 @@ input:focus-visible {
 
 @keyframes board-pulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(61, 220, 132, 0.5);
+    box-shadow: 0 0 0 0 var(--glow-available-ring);
   }
   70% {
-    box-shadow: 0 0 0 7px rgba(61, 220, 132, 0);
+    box-shadow: 0 0 0 7px rgba(0, 0, 0, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(61, 220, 132, 0);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
   }
 }
 
@@ -1047,7 +1119,7 @@ input:focus-visible {
 
 .map-node:hover,
 .map-node.active {
-  fill: #ffffff;
+  fill: var(--ink);
 }
 
 .map-node-ring {
@@ -1217,7 +1289,7 @@ input:focus-visible {
   text-transform: uppercase;
   color: var(--available);
   background: var(--available-soft);
-  text-shadow: 0 0 10px rgba(61, 220, 132, 0.45);
+  text-shadow: 0 0 10px var(--glow-available);
   border-radius: var(--radius-pill);
   padding: 5px 12px;
   white-space: nowrap;
@@ -1226,7 +1298,7 @@ input:focus-visible {
 .board-countdown.urgent {
   color: var(--urgent);
   background: var(--urgent-soft);
-  text-shadow: 0 0 10px rgba(255, 145, 89, 0.45);
+  text-shadow: 0 0 10px var(--glow-urgent);
 }
 
 .board-empty {
