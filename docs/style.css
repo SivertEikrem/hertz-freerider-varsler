@@ -1201,6 +1201,26 @@ input:focus-visible {
   opacity: 0.08;
 }
 
+.map-arrow {
+  fill: var(--available);
+  opacity: 0.55;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+  pointer-events: none;
+}
+
+.map-arrow.urgent {
+  fill: var(--urgent);
+}
+
+.map-arrow.active {
+  opacity: 1;
+}
+
+.map-arrow.dimmed {
+  opacity: 0.08;
+}
+
 .map-node.dimmed,
 .map-label.dimmed {
   opacity: 0.25;
