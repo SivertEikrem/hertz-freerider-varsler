@@ -253,7 +253,7 @@ function renderRouteMap(container, liveRoutes, onSelect) {
   activeKeys.forEach((key) => {
     const [x, y] = mapCoord(key);
     const count = nodeCounts.get(key);
-    const r = Math.min(5 + count * 1.4, 13);
+    const r = 6;
     const anchorEnd = x >= 500;
     items.push({ key, x, y, r, count, anchor: anchorEnd ? "end" : "start", labelY: y + 3.5 });
   });
