@@ -2,6 +2,15 @@
 <html lang="no">
 <head>
 <meta charset="UTF-8" />
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem("ffr-theme");
+      var theme = saved || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+      document.documentElement.dataset.theme = theme;
+    } catch (e) {}
+  })();
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>Freerider-ruter — varsling for Hertz Freerider</title>
 <meta name="description" content="Få beskjed på Telegram i det sekundet en Hertz Freerider-tur åpner seg på ruten din. Gratis, uoffisielt verktøy for Freerider-brukere i Norge." />
@@ -29,6 +38,7 @@
       <a href="#slik-funker-det">Slik funker det</a>
     </div>
     <div class="nav-actions">
+      <button type="button" id="themeToggleBtn" class="theme-toggle-btn" aria-label="Bytt tema"></button>
       <a class="btn btn-secondary btn-small" href="login.html">Logg inn</a>
       <a class="btn btn-primary btn-small" href="login.html?mode=signup">Kom i gang</a>
     </div>
@@ -253,6 +263,7 @@
   </div>
 </footer>
 
+<script src="theme.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="supabase-client.js"></script>
 <script>
