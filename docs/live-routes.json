@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-24T20:06:56.872203+00:00",
+  "updated_at": "2026-09-24T23:11:15.215690+00:00",
   "routes": [
     {
       "from": "ÅLESUND LUFTHAVN",
@@ -162,26 +162,6 @@
       "expire_time": "2026-09-30T02:57:00"
     },
     {
-      "from": "OSLO SENTRALSTASJON",
-      "from_city": "OSLO",
-      "to": "TRONDHEIM LUFTHAVN",
-      "to_city": "TRONDHEIM",
-      "car_model": "POLESTAR 4 SUV 94KWH 4X4 AUT E",
-      "available_at": "2026-09-21T07:00:00",
-      "latest_return": "2026-09-25T15:00:00",
-      "expire_time": "2026-09-25T06:56:00"
-    },
-    {
-      "from": "OSLO SENTRALSTASJON",
-      "from_city": "OSLO",
-      "to": "TRONDHEIM SLUPPEN",
-      "to_city": "TRONDHEIM",
-      "car_model": "POLESTAR 4 SUV 94KWH 4X4 AUT E",
-      "available_at": "2026-09-21T07:00:00",
-      "latest_return": "2026-09-25T16:01:00",
-      "expire_time": "2026-09-25T08:36:00"
-    },
-    {
       "from": "OSLO LUFTHAVN",
       "from_city": "OSLO",
       "to": "TRONDHEIM LUFTHAVN",
@@ -200,6 +180,26 @@
       "available_at": "2026-09-22T07:00:00",
       "latest_return": "2026-09-26T14:10:00",
       "expire_time": "2026-09-26T07:14:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "OSLO",
+      "to": "TRONDHEIM LUFTHAVN",
+      "to_city": "TRONDHEIM",
+      "car_model": "CITROEN E-C4 54KWH AUT ELECTRI",
+      "available_at": "2026-09-22T07:15:00",
+      "latest_return": "2026-09-26T16:15:00",
+      "expire_time": "2026-09-26T08:39:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "OSLO",
+      "to": "TRONDHEIM SLUPPEN",
+      "to_city": "TRONDHEIM",
+      "car_model": "CITROEN E-C4 54KWH AUT ELECTRI",
+      "available_at": "2026-09-22T07:15:00",
+      "latest_return": "2026-09-26T16:22:00",
+      "expire_time": "2026-09-26T09:26:00"
     },
     {
       "from": "FAGERNES",
