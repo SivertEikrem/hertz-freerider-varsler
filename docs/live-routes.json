@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-24T11:59:55.309524+00:00",
+  "updated_at": "2026-09-24T16:37:35.887417+00:00",
   "routes": [
     {
       "from": "ÅLESUND LUFTHAVN",
@@ -162,14 +162,24 @@
       "expire_time": "2026-09-30T02:57:00"
     },
     {
-      "from": "KRISTIANSAND SENTRUM",
-      "from_city": "KRISTIANSAND",
-      "to": "LYNGDAL",
-      "to_city": "LYNGDAL",
-      "car_model": "TOYOTA BZ4X",
-      "available_at": "2026-09-21T10:15:00",
-      "latest_return": "2026-09-24T18:00:00",
-      "expire_time": "2026-09-24T16:38:00"
+      "from": "OSLO SENTRALSTASJON",
+      "from_city": "OSLO",
+      "to": "TRONDHEIM LUFTHAVN",
+      "to_city": "TRONDHEIM",
+      "car_model": "POLESTAR 4 SUV 94KWH 4X4 AUT E",
+      "available_at": "2026-09-21T07:00:00",
+      "latest_return": "2026-09-25T15:00:00",
+      "expire_time": "2026-09-25T06:56:00"
+    },
+    {
+      "from": "OSLO SENTRALSTASJON",
+      "from_city": "OSLO",
+      "to": "TRONDHEIM SLUPPEN",
+      "to_city": "TRONDHEIM",
+      "car_model": "POLESTAR 4 SUV 94KWH 4X4 AUT E",
+      "available_at": "2026-09-21T07:00:00",
+      "latest_return": "2026-09-25T16:01:00",
+      "expire_time": "2026-09-25T08:36:00"
     },
     {
       "from": "OSLO LUFTHAVN",
@@ -380,16 +390,6 @@
       "available_at": "2026-09-24T08:30:00",
       "latest_return": "2026-09-26T21:00:00",
       "expire_time": "2026-09-26T14:08:00"
-    },
-    {
-      "from": "MOLDE LUFTHAVN",
-      "from_city": "MOLDE",
-      "to": "TRONDHEIM SLUPPEN",
-      "to_city": "TRONDHEIM",
-      "car_model": "TOYOTA COROLLA CROSS 4WD AUT H",
-      "available_at": "2026-09-24T12:00:00",
-      "latest_return": "2026-09-30T13:00:00",
-      "expire_time": "2026-09-30T09:18:00"
     },
     {
       "from": "MOLDE LUFTHAVN",
