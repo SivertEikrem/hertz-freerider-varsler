@@ -1,6 +1,16 @@
 {
-  "updated_at": "2026-09-24T06:17:51.921292+00:00",
+  "updated_at": "2026-09-24T11:59:55.309524+00:00",
   "routes": [
+    {
+      "from": "ÅLESUND LUFTHAVN",
+      "from_city": "ÅLESUND",
+      "to": "STAVANGER LUFTHAVN",
+      "to_city": "STAVANGER",
+      "car_model": "HONGQI EHS9 7S AUT ELECTRIC",
+      "available_at": "2026-09-11T10:30:00",
+      "latest_return": "2026-09-30T10:30:00",
+      "expire_time": "2026-09-29T19:57:00"
+    },
     {
       "from": "LILLEHAMMER",
       "from_city": "LILLEHAMMER",
@@ -30,6 +40,46 @@
       "available_at": "2026-09-14T07:15:00",
       "latest_return": "2026-09-26T16:15:00",
       "expire_time": "2026-09-26T09:43:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "OSLO",
+      "to": "STAVANGER LUFTHAVN",
+      "to_city": "STAVANGER",
+      "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
+      "available_at": "2026-09-18T05:15:00",
+      "latest_return": "2026-09-30T05:15:00",
+      "expire_time": "2026-09-29T20:15:00"
+    },
+    {
+      "from": "ARENDAL",
+      "from_city": "ARENDAL",
+      "to": "STAVANGER LUFTHAVN",
+      "to_city": "STAVANGER",
+      "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
+      "available_at": "2026-09-18T11:00:00",
+      "latest_return": "2026-09-30T11:00:00",
+      "expire_time": "2026-09-30T06:21:00"
+    },
+    {
+      "from": "MANDAL",
+      "from_city": "LINDESNES",
+      "to": "STAVANGER LUFTHAVN",
+      "to_city": "STAVANGER",
+      "car_model": "TOYOTA COROLLA CROSS 4WD AUT H",
+      "available_at": "2026-09-18T11:00:00",
+      "latest_return": "2026-09-30T11:00:00",
+      "expire_time": "2026-09-30T07:58:00"
+    },
+    {
+      "from": "MOLDE LUFTHAVN",
+      "from_city": "MOLDE",
+      "to": "STAVANGER LUFTHAVN",
+      "to_city": "STAVANGER",
+      "car_model": "VOLVO EX30 SUV 64KWH 4X4 AUT E",
+      "available_at": "2026-09-18T11:00:00",
+      "latest_return": "2026-09-30T11:00:00",
+      "expire_time": "2026-09-29T19:45:00"
     },
     {
       "from": "BERGEN LUFTHAVN",
@@ -82,14 +132,34 @@
       "expire_time": "2026-09-25T19:44:00"
     },
     {
+      "from": "ÅLESUND LUFTHAVN",
+      "from_city": "ÅLESUND",
+      "to": "BERGEN LUFTHAVN",
+      "to_city": "BERGEN",
+      "car_model": "TOYOTA COROLLA CROSS 4WD AUT H",
+      "available_at": "2026-09-21T05:45:00",
+      "latest_return": "2026-09-30T05:55:00",
+      "expire_time": "2026-09-29T20:34:00"
+    },
+    {
+      "from": "ÅLESUND LUFTHAVN",
+      "from_city": "ÅLESUND",
+      "to": "STAVANGER LUFTHAVN",
+      "to_city": "STAVANGER",
+      "car_model": "TOYOTA COROLLA CROSS 4WD AUT H",
+      "available_at": "2026-09-21T05:45:00",
+      "latest_return": "2026-09-30T05:45:00",
+      "expire_time": "2026-09-29T15:12:00"
+    },
+    {
       "from": "MANDAL",
       "from_city": "LINDESNES",
       "to": "STAVANGER LUFTHAVN",
       "to_city": "STAVANGER",
       "car_model": "TOYOTA CAMRY 4D HYBRID AUT",
       "available_at": "2026-09-21T06:00:00",
-      "latest_return": "2026-09-26T06:00:00",
-      "expire_time": "2026-09-26T03:02:00"
+      "latest_return": "2026-09-30T06:00:00",
+      "expire_time": "2026-09-30T02:57:00"
     },
     {
       "from": "KRISTIANSAND SENTRUM",
@@ -120,36 +190,6 @@
       "available_at": "2026-09-22T07:00:00",
       "latest_return": "2026-09-26T14:10:00",
       "expire_time": "2026-09-26T07:14:00"
-    },
-    {
-      "from": "STAVANGER SOLA",
-      "from_city": "STAVANGER",
-      "to": "OSLO LUFTHAVN",
-      "to_city": "OSLO",
-      "car_model": "FORD EXPLORER 77KWH 4X4 AUT EL",
-      "available_at": "2026-09-22T07:30:00",
-      "latest_return": "2026-09-26T16:36:00",
-      "expire_time": "2026-09-26T07:23:00"
-    },
-    {
-      "from": "STAVANGER SOLA",
-      "from_city": "STAVANGER",
-      "to": "TRONDHEIM LUFTHAVN",
-      "to_city": "TRONDHEIM",
-      "car_model": "FORD EXPLORER 77KWH 4X4 AUT EL",
-      "available_at": "2026-09-22T07:30:00",
-      "latest_return": "2026-09-26T16:30:00",
-      "expire_time": "2026-09-26T00:06:00"
-    },
-    {
-      "from": "STAVANGER SOLA",
-      "from_city": "STAVANGER",
-      "to": "ÅLESUND LUFTHAVN",
-      "to_city": "ÅLESUND",
-      "car_model": "FORD EXPLORER 77KWH 4X4 AUT EL",
-      "available_at": "2026-09-22T07:30:00",
-      "latest_return": "2026-09-26T16:36:00",
-      "expire_time": "2026-09-26T02:03:00"
     },
     {
       "from": "FAGERNES",
@@ -272,6 +312,96 @@
       "expire_time": "2026-09-26T21:59:00"
     },
     {
+      "from": "KRISTIANSAND LUFTHAVN",
+      "from_city": "KRISTIANSAND",
+      "to": "STAVANGER LUFTHAVN",
+      "to_city": "STAVANGER",
+      "car_model": "VW ID.3 5D 58KWH 5D AUT ELECTR",
+      "available_at": "2026-09-24T07:15:00",
+      "latest_return": "2026-09-30T07:15:00",
+      "expire_time": "2026-09-30T03:08:00"
+    },
+    {
+      "from": "KRISTIANSAND SENTRUM",
+      "from_city": "KRISTIANSAND",
+      "to": "STAVANGER LUFTHAVN",
+      "to_city": "STAVANGER",
+      "car_model": "TOYOTA COROLLA CROSS 4WD AUT H",
+      "available_at": "2026-09-24T07:15:00",
+      "latest_return": "2026-09-30T07:15:00",
+      "expire_time": "2026-09-30T03:15:00"
+    },
+    {
+      "from": "ÅLESUND SENTRUM",
+      "from_city": "ÅLESUND",
+      "to": "STAVANGER LUFTHAVN",
+      "to_city": "STAVANGER",
+      "car_model": "TOYOTA YARIS CR 5D AUT 4X4 HYB",
+      "available_at": "2026-09-24T07:15:00",
+      "latest_return": "2026-09-30T07:15:00",
+      "expire_time": "2026-09-29T17:08:00"
+    },
+    {
+      "from": "ÅLESUND SENTRUM",
+      "from_city": "ÅLESUND",
+      "to": "TRONDHEIM LUFTHAVN",
+      "to_city": "TRONDHEIM",
+      "car_model": "TOYOTA COROLLA CROSS 2WD AUT H",
+      "available_at": "2026-09-24T07:15:00",
+      "latest_return": "2026-09-29T21:45:00",
+      "expire_time": "2026-09-29T15:23:00"
+    },
+    {
+      "from": "ÅLESUND SENTRUM",
+      "from_city": "ÅLESUND",
+      "to": "TRONDHEIM SLUPPEN",
+      "to_city": "TRONDHEIM",
+      "car_model": "TOYOTA COROLLA CROSS 2WD AUT H",
+      "available_at": "2026-09-24T07:15:00",
+      "latest_return": "2026-09-29T21:45:00",
+      "expire_time": "2026-09-29T15:59:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "OSLO",
+      "to": "TRONDHEIM LUFTHAVN",
+      "to_city": "TRONDHEIM",
+      "car_model": "FORD EXPLORER 77KWH 4X4 AUT EL",
+      "available_at": "2026-09-24T08:30:00",
+      "latest_return": "2026-09-26T21:00:00",
+      "expire_time": "2026-09-26T13:27:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "OSLO",
+      "to": "TRONDHEIM SLUPPEN",
+      "to_city": "TRONDHEIM",
+      "car_model": "FORD EXPLORER 77KWH 4X4 AUT EL",
+      "available_at": "2026-09-24T08:30:00",
+      "latest_return": "2026-09-26T21:00:00",
+      "expire_time": "2026-09-26T14:08:00"
+    },
+    {
+      "from": "MOLDE LUFTHAVN",
+      "from_city": "MOLDE",
+      "to": "TRONDHEIM SLUPPEN",
+      "to_city": "TRONDHEIM",
+      "car_model": "TOYOTA COROLLA CROSS 4WD AUT H",
+      "available_at": "2026-09-24T12:00:00",
+      "latest_return": "2026-09-30T13:00:00",
+      "expire_time": "2026-09-30T09:18:00"
+    },
+    {
+      "from": "MOLDE LUFTHAVN",
+      "from_city": "MOLDE",
+      "to": "TRONDHEIM SLUPPEN",
+      "to_city": "TRONDHEIM",
+      "car_model": "YARIS CROSS",
+      "available_at": "2026-09-25T08:00:00",
+      "latest_return": "2026-09-30T13:00:00",
+      "expire_time": "2026-09-30T09:18:00"
+    },
+    {
       "from": "BODØ LUFTHAVN",
       "from_city": "BODØ",
       "to": "EVENES LUFTHAVN",
@@ -330,6 +460,16 @@
       "available_at": "2026-09-25T12:15:00",
       "latest_return": "2026-09-30T09:15:00",
       "expire_time": "2026-09-30T05:49:00"
+    },
+    {
+      "from": "OSLO LUFTHAVN",
+      "from_city": "OSLO",
+      "to": "STAVANGER LUFTHAVN",
+      "to_city": "STAVANGER",
+      "car_model": "TOYOTA YARIS CROSS 5D AUT HYBR",
+      "available_at": "2026-09-26T06:45:00",
+      "latest_return": "2026-09-30T06:45:00",
+      "expire_time": "2026-09-29T21:41:00"
     },
     {
       "from": "LEKNES SENTRUM",
