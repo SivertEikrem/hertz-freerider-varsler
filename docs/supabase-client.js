@@ -10,8 +10,8 @@
  * ditt, etter at du har fulgt SETUP.md.
  * ================================================================== */
 
-const SUPABASE_URL = "https://DITT-PROSJEKT.supabase.co";
-const SUPABASE_ANON_KEY = "DIN-ANON-PUBLIC-KEY";
+const SUPABASE_URL = "https://dosiwzxfzhfhwapmjxam.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_...(din faktiske nøkkel)...";
 
 const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
