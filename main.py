@@ -155,29 +155,35 @@ def notify_matches(routes_by_user, chat_id_by_user, all_routes):
         if not chat_id:
             continue  # brukeren har ikke koblet til Telegram ennå
 
-        notified_ids = already_notified.get(user_id, set())
-        newly_notified_rows = []
+        try:
+            notified_ids = already_notified.get(user_id, set())
+            newly_notified_rows = []
 
-        for watch in watches:
-            new_matches = []
-            for route in all_routes:
-                if not matches_watch(route, watch):
-                    continue
-                route_id = str(route["id"])
-                if route_id in notified_ids:
-                    continue
-                new_matches.append(route)
-                notified_ids.add(route_id)
-                newly_notified_rows.append({"user_id": user_id, "route_id": route_id})
+            for watch in watches:
+                new_matches = []
+                for route in all_routes:
+                    if not matches_watch(route, watch):
+                        continue
+                    route_id = str(route["id"])
+                    if route_id in notified_ids:
+                        continue
+                    new_matches.append(route)
+                    notified_ids.add(route_id)
+                    newly_notified_rows.append({"user_id": user_id, "route_id": route_id})
 
-            if new_matches:
-                any_new = True
-                message = format_route_message(watch, new_matches)
-                telegram_api.send_message(chat_id, message)
-                print(f"Sendte varsel til {user_id} om {len(new_matches)} tur(er) for {describe_watch(watch)}.")
+                if new_matches:
+                    any_new = True
+                    message = format_route_message(watch, new_matches)
+                    telegram_api.send_message(chat_id, message)
+                    print(f"Sendte varsel til {user_id} om {len(new_matches)} tur(er) for {describe_watch(watch)}.")
 
-        if newly_notified_rows:
-            supabase_client.insert("notifications_sent", newly_notified_rows)
+            if newly_notified_rows:
+                supabase_client.insert("notifications_sent", newly_notified_rows)
+        except Exception as exc:
+            # Én brukers feil (f.eks. blokkert bot, forbigående nettverksfeil)
+            # skal ikke stoppe varsling for alle de andre brukerne, eller
+            # hindre at live-routes.json blir oppdatert etterpå.
+            print(f"Klarte ikke å varsle bruker {user_id}: {exc}")
 
     if not any_new:
         print("Ingen nye turer funnet for noen bruker.")
@@ -201,11 +207,14 @@ def maybe_send_daily_summaries(routes_by_user, chat_id_by_user, all_routes):
         if not chat_id:
             continue
 
-        summary = build_daily_summary(watches, all_routes)
-        if summary:
-            telegram_api.send_message(chat_id, summary)
-            supabase_client.insert("daily_summary_sent", [{"user_id": user_id, "slot_key": slot_key}])
-            print(f"Sendte daglig oppsummering til {user_id} (kl. {now_oslo.hour}).")
+        try:
+            summary = build_daily_summary(watches, all_routes)
+            if summary:
+                telegram_api.send_message(chat_id, summary)
+                supabase_client.insert("daily_summary_sent", [{"user_id": user_id, "slot_key": slot_key}])
+                print(f"Sendte daglig oppsummering til {user_id} (kl. {now_oslo.hour}).")
+        except Exception as exc:
+            print(f"Klarte ikke å sende daglig oppsummering til {user_id}: {exc}")
 
 
 def write_live_routes(all_routes):
