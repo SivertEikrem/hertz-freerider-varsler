@@ -10,23 +10,40 @@
  * ditt, etter at du har fulgt SETUP.md.
  * ================================================================== */
 
-const SUPABASE_URL = "https://dosiwzxfzhfhwapmjxam.supabase.co";
-const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRvc2l3enhmemhmaHdhcG1qeGFtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTAwODg5MTIsImV4cCI6MjEwNTY2NDkxMn0.h9Xk-8YJ6adF3IWZlHYpfXSiNsZrpDd11SWoX4av8rE";
+const SUPABASE_URL = "https://DITT-PROSJEKT.supabase.co";
+const SUPABASE_ANON_KEY = "DIN-ANON-PUBLIC-KEY";
 
 const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 /**
  * Henter aktiv innlogget økt, eller sender brukeren til login.html
- * hvis ingen økt finnes. Kall denne øverst på sider som krever
+ * hvis ingen gyldig økt finnes. Kall denne øverst på sider som krever
  * innlogging (f.eks. app.html).
+ *
+ * Bruker getUser() (ikke bare getSession()) fordi getSession() bare
+ * leser det som ligger lagret lokalt i nettleseren — den sjekker ikke
+ * at brukeren faktisk fortsatt finnes i databasen. Uten denne
+ * kontrollen kan en "foreldreløs" økt (f.eks. etter at en konto er
+ * slettet på en annen enhet) se gyldig ut helt til man faktisk prøver
+ * å lagre noe, og da feiler det med en kryptisk databasefeil i stedet
+ * for å sende brukeren til innlogging slik den burde.
  */
 async function requireSession() {
-  const { data, error } = await sb.auth.getSession();
-  if (error || !data.session) {
+  const { data: sessionData, error: sessionError } = await sb.auth.getSession();
+  if (sessionError || !sessionData.session) {
     window.location.href = "login.html";
     return null;
   }
-  return data.session;
+
+  const { error: userError } = await sb.auth.getUser();
+  if (userError) {
+    // Økten er foreldreløs eller ugyldig — rydd den bort og send til innlogging.
+    await sb.auth.signOut();
+    window.location.href = "login.html";
+    return null;
+  }
+
+  return sessionData.session;
 }
 
 async function signOut() {
