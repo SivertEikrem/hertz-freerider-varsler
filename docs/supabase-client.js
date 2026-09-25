@@ -11,7 +11,7 @@
  * ================================================================== */
 
 const SUPABASE_URL = "https://dosiwzxfzhfhwapmjxam.supabase.co";
-const SUPABASE_ANON_KEY = "sb_publishable_...(din faktiske nøkkel)...";
+const SUPABASE_ANON_KEY = "sb_publishable_tkAa8eaBG9b4-Hs0AxR9fg_0lLHC-Dc";
 
 const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
