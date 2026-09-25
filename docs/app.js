@@ -7,7 +7,7 @@
  */
 
 // Brukernavnet på Telegram-boten din, UTEN @. Sett denne når boten er opprettet.
-const TELEGRAM_BOT_USERNAME = "Gratis_tur_bot";
+const TELEGRAM_BOT_USERNAME = "DinFreeriderBot";
 
 const $ = (id) => document.getElementById(id);
 
@@ -214,17 +214,29 @@ function renderTelegramStatus(connected) {
 }
 
 async function connectTelegram() {
+  // Åpne vinduet SYNKRONT, med en gang, mens klikket fortsatt telles som en
+  // direkte brukerhandling — ellers blokkerer mobilnettlesere (spesielt
+  // Safari) popup-vinduet siden det ellers først åpnes etter en async-pause.
+  const telegramWindow = window.open("", "_blank");
+
   const code = randomCode();
   const { error } = await sb
     .from("telegram_links")
     .upsert({ user_id: session.user.id, link_code: code, chat_id: null }, { onConflict: "user_id" });
 
   if (error) {
+    if (telegramWindow) telegramWindow.close();
     showStatus("Klarte ikke å starte tilkoblingen: " + error.message, "error");
     return;
   }
 
-  window.open(`https://t.me/${TELEGRAM_BOT_USERNAME}?start=${code}`, "_blank");
+  const telegramUrl = `https://t.me/${TELEGRAM_BOT_USERNAME}?start=${code}`;
+  if (telegramWindow) {
+    telegramWindow.location.href = telegramUrl;
+  } else {
+    // Popup ble likevel blokkert (sjeldent) — naviger denne fanen i stedet.
+    window.location.href = telegramUrl;
+  }
   $("telegramStatusText").textContent = "Venter på at du trykker Start i Telegram …";
 
   if (telegramPollTimer) clearInterval(telegramPollTimer);
