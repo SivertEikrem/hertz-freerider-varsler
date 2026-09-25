@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-25T20:26:53.477993+00:00",
+  "updated_at": "2026-09-25T23:22:20.477450+00:00",
   "routes": [
     {
       "from": "ÅLESUND LUFTHAVN",
@@ -70,16 +70,6 @@
       "available_at": "2026-09-18T11:00:00",
       "latest_return": "2026-09-30T11:00:00",
       "expire_time": "2026-09-29T19:45:00"
-    },
-    {
-      "from": "HAMAR",
-      "from_city": "HAMAR",
-      "to": "BERGEN LUFTHAVN",
-      "to_city": "BERGEN",
-      "car_model": "TOYOTA RAV4 SUV AUT 4X4 PLUGIN",
-      "available_at": "2026-09-21T05:45:00",
-      "latest_return": "2026-09-26T05:57:00",
-      "expire_time": "2026-09-25T21:36:00"
     },
     {
       "from": "HAMAR",
@@ -282,16 +272,6 @@
       "expire_time": "2026-10-02T04:52:00"
     },
     {
-      "from": "KRISTIANSAND SENTRUM",
-      "from_city": "KRISTIANSAND",
-      "to": "STAVANGER LUFTHAVN",
-      "to_city": "STAVANGER",
-      "car_model": "TOYOTA COROLLA CROSS 4WD AUT H",
-      "available_at": "2026-09-24T07:15:00",
-      "latest_return": "2026-09-30T07:15:00",
-      "expire_time": "2026-09-30T03:15:00"
-    },
-    {
       "from": "ÅLESUND SENTRUM",
       "from_city": "ÅLESUND",
       "to": "STAVANGER LUFTHAVN",
@@ -300,26 +280,6 @@
       "available_at": "2026-09-24T07:15:00",
       "latest_return": "2026-09-30T07:15:00",
       "expire_time": "2026-09-29T17:08:00"
-    },
-    {
-      "from": "ÅLESUND SENTRUM",
-      "from_city": "ÅLESUND",
-      "to": "TRONDHEIM LUFTHAVN",
-      "to_city": "TRONDHEIM",
-      "car_model": "TOYOTA COROLLA CROSS 2WD AUT H",
-      "available_at": "2026-09-24T07:15:00",
-      "latest_return": "2026-09-29T21:45:00",
-      "expire_time": "2026-09-29T15:23:00"
-    },
-    {
-      "from": "ÅLESUND SENTRUM",
-      "from_city": "ÅLESUND",
-      "to": "TRONDHEIM SLUPPEN",
-      "to_city": "TRONDHEIM",
-      "car_model": "TOYOTA COROLLA CROSS 2WD AUT H",
-      "available_at": "2026-09-24T07:15:00",
-      "latest_return": "2026-09-29T21:45:00",
-      "expire_time": "2026-09-29T15:59:00"
     },
     {
       "from": "MOLDE LUFTHAVN",
