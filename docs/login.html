@@ -159,9 +159,9 @@
 
   applyMode();
 
-  // Hvis allerede innlogget, hopp rett til app
-  sb.auth.getSession().then(({ data }) => {
-    if (data.session) window.location.href = "app.html";
+  // Hvis allerede innlogget (og økten faktisk er gyldig), hopp rett til app
+  sb.auth.getUser().then(({ data, error }) => {
+    if (!error && data.user) window.location.href = "app.html";
   });
 </script>
 
