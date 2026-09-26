@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-26T06:36:51.366488+00:00",
+  "updated_at": "2026-09-26T11:44:55.542324+00:00",
   "routes": [
     {
       "from": "ÅLESUND LUFTHAVN",
@@ -14,32 +14,12 @@
     {
       "from": "LILLEHAMMER",
       "from_city": "LILLEHAMMER",
-      "to": "MOLDE LUFTHAVN",
-      "to_city": "MOLDE",
-      "car_model": "FORD KUGA 2WD HYBRID AUT",
-      "available_at": "2026-09-14T07:15:00",
-      "latest_return": "2026-09-26T16:17:00",
-      "expire_time": "2026-09-26T09:58:00"
-    },
-    {
-      "from": "LILLEHAMMER",
-      "from_city": "LILLEHAMMER",
       "to": "OSLO LUFTHAVN",
       "to_city": "OSLO",
       "car_model": "FORD KUGA 2WD HYBRID AUT",
       "available_at": "2026-09-14T07:15:00",
       "latest_return": "2026-09-26T16:32:00",
       "expire_time": "2026-09-26T14:37:00"
-    },
-    {
-      "from": "LILLEHAMMER",
-      "from_city": "LILLEHAMMER",
-      "to": "TRONDHEIM LUFTHAVN",
-      "to_city": "TRONDHEIM",
-      "car_model": "FORD KUGA 2WD HYBRID AUT",
-      "available_at": "2026-09-14T07:15:00",
-      "latest_return": "2026-09-26T16:15:00",
-      "expire_time": "2026-09-26T09:43:00"
     },
     {
       "from": "ARENDAL",
@@ -100,36 +80,6 @@
       "available_at": "2026-09-21T06:00:00",
       "latest_return": "2026-09-30T06:00:00",
       "expire_time": "2026-09-30T02:57:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "OSLO",
-      "to": "TRONDHEIM SLUPPEN",
-      "to_city": "TRONDHEIM",
-      "car_model": "FORD COURIER",
-      "available_at": "2026-09-22T07:00:00",
-      "latest_return": "2026-09-26T14:10:00",
-      "expire_time": "2026-09-26T07:14:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "OSLO",
-      "to": "TRONDHEIM LUFTHAVN",
-      "to_city": "TRONDHEIM",
-      "car_model": "CITROEN E-C4 54KWH AUT ELECTRI",
-      "available_at": "2026-09-22T07:15:00",
-      "latest_return": "2026-09-26T16:15:00",
-      "expire_time": "2026-09-26T08:39:00"
-    },
-    {
-      "from": "OSLO LUFTHAVN",
-      "from_city": "OSLO",
-      "to": "TRONDHEIM SLUPPEN",
-      "to_city": "TRONDHEIM",
-      "car_model": "CITROEN E-C4 54KWH AUT ELECTRI",
-      "available_at": "2026-09-22T07:15:00",
-      "latest_return": "2026-09-26T16:22:00",
-      "expire_time": "2026-09-26T09:26:00"
     },
     {
       "from": "FAGERNES",
@@ -250,6 +200,16 @@
       "available_at": "2026-09-23T08:15:00",
       "latest_return": "2026-10-02T08:16:00",
       "expire_time": "2026-10-02T04:52:00"
+    },
+    {
+      "from": "KRISTIANSAND SENTRUM",
+      "from_city": "KRISTIANSAND",
+      "to": "STAVANGER LUFTHAVN",
+      "to_city": "STAVANGER",
+      "car_model": "TOYOTA COROLLA CROSS 4WD AUT H",
+      "available_at": "2026-09-24T07:15:00",
+      "latest_return": "2026-09-30T07:15:00",
+      "expire_time": "2026-09-30T03:15:00"
     },
     {
       "from": "ÅLESUND SENTRUM",
